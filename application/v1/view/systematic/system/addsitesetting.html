@@ -1,0 +1,62 @@
+{extend name="layout/dialog" /}
+{block name='content'}
+<style>
+    .dialog-content{margin:20px;}
+    .dialog-footer{position:fixed;right:39%;top:82%}
+    .red-color{color:red;}
+</style>
+<div class="dialog-content">
+    <form class="form-horizontal dialog-form" id="form">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>网站名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title" name="title">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="icp" class="col-sm-3 control-label">ICP备案号：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="icp" name="icp" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="count_code" class="col-sm-3 control-label">地址：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="count_code" class="form-control form-control-sm" name="count_code" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tel" class="col-sm-3 control-label">固定电话：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="tel" class="form-control form-control-sm" name="tel" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mail" class="col-sm-3 control-label">邮箱：</label>
+                    <div class="col-sm-9">
+                        <input type="email" id="mail" class="form-control form-control-sm" name="mail" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="status" class="col-sm-3 control-label">状态：</label>
+                    <div class="col-sm-9">
+                        <select id="status" name="status" class="form-control form-control-sm">
+                            {volist name="status" id="status_list"}
+                            <option value="{$key}">{$status_list}</option>
+                            {/volist}
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="td-align dialog-footer">
+            <button class="btn btn-warning" onclick="admin_module.cancel_btn()"> <i class="fa fa-close"></i> 取消</button>
+            <input type="hidden" name="is_add" value="1">
+            <button class="btn btn-primary" type="button" onclick="admin_module.setting_add(this)" data-url="{:url('/v1/systematic/system/addsitesetting')}"><i class="fa fa-save"></i> 确定提交</button>
+        </div>
+    </form>
+</div>
+{/block}

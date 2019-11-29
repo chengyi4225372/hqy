@@ -1,0 +1,3 @@
+---------------------------------------------------------------
+[ 2019-11-11T15:25:42+08:00 ] 172.26.2.194 GET /home/index/index.html
+[ error ] [0]致命错误: Call to undefined method think\Cache::geet()[/opt/web/hui-/application/home/controller/Index.php:22]

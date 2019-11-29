@@ -1,0 +1,40 @@
+<div class="btn-group">
+    <button type="button" class="btn btn-sm btn-primary" onclick="admin_module.add_org(this)" data-url="{:url('/v1/organ/organization/addorg')}">新增成员</button>
+</div>
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+    <tr>
+        <th class="td-align td-width-40px">
+            <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
+        </th>
+        <th class="td-align">所属小组|部门</th>
+        <th class="td-align">负责人</th>
+        <th class="td-align">状态</th>
+        <th class="td-align">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {volist name='list' id='data_list'}
+        <tr>
+            <td class="td-align td-padding">
+                <input type="checkbox" name="box_checked" data-id="" class="data-check_box">
+            </td>
+            <td class="td-align td-padding">{$data_list['title']}</td>
+            <td class="td-align td-padding">{$data_list['manage']}</td>
+            <td class="td-align td-padding">
+                {if $data_list['status'] == 1}
+                <span class="btn btn-success">启用</span>
+                {else /}
+                <span class="btn btn-danger">已禁用</span>
+                {/if}
+            </td>
+            <td class="td-align td-padding">
+                <a href="javascript:void(0)" class="btn btn-info" data-url="{:url('/v1/organ/organization/editorg')}" data-id="{$data_list['id']}" onclick="admin_module.edit_org(this)">编辑</a>
+            </td>
+        </tr>
+    {/volist}
+
+
+    </tbody>
+</table>
+<div class="pages">{$page ?? ''}</div>

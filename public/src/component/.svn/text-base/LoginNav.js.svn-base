@@ -1,0 +1,20 @@
+import React from 'react'
+import {NavLink} from "react-router-dom";
+import '../css/loginnav.css'
+class  LoginNav extends React.Component{
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="d-flex  loginnav" >
+        <NavLink to='/pwdlogin'className='text-dark fontSize18' activeClassName="act">密码登录</NavLink>
+        <NavLink to='/smslogin'className='text-dark mx-5 fontSize18' activeClassName="act">手机登录</NavLink>
+        {/*<NavLink to='/rqlogin' className='text-dark fontSize18' activeClassName="act">扫码登录</NavLink>*/}
+      </div>
+    );
+  }
+}
+
+export default LoginNav;

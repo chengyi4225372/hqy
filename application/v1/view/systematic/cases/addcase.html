@@ -1,0 +1,130 @@
+{extend name="layout/dialog" /}
+{block name='content'}
+<style>
+    .dialog-content{margin:20px;}
+    .dialog-footer{position:fixed;right:39%;top:82%}
+    .red-color{color:red;}
+</style>
+<div class="dialog-content">
+    <form class="form-horizontal dialog-form" id="form">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label">标题：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title" name="title">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="is_show" class="col-sm-3 control-label">样式名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="is_show" name="is_show" value="" placeholder="样式名称将影响前台页面的布局，如有不明白的问PHP程序员">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="title2" class="col-sm-3 control-label">标题2：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title2" name="title2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="title3" class="col-sm-3 control-label">标题3：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title3" name="title3">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pic" class="col-sm-3 control-label">图片1：</label>
+                    <div class="col-sm-9">
+                        <button type="button" class="layui-btn" id="pic" is_nginx="{$is_nginx}">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                        <img src="/static/default.png" style="width:50px;height:50px;" id="cur_pic"/>
+                        <input type="hidden" name="pic_curr" id="pic_curr" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pic" class="col-sm-3 control-label">图片2：</label>
+                    <div class="col-sm-9">
+                        <button type="button" class="layui-btn" id="pic2" is_nginx="{$is_nginx}">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                        <img src="/static/default.png" style="width:50px;height:50px;" id="cur_pic2"/>
+                        <input type="hidden" name="pic_curr2" id="pic_curr2" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="url" class="col-sm-3 control-label">URL：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="url" name="url">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="desc" class="col-sm-3 control-label">描述1：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc2" class="col-sm-3 control-label">描述2：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc2" class="form-control form-control-sm" name="desc2" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc3" class="col-sm-3 control-label">描述3：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc3" class="form-control form-control-sm" name="desc3" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc4" class="col-sm-3 control-label">描述4：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc4" class="form-control form-control-sm" name="desc4" value=""/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="desc5" class="col-sm-3 control-label">描述5：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc5" class="form-control form-control-sm" name="desc5" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc6" class="col-sm-3 control-label">描述6：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc6" class="form-control form-control-sm" name="desc6" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc7" class="col-sm-3 control-label">描述7：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc7" class="form-control form-control-sm" name="desc7" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="status" class="col-sm-3 control-label">状态：</label>
+                    <div class="col-sm-9">
+                        <select id="status" name="status" class="form-control form-control-sm">
+                            {volist name="status" id="status_list"}
+                            <option value="{$key}">{$status_list}</option>
+                            {/volist}
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="td-align dialog-footer" style="top:90%;">
+            <button class="btn btn-warning" onclick="admin_module.cancel_btn()"> <i class="fa fa-close"></i> 取消</button>
+            <input type="hidden" name="is_add" value="1">
+            <button class="btn btn-primary" type="button" onclick="admin_module.add_case(this)" data-url="{:url('/v1/systematic/cases/addcase')}"><i class="fa fa-save"></i> 确定提交</button>
+        </div>
+    </form>
+</div>
+{/block}

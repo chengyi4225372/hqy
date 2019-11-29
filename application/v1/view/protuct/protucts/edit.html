@@ -1,0 +1,60 @@
+{extend name="layout/dialog" /}
+{block name='content'}
+<style>
+    .dialog-content{margin:20px;}
+    .dialog-footer{position:fixed;right:39%;top:82%}
+    .red-color{color:red;}
+</style>
+<div class="dialog-content">
+    <form class="form-horizontal dialog-form" id="form">
+        <div class="row">
+            <div class="col-md-9">
+
+                <div class="form-group">
+                    <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>产品图片：</label>
+                    <div class="col-sm-9">
+                        <input type="file"  onchange="upload_file()" style="display:none;" class="form-control form-control-sm" id="file">
+                        <img id="imgs" src="{$info.imgs|default='__PUBLIC__/default.png'}" style="width:90px;height:80px;">
+                        <input type="hidden" id="Images" value="{$info.imgs}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>产品名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" value="{$info.names}" class="form-control form-control-sm" id="names" name="names">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="icp" class="col-sm-3 control-label">基本描述：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value="{$info.desc}"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tel" class="col-sm-3 control-label">跳转地址：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="purl" class="form-control form-control-sm" name="purl" value="{$info.purl}"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="status" class="col-sm-3 control-label">状态：</label>
+                    <div class="col-sm-9">
+                        <select id="status"  class="form-control form-control-sm">
+                            <option value="1" {eq name="$info.status" value="1"} selected=""{/eq} >启用</option>
+                            <option value="0" {eq name="$info.status" value="0"} selected=""{/eq} >禁止</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="hidden"  id='pid' value="{$info.id}" />
+            </div>
+        </div>
+        <div class="td-align dialog-footer">
+            <button class="btn btn-primary edits" type="button"   data-url="{:url('/v1/protuct/protucts/edit')}"><i class="fa fa-save"></i> 确定提交</button>
+            <button class="btn btn-warning" onclick="go_return()"> <i class="fa fa-close"></i> 取消</button>
+        </div>
+    </form>
+</div>
+{/block}

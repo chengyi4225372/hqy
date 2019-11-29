@@ -1,0 +1,60 @@
+{extend name="layout/dialog" /}
+{block name='content'}
+<style>
+    .dialog-content{margin:20px;}
+    .dialog-footer{position:fixed;right:39%;top:82%}
+</style>
+<div class="dialog-content">
+    <form class="form-horizontal dialog-form" id="form">
+        <div class="row">
+            <div class="col-md-9">
+
+                <div class="form-group">
+                    <label for="pid" class="col-sm-3 control-label">父级部门：</label>
+                    <div class="col-sm-9">
+                        <select class="form-control selectpicker show-tick" data-live-search="true" id="pid" name="pid"  data-msg-required="请选择">
+                            <option value="0">请选择</option>
+                            {volist name="all_org" id="items"}
+                                <option value="{$items['id']}">{$items['title']}</option>
+                            {/volist}
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>部门名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title" name="title">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pid" class="col-sm-3 control-label"><span class="red-color">*</span>负责人：</label>
+                    <div class="col-sm-9">
+                        <select class="form-control selectpicker show-tick" data-live-search="true" title="" id="manage_uid" name="manage_uid">
+                            <option value="">请选择</option>
+                            {volist name='saleUser' id='vo'}
+                            <option value="{$key}">{$vo}</option>
+                            {/volist}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>权重：</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control form-control-sm" id="weigh" name="weigh" value="1">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="td-align dialog-footer">
+            <button class="btn btn-warning" onclick="javascript:parent.layer.closeAll();"> <i class="fa fa-close"></i> 取消</button>
+            <input type="hidden" name="is_add" value="1">
+            <button class="btn btn-primary" type="button" onclick="admin_module.save_btn(this)" data-url="{:url('/v1/organ/organization/addorg')}"><i class="fa fa-save"></i> 确定提交</button>
+        </div>
+    </form>
+</div>
+{/block}

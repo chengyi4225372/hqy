@@ -1,0 +1,27 @@
+---------------------------------------------------------------
+[ 2019-11-28T09:23:27+08:00 ] 172.26.2.107 GET /index.php/home/index/infoBiao.html
+[ error ] [0]语法解析错误: syntax error, unexpected ')', expecting ',' or ';'[/opt/web/hui/runtime/temp/8a7e342b2bd21cc864f91853cec17312.php:200]
+---------------------------------------------------------------
+[ 2019-11-28T09:23:36+08:00 ] 172.26.2.107 GET /index.php/home/index/infoBiao.html
+[ error ] [0]致命错误: Call to undefined function mb_suybstr()[/opt/web/hui/runtime/temp/8a7e342b2bd21cc864f91853cec17312.php:200]
+---------------------------------------------------------------
+[ 2019-11-28T09:25:42+08:00 ] 172.26.2.107 GET /index.php/home/index/infoBiao.html
+[ error ] [2]Use of undefined constant utf - assumed 'utf' (this will throw an Error in a future version of PHP)[/opt/web/hui/runtime/temp/8a7e342b2bd21cc864f91853cec17312.php:200]
+---------------------------------------------------------------
+[ 2019-11-28T09:25:46+08:00 ] 172.26.2.252 GET /index.php/home/index/infoBiao.html
+[ error ] [2]Use of undefined constant utf - assumed 'utf' (this will throw an Error in a future version of PHP)[/opt/web/hui/runtime/temp/8a7e342b2bd21cc864f91853cec17312.php:200]
+---------------------------------------------------------------
+[ 2019-11-28T09:26:06+08:00 ] 172.26.2.107 GET /index.php/home/index/infoBiao.html
+[ error ] [8]未定义数组索引: UTF-8[/opt/web/hui/application/common.php:24]
+---------------------------------------------------------------
+[ 2019-11-28T09:26:08+08:00 ] 172.26.2.107 GET /index.php/home/index/infoBiao.html
+[ error ] [8]未定义数组索引: UTF-8[/opt/web/hui/application/common.php:24]
+---------------------------------------------------------------
+[ 2019-11-28T09:35:49+08:00 ] 172.26.2.107 GET /index.php/home/index/infoBiao.html
+[ error ] [0]致命错误: Call to undefined function app\v1\service\mb_substr()[/opt/web/hui/application/v1/service/Infosservice.php:115]
+---------------------------------------------------------------
+[ 2019-11-28T09:45:10+08:00 ] 172.26.2.252 GET /index.php/home/index/index.html
+[ error ] [2]mb_substr() expects at least 2 parameters, 0 given[/opt/web/hui/application/home/controller/Index.php:20]
+---------------------------------------------------------------
+[ 2019-11-28T09:50:42+08:00 ] 172.26.2.107 GET /index.php/home/index/infoBiao.html
+[ error ] [2002]SQLSTATE[HY000] [2002] Connection timed out[/opt/web/hui/thinkphp/library/think/db/Connection.php:295]

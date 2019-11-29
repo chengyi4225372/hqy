@@ -1,0 +1,15 @@
+---------------------------------------------------------------
+[ 2019-11-07T15:48:23+08:00 ] 127.0.0.1 POST /v1/login/check.html
+[ error ] [0]致命错误: Call to a member function toArray() on null[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\application\v1\service\Systems.php:48]
+---------------------------------------------------------------
+[ 2019-11-07T15:49:00+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/edit.html
+[ error ] [10501]SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'purl' at row 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:463]
+---------------------------------------------------------------
+[ 2019-11-07T15:49:01+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/edit.html
+[ error ] [10501]SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'purl' at row 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:463]
+---------------------------------------------------------------
+[ 2019-11-07T15:49:05+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/edit.html
+[ error ] [10501]SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'purl' at row 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:463]
+---------------------------------------------------------------
+[ 2019-11-07T15:49:20+08:00 ] 127.0.0.1 POST /v1/protuct/protucts/edit.html
+[ error ] [10501]SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'purl' at row 1[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hui\thinkphp\library\think\db\Connection.php:463]

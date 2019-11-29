@@ -1,0 +1,12 @@
+---------------------------------------------------------------
+[ 2019-11-14T08:15:46+08:00 ] 172.26.2.194 GET /index.php/api/login/savetokens
+[ error ] [0]致命错误: Class 'app\api\controller\Config' not found[/opt/web/hui/application/api/controller/Login.php:21]
+---------------------------------------------------------------
+[ 2019-11-14T11:17:16+08:00 ] 172.26.2.194 GET /index.php/home/login/commonlogout?is_logout=1&mobile=18681524382
+[ error ] [0]致命错误: Call to undefined function app\home\controller\curl_get()[/opt/web/hui/application/home/controller/Login.php:148]
+---------------------------------------------------------------
+[ 2019-11-14T15:05:53+08:00 ] 172.26.2.194 GET /index.php/v1/users/user/edituser.html?username=%E6%9E%97%E6%9C%9D%E8%8B%B1&tel=13654655&mail=565656%40163.com&userid=11
+[ error ] [8]未定义数组索引: id[/opt/web/hui/application/v1/controller/users/User.php:62]
+---------------------------------------------------------------
+[ 2019-11-14T15:39:57+08:00 ] 172.26.2.194 GET /index.php/v1/users/user/edituser.html?username=%E5%8F%B2%E7%8E%89%E9%BE%99&tel=13510129433&mail=23456%40qq.coma&userid=1
+[ error ] [8]未定义数组索引: id[/opt/web/hui/application/v1/controller/users/User.php:62]

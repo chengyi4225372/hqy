@@ -1,0 +1,39 @@
+---------------------------------------------------------------
+[ 2019-11-27T17:03:23+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:34+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:35+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:35+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:36+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:37+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:38+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:38+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:39+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:39+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:39+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:39+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]
+---------------------------------------------------------------
+[ 2019-11-27T17:05:40+08:00 ] 172.26.2.108 GET /index.php/home/index/infoBiao.html
+[ error ] [2]call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\Page' not found[/opt/web/hui/thinkphp/library/think/db/Query.php:1434]

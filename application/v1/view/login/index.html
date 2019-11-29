@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html lang="zh-CN">
+<head>
+    <!-- 加载样式及META信息 -->
+    {include file="common/meta" /}
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <a href="javascript:void(0);"><b>后台管理</b></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Sign in to start your session</p>
+        <form id="loginForm" action="{:url('/v1/login/check')}" login-action="{:url('/index/login', ['url' => ''])}" method="post">
+            <div class="usernamelogin">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" id="pd-form-username" placeholder="{:__('Username')}" name="username" autocomplete="off" value=""
+                           data-rule="required;"/>
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" id="pd-form-password" placeholder="{:__('Password')}" name="password" autocomplete="off" value=""
+                           data-rule="{:__('Password')}:required;password"/>
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+            </div>
+            <div class="social-auth-links text-center">
+                <p>- TO -</p>
+                <button type="submit" id="submit" class="btn bg-purple btn-block btn-flat">Sign In</button>
+            </div>
+            <div class="alert alert-warning alert-dismissible margin-top10">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <i class="fa fa-fw fa-thumbs-o-down"></i><span> Please enter your name and password</span></div>
+
+        </form>
+    </div>
+    <div class="lockscreen-footer text-center">
+        Copyright &copy; 2019-2025 <b>慧企云</b><br>
+        All rights reserved
+    </div>
+    <!-- /.login-box-body -->
+</div>
+<!-- 加载JS脚本 -->
+{include file="common/script" /}
+<script src="__PUBLIC__/assets/dist/js/login.js"></script>
+</body>
+</html>

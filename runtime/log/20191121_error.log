@@ -1,0 +1,12 @@
+---------------------------------------------------------------
+[ 2019-11-21T15:24:29+08:00 ] 172.26.2.194 GET /index.php/home/index/index
+[ error ] [8]未定义数组索引: artId[/opt/web/hui/application/home/controller/Index.php:26]
+---------------------------------------------------------------
+[ 2019-11-21T16:52:10+08:00 ] 172.26.2.21 GET /index.php/home/login/savetokens?msg1=eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiLlsI_nsbPnspIiLCJ1c2VySWQiOiIzNjA2OGU1OTQzNGE0NmE1YTZkZWM1MzFmZGQ2ZmM1MyIsIm5hbWUiOiJDIiwiZXhwIjoxNTc0MzQwNzMwfQ.e_gecAnvBseA-9osqSpSBUoO7nDHbHO3-5tPv4toCv79AUasx1x6AuScCh8RfbsawTn0HTexDPQGaG0m_d_CKbCBgalVJEER9K7WMsPhHYSC385qKjPZvehD_6DXgB8FRuoRDHZ7AjPRih84YcYYGwVy5cnznbmrQ3OpV7wZw6k&msg2=19807198428&msg3=C
+[ error ] [8]未定义数组索引: msg4[/opt/web/hui/application/home/controller/Login.php:115]
+---------------------------------------------------------------
+[ 2019-11-21T16:57:19+08:00 ] 172.26.2.231 GET /index.php/home/login/savetokens?msg1=eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiLlhbvmrpblnLoiLCJ1c2VySWQiOiI2MTA4MjUyYmVhNGQ0MzdmYjQwNzNjMTZhZDE1OTM1YiIsIm5hbWUiOiJCIiwiZXhwIjoxNTc0MzQxMDM5fQ.nSWX_YF5g3e0B_x48bUxgMCZJpAG34Exgk9lnmD-H9DZCLh89sFxLuXhIp0iUInMA6NNsLpaZ3ez3ewMGOWhenY_DY98V2sX3f2BVfWvTqyZ4IghSY3HBC8h1_xir-nCv9HXQaHLZP_tMYUDXtXKScwZTxVUQmia-gRYXO4sus4&msg2=18372722672&msg3=B
+[ error ] [8]未定义数组索引: msg4[/opt/web/hui/application/home/controller/Login.php:115]
+---------------------------------------------------------------
+[ 2019-11-21T18:05:14+08:00 ] 172.26.2.21 GET /index.php/home/login/savetokens?msg1=eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiLmrabmsYnkvIHkuJoiLCJ1c2VySWQiOiIxMyIsIm5hbWUiOiJCIiwiZXhwIjoxNTc0MzQ1MTE0fQ.STA4cXlOVtsg5_AoSR3hYtThMVVbQX_MGhpHoCN_19kO6w6Ugzytr8TiyDpGorXRSNi-srbPUFzUw7DC_ofkvni01cWJw2ffS59-jXy8EeQzVXQiLtOz4OmJi8eHjA6oXcxjkns9y6TJ4OyOHwd0ADjo4TQCMNoG1gqaeiGsECI&msg2=13476025254&msg3=B
+[ error ] [8]未定义数组索引: msg4[/opt/web/hui/application/home/controller/Login.php:115]

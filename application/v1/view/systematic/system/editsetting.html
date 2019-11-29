@@ -1,0 +1,63 @@
+{extend name="layout/dialog" /}
+{block name='content'}
+<style>
+    .dialog-content{margin:20px;}
+    .dialog-footer{position:fixed;right:39%;top:82%}
+    .red-color{color:red;}
+</style>
+<div class="dialog-content">
+    <form class="form-horizontal dialog-form" id="form">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>网站名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title" name="title" value="{$data['title']}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="icp" class="col-sm-3 control-label">ICP备案号：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="icp" name="icp" value="{$data['icp']}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="count_code" class="col-sm-3 control-label">地址：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="count_code" class="form-control form-control-sm" name="count_code" value="{$data['count_code']}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tel" class="col-sm-3 control-label">固定电话：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="tel" class="form-control form-control-sm" name="tel" value="{$data['tel']}"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mail" class="col-sm-3 control-label">邮箱：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="mail" class="form-control form-control-sm" name="mail" value="{$data['mail']}"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="status" class="col-sm-3 control-label">状态：</label>
+                    <div class="col-sm-9">
+                        <select id="status" name="status" class="form-control form-control-sm">
+                            {volist name="status" id="status_list"}
+                            <option value="{$key}" {if $key == $data['status']}selected=selected{/if}>{$status_list}</option>
+                            {/volist}
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="td-align dialog-footer">
+            <button class="btn btn-warning" onclick="admin_module.cancel_btn()"> <i class="fa fa-close"></i> 取消</button>
+            <input type="hidden" name="site_id" id="site_id" value="{$data['id']}">
+            <button class="btn btn-primary" type="button" onclick="admin_module.setting_edit(this)" data-url="{:url('/v1/systematic/system/editsetting')}"><i class="fa fa-save"></i> 确定提交</button>
+        </div>
+    </form>
+</div>
+{/block}
