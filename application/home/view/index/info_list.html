@@ -90,22 +90,25 @@
                 <li><a href="javascript:;">行业资讯</a></li>
                 <!-- <li><a href="{:url('/home/launch/index')}">惠启动</a></li> -->
             </ul>
-            {if empty($userinfo['mobile'])}
-            <div class='register'>
-                <a href="javascript:void(0)" login_url="{$baseurl}" loca_url="{:config('curl.website')}"
-                   onclick="login_btn(this)">登录</a>
-                <a href="{:url('/home/login/register')}">注册</a>
-            </div>
-            {else /}
-            <div class="u_info">
-                <img src="__HOME__/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
-                <p style="display:inline-block;color:#fff;"  id="mobile_phone">{$userinfo['mobile']}</p>
 
-                <div class="u_info_content" id="u_info_content">
-                    <a class="u_out" href="javascript:void(0)" data-token="{$userinfo['token']}" onclick="user_logout(this)" location_url="{:url('/home/index/index')}" data-url="{:url('/home/login/logout')}">退出账号</a>
-                </div>
-            </div>
-            {/if}
+            <!--登录，注册暂时先不上线 2019年12月2号-->
+
+            <!--{if empty($userinfo['mobile'])}-->
+            <!--<div class='register'>-->
+                <!--<a href="javascript:void(0)" login_url="{$baseurl}" loca_url="{:config('curl.website')}"-->
+                   <!--onclick="login_btn(this)">登录</a>-->
+                <!--<a href="{:url('/home/login/register')}">注册</a>-->
+            <!--</div>-->
+            <!--{else /}-->
+            <!--<div class="u_info">-->
+                <!--<img src="__HOME__/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">-->
+                <!--<p style="display:inline-block;color:#fff;"  id="mobile_phone">{$userinfo['mobile']}</p>-->
+
+                <!--<div class="u_info_content" id="u_info_content">-->
+                    <!--<a class="u_out" href="javascript:void(0)" data-token="{$userinfo['token']}" onclick="user_logout(this)" location_url="{:url('/home/index/index')}" data-url="{:url('/home/login/logout')}">退出账号</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--{/if}-->
         </div>
     </div>
 
@@ -178,12 +181,35 @@
                         {else /}
                         {volist name='shang' id='sh'}
                         <li>
-                            <a href="javascript:;"
-                               data-url="{:url('/home/index/getInfo',['mid' => $sh.id])}"
-                               login_url="{$baseurl}"
-                               loca_url="{:config('curl.website')}/home/index/getInfo?mid={$sh['id']}"
-                               mobile-phone="{$userinfo['mobile']}" data-id="{$sh['id']}"
-                               onclick="home_module.show_detail(this)">
+                            <!--<a href="javascript:;"-->
+                               <!--data-url="{:url('/home/index/getInfo',['mid' => $sh.id])}"-->
+                               <!--login_url="{$baseurl}"-->
+                               <!--loca_url="{:config('curl.website')}/home/index/getInfo?mid={$sh['id']}"-->
+                               <!--mobile-phone="{$userinfo['mobile']}" data-id="{$sh['id']}"-->
+                               <!--onclick="home_module.show_detail(this)">-->
+                                <!--<div class="infoItem">-->
+                                    <!--<div class="infoLeft">-->
+                                        <!--<img src="{$sh.imgs?$sh.imgs:'__HOME__/images/infoItem.jpg';}" alt="">-->
+                                    <!--</div>-->
+
+                                    <!--<div class="infoRight">-->
+                                        <!--<div class="rightTop">-->
+                                            <!--<div class="itemTitle">{:mb_substr($sh.title,0,35,'utf-8')}</div>-->
+                                            <!--<span class="itemTime">-->
+                                                <!--<img src="__SPI__/images/shijian2x.png" alt=""><span>{$sh.release_time}</span>-->
+                                            <!--</span>-->
+                                        <!--</div>-->
+                                        <!--<p>-->
+                                            <!--{$sh.describe}-->
+                                        <!--</p>-->
+
+                                    <!--</div>-->
+
+                                <!--</div>-->
+                            <!--</a>-->
+
+
+                            <a href="{:config('curl.website')}/home/index/getInfo?mid={$sh['id']}">
                                 <div class="infoItem">
                                     <div class="infoLeft">
                                         <img src="{$sh.imgs?$sh.imgs:'__HOME__/images/infoItem.jpg';}" alt="">
@@ -204,6 +230,7 @@
 
                                 </div>
                             </a>
+
                             <ul class="tags">
                                 {empty name='$sh.keyword'}
                                 {else /}

@@ -197,23 +197,24 @@
                         </li>
                     </ul>
 
+                    <!--登录，注册暂时先不上线 2019年12月2号-->
 
-                    <div class='register' id="{if empty($userinfo['mobile'])}register{else /}registers{/if}">
-                        <a href="javascript:void(0)" login_url="{$baseurl}" loca_url="{:config('curl.website')}"
-                           onclick="login_btn(this)">登录</a>
-                        <a href="{:url('/home/login/register')}">注册</a>
-                    </div>
+                    <!--<div class='register' id="{if empty($userinfo['mobile'])}register{else /}registers{/if}">-->
+                        <!--<a href="javascript:void(0)" login_url="{$baseurl}" loca_url="{:config('curl.website')}"-->
+                           <!--onclick="login_btn(this)">登录</a>-->
+                        <!--<a href="{:url('/home/login/register')}">注册</a>-->
+                    <!--</div>-->
 
-                    <div class="u_info" id="{if empty($userinfo['mobile'])}u_info{else /}u_info2{/if}" >
-                        <img src="__HOME__/images/user_img.png">
-                        <p id="mobile_phone">
-                            {$userinfo['mobile']}</p>
-                        <div class="u_info_content" id="u_info_content">
-                            <a class="u_out" href="javascript:void(0)" data-token="{$userinfo['token']}"
-                               onclick="user_logout(this)" location_url="{:url('/home/index/index')}"
-                               data-url="{:url('/home/login/logout')}">退出账号</a>
-                        </div>
-                    </div>
+                    <!--<div class="u_info" id="{if empty($userinfo['mobile'])}u_info{else /}u_info2{/if}" >-->
+                        <!--<img src="__HOME__/images/user_img.png">-->
+                        <!--<p id="mobile_phone">-->
+                            <!--{$userinfo['mobile']}</p>-->
+                        <!--<div class="u_info_content" id="u_info_content">-->
+                            <!--<a class="u_out" href="javascript:void(0)" data-token="{$userinfo['token']}"-->
+                               <!--onclick="user_logout(this)" location_url="{:url('/home/index/index')}"-->
+                               <!--data-url="{:url('/home/login/logout')}">退出账号</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
 
 
 
@@ -312,11 +313,23 @@
                     <div class='totalInfo_title'>招商政策</div>
                     {volist name="shang" id="ss"}
                     <div class='totalInfo_content'>
-                        <a href="javascript:void(0)" data-url="{:url('/home/index/getInfo',['mid' => $ss.id])}"
-                           login_url="{$baseurl}"
-                           loca_url="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}"
-                           mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}"
-                           onclick="home_module.show_detail(this)">
+
+                        <!--登录，注册暂时先不上线 2019年12月2号-->
+
+                        <!--<a href="javascript:void(0)" data-url="{:url('/home/index/getInfo',['mid' => $ss.id])}"-->
+                           <!--login_url="{$baseurl}"-->
+                           <!--loca_url="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}"-->
+                           <!--mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}"-->
+                           <!--onclick="home_module.show_detail(this)">-->
+                            <!--<div class='zhao_contentInfo'>-->
+                                <!--<div>{$ss.title}</div>-->
+                                <!--<div>-->
+                                    <!--{$ss.release_time}-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div> {$ss.describe}</div>-->
+                        <!--</a>-->
+                        <a href="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}">
                             <div class='zhao_contentInfo'>
                                 <div>{$ss.title}</div>
                                 <div>
@@ -325,7 +338,9 @@
                             </div>
                             <div> {$ss.describe}</div>
                         </a>
+
                     </div>
+
                     {/volist}
                     <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoList')}"
@@ -338,11 +353,26 @@
                     <div class='totalInfo_title'>招标信息</div>
                     {volist name="biao" id="biaos"}
                     <div class='totalInfo_content'>
-                        <a href="javascript:void(0)" data-url="{:url('/home/index/getInfo',['mid' => $ss.id])}"
-                           login_url="{$baseurl}"
-                           loca_url="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}"
-                           mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}"
-                           onclick="home_module.show_detail(this)">
+
+                        <!--登录，注册暂时先不上线 2019年12月2号-->
+
+                        <!--<a href="javascript:void(0)" data-url="{:url('/home/index/getInfo',['mid' => $ss.id])}"-->
+                           <!--login_url="{$baseurl}"-->
+                           <!--loca_url="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}"-->
+                           <!--mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}"-->
+                           <!--onclick="home_module.show_detail(this)">-->
+                            <!--<div class='zhao_contentInfo'>-->
+                                <!--<div>{$biaos.title|default=''}</div>-->
+                                <!--<div>-->
+                                    <!--{$biaos.release_time}-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--{$biaos.describe}-->
+                            <!--</div>-->
+                        <!--</a>-->
+
+                        <a href="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}">
                             <div class='zhao_contentInfo'>
                                 <div>{$biaos.title|default=''}</div>
                                 <div>
@@ -353,6 +383,7 @@
                                 {$biaos.describe}
                             </div>
                         </a>
+
                     </div>
                     {/volist}
 
