@@ -384,12 +384,13 @@ body {
   left: 50%;
   top: 6.4125rem;
   transform: translateX(-50%);
-  height: 9.375rem;
   background: rgba(64, 145, 255, .5);
   z-index: -999;
-  display: none;
-  transition: all .5s;
+  /* display: none; */
+  transition: all .3s;
+  height: 0;
   /* width: 1199px; */
+  overflow: hidden;
 }
 
 .two .secondary-menu {
@@ -400,15 +401,18 @@ body {
   height: 9.375rem;
   background: rgba(64, 145, 255, .5);
   z-index: -999;
-  display: none;
+  /* display: none; */
   /* display: block; */
-  transition: all .5s;
+  transition: all .3s;
   /* width: 1199px; */
+  height: 0;
+  overflow: hidden;
 }
 
 .header_content ul>li:hover .secondary-menu {
   /* top: 6rem; */
-  display: block;
+  /* display: block; */
+  height: 9.375rem;
 }
 
 .secondary-menu>div:nth-child(1) {

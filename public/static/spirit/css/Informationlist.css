@@ -30,7 +30,7 @@
     height: 0;
     clear: both;
     visibility: hidden;
-    
+
 }
 
 .clearfix {
@@ -193,6 +193,7 @@ a {
     height: 100%;
     margin-left: 6.4375rem;
 }
+
 .titile li {
     height: 100%;
 }
@@ -201,7 +202,7 @@ a {
     position: relative;
     color: #4091FF;
 }
-  
+
 .titile li:hover>a::after {
     content: '';
     position: absolute;
@@ -243,7 +244,7 @@ a {
     text-decoration: none;
 }
 
-.nav-active>a{
+.nav-active>a {
     position: relative;
 }
 
@@ -270,7 +271,8 @@ a {
     /* padding-top: 0.5625rem; */
     box-sizing: border-box;
 }
-.titile :last-child{
+
+.titile :last-child {
     margin-right: 0;
 }
 
@@ -294,6 +296,7 @@ a {
     color: rgba(0, 105, 179, 1);
     color: #fff;
 }
+
 .header_content .register>a:nth-of-type(2) {
     margin-left: 1.125rem;
 }
@@ -304,74 +307,81 @@ a {
     left: 50%;
     top: 3.7125rem;
     transform: translateX(-50%);
-    height: 9.375rem;
+    /* height: 9.375rem; */
     background: rgba(64, 145, 255, .5);
     z-index: 1;
-    display: none;
-    transition: all .5s;
+    /* display: none; */
+    transition: all .3s;
     min-width: 65.625rem;
-  }
-  .two .secondary-menu {
+    height: 0;
+    overflow: hidden;
+}
+
+.two .secondary-menu {
     position: absolute;
     left: 50%;
     top: 3.7125rem;
     transform: translateX(-50%);
-    height: 9.375rem;
+    /* height: 9.375rem; */
     background: rgba(64, 145, 255, .5);
     z-index: 1;
-    display: none;
+    /* display: none; */
     /* display: block; */
-    transition: all .5s;
+    transition: all .3s;
+    height: 0;
+    overflow: hidden;
     /* width: 1199px; */
-  }
-  
-  .header_content ul>li:hover .secondary-menu {
+}
+
+.header_content ul>li:hover .secondary-menu {
     /* top: 6rem; */
-    display: block;
-  }
-  
-  .secondary-menu>div:nth-child(1) {
+    /* display: block; */
+    height: 9.375rem;
+}
+
+.secondary-menu>div:nth-child(1) {
     /* padding: .625rem 4.125rem 0 4.125rem; */
     display: -webkit-flex;
-  /* 新版本语法: Chrome 21+ */
-  display: -webkit-box;
-  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
-  display: -moz-box;
-  /* 老版本语法: Firefox (buggy) */
-  display: -ms-flexbox;
-  /* 混合版本语法: IE 10 */
-  display: flex;
-  -moz-justify-content: space-around;
-  -webkit-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  }
-  
-  .secondary-menu>div:nth-child(1) dl {
+    /* 新版本语法: Chrome 21+ */
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: flex;
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.secondary-menu>div:nth-child(1) dl {
     /* float: left;
     margin-right: 3.8rem */
-  }
-  
-  .secondary-menu>div:nth-child(1) dl:last-child {
+}
+
+.secondary-menu>div:nth-child(1) dl:last-child {
     margin-right: 0;
-  }
-  
-  .secondary-menu>div:nth-child(1) dl dt a {
+}
+
+.secondary-menu>div:nth-child(1) dl dt a {
     font-size: 1.375rem;
     font-family: Source Han Sans CN;
     font-weight: bold;
     color: rgba(255, 255, 255, 1);
     line-height: 3.8125rem;
-  }
-  
-  .secondary-menu>div:nth-child(1) dl dd {
+}
+
+.secondary-menu>div:nth-child(1) dl dd {
     font-size: .875rem;
     font-family: Source Han Sans CN;
     font-weight: 300;
     color: rgba(254, 255, 255, 1);
     line-height: 1.75rem;
-  }
+}
+
 /* 用户信息 */
 
 .u_info {
@@ -449,6 +459,7 @@ a {
     width: 75rem;
     margin: 0 auto;
 }
+
 .banner {
     width: 100%;
     height: 28.625rem;
@@ -472,7 +483,7 @@ a {
 .bg_breadCrumbs {
     width: 100%;
     background: #f5f9ff;
-    
+
 }
 
 .bread-crumbs {
@@ -490,10 +501,12 @@ a {
 .bread-crumbs {
     color: #999;
 }
-.bread-crumbs span a{
+
+.bread-crumbs span a {
     color: #999;
 }
-.bread-crumbs >span >a:hover{
+
+.bread-crumbs>span>a:hover {
     color: #3E92FF;
 }
 
@@ -605,10 +618,11 @@ a {
 }
 
 /* 热搜 */
-.hotWord{
+.hotWord {
     width: 65.625rem;
     margin: 0 auto;
 }
+
 .hotWord ul {
     display: flex;
     justify-content: flex-start;
@@ -619,39 +633,40 @@ a {
     /* padding: .75rem 1.3125rem; */
     height: 1.625rem;
     line-height: 1.625rem;
-    padding: 0  1.3125rem;
+    padding: 0 1.3125rem;
     background: rgba(246, 246, 246, 1);
     border-radius: .25rem;
     margin-right: 1.75rem !important;
     cursor: pointer;
 }
 
-.hotWord ul li  {
+.hotWord ul li {
     font-size: .875rem;
     color: #333;
     position: relative;
 }
 
 .hotWord ul li:first-child {
-    background: #fff!important;
+    background: #fff !important;
     padding: 0;
-    color: #D61313!important;
+    color: #D61313 !important;
     cursor: default;
 }
 
 
 
-.hotWord ul li:hover{
+.hotWord ul li:hover {
 
     background: #4091FF;
     color: #fff;
 }
-.hotWord .chosen{
+
+.hotWord .chosen {
     background: #4091FF;
     color: #fff;
 }
 
-.hotWord ul li:hover span::after{
+.hotWord ul li:hover span::after {
     content: '×';
     color: #fff;
     position: absolute;
@@ -664,10 +679,11 @@ a {
 
 
 /* 分隔线 */
-.bg_divide{
+.bg_divide {
     width: 100%;
     padding: 2rem 0;
 }
+
 .divide {
     width: 65.625rem;
     height: .0625rem;
@@ -680,9 +696,11 @@ a {
     /* padding: 4rem .625rem 0 .625rem; */
     width: 100%;
 }
-.tabs-items ul{
+
+.tabs-items ul {
     margin: 0 auto;
 }
+
 .show {
     display: block;
 }
@@ -845,7 +863,7 @@ a {
 
 .infoRight {
     width: 47.5rem;
-    
+
     margin-left: 2.5rem;
     border-bottom: 1px solid #f5f5f5;
     box-sizing: border-box;
@@ -877,7 +895,8 @@ a {
     height: 1rem;
     margin-right: .625rem;
 }
-.itemTime span{
+
+.itemTime span {
     font-size: .75rem;
     color: #999;
 }
@@ -893,10 +912,12 @@ a {
     overflow: hidden;
     margin: 1.4375rem 0;
 }
+
 #shang li {
     position: relative;
 }
-#shang li>.tags{
+
+#shang li>.tags {
     position: absolute;
     left: 18.2rem;
     bottom: 0.875rem;
@@ -904,10 +925,11 @@ a {
     justify-content: flex-start;
 
 }
-#shang li>.tags li{
+
+#shang li>.tags li {
     padding: .15625rem .875rem;
     background: #f5f5f5;
-    border-radius:0.25rem;
+    border-radius: 0.25rem;
     color: #666;
     font-size: .75rem;
     margin: 0;
@@ -915,20 +937,21 @@ a {
 }
 
 /* 分页 */
-.pageNation{
+.pageNation {
     display: flex;
     background: #fff;
     padding: 4rem 0 7.125rem 0;
 }
 
-.pageNation .page{
+.pageNation .page {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     min-width: 1.5rem;
     margin: 0 auto;
 }
-.page li{
+
+.page li {
     box-sizing: border-box;
     min-width: 1.5rem;
     height: 1.5rem;
@@ -944,9 +967,10 @@ a {
 }
 
 .page li:first-child,
-.page li:last-child{
+.page li:last-child {
     padding: 0 .375rem;
 }
+
 .page li a {
     display: block;
     width: 100%;
@@ -955,46 +979,55 @@ a {
     text-align: center;
     /*margin:0 0 .375rem;*/
 }
-.page li:hover{
+
+.page li:hover {
     background: #4091FF;
     color: #fff;
 }
+
 .page li:hover a {
     color: #fff;
 }
 
-.page .currentPage{
+.page .currentPage {
     background: #fff;
     color: #fff;
 }
+
 .page .currentPage a {
     color: #999;
 }
-.page .activePage{
+
+.page .activePage {
     background: #4091FF;
     color: #fff;
 }
-.page .activePage a{
+
+.page .activePage a {
     color: #fff;
 }
+
 .page .onclick {
-    cursor:no-drop
+    cursor: no-drop
 }
 
 .page .prev,
-.page .next{
+.page .next {
     margin: 0 1rem;
 }
+
 .page .prev:hover,
-.page .next:hover{
+.page .next:hover {
     background: #fff;
     color: #4091FF;
 }
+
 .page .more {
     border: none;
 
 }
-.page .more:hover{
+
+.page .more:hover {
     background: none;
     color: #4091FF;
 }
@@ -1033,7 +1066,7 @@ a {
 }
 
 .parter_catefories {
-    width:75rem;
+    width: 75rem;
     overflow: hidden;
     font-size: .6875rem;
     font-family: "Source Han Sans CN";
@@ -1189,7 +1222,8 @@ a {
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
 }
-.register a:hover{
+
+.register a:hover {
     background: #074483;
     color: #fff;
 }
