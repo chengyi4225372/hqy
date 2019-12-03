@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1575253365;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1575258006;}*/ ?>
 <!DOCTYPE>
 <html lang="en">
 
@@ -198,23 +198,24 @@
                         </li>
                     </ul>
 
+                    <!--登录，注册暂时先不上线 2019年12月2号-->
 
-                    <div class='register' id="<?php if(empty($userinfo['mobile'])): ?>register<?php else: ?>registers<?php endif; ?>">
-                        <a href="javascript:void(0)" login_url="<?php echo $baseurl; ?>" loca_url="<?php echo config('curl.website'); ?>"
-                           onclick="login_btn(this)">登录</a>
-                        <a href="<?php echo url('/home/login/register'); ?>">注册</a>
-                    </div>
+                    <!--<div class='register' id="<?php if(empty($userinfo['mobile'])): ?>register<?php else: ?>registers<?php endif; ?>">-->
+                        <!--<a href="javascript:void(0)" login_url="<?php echo $baseurl; ?>" loca_url="<?php echo config('curl.website'); ?>"-->
+                           <!--onclick="login_btn(this)">登录</a>-->
+                        <!--<a href="<?php echo url('/home/login/register'); ?>">注册</a>-->
+                    <!--</div>-->
 
-                    <div class="u_info" id="<?php if(empty($userinfo['mobile'])): ?>u_info<?php else: ?>u_info2<?php endif; ?>" >
-                        <img src="/static/home/images/user_img.png">
-                        <p id="mobile_phone">
-                            <?php echo $userinfo['mobile']; ?></p>
-                        <div class="u_info_content" id="u_info_content">
-                            <a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>"
-                               onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>"
-                               data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
-                        </div>
-                    </div>
+                    <!--<div class="u_info" id="<?php if(empty($userinfo['mobile'])): ?>u_info<?php else: ?>u_info2<?php endif; ?>" >-->
+                        <!--<img src="/static/home/images/user_img.png">-->
+                        <!--<p id="mobile_phone">-->
+                            <!--<?php echo $userinfo['mobile']; ?></p>-->
+                        <!--<div class="u_info_content" id="u_info_content">-->
+                            <!--<a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>"-->
+                               <!--onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>"-->
+                               <!--data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
 
 
 
@@ -313,11 +314,23 @@
                     <div class='totalInfo_title'>招商政策</div>
                     <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                     <div class='totalInfo_content'>
-                        <a href="javascript:void(0)" data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"
-                           login_url="<?php echo $baseurl; ?>"
-                           loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>"
-                           mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>"
-                           onclick="home_module.show_detail(this)">
+
+                        <!--登录，注册暂时先不上线 2019年12月2号-->
+
+                        <!--<a href="javascript:void(0)" data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"-->
+                           <!--login_url="<?php echo $baseurl; ?>"-->
+                           <!--loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>"-->
+                           <!--mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>"-->
+                           <!--onclick="home_module.show_detail(this)">-->
+                            <!--<div class='zhao_contentInfo'>-->
+                                <!--<div><?php echo $ss['title']; ?></div>-->
+                                <!--<div>-->
+                                    <!--<?php echo $ss['release_time']; ?>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div> <?php echo $ss['describe']; ?></div>-->
+                        <!--</a>-->
+                        <a href="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>">
                             <div class='zhao_contentInfo'>
                                 <div><?php echo $ss['title']; ?></div>
                                 <div>
@@ -326,7 +339,9 @@
                             </div>
                             <div> <?php echo $ss['describe']; ?></div>
                         </a>
+
                     </div>
+
                     <?php endforeach; endif; else: echo "" ;endif; ?>
                     <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
                             data-url="<?php echo url('/home/index/infoList'); ?>"
@@ -339,11 +354,26 @@
                     <div class='totalInfo_title'>招标信息</div>
                     <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                     <div class='totalInfo_content'>
-                        <a href="javascript:void(0)" data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"
-                           login_url="<?php echo $baseurl; ?>"
-                           loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>"
-                           mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>"
-                           onclick="home_module.show_detail(this)">
+
+                        <!--登录，注册暂时先不上线 2019年12月2号-->
+
+                        <!--<a href="javascript:void(0)" data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"-->
+                           <!--login_url="<?php echo $baseurl; ?>"-->
+                           <!--loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>"-->
+                           <!--mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>"-->
+                           <!--onclick="home_module.show_detail(this)">-->
+                            <!--<div class='zhao_contentInfo'>-->
+                                <!--<div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>-->
+                                <!--<div>-->
+                                    <!--<?php echo $biaos['release_time']; ?>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div>-->
+                                <!--<?php echo $biaos['describe']; ?>-->
+                            <!--</div>-->
+                        <!--</a>-->
+
+                        <a href="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>">
                             <div class='zhao_contentInfo'>
                                 <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
                                 <div>
@@ -354,6 +384,7 @@
                                 <?php echo $biaos['describe']; ?>
                             </div>
                         </a>
+
                     </div>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
 
