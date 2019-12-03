@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86f1b9ed-9690-4906-9c73-bed798b919ff" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/01985ca2427428a5816a72383c856fc5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/4d811f393d6b01306e5cad8a5489fdb1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/b98b0097f3eceb2ba5d75b5d36538488.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/get_info.html" afterPath="$PROJECT_DIR$/application/home/view/index/get_info.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/index.html" afterPath="$PROJECT_DIR$/application/home/view/index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/industry.html" afterPath="$PROJECT_DIR$/application/home/view/index/industry.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/info_biao.html" afterPath="$PROJECT_DIR$/application/home/view/index/info_biao.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/info_list.html" afterPath="$PROJECT_DIR$/application/home/view/index/info_list.html" />
     </list>
     <ignored path="hqy_.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,6 +32,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="info_biao.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/home/view/index/info_biao.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41327125">
+              <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Index.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -70,17 +88,17 @@
         <entry file="file://$PROJECT_DIR$/application/home/view/index/industry.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-12.75">
-              <caret line="89" column="48" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="78" />
+              <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_info.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_info.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/view/index/get_info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2599278">
-              <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+            <state vertical-scroll-proportion="-2.953125">
+              <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -89,8 +107,18 @@
       <file leaf-file-name="info_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/view/index/info_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-66.75">
-              <caret line="89" column="59" selection-start-line="89" selection-start-column="59" selection-end-line="89" selection-end-column="59" />
+            <state vertical-scroll-proportion="-12.75">
+              <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/home/view/index/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.5">
+              <caret line="141" column="74" selection-start-line="141" selection-start-column="74" selection-end-line="141" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -116,16 +144,16 @@
         <option value="$PROJECT_DIR$/application/home/controller/Optimal.php" />
         <option value="$PROJECT_DIR$/application/home/view/optimal/index.html" />
         <option value="$PROJECT_DIR$/application/v1/service/Ificationservice.php" />
-        <option value="$PROJECT_DIR$/application/home/view/index/index.html" />
         <option value="$PROJECT_DIR$/public/static/home/js/index.js" />
         <option value="$PROJECT_DIR$/public/static/spirit/js/detail.js" />
         <option value="$PROJECT_DIR$/public/static/spirit/js/industry.js" />
-        <option value="$PROJECT_DIR$/application/home/view/index/industry.html" />
-        <option value="$PROJECT_DIR$/application/home/view/index/info_list.html" />
-        <option value="$PROJECT_DIR$/application/home/view/index/info_biao.html" />
         <option value="$PROJECT_DIR$/application/home/controller/Index.php" />
         <option value="$PROJECT_DIR$/application/v1/service/Infosservice.php" />
+        <option value="$PROJECT_DIR$/application/home/view/index/industry.html" />
         <option value="$PROJECT_DIR$/application/home/view/index/get_info.html" />
+        <option value="$PROJECT_DIR$/application/home/view/index/info_list.html" />
+        <option value="$PROJECT_DIR$/application/home/view/index/index.html" />
+        <option value="$PROJECT_DIR$/application/home/view/index/info_biao.html" />
       </list>
     </option>
   </component>
@@ -459,6 +487,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hqy_" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hqy_" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -513,7 +559,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -710,14 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/view/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7777777">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/static/spirit/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.36201116">
@@ -750,34 +788,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/view/index/info_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-66.75">
-          <caret line="89" column="59" selection-start-line="89" selection-start-column="59" selection-end-line="89" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thinkphp/helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.9444447">
           <caret line="264" column="13" selection-start-line="264" selection-start-column="13" selection-end-line="264" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/view/index/info_biao.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.871944">
-          <caret line="155" column="42" selection-start-line="155" selection-start-column="38" selection-end-line="155" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/view/index/industry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.75">
-          <caret line="89" column="48" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="78" />
           <folding />
         </state>
       </provider>
@@ -824,10 +838,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/extra/curl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34575087">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/view/index/industry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.75">
+          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/home/view/index/get_info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2599278">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+        <state vertical-scroll-proportion="-2.953125">
+          <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/view/index/info_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.75">
+          <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/view/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.5">
+          <caret line="141" column="74" selection-start-line="141" selection-start-column="74" selection-end-line="141" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/view/index/info_biao.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41327125">
+          <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
           <folding />
         </state>
       </provider>
