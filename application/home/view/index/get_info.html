@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keyword" content="{$info['keyword']}">
+  <meta name="description" content="{$info['describe']}">
   <title>{$title}</title>
   <link rel="stylesheet" href="__SPI__/css/base.css">
   <link rel="stylesheet" href="__SPI__/css/detail.css">
@@ -93,19 +95,19 @@
           </li>
           <li><a href="{:url('/home/index/infoBiao')}">政府招标信息</a></li>
           <li><a href="{:url('/home/index/infoList')}">政府招商信息</a></li>
-          <li><a href="javascript:;">行业资讯</a></li>
+          <li><a href="{:url('/home/index/industry')}">行业资讯</a></li>
           <!-- <li><a href="{:url('/home/launch/index')}">惠启动</a></li> -->
         </ul>
-        {if empty($userinfo['mobile'])}
-        <div class='register'>
-          <a href="javascript:void(0)"
-             login_url="{$baseurl}"
-             loca_url="{:config('curl.website')}" onclick="login_btn(this)">登录</a>
-          <a href="{:url('/home/login/register')}">注册</a>
-        </div>
-        {else /}
-        {include file="common/login"}
-        {/if}
+        <!--{if empty($userinfo['mobile'])}-->
+        <!--<div class='register'>-->
+          <!--<a href="javascript:void(0)"-->
+             <!--login_url="{$baseurl}"-->
+             <!--loca_url="{:config('curl.website')}" onclick="login_btn(this)">登录</a>-->
+          <!--<a href="{:url('/home/login/register')}">注册</a>-->
+        <!--</div>-->
+        <!--{else /}-->
+        <!--{include file="common/login"}-->
+        <!--{/if}-->
       </div>
     </div>
     <div  class='bread_title'>

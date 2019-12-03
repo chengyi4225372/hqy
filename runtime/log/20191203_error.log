@@ -1,3 +1,6 @@
 ---------------------------------------------------------------
 [ 2019-12-03T16:44:40+08:00 ] 172.26.2.252 GET /home/optimal/index.html
 [ error ] [8]未定义变量: count[/opt/web/hqy_/runtime/temp/69464227edc7ecb2084a5c50bd9e0b2c.php:19]
+---------------------------------------------------------------
+[ 2019-12-03T17:02:08+08:00 ] 172.26.2.252 GET /home/index/industry.html
+[ error ] [8]未定义变量: shang[/opt/web/hqy_/runtime/temp/4d811f393d6b01306e5cad8a5489fdb1.php:256]

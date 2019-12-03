@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:64:"/opt/web/hui/public/../application/home/view/index/get_info.html";i:1574908491;s:52:"/opt/web/hui/application/home/view/common/login.html";i:1574908491;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:65:"/opt/web/hqy_/public/../application/home/view/index/get_info.html";i:1575366226;s:53:"/opt/web/hqy_/application/home/view/common/login.html";i:1575011765;}*/ ?>
 <!DOCTYPE >
 <html lang="en">
 
@@ -6,6 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keyword" content="<?php echo $info['keyword']; ?>">
+  <meta name="description" content="<?php echo $info['describe']; ?>">
   <title><?php echo $title; ?></title>
   <link rel="stylesheet" href="/static/spirit/css/base.css">
   <link rel="stylesheet" href="/static/spirit/css/detail.css">
@@ -94,17 +96,18 @@
           </li>
           <li><a href="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a></li>
           <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
-          <li><a href="javascript:;">行业资讯</a></li>
+          <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
           <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
         </ul>
-        <?php if(empty($userinfo['mobile'])): ?>
-        <div class='register'>
-          <a href="javascript:void(0)"
-             login_url="<?php echo $baseurl; ?>"
-             loca_url="<?php echo config('curl.website'); ?>" onclick="login_btn(this)">登录</a>
-          <a href="<?php echo url('/home/login/register'); ?>">注册</a>
-        </div>
-        <?php else: if(empty($userinfo['mobile'])): ?>
+        <!--<?php if(empty($userinfo['mobile'])): ?>-->
+        <!--<div class='register'>-->
+          <!--<a href="javascript:void(0)"-->
+             <!--login_url="<?php echo $baseurl; ?>"-->
+             <!--loca_url="<?php echo config('curl.website'); ?>" onclick="login_btn(this)">登录</a>-->
+          <!--<a href="<?php echo url('/home/login/register'); ?>">注册</a>-->
+        <!--</div>-->
+        <!--<?php else: ?>-->
+        <!--<?php if(empty($userinfo['mobile'])): ?>
 <div class="loging clearfix">
     <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
         登陆
@@ -120,7 +123,8 @@
         <a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>" onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
     </div>
 </div>
-<?php endif; endif; ?>
+<?php endif; ?>-->
+        <!--<?php endif; ?>-->
       </div>
     </div>
     <div  class='bread_title'>
