@@ -24,8 +24,8 @@ window.onload = function () {
             item.classList.add('nav-active')
         }
     })
+    
     menuUl.onmouseleave = function () {
-        console.log(111);
         let li = document.getElementsByClassName('nav-active')[0]
         li.classList.remove('nav-active')
         menuList[0].classList.add('nav-active')

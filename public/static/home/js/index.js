@@ -22,10 +22,10 @@ window.onload = function () {
       box.classList.add("header_content_two")
       logo.classList.add('content_logo_two')
       ul.classList.add('two')
-      register.classList.add('register_two')
+      // register.classList.add('register_two')
 
 
-      uinfo.classList.add('u_info_two')
+      // uinfo.classList.add('u_info_two')
       // uinfo.style.marginTop = '1rem'
 
 
@@ -67,8 +67,8 @@ window.onload = function () {
       box.classList.remove("header_content_two")
       logo.classList.remove('content_logo_two')
       ul.classList.remove('two')
-      register.classList.remove('register_two')
-      uinfo.classList.remove('u_info_two')
+      // register.classList.remove('register_two')
+      // uinfo.classList.remove('u_info_two')
 
       // 返回顶部样式
       let goTop = document.getElementById('goTop')
@@ -102,7 +102,6 @@ window.onload = function () {
     }
   })
   menuUl.onmouseleave = function () {
-    console.log(111);
     let li = document.getElementsByClassName('nav-active')[0]
     li.classList.remove('nav-active')
     menuList[0].classList.add('nav-active')
