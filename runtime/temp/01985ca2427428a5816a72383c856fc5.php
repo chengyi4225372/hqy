@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1575365332;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1575371664;}*/ ?>
 <!DOCTYPE>
 <html lang="en">
 
@@ -40,7 +40,7 @@
                     <div class="w secondary-menu" id="secondary-menu">
                         <div>
                             <dl>
-                                <dt><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dt>
+                                <dt><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
                                 <dd>
                                     ·企税降成本 薪税降税负
 

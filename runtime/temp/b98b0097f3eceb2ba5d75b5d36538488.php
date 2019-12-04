@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1575363719;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1575371647;}*/ ?>
 <!DOCTYPE>
 <html lang="en">
 
@@ -140,7 +140,7 @@
 
                                 <div>
                                     <dl>
-                                        <dt><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dt>
+                                        <dt><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
                                         <dd>
                                             ·企税降成本 薪税降税负
 

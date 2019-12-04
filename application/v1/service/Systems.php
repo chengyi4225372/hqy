@@ -266,10 +266,10 @@ class Systems
             return json(['status' => false,'msg' => '添加失败']);
         }
         $add['pic'] = $params['pic'];
-        $add['title'] = $params['title'] ?? '';
-        $add['desc'] = $params['desc'] ?? '';
-        $add['url'] = $params['url'] ?? '';
-        $add['status'] = $params['status'] ?? 1;
+        $add['title'] = $params['title'] ? $params['title'] :'';
+        $add['desc'] = $params['desc'] ? $params['desc'] :'';
+        $add['url'] = $params['url'] ? $params['url'] : '';
+        $add['status'] = $params['status'] ? $params['status'] : 1;
         $res = Slideshow::insert($add);
         if($res === false){
             return json(['status' => false,'msg' => '添加失败']);
