@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1575371647;}*/ ?>
-<!DOCTYPE>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1575443621;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -164,7 +164,7 @@
                                         <dd>·企业成本可控透明化</dd>
                                     </dl>
                                     <dl>
-                                        <dt><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></dt>
+                                        <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                         <dd>
                                             ·技能价值化
 
@@ -510,11 +510,11 @@
                 </dl>
 
             </div>
-            <!--<div class='concat_icon'>-->
-            <!--<div><img src="/static/home/images/bo.png" alt=""></div>-->
-            <!--<div><img src="/static/home/images/wx.png" alt=""></div>-->
-            <!--<div><img src="/static/home/images/tie.png" alt=""></div>-->
-            <!--</div>-->
+            <div class='concat_icon clearfix'>
+            <div><img src="/static/home/images/bo.png" alt=""></div>
+            <div><img src="/static/home/images/wx.png" alt=""></div>
+            <div><img src="/static/home/images/tie.png" alt=""></div>
+            </div>
         </div>
     </div>
 

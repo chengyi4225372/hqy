@@ -63,7 +63,7 @@
                                 <dd>·企业成本可控透明化</dd>
                             </dl>
                             <dl>
-                                <dt><a href="{:config('curl.hzs')}">惠找事</a></dt>
+                                <dt><a href="{:url('/home/searches/index')}">惠找事</a></dt>
                                 <dd>
                                     ·技能价值化
 
@@ -125,7 +125,7 @@
         <div class="bread-crumbs">
             <span><a href="{:url('/home/index/index')}">首页</a></span> >
             <span><a class="current" style="color:#3E92FF;" onclick="go_news(this)"
-                     data-url="{:url('/home/index/infoList')}">政府招标信息</a></span> <span></span>
+                     data-url="{:url('/home/index/industry')}">行业资讯</a></span> <span></span>
         </div>
     </div>
 
@@ -139,7 +139,7 @@
                       <li class="li-active">招商政策</li>
                       <li>招标信息</li>
                     </ul> -->
-                    <div class="govPolicy fl">政府招标信息</div>
+                    <div class="govPolicy fl">行业资讯</div>
                     <div class="search-box fr">
                         <input type="text" id="keyword" value="{$Think.get.keyword}" placeholder="请输入关键字">
                         <div id="searched" style="cursor:pointer;" data-url="{:url('/home/index/industry')}">搜索</div>
