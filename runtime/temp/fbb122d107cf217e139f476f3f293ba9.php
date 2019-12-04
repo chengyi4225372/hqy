@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1575439676;}*/ ?>
 <!DOCTYPE>
 <html lang="en">
 
@@ -6,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>惠企云</title>
-    <link rel="stylesheet" href="__HOME__/css/base.css">
-    <link rel="stylesheet" href="__HOME__/css/index.css">
+    <link rel="stylesheet" href="/static/home/css/base.css">
+    <link rel="stylesheet" href="/static/home/css/index.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src='__HOME__/js/index.js'></script>
-    <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
-    <script src='__HOME__/js/common.js'></script>
-    <script src='__PUBLIC__/common/js/public.js'></script>
+    <script src='/static/home/js/index.js'></script>
+    <script src="/static/assets/plugins/layui/layui.all.js"></script>
+    <script src='/static/home/js/common.js'></script>
+    <script src='/static/common/js/public.js'></script>
     <style>
         /*.header {*/
-        /*background-image: url("{$slideshow['pic']|default='__HOME__/images/default.png'}");*/
+        /*background-image: url("<?php echo (isset($slideshow['pic']) && ($slideshow['pic'] !== '')?$slideshow['pic']:'/static/home/images/default.png'); ?>");*/
         /*}*/
 
         .success_icon > div:nth-of-type(1) {
@@ -25,7 +26,7 @@
             width: 24.125rem;
             height: 10.375rem;
             background-size: contain;
-            background-image: url('__HOME__/images/huiduoxin.png');
+            background-image: url('/static/home/images/huiduoxin.png');
             background-size: 100% 100%;
         }
 
@@ -36,7 +37,7 @@
             width: 24.125rem;
             height: 10.375rem;
             background-size: 100%;
-            background-image: url('__HOME__/images/huichuangyou.png');
+            background-image: url('/static/home/images/huichuangyou.png');
             background-size: 100% 100%;
         }
 
@@ -47,7 +48,7 @@
             width: 24.125rem;
             height: 10.375rem;
             background-size: contain;
-            background-image: url('__HOME__/images/huilinggong.png');
+            background-image: url('/static/home/images/huilinggong.png');
             background-size: 100% 100%;
         }
 
@@ -58,7 +59,7 @@
             width: 24.125rem;
             height: 10.375rem;
             background-size: 100%;
-            background-image: url('__HOME__/images/huizhaoshi.png');
+            background-image: url('/static/home/images/huizhaoshi.png');
             background-size: 100% 100%;
         }
 
@@ -69,7 +70,7 @@
             width: 24.125rem;
             height: 10.375rem;
             background-size: contain;
-            background-image: url('__HOME__/images/huiqidong.png');
+            background-image: url('/static/home/images/huiqidong.png');
             background-size: 100% 100%;
         }
 
@@ -80,14 +81,14 @@
             width: 24.125rem;
             height: 10.375rem;
             background-size: contain;
-            background-image: url('__HOME__/images/huichuangye.png');
+            background-image: url('/static/home/images/huichuangye.png');
             background-size: 100% 100%;
         }
     </style>
 
 </head>
 
-<body id="getdata" data="{$count}">
+<body id="getdata" data="<?php echo $count; ?>">
 
 <div class='container'>
 
@@ -109,11 +110,11 @@
                             </div>
                             <div>
                                 <span class='email'></span>
-                                <span>{$site_info['mail']}</span>
+                                <span><?php echo $site_info['mail']; ?></span>
                             </div>
                             <div>
                                 <span class='phone'></span>
-                                <span>{$site_info['tel']}</span>
+                                <span><?php echo $site_info['tel']; ?></span>
                             </div>
                         </div>
                     </div>
@@ -125,13 +126,13 @@
 
         <!-- 头部其他内容 -->
         <div class='header_fixed'>
-            <input type="hidden" id="data_token" value="{$userinfo['token']}"/>
+            <input type="hidden" id="data_token" value="<?php echo $userinfo['token']; ?>"/>
             <div class='header_content' id='headerContent'>
                 <div class='w content'>
                     <div class='content_logo' id='logo'></div>
                     <ul class="">
-                        <li class="nav-active"><a href="{:url('/home/index/index')}">首页</a></li>
-                        <li><a href="{:url('/home/optimal/index')}">招募合伙人</a></li>
+                        <li class="nav-active"><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+                        <li><a href="<?php echo url('/home/optimal/index'); ?>">招募合伙人</a></li>
                         <li>
                             <a href="javascript:;">“惠”家族产品</a>
                             <!-- 二级菜单 -->
@@ -139,7 +140,7 @@
 
                                 <div>
                                     <dl>
-                                        <dt><a href="{:url('/home/optimal/index')}">惠优税</a></dt>
+                                        <dt><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dt>
                                         <dd>
                                             ·企税降成本 薪税降税负
 
@@ -147,7 +148,7 @@
                                         <dd>·分红降扣率 创业降个税</dd>
                                     </dl>
                                     <dl>
-                                        <dt><a href="{:config('curl.hlg')}">惠灵工</a></dt>
+                                        <dt><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
                                         <dd>
                                             ·寻求多样化用工模式
 
@@ -155,7 +156,7 @@
                                         <dd>·提高内部人员效能</dd>
                                     </dl>
                                     <dl>
-                                        <dt><a href="{:url('/home/many/index')}">惠多薪</a></dt>
+                                        <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                                         <dd>
                                             ·优化员工福利选择模块
 
@@ -163,7 +164,7 @@
                                         <dd>·企业成本可控透明化</dd>
                                     </dl>
                                     <dl>
-                                        <dt><a href="{:config('curl.hzs')}">惠找事</a></dt>
+                                        <dt><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></dt>
                                         <dd>
                                             ·技能价值化
 
@@ -171,7 +172,7 @@
                                         <dd>·成就更好自我</dd>
                                     </dl>
                                     <dl>
-                                        <dt><a href="{:url('/home/business/index')}">惠创业</a></dt>
+                                        <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                         <dd>
                                             ·一站式解决方案
 
@@ -179,7 +180,7 @@
                                         <dd>·激活企业最大效益</dd>
                                     </dl>
                                     <dl>
-                                        <dt><a href="{:url('/home/launch/index')}">惠企动</a></dt>
+                                        <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
                                         <dd>·产品内容建设中……</dd>
                                     </dl>
                                 </div>
@@ -187,32 +188,32 @@
                             </div>
                         </li>
                         <li>
-                            <a href="{:url('/home/index/infoBiao')}">政府招标信息</a>
+                            <a href="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a>
                         </li>
                         <li>
-                            <a href="{:url('/home/index/infoList')}">政府招商信息</a>
+                            <a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a>
                         </li>
                         <li>
-                            <a href="{:url('/home/index/industry')}">行业资讯</a>
+                            <a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a>
                         </li>
                     </ul>
 
                     <!--登录，注册暂时先不上线 2019年12月2号-->
 
-                    <!--<div class='register' id="{if empty($userinfo['mobile'])}register{else /}registers{/if}">-->
-                        <!--<a href="javascript:void(0)" login_url="{$baseurl}" loca_url="{:config('curl.website')}"-->
+                    <!--<div class='register' id="<?php if(empty($userinfo['mobile'])): ?>register<?php else: ?>registers<?php endif; ?>">-->
+                        <!--<a href="javascript:void(0)" login_url="<?php echo $baseurl; ?>" loca_url="<?php echo config('curl.website'); ?>"-->
                            <!--onclick="login_btn(this)">登录</a>-->
-                        <!--<a href="{:url('/home/login/register')}">注册</a>-->
+                        <!--<a href="<?php echo url('/home/login/register'); ?>">注册</a>-->
                     <!--</div>-->
 
-                    <!--<div class="u_info" id="{if empty($userinfo['mobile'])}u_info{else /}u_info2{/if}" >-->
-                        <!--<img src="__HOME__/images/user_img.png">-->
+                    <!--<div class="u_info" id="<?php if(empty($userinfo['mobile'])): ?>u_info<?php else: ?>u_info2<?php endif; ?>" >-->
+                        <!--<img src="/static/home/images/user_img.png">-->
                         <!--<p id="mobile_phone">-->
-                            <!--{$userinfo['mobile']}</p>-->
+                            <!--<?php echo $userinfo['mobile']; ?></p>-->
                         <!--<div class="u_info_content" id="u_info_content">-->
-                            <!--<a class="u_out" href="javascript:void(0)" data-token="{$userinfo['token']}"-->
-                               <!--onclick="user_logout(this)" location_url="{:url('/home/index/index')}"-->
-                               <!--data-url="{:url('/home/login/logout')}">退出账号</a>-->
+                            <!--<a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>"-->
+                               <!--onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>"-->
+                               <!--data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>-->
                         <!--</div>-->
                     <!--</div>-->
 
@@ -228,11 +229,11 @@
     <!-- 文字部分-->
     <div class="header-content-box">
         <div class='content_text'>
-            <div class='w'>{$slideshow['title']}</div>
+            <div class='w'><?php echo $slideshow['title']; ?></div>
         </div>
 
         <div class='rentong'>
-            <div class='w'>{$slideshow['desc']}</div>
+            <div class='w'><?php echo $slideshow['desc']; ?></div>
         </div>
 
         <div class='btn'>
@@ -251,15 +252,15 @@
             <div class='choose-intro'>惠企云平台是一款基于国家政策、以合规化为基础、由金牌顾问团队打造的产品，为企业及个人提供税筹问题的全方位解决方案。</div>
             <ul class='img_total'>
                 <li>
-                    <img src="__HOME__/images/more.png" alt="">
+                    <img src="/static/home/images/more.png" alt="">
                     <a href="javascript:void(0)">集专家智“惠”定制</a>
                 </li>
                 <li>
-                    <img src="__HOME__/images/rainning.png" alt="">
+                    <img src="/static/home/images/rainning.png" alt="">
                     <a href="javascript:void(0)">集专家智“惠”定制</a>
                 </li>
                 <li>
-                    <img src="__HOME__/images/pig.png" alt="">
+                    <img src="/static/home/images/pig.png" alt="">
                     <a href="javascript:void(0)">给您最优“惠”</a>
                 </li>
             </ul>
@@ -271,17 +272,17 @@
         <div class='w'>
             <div class='product_logo'></div>
             <ul class='all_product'>
-                {volist name='protuct' id='v1'}
+                <?php if(is_array($protuct) || $protuct instanceof \think\Collection || $protuct instanceof \think\Paginator): $i = 0; $__LIST__ = $protuct;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?>
                 <li>
-                    <img src="{$v1.imgs|default=''}" alt="">
-                    <a href="javascript:void(0)">{$v1.names|default=''}</a>
-                    <a href="javascript:void(0)">{$v1.desc|default=''}</a>
+                    <img src="<?php echo (isset($v1['imgs']) && ($v1['imgs'] !== '')?$v1['imgs']:''); ?>" alt="">
+                    <a href="javascript:void(0)"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
+                    <a href="javascript:void(0)"><?php echo (isset($v1['desc']) && ($v1['desc'] !== '')?$v1['desc']:''); ?></a>
                     <ul class='one_pic'>
                         <li><a onclick="showSearch()">获取方案</a></li>
-                        <li><a href="{$v1.purl|default='#'}">前往网站</a></li>
+                        <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>">前往网站</a></li>
                     </ul>
                 </li>
-                {/volist}
+                <?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
         </div>
     </div>
@@ -302,7 +303,7 @@
                     <!-- 搜索 -->
                     <div class='zhaoSearch'>
                         <div class='searchLogo'>
-                            <i onclick="search(this)" data-url="{:url('/home/index/infoList')}"></i>
+                            <i onclick="search(this)" data-url="<?php echo url('/home/index/infoList'); ?>"></i>
                             <input type="text" id="keyword" placeholder="搜索招标政策和招标信息...">
                         </div>
                         <!-- <button>查询</button> -->
@@ -311,86 +312,86 @@
 
                 <div class='zhaomethods'>
                     <div class='totalInfo_title'>招商政策</div>
-                    {volist name="shang" id="ss"}
+                    <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                     <div class='totalInfo_content'>
 
                         <!--登录，注册暂时先不上线 2019年12月2号-->
 
-                        <!--<a href="javascript:void(0)" data-url="{:url('/home/index/getInfo',['mid' => $ss.id])}"-->
-                           <!--login_url="{$baseurl}"-->
-                           <!--loca_url="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}"-->
-                           <!--mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}"-->
+                        <!--<a href="javascript:void(0)" data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"-->
+                           <!--login_url="<?php echo $baseurl; ?>"-->
+                           <!--loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>"-->
+                           <!--mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>"-->
                            <!--onclick="home_module.show_detail(this)">-->
                             <!--<div class='zhao_contentInfo'>-->
-                                <!--<div>{$ss.title}</div>-->
+                                <!--<div><?php echo $ss['title']; ?></div>-->
                                 <!--<div>-->
-                                    <!--{$ss.release_time}-->
+                                    <!--<?php echo $ss['release_time']; ?>-->
                                 <!--</div>-->
                             <!--</div>-->
-                            <!--<div> {$ss.describe}</div>-->
+                            <!--<div> <?php echo $ss['describe']; ?></div>-->
                         <!--</a>-->
-                        <a href="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}">
+                        <a href="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>">
                             <div class='zhao_contentInfo'>
-                                <div>{$ss.title}</div>
+                                <div><?php echo $ss['title']; ?></div>
                                 <div>
-                                    {$ss.release_time}
+                                    <?php echo $ss['release_time']; ?>
                                 </div>
                             </div>
-                            <div> {$ss.describe}</div>
+                            <div> <?php echo $ss['describe']; ?></div>
                         </a>
 
                     </div>
 
-                    {/volist}
-                    <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
-                            data-url="{:url('/home/index/infoList')}"
-                            loca_url="{:config('curl.website')}/home/index/infoList"
-                            login_url="{$baseurl}">了解更多
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                    <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
+                            data-url="<?php echo url('/home/index/infoList'); ?>"
+                            loca_url="<?php echo config('curl.website'); ?>/home/index/infoList"
+                            login_url="<?php echo $baseurl; ?>">了解更多
                     </button>
                 </div>
 
                 <div class='zhaoTotalInfo'>
                     <div class='totalInfo_title'>招标信息</div>
-                    {volist name="biao" id="biaos"}
+                    <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                     <div class='totalInfo_content'>
 
                         <!--登录，注册暂时先不上线 2019年12月2号-->
 
-                        <!--<a href="javascript:void(0)" data-url="{:url('/home/index/getInfo',['mid' => $ss.id])}"-->
-                           <!--login_url="{$baseurl}"-->
-                           <!--loca_url="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}"-->
-                           <!--mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}"-->
+                        <!--<a href="javascript:void(0)" data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"-->
+                           <!--login_url="<?php echo $baseurl; ?>"-->
+                           <!--loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>"-->
+                           <!--mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>"-->
                            <!--onclick="home_module.show_detail(this)">-->
                             <!--<div class='zhao_contentInfo'>-->
-                                <!--<div>{$biaos.title|default=''}</div>-->
+                                <!--<div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>-->
                                 <!--<div>-->
-                                    <!--{$biaos.release_time}-->
+                                    <!--<?php echo $biaos['release_time']; ?>-->
                                 <!--</div>-->
                             <!--</div>-->
                             <!--<div>-->
-                                <!--{$biaos.describe}-->
+                                <!--<?php echo $biaos['describe']; ?>-->
                             <!--</div>-->
                         <!--</a>-->
 
-                        <a href="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}">
+                        <a href="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>">
                             <div class='zhao_contentInfo'>
-                                <div>{$biaos.title|default=''}</div>
+                                <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
                                 <div>
-                                    {$biaos.release_time}
+                                    <?php echo $biaos['release_time']; ?>
                                 </div>
                             </div>
                             <div>
-                                {$biaos.describe}
+                                <?php echo $biaos['describe']; ?>
                             </div>
                         </a>
 
                     </div>
-                    {/volist}
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
 
-                    <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
-                            data-url="{:url('/home/index/infoList')}"
-                            loca_url="{:config('curl.website')}/home/index/infoList"
-                            login_url="{$baseurl}">了解更多
+                    <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
+                            data-url="<?php echo url('/home/index/infoList'); ?>"
+                            loca_url="<?php echo config('curl.website'); ?>/home/index/infoList"
+                            login_url="<?php echo $baseurl; ?>">了解更多
                     </button>
 
                 </div>
@@ -400,40 +401,40 @@
     </div>
 
     <!-- 近期成功案例 -->
-    <input type="hidden" id="add_url" value="{:url('/home/index/ajaximage')}">
+    <input type="hidden" id="add_url" value="<?php echo url('/home/index/ajaximage'); ?>">
     <div class='success'>
         <div class='w success_content'>
             <div class='success_title'></div>
             <div class='success_icon'>
-                {volist name="case_list" id="data_list"}
-                <div style="cursor:pointer;" onclick="click_show(this)" keys="{$key}"
-                     class="{$data_list['is_show'].$key}" data="{$count}"
-                     data-attr="{$data_list['is_show']}">
-                    <div class='{if $key == 1}hui_icon{else /}p_icon{/if}'>
-                        <div>{$data_list['title2']}</div>
-                        <div>{$data_list['title3']}</div>
-                        {if $key != 1}
+                <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
+                <div style="cursor:pointer;" onclick="click_show(this)" keys="<?php echo $key; ?>"
+                     class="<?php echo $data_list['is_show'].$key; ?>" data="<?php echo $count; ?>"
+                     data-attr="<?php echo $data_list['is_show']; ?>">
+                    <div class='<?php if($key == 1): ?>hui_icon<?php else: ?>p_icon<?php endif; ?>'>
+                        <div><?php echo $data_list['title2']; ?></div>
+                        <div><?php echo $data_list['title3']; ?></div>
+                        <?php if($key != 1): ?>
                         <!--<a href="javascript:void(0)">-->
-                        <!--<img src="__HOME__/images/jiantou.png" alt="">-->
+                        <!--<img src="/static/home/images/jiantou.png" alt="">-->
                         <!--</a>-->
-                        {/if}
+                        <?php endif; ?>
                     </div>
                 </div>
-                {/volist}
+                <?php endforeach; endif; else: echo "" ;endif; ?>
 
             </div>
             <div class='to_detailInfo'>
-                {volist name="case_list" id="info_list"}
-                <div class="{$info_list['is_show']}">
-                    <div class='huichuangyou_title'>{$info_list['title']}</div>
+                <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info_list): $mod = ($i % 2 );++$i;?>
+                <div class="<?php echo $info_list['is_show']; ?>">
+                    <div class='huichuangyou_title'><?php echo $info_list['title']; ?></div>
                     <div class="con">
-                        <div class="desc">{$info_list['desc']}</div>
-                        <div class="desc">{$info_list['desc2']}</div>
-                        <div class="desc">{$info_list['desc3']}</div>
-                        <div class="desc">{$info_list['desc4']}</div>
-                        <div class="desc">{$info_list['desc5']}</div>
-                        <div class="desc">{$info_list['desc6']}</div>
-                        <div class="desc">{$info_list['desc7']}</div>
+                        <div class="desc"><?php echo $info_list['desc']; ?></div>
+                        <div class="desc"><?php echo $info_list['desc2']; ?></div>
+                        <div class="desc"><?php echo $info_list['desc3']; ?></div>
+                        <div class="desc"><?php echo $info_list['desc4']; ?></div>
+                        <div class="desc"><?php echo $info_list['desc5']; ?></div>
+                        <div class="desc"><?php echo $info_list['desc6']; ?></div>
+                        <div class="desc"><?php echo $info_list['desc7']; ?></div>
                         <div class='total_input'>
                             <div>
                                 <input type="text" id='contactName' placeholder="请输入您的姓名..">
@@ -452,7 +453,7 @@
                         </div>
                     </div>
                 </div>
-                {/volist}
+                <?php endforeach; endif; else: echo "" ;endif; ?>
 
             </div>
         </div>
@@ -503,16 +504,16 @@
                 </dl>
                 <dl>
                     <dt>联系我们</dt>
-                    <dd>{$site_info['tel']}</dd>
-                    <dd>{$site_info['mail']}</dd>
-                    <dd>{$site_info['count_code']}</dd>
+                    <dd><?php echo $site_info['tel']; ?></dd>
+                    <dd><?php echo $site_info['mail']; ?></dd>
+                    <dd><?php echo $site_info['count_code']; ?></dd>
                 </dl>
 
             </div>
             <div class='concat_icon clearfix'>
-            <div><img src="__HOME__/images/bo.png" alt=""></div>
-            <div><img src="__HOME__/images/wx.png" alt=""></div>
-            <div><img src="__HOME__/images/tie.png" alt=""></div>
+            <div><img src="/static/home/images/bo.png" alt=""></div>
+            <div><img src="/static/home/images/wx.png" alt=""></div>
+            <div><img src="/static/home/images/tie.png" alt=""></div>
             </div>
         </div>
     </div>

@@ -15,6 +15,8 @@ window.onload = function () {
         }
     }
 
+    
+
     // 返回顶部
     window.onscroll = function () {
         var top = document.body.scrollTop || document.documentElement.scrollTop;
