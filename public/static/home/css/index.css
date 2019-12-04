@@ -729,6 +729,10 @@ body {
 
 }
 
+.one_pic>li:nth-of-type(1) a:hover {
+  color: rgba(66, 133, 244, 1);
+}
+
 .one_pic>li:nth-of-type(2) a {
   font-size: 1.125rem;
   font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
@@ -1818,71 +1822,71 @@ input:-webkit-autofill {
 
 .mask-box1,
 .mask-box2 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    /*display: -webkit-box;*/
-    /*!* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. *!*/
-    /*display: -moz-box;*/
-    /*!* 老版本语法: Firefox (buggy) *!*/
-    /*display: -ms-flexbox;*/
-    /*!* 混合版本语法: IE 10 *!*/
-    /*display: -webkit-flex;*/
-    /*!* 新版本语法: Chrome 21+ *!*/
-    /*display: flex;*/
-    /*-webkit-flex-direction: column;*/
-    /*-moz-flex-direction: column;*/
-    /*-ms-flex-direction: column;*/
-    /*-o-flex-direction: column;*/
-    /*flex-direction: column;*/
-    /*-webkit-justify-content: center;*/
-    /*-moz-justify-content: center;*/
-    /*-ms-justify-content: center;*/
-    /*-o-justify-content: center;*/
-    /*justify-content: center;*/
-    /*-webkit-align-items: center;*/
-    /*-moz-align-items: center;*/
-    /*-ms-align-items: center;*/
-    /*-o-align-items: center;*/
-    /*align-items: center;*/
-    width: 16.25rem;
-    height: 10rem;
-    background: rgba(0, 0, 0, .7);
-    /* opacity: 0.7; */
-    border-radius: .75rem;
-    display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*display: -webkit-box;*/
+  /*!* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. *!*/
+  /*display: -moz-box;*/
+  /*!* 老版本语法: Firefox (buggy) *!*/
+  /*display: -ms-flexbox;*/
+  /*!* 混合版本语法: IE 10 *!*/
+  /*display: -webkit-flex;*/
+  /*!* 新版本语法: Chrome 21+ *!*/
+  /*display: flex;*/
+  /*-webkit-flex-direction: column;*/
+  /*-moz-flex-direction: column;*/
+  /*-ms-flex-direction: column;*/
+  /*-o-flex-direction: column;*/
+  /*flex-direction: column;*/
+  /*-webkit-justify-content: center;*/
+  /*-moz-justify-content: center;*/
+  /*-ms-justify-content: center;*/
+  /*-o-justify-content: center;*/
+  /*justify-content: center;*/
+  /*-webkit-align-items: center;*/
+  /*-moz-align-items: center;*/
+  /*-ms-align-items: center;*/
+  /*-o-align-items: center;*/
+  /*align-items: center;*/
+  width: 16.25rem;
+  height: 10rem;
+  background: rgba(0, 0, 0, .7);
+  /* opacity: 0.7; */
+  border-radius: .75rem;
+  display: none;
 }
 
 .mask-box1 span,
 .mask-box2 span {
-    display: block;
-    width: 2.625rem;
-    height: 2.625rem;
-    background: url('../images/success2x.png') no-repeat;
-    background-size: 100% 100%;
-    margin: 1.125rem auto;
+  display: block;
+  width: 2.625rem;
+  height: 2.625rem;
+  background: url('../images/success2x.png') no-repeat;
+  background-size: 100% 100%;
+  margin: 1.125rem auto;
 }
 
 .mask-box1 .mask-box-title,
 .mask-box2 .mask-box-title {
-    text-align: center;
-    font-size: 1.125rem;
-    font-family: PingFang SC;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 1);
-    margin: 0 0 1.25rem 0;
+  text-align: center;
+  font-size: 1.125rem;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  margin: 0 0 1.25rem 0;
 }
 
 .mask-box1 .mask-box-content,
 .mask-box2 .mask-box-content {
-    text-align: center;
-    font-size: .875rem;
-    font-family: PingFang SC;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 1);
+  text-align: center;
+  font-size: .875rem;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
 }
