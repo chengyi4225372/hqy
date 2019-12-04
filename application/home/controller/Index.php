@@ -25,6 +25,7 @@ class Index extends BaseController
 
             //招标 招商信息
             $biao = Infosservice::instance()->biao(['pid' => 1]);
+
             $shang = Infosservice::instance()->shang(['pid' => 2]);
 
             //轮播
@@ -152,7 +153,6 @@ class Index extends BaseController
            $info = infosservice::instance()->getId($id);
            $top  = Infosservice::instance()->getTop($id);
            $next = Infosservice::instance()->getNext($id);
-
            $this->assign('info',$info);
            $this->assign('top',$top);
            $this->assign('next',$next);

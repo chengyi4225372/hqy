@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86f1b9ed-9690-4906-9c73-bed798b919ff" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/01985ca2427428a5816a72383c856fc5.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/4d811f393d6b01306e5cad8a5489fdb1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/b98b0097f3eceb2ba5d75b5d36538488.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/get_info.html" afterPath="$PROJECT_DIR$/application/home/view/index/get_info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/index.html" afterPath="$PROJECT_DIR$/application/home/view/index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/industry.html" afterPath="$PROJECT_DIR$/application/home/view/index/industry.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/info_biao.html" afterPath="$PROJECT_DIR$/application/home/view/index/info_biao.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/info_list.html" afterPath="$PROJECT_DIR$/application/home/view/index/info_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/extra/curl.php" afterPath="$PROJECT_DIR$/application/extra/curl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/controller/Index.php" afterPath="$PROJECT_DIR$/application/home/controller/Index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/v1/service/Systems.php" afterPath="$PROJECT_DIR$/application/v1/service/Systems.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/v1/view/common/header.html" afterPath="$PROJECT_DIR$/application/v1/view/common/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/v1/view/common/left.html" afterPath="$PROJECT_DIR$/application/v1/view/common/left.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environment.php" afterPath="$PROJECT_DIR$/environment.php" />
     </list>
     <ignored path="hqy_.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="info_biao.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="info_biao.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/view/index/info_biao.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41327125">
+            <state vertical-scroll-proportion="-9.861111">
               <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
               <folding />
             </state>
@@ -45,8 +43,8 @@
       <file leaf-file-name="Index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/controller/Index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.6060605">
-              <caret line="151" column="49" selection-start-line="151" selection-start-column="49" selection-end-line="151" selection-end-column="49" />
+            <state vertical-scroll-proportion="-6.4242425">
+              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
               <folding>
                 <element signature="e#38#79#0#PHP" expanded="true" />
               </folding>
@@ -54,71 +52,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="helper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thinkphp/helper.php">
+      <file leaf-file-name="Systems.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/v1/service/Systems.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.9444447">
-              <caret line="264" column="13" selection-start-line="264" selection-start-column="13" selection-end-line="264" selection-end-column="13" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="2" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="2" />
+              <folding>
+                <marker date="1575422371192" expanded="true" signature="5843:5853" placeholder="..." />
+                <marker date="1575422371192" expanded="true" signature="6012:6022" placeholder="..." />
+                <marker date="1575422371192" expanded="true" signature="8668:8678" placeholder="..." />
+                <marker date="1575422371192" expanded="true" signature="8822:8832" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="left.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/v1/view/common/left.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.8181818">
+              <caret line="2" column="37" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ificationservice.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/v1/service/Ificationservice.php">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/v1/view/common/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.36111">
-              <caret line="153" column="25" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.22002329">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ification.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/common/model/Ification.php">
+      <file leaf-file-name="curl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/extra/curl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.5">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state vertical-scroll-proportion="-9.0">
+              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="industry.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/home/view/index/industry.html">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.75">
-              <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_info.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/home/view/index/get_info.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.953125">
-              <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="info_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/home/view/index/info_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.75">
-              <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/home/view/index/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.5">
-              <caret line="141" column="74" selection-start-line="141" selection-start-column="74" selection-end-line="141" selection-end-column="74" />
+            <state vertical-scroll-proportion="-1.5">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,13 +130,19 @@
         <option value="$PROJECT_DIR$/public/static/home/js/index.js" />
         <option value="$PROJECT_DIR$/public/static/spirit/js/detail.js" />
         <option value="$PROJECT_DIR$/public/static/spirit/js/industry.js" />
-        <option value="$PROJECT_DIR$/application/home/controller/Index.php" />
         <option value="$PROJECT_DIR$/application/v1/service/Infosservice.php" />
         <option value="$PROJECT_DIR$/application/home/view/index/industry.html" />
         <option value="$PROJECT_DIR$/application/home/view/index/get_info.html" />
         <option value="$PROJECT_DIR$/application/home/view/index/info_list.html" />
         <option value="$PROJECT_DIR$/application/home/view/index/index.html" />
         <option value="$PROJECT_DIR$/application/home/view/index/info_biao.html" />
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/environment.php" />
+        <option value="$PROJECT_DIR$/application/extra/curl.php" />
+        <option value="$PROJECT_DIR$/application/home/controller/Index.php" />
+        <option value="$PROJECT_DIR$/application/v1/service/Systems.php" />
+        <option value="$PROJECT_DIR$/application/v1/view/common/left.html" />
+        <option value="$PROJECT_DIR$/application/v1/view/common/header.html" />
       </list>
     </option>
   </component>
@@ -273,89 +262,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spirit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hqy_" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hqy_" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spirit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hqy_" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hqy_" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hqy_" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hqy_" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,6 +277,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hqy_" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hqy_" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hqy_" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hqy_" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="v1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -812,48 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/common/model/Ification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/controller/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6060605">
-          <caret line="151" column="49" selection-start-line="151" selection-start-column="49" selection-end-line="151" selection-end-column="49" />
-          <folding>
-            <element signature="e#38#79#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/home/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21564245">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="131" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/extra/curl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34575087">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/view/index/industry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.75">
-          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/home/view/index/get_info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.953125">
@@ -880,8 +797,103 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/home/view/index/info_biao.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41327125">
+        <state vertical-scroll-proportion="-9.861111">
           <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1257276">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="2" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/home/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0">
+          <caret line="124" column="29" selection-start-line="124" selection-start-column="29" selection-end-line="124" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/view/index/industry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5343422">
+          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/common/model/Ification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18859139">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/controller/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4242425">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding>
+            <element signature="e#38#79#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/v1/service/Systems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="2" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="2" />
+          <folding>
+            <marker date="1575422371192" expanded="true" signature="5843:5853" placeholder="..." />
+            <marker date="1575422371192" expanded="true" signature="6012:6022" placeholder="..." />
+            <marker date="1575422371192" expanded="true" signature="8668:8678" placeholder="..." />
+            <marker date="1575422371192" expanded="true" signature="8822:8832" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/extra/curl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.0">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/v1/view/common/left.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8181818">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/v1/view/common/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22002329">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding />
         </state>
       </provider>
