@@ -590,16 +590,16 @@ a {
     border-radius: .1875rem 0px 0px .1875rem;
 }
 
-.search-box>div::after {
+/* .search-box>div::after {
     content: '';
     position: absolute;
     left: -1.25rem;
     top: .625rem;
     width: .875rem;
-    height: .875rem;
+    height: .875rem; */
     /* background: url('../images/guanbi.png') no-repeat 100% 100%; */
-    cursor: pointer;
-}
+    /* cursor: pointer;
+} */
 
 
 
