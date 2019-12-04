@@ -189,13 +189,8 @@ a {
 }
 
 .header_content .a_href a {
-<<<<<<< HEAD
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(68, 139, 255, 1);
 }
@@ -217,21 +212,8 @@ a {
 }
 
 .login_box {
-<<<<<<< HEAD
-    width: 640px;
-    height: 700px;
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box;
-    /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Chrome */
-=======
     width: 40rem;
     height: 43.75rem;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     display: flex;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
@@ -278,17 +260,10 @@ a {
 }
 
 .account_login {
-<<<<<<< HEAD
-    width: 96px;
-    height: 24px;
-    font-size: 18px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     width: 6rem;
     height: 1.5rem;
     font-size: 1.125rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(50, 50, 50, 1);
     margin-right: 1.875rem;
@@ -305,17 +280,10 @@ a {
 }
 
 .phone {
-<<<<<<< HEAD
-    width: 96px;
-    height: 24px;
-    font-size: 18px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     width: 6rem;
     height: 1.5rem;
     font-size: 1.125rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(50, 50, 50, 1);
     margin-left: 1.875rem;
@@ -372,15 +340,9 @@ a {
     height: 3rem;
     outline: none;
     border: none;
-<<<<<<< HEAD
-    margin-right: 24px;
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     margin-right: 1.5rem;
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(51, 51, 51, 1);
     padding-left: .9375rem;
@@ -400,23 +362,11 @@ select::-ms-expand {
 
 .phone_input {
     position: relative;
-<<<<<<< HEAD
-    height: 46px;
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    -o-flex: 1;
-    flex: 1;
-    padding-left: 15px;
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     height: 2.675rem;
     flex: 1;
     padding-left: .9375rem;
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
 }
@@ -427,13 +377,8 @@ select::-ms-expand {
 
 .code_input {
     position: relative;
-<<<<<<< HEAD
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
     padding-left: 1.0625rem;
@@ -445,13 +390,8 @@ select::-ms-expand {
 
 .huo_code {
     cursor: pointer;
-<<<<<<< HEAD
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(47, 128, 237, 1);
     line-height: 1.875rem;
@@ -462,13 +402,8 @@ select::-ms-expand {
 .goRegister {
     margin-top: 1.5625rem;
     text-align: right;
-<<<<<<< HEAD
-    font-size: 14px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: .875rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(51, 51, 51, 1);
 }
@@ -481,17 +416,10 @@ select::-ms-expand {
     border-radius: .25rem;
     border: none;
     outline: none;
-<<<<<<< HEAD
-    margin-left: 50px;
-    margin-top: 100px;
-    font-size: 20px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     margin-left: 3.125rem;
     margin-top: 6.25rem;
     font-size: 1.25rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
     cursor:pointer;
@@ -499,13 +427,8 @@ select::-ms-expand {
 }
 
 .goRegister a {
-<<<<<<< HEAD
-    font-size: 14px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: .875rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: #2F80ED
 }
@@ -540,19 +463,11 @@ select::-ms-expand {
 .u_pass {
     position: relative;
     display: inline-block;
-<<<<<<< HEAD
-    width: 95px;
-    height: 48px;
-    line-height: 48px;
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     width: 5.9375rem;
     height: 3rem;
     line-height: 3rem;
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(51, 51, 51, 1);
 }
@@ -574,13 +489,8 @@ select::-ms-expand {
     height: 97%;
     padding-left: 1rem;
     box-sizing: border-box;
-<<<<<<< HEAD
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
     border: none;
@@ -608,13 +518,8 @@ select::-ms-expand {
 #content {
     padding-left: .625rem;
     background: rgb(255, 255, 255);
-<<<<<<< HEAD
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
     font-family: MicrosoftYaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     color: rgb(51, 51, 51);
     cursor: pointer;
 }

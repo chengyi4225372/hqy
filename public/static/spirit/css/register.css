@@ -196,13 +196,8 @@ a {
 }
 
 .header .tohome a {
-<<<<<<< HEAD
-    font-size: 16px;
     font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
-    font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(68, 139, 255, 1);
 }
@@ -246,13 +241,8 @@ a {
     margin: 0px auto;
     transform: translateY(-29%);
     background: url('../images/biaodanbeijing.png') no-repeat;
-<<<<<<< HEAD
-    font-size: 24px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1.5rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     /* color: rgba(47, 128, 237, 1); */
     color: #fff;
@@ -296,13 +286,8 @@ a {
 }
 
 .succeed-box>div div:nth-child(1) p {
-<<<<<<< HEAD
-    font-size: 30px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1.875rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(47, 128, 237, 1);
     line-height: 1.875rem;
@@ -314,15 +299,9 @@ a {
     height: 3.5rem;
     background: linear-gradient(90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
     opacity: 0.96;
-<<<<<<< HEAD
-    border-radius: 4px;
-    font-size: 24px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     border-radius: .25rem;
     font-size: 1.5rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
     line-height: 3.75rem;
@@ -334,13 +313,8 @@ a {
     display: block;
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
-    font-size: 24px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1.5rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
     line-height: 3.75rem;
@@ -353,14 +327,9 @@ a {
     margin: 0px auto;
     transform: translateY(-29%);
     background: url('../images/biaodanbeijing.png') no-repeat;
-<<<<<<< HEAD
-    font-size: 24px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     background-size:  100% 100%;
     font-size: 1.5rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     /* color: rgba(47, 128, 237, 1); */
     color: #fff;
@@ -370,13 +339,8 @@ a {
 }
 
 .tabs {
-<<<<<<< HEAD
-    font-size: 18px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1.125rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     line-height: 1.875rem;
     text-align: center;
@@ -462,13 +426,8 @@ a {
     padding-left: .25rem;
     margin-bottom: .875rem;
     height: auto;
-<<<<<<< HEAD
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(51, 51, 51, 1);
 }
@@ -508,13 +467,8 @@ a {
 .tabs-item-gr .two-box div span {
     width: 5.625rem;
     border-right: 2px solid rgba(0, 0, 0, .2);
-<<<<<<< HEAD
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: #333;
 }
@@ -547,52 +501,32 @@ a {
 
 ::-webkit-input-placeholder {
     /* WebKit browsers */
-<<<<<<< HEAD
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
 }
 
 :-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
-<<<<<<< HEAD
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
 }
 
 ::-moz-placeholder {
     /* Mozilla Firefox 19+ */
-<<<<<<< HEAD
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10+ */
-<<<<<<< HEAD
-    font-size: 16px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: 1rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(153, 153, 153, 1) !important;
 }
@@ -610,26 +544,16 @@ a {
 .tabs-item-qy p,
 .tabs-item-gr p {
     text-align: right;
-<<<<<<< HEAD
-    font-size: 14px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: .875rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(51, 51, 51, 1);
 }
 
 .tabs-item-qy p a,
 .tabs-item-gr p a {
-<<<<<<< HEAD
-    font-size: 14px;
-    font-family: "Microsoft YaHei", "微软雅黑";
-=======
     font-size: .875rem;
     font-family: Microsoft YaHei;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: #2F80ED;
 }
@@ -647,15 +571,9 @@ a {
     opacity: 0.96;
     border-radius: .25rem;
     text-align: center;
-<<<<<<< HEAD
-    line-height: 56px;
-    font-size: 20px;
-    font-family: "Source Han Sans CN","Microsoft YaHei", "微软雅黑";
-=======
     line-height: 3.5rem;
     font-size: 1.25rem;
     font-family: Source Han Sans CN;
->>>>>>> e0ee0deee146f6d2d492350cc22e2e2aeca16069
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
     line-height: 3.75rem;
