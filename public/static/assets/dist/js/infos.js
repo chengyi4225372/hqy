@@ -2,13 +2,11 @@
 //搜索
 $('#btn_search').click(function(){
     var url   = $(this).attr('data-url');
-    var title = $('#title').val();
+    var searchField = $('#searchField').val();//搜索字段
+    var searchValue = $('#searchValue').val();//搜索值
+    var category = $('#category').val();//所属分类
 
-    if(title == '' || title == undefined){
-        layer.msg('搜索条件不能为空')
-        return;
-    }
-    window.location.href = url+"?title="+title;
+    window.location.href = url+"?searchField="+searchField+'&searchValue='+searchValue + '&category='+category;
 })
 
 //富文本
@@ -168,14 +166,12 @@ $('.infos_del').click(function(){
 
             if(ret.code == 200){
                 layer.msg(ret.msg,{icon:6},function(){
-                    parent.location.href="index";
+                    parent.location.reload();
                 })
             }
 
             if(ret.code == 400){
-                layer.msg(ret.msg,{icon:5},function(){
-                    parent.location.href="index";
-                })
+                layer.msg(ret.msg,{icon:5})
             }
         },'json')
     }, function(){
