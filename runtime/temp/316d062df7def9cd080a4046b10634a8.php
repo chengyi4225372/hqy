@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1575440644;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1575537118;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,7 +64,7 @@
                                 <dd>·企业成本可控透明化</dd>
                             </dl>
                             <dl>
-                                <dt><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></dt>
+                                <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                 <dd>
                                     ·技能价值化
 
