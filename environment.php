@@ -15,10 +15,15 @@
 // +----------------------------------------------------------------------
 
 //生产环境
-//define('ENVIRONMENT', 'development');
+//define('ENVIRONMENT', 'production');
+
+
+//开发环境
+define('ENVIRONMENT', 'development');
 
 //测试环境
-define('ENVIRONMENT', 'test');
+
+//define('ENVIRONMENT', 'test');
 
 // 配置文件目录
 define('CONFIG_PATH', __DIR__ . '/config/' . ENVIRONMENT . '/');
