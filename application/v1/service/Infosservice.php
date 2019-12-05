@@ -110,7 +110,7 @@ class Infosservice
     public function biao($array)
     {
         $array['status'] = 1;
-        $arr = Info::instance()->where($array)->order('release_time desc')->limit(0, 2)->select();
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
         return $arr;
     }
 
@@ -121,7 +121,7 @@ class Infosservice
     public function shang($array)
     {
         $array['status'] = 1;
-        $arr = Info::instance()->where($array)->order('release_time desc')->limit(0, 2)->select();
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
         return $arr;
     }
 
