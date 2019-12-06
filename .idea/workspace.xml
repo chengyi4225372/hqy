@@ -3,18 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="86f1b9ed-9690-4906-9c73-bed798b919ff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/extra/user.php" afterPath="$PROJECT_DIR$/application/extra/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/controller/Index.php" afterPath="$PROJECT_DIR$/application/home/controller/Index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/index.html" afterPath="$PROJECT_DIR$/application/home/view/index/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/v1/controller/users/User.php" afterPath="$PROJECT_DIR$/application/v1/controller/users/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/v1/service/Caseservice.php" afterPath="$PROJECT_DIR$/application/v1/service/Caseservice.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/v1/service/Systems.php" afterPath="$PROJECT_DIR$/application/v1/service/Systems.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/v1/service/Userservice.php" afterPath="$PROJECT_DIR$/application/v1/service/Userservice.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/v1/view/users/user/index.html" afterPath="$PROJECT_DIR$/application/v1/view/users/user/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/01c2af33aec3d9a8546956817297df65.php" afterPath="$PROJECT_DIR$/runtime/temp/01c2af33aec3d9a8546956817297df65.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/5b7520e6154b081d1f453b501a40a276.php" afterPath="$PROJECT_DIR$/runtime/temp/5b7520e6154b081d1f453b501a40a276.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/b98b0097f3eceb2ba5d75b5d36538488.php" afterPath="$PROJECT_DIR$/runtime/temp/b98b0097f3eceb2ba5d75b5d36538488.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/da728516ab0d55467d95bc44c4f20504.php" afterPath="$PROJECT_DIR$/runtime/temp/da728516ab0d55467d95bc44c4f20504.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/6ddfbd015b4408f94f13b90755f5838c.php" afterPath="$PROJECT_DIR$/runtime/temp/6ddfbd015b4408f94f13b90755f5838c.php" />
     </list>
     <ignored path="hqy_.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -663,11 +652,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />

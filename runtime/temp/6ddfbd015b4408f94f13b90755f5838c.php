@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/opt/web/hqy_/public/../application/home/view/launch/index.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:63:"/opt/web/hqy_/public/../application/home/view/launch/index.html";i:1575456051;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
