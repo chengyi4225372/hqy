@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1575456049;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1575598081;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -425,7 +425,7 @@
             </div>
             <div class='to_detailInfo'>
                 <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info_list): $mod = ($i % 2 );++$i;?>
-                <div class="<?php echo $info_list['is_show']; ?>">
+                <div class="<?php echo $info_list['is_show']; ?>" <?php if($key == 1): ?> style="display:block;" <?php else: ?> style="display:none;" <?php endif; ?>>
                     <div class='huichuangyou_title'><?php echo $info_list['title']; ?></div>
                     <div class="con">
                         <div class="desc"><?php echo $info_list['desc']; ?></div>

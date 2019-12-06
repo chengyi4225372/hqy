@@ -424,7 +424,7 @@
             </div>
             <div class='to_detailInfo'>
                 {volist name="case_list" id="info_list"}
-                <div class="{$info_list['is_show']}">
+                <div class="{$info_list['is_show']}" {if $key == 1} style="display:block;" {else /} style="display:none;" {/if}>
                     <div class='huichuangyou_title'>{$info_list['title']}</div>
                     <div class="con">
                         <div class="desc">{$info_list['desc']}</div>

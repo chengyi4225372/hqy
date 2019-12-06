@@ -177,7 +177,7 @@ class Caseservice
      */
     public function getallparent()
     {
-        $return_data = collection(Cases::where(['status' => 1])->order('id,desc')->select())->toArray();
+        $return_data = collection(Cases::where(['status' => 1])->order('sort desc,id desc')->select())->toArray();
         return $return_data;
     }
 

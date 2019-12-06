@@ -45,7 +45,7 @@ class Systems
     {
         $password = md5(md5($password));
 
-        $user_info = Admin::where(['username' => $username,'is_del' => 0])->find()->toArray();
+        $user_info = Admin::where(['username' => $username,'is_del' => 1])->find()->toArray();
 
         if($username != $user_info['username'] || $password != $user_info['password']){
             return false;

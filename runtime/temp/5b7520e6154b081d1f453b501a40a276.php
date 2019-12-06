@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hqy_/public/../application/v1/view/users/user/index.html";i:1575011766;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575440239;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1575424568;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hqy_/public/../application/v1/view/users/user/index.html";i:1575602318;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575598406;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1575424568;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -315,8 +315,8 @@
                             <label>状态：</label>
                             <select class="form-control" name="status">
                                 <option value="">请选择</option>
-                                <option value="0" <?php if((isset($params['status'])) && ($params['status'] == 0)): ?>selected='selected'<?php endif; ?>>启用</option>
-                                <option value="1" <?php if((isset($params['status'])) && ($params['status'] == 1)): ?>selected='selected'<?php endif; ?>>禁用</option>
+                                <option value="1" <?php if($params['status'] == 1): ?>selected='selected'<?php endif; ?>>启用</option>
+                                <option value="2" <?php if($params['status'] == 2): ?>selected='selected'<?php endif; ?>>禁用</option>
                             </select>
                         </div>
 
@@ -367,7 +367,18 @@
                     <td class="text-center"><?php echo $list['tel']; ?></td>
                     <td class="text-center"><?php echo $list['mail']; ?></td>
                     <td class="text-center">
-                        <span class="btn <?php if($list['is_del'] == 0): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$list['is_del']]; ?></span>
+
+                        <?php if($list['is_del'] == 1): ?>
+                        <span class="btn btn-success"
+                              onclick="admin_module.status_sort(this)"
+                              data-url="<?php echo url('/v1/users/user/userstatus'); ?>"
+                              data-id="<?php echo $list['id']; ?>" data="2"><?php echo $status[$list['is_del']]; ?></span>
+                        <?php else: ?>
+                        <span class="btn btn-danger"
+                              onclick="admin_module.status_sort(this)"
+                              data-url="<?php echo url('/v1/users/user/userstatus'); ?>"
+                              data-id="<?php echo $list['id']; ?>" data="1"><?php echo $status[$list['is_del']]; ?></span>
+                        <?php endif; ?>
                     </td>
                     <td class="text-center">
                         <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/users/user/edituser',['id' => $list['id']]); ?>" data-id="" onclick="admin_module.user_edit(this)">编辑</a>

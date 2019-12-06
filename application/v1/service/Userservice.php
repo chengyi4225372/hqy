@@ -39,7 +39,6 @@ class Userservice
      */
     public function getList($params)
     {
-
         //每页显示的数量
         $page_size = !empty($params['ps']) ? $params['ps'] : 20;
         //当前页
@@ -68,7 +67,8 @@ class Userservice
 
             $where['username'] = ['LIKE',$userArr,'OR'];
         }
-        if(isset($params['status']) || $params['status'] != ''){
+
+        if(isset($params['status']) && !empty($params['status'])){
             $where['is_del'] = $params['status'];
         }
 
@@ -81,7 +81,6 @@ class Userservice
             ->order('id', 'desc')
             ->paginate($page_size, false, $config);
         $page = $userInfo->render();
-
         $return_data = [
             'list' => $userInfo->toArray(),
             'page' => $page,
@@ -183,7 +182,30 @@ class Userservice
      */
     public function usercount()
     {
-        $user = Admin::where(['is_del' => 0])->count();
+        $user = Admin::where(['is_del' => 1])->count();
         return $user;
+    }
+
+    /**
+     * @DESC：用户改变状态
+     * @param array $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-05 02:25:05
+     */
+    public function userstatus($params = [])
+    {
+        if(empty($params)){
+            return false;
+        }
+        $save = [];
+        $save['is_del'] = $params['status'];
+        $where = [];
+        $where['id'] = $params['id'];
+        $res = Admin::where($where)->update($save);
+        if($res === false){
+            return false;
+        }
+        return true;
     }
 }
