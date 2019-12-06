@@ -137,6 +137,87 @@ class Index extends BaseController
 
 
     /**
+     * @DESC：招标信息详情
+     * @return bool|mixed
+     * @author: jason
+     * @date: 2019-12-06 03:33:14
+     */
+    public function detailbiao()
+    {
+        if($this->request->isGet()){
+//            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+//                return $this->redirect('/home/index/index');
+//            }
+
+            $id = input('get.mid','','int');
+            if(empty($id) || !isset($id)|| $id <=0){
+                return false;
+            }
+            $info = infosservice::instance()->getId($id);
+            $top  = Infosservice::instance()->getTop($id);
+            $next = Infosservice::instance()->getNext($id);
+            $this->assign('info',$info);
+            $this->assign('top',$top);
+            $this->assign('next',$next);
+            $this->assign('title','招标信息详情');
+            return $this->fetch();
+        }
+        return false;
+    }
+
+    /**
+     * @DESC：招商信息详情
+     * @return bool|mixed
+     * @author: jason
+     * @date: 2019-12-06 03:36:41
+     */
+    public function detailshang()
+    {
+        if($this->request->isGet()){
+//            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+//                return $this->redirect('/home/index/index');
+//            }
+
+            $id = input('get.mid','','int');
+            if(empty($id) || !isset($id)|| $id <=0){
+                return false;
+            }
+            $info = infosservice::instance()->getId($id);
+            $top  = Infosservice::instance()->getTop($id);
+            $next = Infosservice::instance()->getNext($id);
+            $this->assign('info',$info);
+            $this->assign('top',$top);
+            $this->assign('next',$next);
+            $this->assign('title','新闻详情');
+            return $this->fetch();
+        }
+        return false;
+    }
+
+    public function industrydetail()
+    {
+        if($this->request->isGet()){
+//            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+//                return $this->redirect('/home/index/index');
+//            }
+
+            $id = input('get.mid','','int');
+            if(empty($id) || !isset($id)|| $id <=0){
+                return false;
+            }
+            $info = infosservice::instance()->getId($id);
+            $top  = Infosservice::instance()->getTop($id);
+            $next = Infosservice::instance()->getNext($id);
+            $this->assign('info',$info);
+            $this->assign('top',$top);
+            $this->assign('next',$next);
+            $this->assign('title','招标信息详情');
+            return $this->fetch();
+        }
+        return false;
+    }
+
+    /**
      * 新闻详情页
      * min  string | int
      */

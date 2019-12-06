@@ -135,13 +135,13 @@
 
             <div class='page'>
               {empty name='top'}
-              <div><span>上一篇:</span><a href="#">已经是第一篇了</a></div>
+              <div><span>上一篇:</span><a href="javascript:;">已经是第一篇了</a></div>
               {else /}
               <div><span>上一篇:</span><a href="{:url('/home/index/getInfo',array('mid'=>$top.id))}">{$top.title}</a></div>
               {/empty}
 
               {empty name='next'}
-              <div><span>下一篇:</span><a href="#">已经是最后一篇了</a></div>
+              <div><span>下一篇:</span><a href="javascript:;">已经是最后一篇了</a></div>
               {else /}
               <div><span>下一篇:</span><a href="{:url('/home/index/getInfo',array('mid'=>$next.id))}">{$next.title}</a>
               </div>
