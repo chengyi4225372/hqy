@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1575616026;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1575619576;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -215,7 +215,7 @@
                 <!--</a>-->
 
 
-                <a href="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $sh['id']; ?>">
+                <a href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo $sh['id']; ?>">
                   <div class="infoItem">
                     <div class="infoLeft">
                       <img src="<?php echo !empty($sh['imgs'])?$sh['imgs']:'/static/home/images/infoItem.jpg';; ?>" alt="">

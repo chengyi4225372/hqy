@@ -1,11 +1,16 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:65:"/opt/web/hqy_/public/../application/home/view/index/get_info.html";i:1575366226;s:53:"/opt/web/hqy_/application/home/view/common/login.html";i:1575011765;}*/ ?>
-<!DOCTYPE >
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:65:"/opt/web/hqy_/public/../application/home/view/index/get_info.html";i:1575617886;s:53:"/opt/web/hqy_/application/home/view/common/login.html";i:1575456051;}*/ ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <!-- <script>/*@cc_on window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script> -->
+  <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="keyword" content="<?php echo $info['keyword']; ?>">
   <meta name="description" content="<?php echo $info['describe']; ?>">
   <title><?php echo $title; ?></title>
@@ -18,14 +23,15 @@
   <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <style>
     /* 归属信息 */
-    .affiliation{
+    .affiliation {
       text-align: right;
       font-size: 10px;
       color: #ccc;
       padding-right: 20px;
       margin-top: 200px;
     }
-    .page{
+
+    .page {
       margin-top: 60px;
     }
   </style>
@@ -48,7 +54,7 @@
             <div class="w secondary-menu" id="secondary-menu">
               <div>
                 <dl>
-                  <dt><a href="<?php echo url('/home/optimal/index'); ?>">惠优税</a></dt>
+                  <dt><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
                   <dd>
                     ·企税降成本 薪税降税负
 
@@ -72,7 +78,7 @@
                   <dd>·企业成本可控透明化</dd>
                 </dl>
                 <dl>
-                  <dt><a href="<?php echo config('curl.hzs'); ?>">惠找事</a></dt>
+                  <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                   <dd>
                     ·技能价值化
 
@@ -101,10 +107,10 @@
         </ul>
         <!--<?php if(empty($userinfo['mobile'])): ?>-->
         <!--<div class='register'>-->
-          <!--<a href="javascript:void(0)"-->
-             <!--login_url="<?php echo $baseurl; ?>"-->
-             <!--loca_url="<?php echo config('curl.website'); ?>" onclick="login_btn(this)">登录</a>-->
-          <!--<a href="<?php echo url('/home/login/register'); ?>">注册</a>-->
+        <!--<a href="javascript:void(0)"-->
+        <!--login_url="<?php echo $baseurl; ?>"-->
+        <!--loca_url="<?php echo config('curl.website'); ?>" onclick="login_btn(this)">登录</a>-->
+        <!--<a href="<?php echo url('/home/login/register'); ?>">注册</a>-->
         <!--</div>-->
         <!--<?php else: ?>-->
         <!--<?php if(empty($userinfo['mobile'])): ?>
@@ -127,10 +133,10 @@
         <!--<?php endif; ?>-->
       </div>
     </div>
-    <div  class='bread_title'>
+    <div class='bread_title'>
       <a class="actives" href="<?php echo url('/home/index/index'); ?>">首页 ></a>
-      <a  class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/infoList'); ?>">资讯</a> >
-      <a  class="activees" href="javasrcipt:;">新闻详情</a></div>
+      <a class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/infoList'); ?>">资讯</a> >
+      <a class="activees" href="javasrcipt:;">新闻详情</a></div>
     <div class='main_content'>
       <div class='content_middle'>
         <div class='pic_total'>
@@ -145,15 +151,16 @@
             </div>
 
             <div class='page'>
-               <?php if(empty($top) || (($top instanceof \think\Collection || $top instanceof \think\Paginator ) && $top->isEmpty())): ?>
-              <div><span>上一篇:</span><a href="#">已经是第一篇了</a></div>
-               <?php else: ?>
-                <div><span>上一篇:</span><a href="<?php echo url('/home/index/getInfo',array('mid'=>$top['id'])); ?>"><?php echo $top['title']; ?></a></div>
-               <?php endif; if(empty($next) || (($next instanceof \think\Collection || $next instanceof \think\Paginator ) && $next->isEmpty())): ?>
-                <div><span>下一篇:</span><a href="#">已经是最后一篇了</a></div>
-                <?php else: ?>
-              <div><span>下一篇:</span><a href="<?php echo url('/home/index/getInfo',array('mid'=>$next['id'])); ?>"><?php echo $next['title']; ?></a></div>
-               <?php endif; ?>
+              <?php if(empty($top) || (($top instanceof \think\Collection || $top instanceof \think\Paginator ) && $top->isEmpty())): ?>
+              <div><span>上一篇:</span><a href="javascript:;">已经是第一篇了</a></div>
+              <?php else: ?>
+              <div><span>上一篇:</span><a href="<?php echo url('/home/index/getInfo',array('mid'=>$top['id'])); ?>"><?php echo $top['title']; ?></a></div>
+              <?php endif; if(empty($next) || (($next instanceof \think\Collection || $next instanceof \think\Paginator ) && $next->isEmpty())): ?>
+              <div><span>下一篇:</span><a href="javascript:;">已经是最后一篇了</a></div>
+              <?php else: ?>
+              <div><span>下一篇:</span><a href="<?php echo url('/home/index/getInfo',array('mid'=>$next['id'])); ?>"><?php echo $next['title']; ?></a>
+              </div>
+              <?php endif; ?>
             </div>
           </div>
         </div>

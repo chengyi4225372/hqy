@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"C:\phpEnv\www\hqy_\public/../application/home\view\optimal\index.html";i:1575616924;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"/opt/web/hqy_/public/../application/home/view/optimal/index.html";i:1575593783;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 

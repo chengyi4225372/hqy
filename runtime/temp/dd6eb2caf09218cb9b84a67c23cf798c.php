@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\get_info.html";i:1575618691;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1575369601;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\get_info.html";i:1575619576;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1575369601;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -152,11 +152,11 @@
 
             <div class='page'>
               <?php if(empty($top) || (($top instanceof \think\Collection || $top instanceof \think\Paginator ) && $top->isEmpty())): ?>
-              <div><span>上一篇:</span><a href="#">已经是第一篇了</a></div>
+              <div><span>上一篇:</span><a href="javascript:;">已经是第一篇了</a></div>
               <?php else: ?>
               <div><span>上一篇:</span><a href="<?php echo url('/home/index/getInfo',array('mid'=>$top['id'])); ?>"><?php echo $top['title']; ?></a></div>
               <?php endif; if(empty($next) || (($next instanceof \think\Collection || $next instanceof \think\Paginator ) && $next->isEmpty())): ?>
-              <div><span>下一篇:</span><a href="#">已经是最后一篇了</a></div>
+              <div><span>下一篇:</span><a href="javascript:;">已经是最后一篇了</a></div>
               <?php else: ?>
               <div><span>下一篇:</span><a href="<?php echo url('/home/index/getInfo',array('mid'=>$next['id'])); ?>"><?php echo $next['title']; ?></a>
               </div>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1575616029;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1575619576;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -131,7 +131,7 @@
             <div class="bread-crumbs">
                 <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
                 <span><a class="current" style="color:#3E92FF;" onclick="go_news(this)"
-                        data-url="<?php echo url('/home/index/infoList'); ?>">政府招标信息</a></span> <span></span>
+                        data-url="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a></span> <span></span>
             </div>
         </div>
 
@@ -214,7 +214,7 @@
                                 <!--</div>-->
                                 <!--</a>-->
 
-                                <a href="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ww['id']; ?>">
+                                <a href="<?php echo config('curl.website'); ?>/home/index/detailbiao?mid=<?php echo $ww['id']; ?>">
                                     <div class="infoItem">
                                         <div class="infoLeft">
                                             <img src="<?php echo !empty($ww['imgs'])?$ww['imgs']:'/static/home/images/infoItem.jpg';; ?>" alt="">
