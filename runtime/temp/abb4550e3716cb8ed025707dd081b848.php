@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/hqy_/public/../application/home/view/index/detailshang.html";i:1575618792;s:53:"/opt/web/hqy_/application/home/view/common/login.html";i:1575456051;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:68:"/opt/web/hqy_/public/../application/home/view/index/detailshang.html";i:1575619343;s:53:"/opt/web/hqy_/application/home/view/common/login.html";i:1575456051;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +45,7 @@
                 <a href="<?php echo url('/home/index/index'); ?>"></a>
             </div>
             <ul class='titile'>
-                <li class='nav-active'><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+                <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
                 <li><a href="javascript:;">招募合伙人</a>
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                 </li>
                 <li><a href="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a></li>
                 <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
-                <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
+                <li class='nav-active'><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                 <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
             </ul>
             <!--<?php if(empty($userinfo['mobile'])): ?>-->

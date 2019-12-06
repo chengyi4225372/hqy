@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"/opt/web/hqy_/public/../application/home/view/index/detailbiao.html";i:1575618625;s:53:"/opt/web/hqy_/application/home/view/common/login.html";i:1575456051;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"/opt/web/hqy_/public/../application/home/view/index/detailbiao.html";i:1575619344;s:53:"/opt/web/hqy_/application/home/view/common/login.html";i:1575456051;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +45,7 @@
                 <a href="<?php echo url('/home/index/index'); ?>"></a>
             </div>
             <ul class='titile'>
-                <li class='nav-active'><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+                <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
                 <li><a href="javascript:;">招募合伙人</a>
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                 </li>
                 <li><a href="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a></li>
                 <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
-                <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
+                <li class='nav-active'><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                 <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
             </ul>
             <!--<?php if(empty($userinfo['mobile'])): ?>-->
@@ -136,7 +136,7 @@
     <div class='bread_title'>
         <a class="actives" href="<?php echo url('/home/index/index'); ?>">首页 ></a>
         <a class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a> >
-        <a class="activees" href="javasrcipt:;">新闻详情</a></div>
+        <a class="activees" href="javasrcipt:void(0)">新闻详情</a></div>
     <div class='main_content'>
         <div class='content_middle'>
             <div class='pic_total'>
@@ -219,22 +219,5 @@
 
 </div>
 </body>
-<script>
-    var menuList = document.querySelectorAll('#headerContent ul li')
-    var menuUl = document.querySelector('#headerContent ul')
 
-    for (var i = 0; i < menuList.length; i++) {
-        menuList[i].onmouseenter = function () {
-            var li = document.querySelectorAll('.nav-active')[0]
-            li.classList.remove('nav-active')
-            this.classList.add('nav-active')
-        }
-    }
-
-    menuUl.onmouseleave = function () {
-        var li = document.querySelectorAll('.nav-active')[0]
-        li.classList.remove('nav-active')
-        menuList[3].classList.add('nav-active')
-    }
-</script>
 </html>

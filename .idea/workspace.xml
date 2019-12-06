@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86f1b9ed-9690-4906-9c73-bed798b919ff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/extra/curl.php" afterPath="$PROJECT_DIR$/application/extra/curl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/index.html" afterPath="$PROJECT_DIR$/application/home/view/index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/89d530a35d7661f63fcf0205774eba05.php" afterPath="$PROJECT_DIR$/runtime/temp/89d530a35d7661f63fcf0205774eba05.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/abb4550e3716cb8ed025707dd081b848.php" afterPath="$PROJECT_DIR$/runtime/temp/abb4550e3716cb8ed025707dd081b848.php" />
     </list>
     <ignored path="hqy_.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,8 +110,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/home/view/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="385.6389">
-              <caret line="0" column="14" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="14" />
+            <state vertical-scroll-proportion="-51.61111">
+              <caret line="397" column="53" selection-start-line="397" selection-start-column="53" selection-end-line="397" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -155,7 +158,6 @@
         <option value="$PROJECT_DIR$/application/v1/controller/info/Infos.php" />
         <option value="$PROJECT_DIR$/application/v1/service/Infosservice.php" />
         <option value="$PROJECT_DIR$/thinkphp/library/think/App.php" />
-        <option value="$PROJECT_DIR$/application/home/view/index/index.html" />
         <option value="$PROJECT_DIR$/application/v1/service/Caseservice.php" />
         <option value="$PROJECT_DIR$/application/v1/service/Systems.php" />
         <option value="$PROJECT_DIR$/application/extra/user.php" />
@@ -172,6 +174,7 @@
         <option value="$PROJECT_DIR$/application/home/view/index/detailshang.html" />
         <option value="$PROJECT_DIR$/application/home/view/index/detailbiao.html" />
         <option value="$PROJECT_DIR$/application/home/view/index/industrydetail.html" />
+        <option value="$PROJECT_DIR$/application/home/view/index/index.html" />
         <option value="$PROJECT_DIR$/application/extra/curl.php" />
       </list>
     </option>
@@ -1129,14 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/view/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="385.6389">
-          <caret line="0" column="14" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/home/view/index/detailshang.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.61111">
@@ -1157,6 +1152,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.61111">
           <caret line="206" column="0" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/view/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-51.61111">
+          <caret line="397" column="53" selection-start-line="397" selection-start-column="53" selection-end-line="397" selection-end-column="53" />
           <folding />
         </state>
       </provider>
