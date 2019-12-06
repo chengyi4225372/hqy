@@ -1,5 +1,22 @@
 window.onload = function () {
 
+    var menuList = document.querySelectorAll('#headerContent ul li')
+    var menuUl = document.querySelector('#headerContent ul')
+
+    for (var i = 0; i < menuList.length; i++) {
+        menuList[i].onmouseenter = function () {
+            var li = document.querySelectorAll('.nav-active')[0]
+            li.classList.remove('nav-active')
+            this.classList.add('nav-active')
+        }
+    }
+
+    menuUl.onmouseleave = function () {
+        var li = document.querySelectorAll('.nav-active')[0]
+        li.classList.remove('nav-active')
+        menuList[5].classList.add('nav-active')
+    }
+
     var liArr = document.querySelectorAll(".tabs ul li");
     var spanArr = document.querySelectorAll(".tabs-items");
 
@@ -23,8 +40,8 @@ window.onload = function () {
         console.log(document.documentElement.scrollTop);
 
         if (top >= 1080) {
-            let goTop = document.getElementById('goTop')
-            goTop.style.display = "block"
+            var goTop = document.getElementById('goTop');
+            goTop.style.display = "block";
 
             // console.log(goTop);
             var timer = null;
@@ -48,21 +65,11 @@ window.onload = function () {
         } else if (top < 1080) {
 
             // 返回顶部样式
-            let goTop = document.getElementById('goTop')
-            goTop.style.display = "none"
+            var goTop = document.getElementById('goTop');
+            goTop.style.display = "none";
 
         }
     }
-
-    // 文字溢出隐藏
-    // var module1 = document.querySelector(".tabs-items-content-title");
-    // $clamp(module1, { clamp: 2 });
-    // var module2 = document.querySelector(".tabs-items-content-text");
-    // $clamp(module2, { clamp: 3 });
-
-
-
-
 };
 
 

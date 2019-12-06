@@ -1,23 +1,20 @@
 window.onload = function () {
+
+
   window.onscroll = function () {
     var top = document.body.scrollTop || document.documentElement.scrollTop;
-    // console.log(top)
-
     var box = document.getElementById("headerContent");
-    // this.console.log(box)
     var logo = document.getElementById("logo");
     var headerTotal = document.getElementById("headerTotal");
     var ul = document.querySelector(".content ul")
     var register = document.querySelector('.register')
     var uinfo = document.querySelector('.u_info')
-    // var goTop=document.getElementByClassName("goTop")
-    // console.log(goTop)
+    var goTop = document.querySelector("goTop")
     if (top >= 1080) {
       box.style.backgroundColor = "#031c36";
       box.style.position = 'fixed'
       box.style.top = "0px"
       box.style.left = "0px"
-
 
       box.classList.add("header_content_two")
       logo.classList.add('content_logo_two')
@@ -36,7 +33,7 @@ window.onload = function () {
       // goTop.style.top=0+'px'
 
       // 返回顶部
-      let goTop = document.getElementById('goTop')
+      var goTop = document.getElementById('goTop')
       goTop.style.display = "block"
 
       // console.log(goTop);
@@ -71,7 +68,7 @@ window.onload = function () {
       // uinfo.classList.remove('u_info_two')
 
       // 返回顶部样式
-      let goTop = document.getElementById('goTop')
+      var goTop = document.getElementById('goTop')
       goTop.style.display = "none"
     }
 
@@ -79,30 +76,34 @@ window.onload = function () {
 
   // 导航栏样式切换
 
-   //let menuList = document.querySelectorAll('#headerContent ul li')
-   //menuList.forEach((item, index) => {
-   //  item.onmouseover = function (event) {
-   //    let li = document.getElementsByClassName('nav-active')[0]
-   //    li.classList.remove('nav-active')
-   //    item.classList.add('nav-active')
-   //  }
-   //  item.onmouseout = function (event) {
-   //    item.classList.remove('nav-active')
-   //    menuList[0].classList.add('nav-active')
-   //  }
-   //})
+  // var menuList = document.querySelectorAll('#headerContent ul li')
+  // var menuUl = document.querySelector('#headerContent ul')
+  // menuList.forEach((item, index) => {
+  //   item.onmouseenter = function (event) {
+  //     var li = document.getElementsByClassName('nav-active')[0]
+  //     li.classList.remove('nav-active')
+  //     item.classList.add('nav-active')
+  //   }
+  // })
+  // menuUl.onmouseleave = function () {
+  //   var li = document.getElementsByClassName('nav-active')[0]
+  //   li.classList.remove('nav-active')
+  //   menuList[0].classList.add('nav-active')
+  // }
 
-  let menuList = document.querySelectorAll('#headerContent ul li')
-  let menuUl = document.querySelector('#headerContent ul')
-  menuList.forEach((item, index) => {
-    item.onmouseenter = function (event) {
-      let li = document.getElementsByClassName('nav-active')[0]
+  var menuList = document.querySelectorAll('#headerContent ul li')
+  var menuUl = document.querySelector('#headerContent ul')
+
+  for (var i = 0; i < menuList.length; i++) {
+    menuList[i].onmouseenter = function () {
+      var li = document.querySelectorAll('.nav-active')[0]
       li.classList.remove('nav-active')
-      item.classList.add('nav-active')
+      this.classList.add('nav-active')
     }
-  })
+  }
+
   menuUl.onmouseleave = function () {
-    let li = document.getElementsByClassName('nav-active')[0]
+    var li = document.querySelectorAll('.nav-active')[0]
     li.classList.remove('nav-active')
     menuList[0].classList.add('nav-active')
   }
