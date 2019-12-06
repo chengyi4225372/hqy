@@ -334,7 +334,7 @@
               <!--</div>-->
               <!--<div> {$ss.describe}</div>-->
               <!--</a>-->
-              <a href="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}">
+              <a href="{:config('curl.website')}/home/index/detailshang?mid={$ss['id']}">
                 <div class='zhao_contentInfo'>
                   <div>{$ss.title}</div>
                   <div>
@@ -378,7 +378,7 @@
               <!--</div>-->
               <!--</a>-->
 
-              <a href="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}">
+              <a href="{:config('curl.website')}/home/index/detailbiao?mid={$ss['id']}">
                 <div class='zhao_contentInfo'>
                   <div>{$biaos.title|default=''}</div>
                   <div>
@@ -395,7 +395,7 @@
 
             <div class="know_more_box">
               <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
-                data-url="{:url('/home/index/infoList')}" loca_url="{:config('curl.website')}/home/index/infoList"
+                data-url="{:url('/home/index/infoBiao')}" loca_url="{:config('curl.website')}/home/index/infoBiao"
                 login_url="{$baseurl}">了解更多
               </button>
             </div>
