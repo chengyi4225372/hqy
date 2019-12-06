@@ -1,5 +1,7 @@
 window.onload = function () {
 
+    
+
     var liArr = document.querySelectorAll(".tabs ul li");
     var spanArr = document.querySelectorAll(".tabs-items");
 
@@ -11,11 +13,11 @@ window.onload = function () {
                 spanArr[j].className = "tabs-items";
             }
             this.classList.add("li-active");
-            spanArr[this.index].classList.add("show"); 
+            spanArr[this.index].classList.add("show");
         }
     }
 
-    
+
 
     // 返回顶部
     window.onscroll = function () {
@@ -25,7 +27,7 @@ window.onload = function () {
         console.log(document.documentElement.scrollTop);
 
         if (top >= 1080) {
-            let goTop = document.getElementById('goTop')
+            var goTop = document.getElementById('goTop')
             goTop.style.display = "block"
 
             // console.log(goTop);
@@ -50,20 +52,11 @@ window.onload = function () {
         } else if (top < 1080) {
 
             // 返回顶部样式
-            let goTop = document.getElementById('goTop')
+            var goTop = document.getElementById('goTop')
             goTop.style.display = "none"
 
         }
     }
-
-    // 文字溢出隐藏
-    // var module1 = document.querySelector(".tabs-items-content-title");
-    // $clamp(module1, { clamp: 2 });
-    // var module2 = document.querySelector(".tabs-items-content-text");
-    // $clamp(module2, { clamp: 3 });
-
-
-    
 
 };
 

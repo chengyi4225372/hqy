@@ -1,0 +1,10 @@
+---------------------------------------------------------------
+[ 2019-12-06T10:42:07+08:00 ] 127.0.0.1 GET /
+[ error ] [2]file_put_contents(C:\phpEnv\www\hqy_\runtime\temp\fbb122d107cf217e139f476f3f293ba9.php): failed to open stream: Invalid argument[C:\phpEnv\www\hqy_\thinkphp\library\think\template\driver\File.php:34]
+---------------------------------------------------------------
+[ 2019-12-06T14:12:35+08:00 ] 127.0.0.1 GET /
+[ error ] [2002]SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+[C:\phpEnv\www\hqy_\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2019-12-06T14:17:57+08:00 ] 127.0.0.1 GET /
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected end of file[C:\phpEnv\www\hqy_\runtime\temp\fbb122d107cf217e139f476f3f293ba9.php:335]

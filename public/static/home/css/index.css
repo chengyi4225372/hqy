@@ -651,6 +651,21 @@ body {
   transition: all 0.2s;
 }
 
+.all_product>li .all_product-img-box {
+  padding-top: 1.625rem;
+  width: 6.75rem;
+  height: 6.75rem;
+  margin: 0 auto;
+}
+
+.all_product>li .all_product-img-box img {
+  /* margin-top: 1.625rem;
+  width: 6.75rem;
+  height: 6.75rem; */
+  width: 100%;
+  height: 100%;
+}
+
 .all_product>li:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
@@ -745,11 +760,7 @@ body {
   color: rgba(66, 133, 244, 1);
 }
 
-.all_product img {
-  margin-top: 1.625rem;
-  width: 6.75rem;
-  height: 6.75rem;
-}
+
 
 /* 近期成功案例 */
 .success {
@@ -1070,7 +1081,7 @@ body {
   /* margin-left: 1.875rem; */
   /* width: 67.4375rem; */
   /* margin: 0 auto; */
-  height: 23.75rem;
+  max-height: 24.75rem;
   padding: 0 4.46875rem 0;
   background-color: #fff;
   box-sizing: border-box;
@@ -1104,6 +1115,10 @@ body {
   color: rgba(51, 51, 51, 1);
 }
 
+.totalInfo_content a {
+  color: #333333
+}
+
 .zhaoTotalInfo .zhao_contentInfo div:nth-of-type(1) {
   float: left;
   font-size: 1rem;
@@ -1122,11 +1137,29 @@ body {
 
 }
 
-.totalInfo_content div:nth-of-type(2n) {
+.totalInfo_content>a>div:nth-of-type(2) {
+  position: relative;
+  max-height: 2.375rem;
   font-size: .875rem;
   font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
   font-weight: 300;
   color: rgba(51, 51, 51, 1);
+
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  color: rgba(51, 51, 51, 1);
+}
+
+
+.zhaoTotalInfo .know_more_box {
+  text-align: right;
+  padding-right: 1.25rem;
 }
 
 .zhaoTotalInfo .know_more {
@@ -1136,7 +1169,7 @@ body {
   text-align: center;
   background-color: #4091FF;
   border: none;
-  float: right;
+  /* float: right; */
   margin: 2.1875rem 1.25rem 0 0;
   font-size: .875rem;
   font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
@@ -1144,12 +1177,13 @@ body {
   color: rgba(255, 255, 255, 1);
   border-radius: .25rem;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 
 .zhaomethods {
   /* width: 67.4375rem; */
-  height: 23.75rem;
+  max-height: 24.75rem;
   padding: 0 4.46875rem 0;
   background-color: #fff;
   margin-top: 1.5625rem;
@@ -1202,12 +1236,17 @@ body {
 
 }
 
+.zhaomethods .know_more_box {
+  text-align: right;
+  padding-right: 1.25rem;
+}
+
 .zhaomethods .know_more {
   width: 7.5rem;
   height: 2rem;
   background-color: #4091FF;
   border: none;
-  float: right;
+  /* float: right; */
   line-height: 2rem;
   text-align: center;
   margin: 2.1875rem 1.25rem 0 0;
@@ -1217,6 +1256,7 @@ body {
   color: rgba(255, 255, 255, 1);
   border-radius: .25rem;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .diandianone {
@@ -1285,7 +1325,7 @@ body {
   height: 2.5625rem;
   background-size: contain;
   background-image: url('../images/goback.png');
-  margin-bottom: .6875rem;
+  /* margin-bottom: .6875rem; */
 }
 
 .goTop div {

@@ -244,21 +244,9 @@ a {
     text-decoration: none;
 }
 
-.nav-active>a {
-    position: relative;
-}
 
-.nav-active>a::after {
-    content: '';
-    position: absolute;
-    bottom: -0.55rem;
-    left: 50%;
-    transform: translateX(-50%);
-    content: '';
-    width: 110%;
-    height: 2px;
-    background: #4091FF;
-}
+
+
 
 .titile li {
     /* position: relative; */
@@ -274,6 +262,25 @@ a {
 
 .titile :last-child {
     margin-right: 0;
+}
+
+.header_content .titile .nav-active>a {
+    position: relative;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #006EBC;
+}
+
+.header_content .titile .nav-active>a::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5625rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
+    height: 2px;
+    background: rgba(0, 110, 188, 1);
+    border-radius: 1px;
 }
 
 .register {
@@ -597,8 +604,8 @@ a {
     top: .625rem;
     width: .875rem;
     height: .875rem; */
-    /* background: url('../images/guanbi.png') no-repeat 100% 100%; */
-    /* cursor: pointer;
+/* background: url('../images/guanbi.png') no-repeat 100% 100%; */
+/* cursor: pointer;
 } */
 
 
@@ -1162,37 +1169,41 @@ a {
 
 /* 返回顶部 */
 
+
 .goTop {
     position: fixed;
-    bottom: 1.25rem;
+    bottom: 6.25rem;
     right: 8.4375rem;
-    /* width: 3.125rem; */
-    height: 2.8125rem;
+    width: 5rem;
+    height: 5rem;
     text-align: center;
     z-index: 999;
+    /* float: right; */
+    /* background-color: red; */
     background-color: #fff;
-    padding-top: 0.3125rem;
     display: none;
-    cursor: pointer
+    padding-top: 0.4375rem;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
 .goTop i {
     overflow: hidden;
     /* float: right; */
     display: inline-block;
-    width: 1.4375rem;
-    height: 1.625rem;
+    width: 2.1875rem;
+    height: 2.5625rem;
     background-size: contain;
     background-image: url('../images/goback.png');
+    /* margin-bottom: .6875rem; */
 }
 
 .goTop div {
-    font-size: 0.5625rem;
-    font-family: Source Han Sans CN;
+    font-size: .875rem;
+    font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
     font-weight: 400;
     color: rgba(50, 50, 50, 1);
 }
-
 
 
 
