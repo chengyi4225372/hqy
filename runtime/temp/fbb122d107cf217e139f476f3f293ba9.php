@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1575614785;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1575620694;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -335,7 +335,7 @@
               <!--</div>-->
               <!--<div> <?php echo $ss['describe']; ?></div>-->
               <!--</a>-->
-              <a href="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>">
+              <a href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo $ss['id']; ?>">
                 <div class='zhao_contentInfo'>
                   <div><?php echo $ss['title']; ?></div>
                   <div>
@@ -379,7 +379,7 @@
               <!--</div>-->
               <!--</a>-->
 
-              <a href="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>">
+              <a href="<?php echo config('curl.website'); ?>/home/index/detailbiao?mid=<?php echo $ss['id']; ?>">
                 <div class='zhao_contentInfo'>
                   <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
                   <div>
@@ -396,7 +396,7 @@
 
             <div class="know_more_box">
               <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
-                data-url="<?php echo url('/home/index/infoList'); ?>" loca_url="<?php echo config('curl.website'); ?>/home/index/infoList"
+                data-url="<?php echo url('/home/index/infoBiao'); ?>" loca_url="<?php echo config('curl.website'); ?>/home/index/infoBiao"
                 login_url="<?php echo $baseurl; ?>">了解更多
               </button>
             </div>

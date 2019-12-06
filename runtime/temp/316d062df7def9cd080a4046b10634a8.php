@@ -1,11 +1,16 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1575615298;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1575619576;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <!-- <script>/*@cc_on window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script> -->
+    <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php echo $title; ?></title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!-- <script src='/static/spirit/js/xlPaging.js'></script> -->
@@ -126,7 +131,7 @@
             <div class="bread-crumbs">
                 <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
                 <span><a class="current" style="color:#3E92FF;" onclick="go_news(this)"
-                        data-url="<?php echo url('/home/index/infoList'); ?>">政府招标信息</a></span> <span></span>
+                        data-url="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a></span> <span></span>
             </div>
         </div>
 
@@ -209,7 +214,7 @@
                                 <!--</div>-->
                                 <!--</a>-->
 
-                                <a href="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ww['id']; ?>">
+                                <a href="<?php echo config('curl.website'); ?>/home/index/detailbiao?mid=<?php echo $ww['id']; ?>">
                                     <div class="infoItem">
                                         <div class="infoLeft">
                                             <img src="<?php echo !empty($ww['imgs'])?$ww['imgs']:'/static/home/images/infoItem.jpg';; ?>" alt="">

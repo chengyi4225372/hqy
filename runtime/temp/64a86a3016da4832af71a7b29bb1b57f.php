@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1575616032;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1575619576;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -214,7 +214,7 @@
                                 <!--</div>-->
                                 <!--</a>-->
 
-                                <a href="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ww['id']; ?>">
+                                <a href="<?php echo config('curl.website'); ?>/home/index/industrydetail?mid=<?php echo $ww['id']; ?>">
                                     <div class="infoItem">
                                         <div class="infoLeft">
                                             <img src="<?php echo !empty($ww['imgs'])?$ww['imgs']:'/static/home/images/infoItem.jpg';; ?>" alt="">
@@ -320,7 +320,24 @@
 
 
 </body>
+<script>
+    var menuList = document.querySelectorAll('#headerContent ul li')
+    var menuUl = document.querySelector('#headerContent ul')
 
+    for (var i = 0; i < menuList.length; i++) {
+        menuList[i].onmouseenter = function () {
+            var li = document.querySelectorAll('.nav-active')[0]
+            li.classList.remove('nav-active')
+            this.classList.add('nav-active')
+        }
+    }
+
+    menuUl.onmouseleave = function () {
+        var li = document.querySelectorAll('.nav-active')[0]
+        li.classList.remove('nav-active')
+        menuList[4].classList.add('nav-active')
+    }
+</script>
 <script>
 
     /* 选择热词 */

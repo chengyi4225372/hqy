@@ -1,34 +1,19 @@
 window.onload = function () {
     // 导航栏样式切换
-    // let menuList = document.querySelectorAll('.header_content ul li')
-    // console.log(menuList);
-    // menuList.forEach((item, index) => {
-    //     item.onmouseover = function (event) {
-    //         let li = document.getElementsByClassName('nav-active')[0]
-    //         li.classList.remove('nav-active')
-    //         item.classList.add('nav-active')
-    //     }
 
-    //     item.onmouseout = function (event) {
-    //         item.classList.remove('nav-active')
-    //         menuList[0].classList.add('nav-active')
-    //     }
-    // })
-    
-    // let menuList = document.querySelectorAll('#headerContent ul li')
-    // let menuUl = document.querySelector('#headerContent ul')
-    // console.log(menuUl);
-    
-    // menuList.forEach((item) => {
-    //     item.onmouseenter = function () {
-    //         let li = document.getElementsByClassName('nav-active')[0]
+    // var menuList = document.querySelectorAll('#headerContent ul li')
+    // var menuUl = document.querySelector('#headerContent ul')
+
+    // for (var i = 0; i < menuList.length; i++) {
+    //     menuList[i].onmouseenter = function () {
+    //         var li = document.querySelectorAll('.nav-active')[0]
     //         li.classList.remove('nav-active')
-    //         item.classList.add('nav-active')
+    //         this.classList.add('nav-active')
     //     }
-    // })
-    
+    // }
+
     // menuUl.onmouseleave = function () {
-    //     let li = document.getElementsByClassName('nav-active')[0]
+    //     var li = document.querySelectorAll('.nav-active')[0]
     //     li.classList.remove('nav-active')
     //     menuList[0].classList.add('nav-active')
     // }
