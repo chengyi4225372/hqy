@@ -23,14 +23,18 @@ class User extends AuthController
     public function index()
     {
         $status = Config::get('user.status');
+
         $params = $_GET;
-        if(isset($params['status']) === false){
+        if(!isset($params['status']) || empty($params['status'])){
             $params['status'] = '';
         }
+
         if(!isset($params['username']) || empty($params['username'])){
             $params['username'] = '';
         }
+
         $list = Userservice::instance()->getList($params);
+//        echo '<pre>';print_r($params);exit;
         $this->assign('status',$status);
         $this->assign('params',$params);
         $this->assign('data_list',$list['list']['data']);
@@ -64,4 +68,23 @@ class User extends AuthController
         $this->assign('data',$return_data);
         return $this->fetch();
     }
+
+    /**
+     * @DESC：排序
+     * @return \think\response\Json
+     * @author: jason
+     * @date: 2019-12-05 02:25:19
+     */
+    public function userstatus()
+    {
+        if($this->request->isPost() && $this->request->isAjax()){
+            $return_data = Userservice::instance()->userstatus($_POST);
+            if($return_data == false){
+                return json(['status' => 400,'msg' => '请确认操作是否正确']);
+            }
+            return json(['status' => 200,'msg' => '操作成功']);
+        }
+    }
+
+
 }

@@ -26,22 +26,49 @@ class Infosservice
     }
 
     /**
-     * 获取所有产品
+     * @DESC：获取所有产品
+     * @param $params
+     * @return mixed
+     * @author: jason
+     * @date: 2019-12-05 04:38:11
      */
-    public function getList($param)
+    public function getList($params)
     {
-        if (empty($param)) {
-            $list = Info::instance()->where(['status' => 1])->order(['release_time' => 'desc'])->paginate(15);
-        }
+        $where = [];
+        //按字段类型搜索
+        if (!empty($params['searchField']) && !empty($params['searchValue'])) {
+            $searchValue = preg_replace("/(\n)|(\s)|(\t)|(\')|(')|(，)/", ',', trim($params['searchValue']));
+            $searchValue = explode(',', $searchValue);
 
-        if (!empty($param) && isset($param)) {
-            $where = [
-                'title' => ['like', '%' . $param . '%'],
-                'status' => 1
-            ];
-            $list = Info::instance()->where($where)->order(['release_time' => 'desc'])->paginate(15);
+            $searchValue = array_filter($searchValue, function ($par) {
+                return !empty($par);
+            });
+            switch ($params['searchField']) {
+                case 1:
+                    $good = array_map(function ($param) {
+                        return '%' . $param . '%';
+                    }, $searchValue);
+                    $where['title'] = array('like', $good, 'or');
+                    break;
+                case 2:
+                    $good = array_map(function ($param) {
+                        return '%' . $param . '%';
+                    }, $searchValue);
+                    $where['keyword'] = array('like', $good, 'or');
+                    break;
+                case 3:
+                    $good = array_map(function ($param) {
+                        return '%' . $param . '%';
+                    }, $searchValue);
+                    $where['describe'] = array('like', $good, 'or');
+                    break;
+            }
         }
-
+        if(!empty($params['category'])){
+            $where['pid'] = $params['category'];
+        }
+        $where['status'] = ['GT',0];
+        $list = Info::instance()->where($where)->order('sort desc,release_time desc')->paginate(15);
         return $list;
     }
 
@@ -83,7 +110,7 @@ class Infosservice
     public function biao($array)
     {
         $array['status'] = 1;
-        $arr = Info::instance()->where($array)->order('release_time desc')->limit(0, 2)->select();
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
         return $arr;
     }
 
@@ -94,7 +121,7 @@ class Infosservice
     public function shang($array)
     {
         $array['status'] = 1;
-        $arr = Info::instance()->where($array)->order('release_time desc')->limit(0, 2)->select();
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
         return $arr;
     }
 
@@ -117,7 +144,7 @@ class Infosservice
             $page = 10;
         }
 
-        $arr = Info::instance()->where($array)->order('release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
@@ -148,7 +175,7 @@ class Infosservice
             $page = 10;
         }
 
-        $arr = Info::instance()->where($array)->order('release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
@@ -177,7 +204,7 @@ class Infosservice
             $page = 15;
         }
 
-        $arr = Info::instance()->where($array)->order('release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
@@ -192,10 +219,13 @@ class Infosservice
      * id string
      * 删除功能
      */
-    public function dels($arr, $id)
+    public function dels($id)
     {
-        $ret = Info::instance()->where(['id' => $id])->update($arr);
-        return $ret;
+        $ret = Info::instance()->where(['id' => $id])->update(['status' => 0]);
+        if($ret == false){
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -213,7 +243,7 @@ class Infosservice
             'status' => 1
         ];
 
-        $info = Info::instance()->where($where)->order(['release_time' => 'desc'])->find();
+        $info = Info::instance()->where($where)->order('sort desc,release_time desc')->find();
 
         if (empty($info)) {
             return $info = '';
@@ -238,7 +268,7 @@ class Infosservice
             'id' => ['>', $id],
             'status' => 1
         ];
-        $info = Info::instance()->where($where)->order(['release_time' => 'asc'])->find();
+        $info = Info::instance()->where($where)->order('sort desc,release_time asc')->find();
 
         if (empty($info)) {
             return $info = '';
@@ -258,4 +288,29 @@ class Infosservice
         $info = Info::instance()->where(['status' => 1])->count();
         return $info;
     }
+
+
+    /**
+     * @DESC：招商、招标信息排序
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-05 02:34:26
+     */
+    public function changesort($params)
+    {
+        if(empty($params)){
+            return false;
+        }
+        $save = [];
+        $save['sort'] = $params['sort'];
+        $where = [];
+        $where['id'] = $params['id'];
+        $res = Info::instance()->where($where)->update($save);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
+
 }

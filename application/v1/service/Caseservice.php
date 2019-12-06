@@ -73,7 +73,7 @@ class Caseservice
         ];
         $caseInfo = Cases::where($where)
             ->limit($start,$page_size)
-            ->order('id', 'desc')
+            ->order('sort', 'desc')
             ->paginate($page_size, false, $config);
         $page = $caseInfo->render();
 
@@ -177,9 +177,53 @@ class Caseservice
      */
     public function getallparent()
     {
-        $return_data = collection(Cases::where(['status' => 1])->select())->toArray();
+        $return_data = collection(Cases::where(['status' => 1])->order('sort desc,id desc')->select())->toArray();
         return $return_data;
     }
 
+    /**
+     * @DESC：文案改变状态
+     * @param array $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-05 02:25:05
+     */
+    public function casestatus($params = [])
+    {
+        if(empty($params)){
+            return false;
+        }
+        $save = [];
+        $save['status'] = $params['status'];
+        $where = [];
+        $where['id'] = $params['id'];
+        $res = Cases::where($where)->update($save);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
 
+    /**
+     * @DESC：文案排序
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-05 02:34:26
+     */
+    public function changesort($params)
+    {
+        if(empty($params)){
+            return false;
+        }
+        $save = [];
+        $save['sort'] = $params['sort'];
+        $where = [];
+        $where['id'] = $params['id'];
+        $res = Cases::where($where)->update($save);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
 }

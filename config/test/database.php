@@ -13,13 +13,13 @@ return [
         // 数据库类型
         'type'            => 'mysql',
         // 服务器地址
-        'hostname'        => '47.105.48.137',
+        'hostname'        => '172.26.3.8',
         // 数据库名
         'database'        => 'test_huiqiyun',
         // 用户名
         'username'        => 'root',
         // 密码
-        'password'        => 'bbb1root',
+        'password'        => '123456',
         // 端口
         'hostport'        => '',
         // 连接dsn

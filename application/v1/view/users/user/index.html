@@ -11,8 +11,8 @@
                             <label>状态：</label>
                             <select class="form-control" name="status">
                                 <option value="">请选择</option>
-                                <option value="0" {if (isset($params['status'])) && ($params['status'] == 0)}selected='selected'{/if}>启用</option>
-                                <option value="1" {if (isset($params['status'])) && ($params['status'] == 1)}selected='selected'{/if}>禁用</option>
+                                <option value="1" {if $params['status'] == 1}selected='selected'{/if}>启用</option>
+                                <option value="2" {if $params['status'] == 2}selected='selected'{/if}>禁用</option>
                             </select>
                         </div>
 
@@ -63,7 +63,18 @@
                     <td class="text-center">{$list['tel']}</td>
                     <td class="text-center">{$list['mail']}</td>
                     <td class="text-center">
-                        <span class="btn {if $list['is_del'] == 0}btn-success{else/}btn-danger{/if}">{$status[$list['is_del']]}</span>
+
+                        {if $list['is_del'] == 1}
+                        <span class="btn btn-success"
+                              onclick="admin_module.status_sort(this)"
+                              data-url="{:url('/v1/users/user/userstatus')}"
+                              data-id="{$list['id']}" data="2">{$status[$list['is_del']]}</span>
+                        {else/}
+                        <span class="btn btn-danger"
+                              onclick="admin_module.status_sort(this)"
+                              data-url="{:url('/v1/users/user/userstatus')}"
+                              data-id="{$list['id']}" data="1">{$status[$list['is_del']]}</span>
+                        {/if}
                     </td>
                     <td class="text-center">
                         <a href="javascript:void(0)" class="btn btn-info" data-url="{:url('/v1/users/user/edituser',['id' => $list['id']])}" data-id="" onclick="admin_module.user_edit(this)">编辑</a>

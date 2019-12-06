@@ -17,7 +17,6 @@ class Index extends BaseController
     public function index()
     {
         if ($this->request->isGet()) {
-
             //慧享产品
             $array = array('status' => '1');
             $protuct = Protuctservice::instance()->normal($array);
@@ -37,6 +36,7 @@ class Index extends BaseController
             //近期成功案例
 
             $caseInfo = Caseservice::instance()->getallparent();
+//            echo '<pre>';print_r($caseInfo);exit;
             $pic = array_column($caseInfo,'pic');
             $pic2 = array_column($caseInfo,'pic2');
             $this->assign('pic1',json_encode($pic));

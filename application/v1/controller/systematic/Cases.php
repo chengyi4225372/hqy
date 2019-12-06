@@ -70,5 +70,37 @@ class Cases extends AuthController
         return $this->fetch();
     }
 
+    /**
+     * @DESC：文案改变状态
+     * @return \think\response\Json
+     * @author: jason
+     * @date: 2019-12-05 01:34:01
+     */
+    public function casestatus()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+            $return_data = Caseservice::instance()->casestatus($_POST);
+            if($return_data == false){
+                return json(['status' => 400,'msg' => '请确认操作是否正确']);
+            }
+            return json(['status' => 200,'msg' => '操作成功']);
+        }
+    }
 
+    /**
+     * @DESC：文案排序
+     * @return \think\response\Json
+     * @author: jason
+     * @date: 2019-12-05 02:25:19
+     */
+    public function changesort()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+            $return_data = Caseservice::instance()->changesort($_POST);
+            if($return_data == false){
+                return json(['status' => 400,'msg' => '请确认操作是否正确']);
+            }
+            return json(['status' => 200,'msg' => '排序成功']);
+        }
+    }
 }
