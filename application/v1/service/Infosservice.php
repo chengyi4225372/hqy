@@ -144,7 +144,7 @@ class Infosservice
             $page = 10;
         }
 
-        $arr = Info::instance()->where($array)->order('release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
@@ -175,7 +175,7 @@ class Infosservice
             $page = 10;
         }
 
-        $arr = Info::instance()->where($array)->order('release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
@@ -204,7 +204,7 @@ class Infosservice
             $page = 15;
         }
 
-        $arr = Info::instance()->where($array)->order('release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
@@ -243,7 +243,7 @@ class Infosservice
             'status' => 1
         ];
 
-        $info = Info::instance()->where($where)->order(['release_time' => 'desc'])->find();
+        $info = Info::instance()->where($where)->order('sort desc,release_time desc')->find();
 
         if (empty($info)) {
             return $info = '';
@@ -268,7 +268,7 @@ class Infosservice
             'id' => ['>', $id],
             'status' => 1
         ];
-        $info = Info::instance()->where($where)->order(['release_time' => 'asc'])->find();
+        $info = Info::instance()->where($where)->order('sort desc,release_time asc')->find();
 
         if (empty($info)) {
             return $info = '';
