@@ -67,6 +67,7 @@ html {
         font-size: 16px;
     }
 }
+
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -121,6 +122,7 @@ textarea {
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
+
 textarea {
     resize: none;
 }
@@ -164,6 +166,10 @@ a {
     -o-justify-content: space-between;
     justify-content: space-between;
     padding: 1.625rem 0 0 0px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto;
     width: 75rem;
@@ -185,6 +191,10 @@ a {
 
 .header_content .a_href {
     padding-top: 1.625rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -208,12 +218,25 @@ a {
     height: 43.75rem;
     margin: 0 auto;
     padding-top: 5.625rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .login_box {
     width: 40rem;
     height: 43.75rem;
+    /* padding: .625rem 4.125rem 0 4.125rem; */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
     display: flex;
     -webkit-flex-direction: column;
     -moz-flex-direction: column;
@@ -229,6 +252,10 @@ a {
     box-shadow: -0.125rem 0px 0.625rem 0px rgba(44, 44, 44, 0.1);
     border-radius: .25rem;
     /* padding: 59px 130px 56px 130px; */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -382,6 +409,10 @@ select::-ms-expand {
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
     padding-left: 1.0625rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
     width: 13rem;
     height: 97%;
@@ -396,6 +427,10 @@ select::-ms-expand {
     color: rgba(47, 128, 237, 1);
     line-height: 1.875rem;
     margin-left: 3.875rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -422,7 +457,7 @@ select::-ms-expand {
     font-family: Microsoft YaHei;
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
-    cursor:pointer;
+    cursor: pointer;
 
 }
 
@@ -456,6 +491,10 @@ select::-ms-expand {
     border: 1px solid rgba(194, 194, 194, 1);
     border-radius: .125rem;
     padding-left: .9375rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -488,6 +527,10 @@ select::-ms-expand {
     width: 19.1125rem;
     height: 97%;
     padding-left: 1rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 1rem;
     font-family: Microsoft YaHei;

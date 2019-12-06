@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\get_info.html";i:1575616131;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1575369601;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\get_info.html";i:1575618691;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1575369601;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +40,7 @@
 <body>
   <div class='container'>
     <div class='header'>
-      <div class=header_content>
+      <div class=header_content id='headerContent'>
         <div class='logo'>
           <a href="<?php echo url('/home/index/index'); ?>"></a>
         </div>

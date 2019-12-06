@@ -14,11 +14,11 @@ window.onload = function () {
     //         menuList[0].classList.add('nav-active')
     //     }
     // })
-    
+
     // let menuList = document.querySelectorAll('#headerContent ul li')
     // let menuUl = document.querySelector('#headerContent ul')
     // console.log(menuUl);
-    
+
     // menuList.forEach((item) => {
     //     item.onmouseenter = function () {
     //         let li = document.getElementsByClassName('nav-active')[0]
@@ -26,10 +26,26 @@ window.onload = function () {
     //         item.classList.add('nav-active')
     //     }
     // })
-    
+
     // menuUl.onmouseleave = function () {
     //     let li = document.getElementsByClassName('nav-active')[0]
     //     li.classList.remove('nav-active')
     //     menuList[0].classList.add('nav-active')
     // }
+    var menuList = document.querySelectorAll('#headerContent ul li')
+    var menuUl = document.querySelector('#headerContent ul')
+
+    for (var i = 0; i < menuList.length; i++) {
+        menuList[i].onmouseenter = function () {
+            var li = document.querySelectorAll('.nav-active')[0]
+            li.classList.remove('nav-active')
+            this.classList.add('nav-active')
+        }
+    }
+
+    menuUl.onmouseleave = function () {
+        var li = document.querySelectorAll('.nav-active')[0]
+        li.classList.remove('nav-active')
+        menuList[0].classList.add('nav-active')
+    }
 }
