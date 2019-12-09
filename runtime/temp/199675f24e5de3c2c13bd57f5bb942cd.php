@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1575859028;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1575859043;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
