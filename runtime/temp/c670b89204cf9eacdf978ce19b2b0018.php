@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industrydetail.html";i:1575620068;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1575369601;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:76:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industrydetail.html";i:1575858205;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1575369601;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -134,9 +134,12 @@
             </div>
         </div>
         <div class='bread_title'>
-            <a class="actives" href="<?php echo url('/home/index/index'); ?>">首页 ></a>
-            <a class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/industry'); ?>">行业资讯</a> >
-            <a class="activees" href="javasrcipt:void(0)">新闻详情</a></div>
+            <div class="w">
+                <a class="actives" href="<?php echo url('/home/index/index'); ?>">首页 ></a>
+                <a class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/industry'); ?>">行业资讯</a> >
+                <a class="activees" href="javasrcipt:void(0)">新闻详情</a>
+            </div>
+        </div>
         <div class='main_content'>
             <div class='content_middle'>
                 <div class='pic_total'>

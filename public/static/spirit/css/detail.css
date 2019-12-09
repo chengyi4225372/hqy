@@ -1,7 +1,7 @@
 /* 版心 */
 
 .w {
-    width: 100%;
+    width: 75rem;
     margin: 0 auto;
 }
 
@@ -480,7 +480,7 @@ a {
     font-family: Source Han Sans CN;
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
-    padding-left: 25.87rem;
+    /* padding-left: 25.87rem; */
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -o-box-sizing: border-box;

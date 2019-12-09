@@ -1,11 +1,7 @@
 /* 版心 */
 
-.w {
-    width: 100%;
-    margin: 0 auto;
-}
 
-.m {
+.w  {
     width: 75rem;
     margin: 0 auto;
 }
@@ -538,9 +534,8 @@ a {
 .bread-crumbs {
     /* margin-bottom: 2.0625rem; */
     height: 4.375rem;
-
     line-height: 4.375rem;
-    margin-left: 22.625rem;
+    /* margin-left: 22.625rem; */
 }
 
 .current {
