@@ -1,7 +1,7 @@
 /* 版心 */
 
 
-.w  {
+.w {
     width: 75rem;
     margin: 0 auto;
 }
@@ -642,6 +642,7 @@ a {
 .search-box input {
     width: 13.75rem;
     height: 2rem;
+    padding: 0;
     padding-left: 1.5rem;
     background: rgba(246, 246, 246, 1);
     border-radius: .1875rem 0px 0px .1875rem;
