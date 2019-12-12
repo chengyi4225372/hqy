@@ -194,6 +194,12 @@ class Index extends BaseController
         return false;
     }
 
+    /**
+     * @DESC：资讯
+     * @return bool|mixed
+     * @author: jason
+     * @date: 2019-12-12 06:03:12
+     */
     public function industrydetail()
     {
         if($this->request->isGet()){
@@ -285,6 +291,12 @@ class Index extends BaseController
 
     }
 
+    /**
+     * @DESC：行业资讯
+     * @return bool|mixed
+     * @author: jason
+     * @date: 2019-12-12 05:54:46
+     */
     public function industry()
     {
         if($this->request->isGet()){

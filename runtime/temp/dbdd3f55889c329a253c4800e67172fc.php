@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hqy_/public/../application/v1/view/info/infos/index.html";i:1575535300;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576132167;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hqy_/public/../application/v1/view/info/infos/index.html";i:1576143199;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576134388;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -187,7 +187,7 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview <?php if($paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting' || $path ='/v1/cate/ifications/index'): ?>active<?php endif; ?> " >
+            <li class="treeview <?php if($paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting' || $path ='/v1/cate/ifications/index' ||  $paths == '/v1/systematic/system/blogroll'): ?>active<?php endif; ?> " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>首页</span>
                     <span class="pull-right-container">
@@ -268,7 +268,7 @@
                         </ul>
                     </li>
 
-                    <li class="<?php if($paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
+                    <li class="<?php if($paths == '/v1/systematic/system/blogroll' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
                         <a href="#">
                             <i class="fa fa-dashboard"></i> <span>系统管理</span>
                             <span class="pull-right-container">
@@ -285,7 +285,7 @@
                                 <a href="<?php echo url('/v1/systematic/system/slideshow'); ?>"><i class="fa fa-circle-o"></i>首页轮播图</a>
                             </li>
 
-                            <li class="<?php if($paths == '/v1/systematic/system/slideshow'): ?>active<?php endif; ?>">
+                            <li class="<?php if($paths == '/v1/systematic/system/blogroll'): ?>active<?php endif; ?>">
                                 <a href="<?php echo url('/v1/systematic/system/blogroll'); ?>"><i class="fa fa-circle-o"></i>友情链接</a>
                             </li>
 
@@ -400,6 +400,8 @@
                         <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="<?php echo url('/v1/info/infos/infosEdit',['id'=>$vo['id']]); ?>">编辑</a>
 
                         <a  class="btn btn-danger infos_del" data-url="<?php echo url('/v1/info/infos/infoDels',['id'=>$vo['id']]); ?>">删除</a>
+
+                        <a class="btn <?php if($vo['auditing'] == 1): ?>btn-success<?php else: ?>btn-warning<?php endif; ?>" onclick="admin_module.auditing(this)" data="<?php echo $vo['auditing']; ?>" data-url="<?php echo url('/v1/info/infos/auditing'); ?>" data-id="<?php echo $vo['id']; ?>"><?php echo $audit[$vo['auditing']]; ?></a>
 
                     </td>
 

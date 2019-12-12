@@ -988,6 +988,34 @@ var admin_module = (function (){
             },'json'
         );
     };
+
+    //招标、招商信息审核
+    var auditing = function auditing(objthis){
+        var url = $(objthis).attr('data-url');
+        var audit = $(objthis).attr('data');
+        var id = $(objthis).attr('data-id');
+        if(audit == 1){
+            return;
+        }
+        $.post(
+            url,
+            {id:id},
+            function (ret){
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        $(objthis).removeClass('btn-warning');
+                        $(objthis).addClass('btn-success');
+                        $(objthis).attr('data',1);
+                        $(objthis).html('已审核');
+                    });
+                }
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+            },'json'
+        );
+    };
+
     return {
         changepas: changepas,
         change_password: change_password,
@@ -1018,6 +1046,7 @@ var admin_module = (function (){
         change_sort:change_sort,
         add_blogroll:add_blogroll,
         edit_blogroll:edit_blogroll,
+        auditing:auditing,
     }
 
 })();

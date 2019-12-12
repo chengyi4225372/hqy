@@ -28,7 +28,8 @@ class Infos extends AuthController
             $params['searchField'] = !empty($searchField) ? $searchField : '';
             $params['searchValue'] = !empty($searchValue) ? $searchValue : '';
             $params['category'] = !empty($category) ? $category : '';
-
+            $audit = Config::get('site.audit');
+            $this->assign('audit', $audit);
             $this->assign('params', $params);
             $this->assign('list', $list);
             $this->assign('title', '招标信息');
@@ -126,6 +127,23 @@ class Infos extends AuthController
             return json(['code' => 200, 'msg' => '操作成功']);
         }
         return false;
+    }
+
+    /**
+     * @DESC：招标、招商信息审核
+     * @return \think\response\Json
+     * @author: jason
+     * @date: 2019-12-12 05:48:13
+     */
+    public function auditing()
+    {
+        if($this->request->isAjax() && $this->request->isPost()){
+            $id = input('post.id','','int');
+            if(empty($id)) return json(['status' => 400,'msg' => '审核失败']);
+            $res = Infosservice::instance()->auditing(['id' => $id]);
+            if($res == false) return json(['status' => 400,'msg' => '审核失败']);
+            return json(['status' => 200,'msg' => '审核成功']);
+        }
     }
 
     /**
