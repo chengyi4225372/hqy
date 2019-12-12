@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1575620694;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576135673;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +14,10 @@
   <title>惠企云</title>
   <link rel="stylesheet" href="/static/home/css/base.css">
   <link rel="stylesheet" href="/static/home/css/index.css">
+  <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="/static/assets/plugins/layui/layui.js"></script>
   <script src='/static/home/js/index.js'></script>
-  <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script src='/static/home/js/common.js'></script>
   <script src='/static/common/js/public.js'></script>
   <style>
@@ -232,7 +233,7 @@
 
     </div>
     <!-- 文字部分-->
-    <div class="header-content-box">
+    <!-- <div class="header-content-box">
       <div class='content_text'>
         <div class='w'><?php echo $slideshow['title']; ?></div>
       </div>
@@ -247,6 +248,18 @@
         </div>
       </div>
 
+    </div> -->
+
+    <!-- 轮播图 -->
+    <div class="layui-carousel" id="swiper">
+      <div carousel-item>
+        <div>
+          <img src="/static/home/images2/banner1.png" alt="">
+          <button class="customize" onclick="showSearch()">立即咨询</button>
+        </div>
+        <div><img src="/static/home/images2/banner2.png" alt=""></div>
+        <div><img src="/static/home/images2/banner3.png" alt=""></div>
+      </div>
     </div>
 
 

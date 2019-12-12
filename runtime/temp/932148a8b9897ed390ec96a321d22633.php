@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"C:\phpEnv\www\hqy_\public/../application/home\view\optimal\index.html";i:1575616924;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"C:\phpEnv\www\hqy_\public/../application/home\view\optimal\index.html";i:1576131456;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +7,7 @@
     <title>招募合伙人</title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/optimal.css">
-    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
 <body>
