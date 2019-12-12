@@ -917,7 +917,77 @@ var admin_module = (function (){
             },'json'
         );
     };
+    //添加友情链接
+    var add_blogroll = function add_blogroll(objthis){
+        var id = $(objthis).attr('data');
+        var url = $(objthis).attr('data-url');
+        var data = {};
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var link = $('#link').val();
+        var status = $('#status').val();
+        if(title == '' || title == undefined){
+            layer.tips('请填写标题','#title',{tips:[3,'#00a65a']});return;
+        }
 
+        if(link == '' || link == undefined){
+            layer.tips('请填写URL地址','#title',{tips:[3,'#00a65a']});return;
+        }
+        data.title = title;
+        data.describe = desc;
+        data.link = link;
+        data.status = status;
+        $.post(
+            url,
+            data,
+            function (ret){
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        parent.location.reload();
+                    });
+                }
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+            },'json'
+        );
+    };
+    //编辑友情链接
+    var edit_blogroll = function edit_blogroll(objthis){
+        var url = $(objthis).attr('data-url');
+        var data = {};
+        var id = $(objthis).attr('data');
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var link = $('#link').val();
+        var status = $('#status').val();
+        if(title == '' || title == undefined){
+            layer.tips('请填写标题','#title',{tips:[3,'#00a65a']});return;
+        }
+
+        if(link == '' || link == undefined){
+            layer.tips('请填写URL地址','#title',{tips:[3,'#00a65a']});return;
+        }
+        data.id = id;
+        data.title = title;
+        data.describe = desc;
+        data.link = link;
+        data.status = status;
+        $.post(
+            url,
+            data,
+            function (ret){
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        parent.location.reload();
+                    });
+                }
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+            },'json'
+        );
+    };
     return {
         changepas: changepas,
         change_password: change_password,
@@ -946,6 +1016,8 @@ var admin_module = (function (){
         case_edit:case_edit,
         status_sort:status_sort,
         change_sort:change_sort,
+        add_blogroll:add_blogroll,
+        edit_blogroll:edit_blogroll,
     }
 
 })();

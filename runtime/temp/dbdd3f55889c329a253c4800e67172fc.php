@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hqy_/public/../application/v1/view/info/infos/index.html";i:1575535300;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1575424568;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hqy_/public/../application/v1/view/info/infos/index.html";i:1575535300;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576132167;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -276,18 +276,17 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <!--                    <li class="<?php if($paths == '/v1/systematic/system/menu'): ?>active<?php endif; ?>">
-                                                    <a href="<?php echo url('/v1/systematic/system/menu'); ?>"><i class="fa fa-circle-o"></i> 菜单管理</a>
-                                                </li>
-                                                <li class="<?php if($paths == '/v1/organ/organization/index'): ?>active<?php endif; ?>">
-                                                    <a href="<?php echo url('/v1/organ/organization/index'); ?>"><i class="fa fa-circle-o"></i>组织架构管理</a>
-                                                </li>-->
+
                             <li class="<?php if($paths == '/v1/systematic/system/setting'): ?>active<?php endif; ?>">
                                 <a href="<?php echo url('/v1/systematic/system/setting'); ?>"><i class="fa fa-circle-o"></i>网站设置</a>
                             </li>
 
                             <li class="<?php if($paths == '/v1/systematic/system/slideshow'): ?>active<?php endif; ?>">
                                 <a href="<?php echo url('/v1/systematic/system/slideshow'); ?>"><i class="fa fa-circle-o"></i>首页轮播图</a>
+                            </li>
+
+                            <li class="<?php if($paths == '/v1/systematic/system/slideshow'): ?>active<?php endif; ?>">
+                                <a href="<?php echo url('/v1/systematic/system/blogroll'); ?>"><i class="fa fa-circle-o"></i>友情链接</a>
                             </li>
 
                         </ul>
