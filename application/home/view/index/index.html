@@ -13,9 +13,10 @@
   <title>惠企云</title>
   <link rel="stylesheet" href="__HOME__/css/base.css">
   <link rel="stylesheet" href="__HOME__/css/index.css">
+  <link rel="stylesheet" href="__PUBLIC__/assets/plugins/layui/css/layui.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="__PUBLIC__/assets/plugins/layui/layui.js"></script>
   <script src='__HOME__/js/index.js'></script>
-  <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
   <script src='__HOME__/js/common.js'></script>
   <script src='__PUBLIC__/common/js/public.js'></script>
   <style>
@@ -231,7 +232,7 @@
 
     </div>
     <!-- 文字部分-->
-    <div class="header-content-box">
+    <!-- <div class="header-content-box">
       <div class='content_text'>
         <div class='w'>{$slideshow['title']}</div>
       </div>
@@ -246,6 +247,18 @@
         </div>
       </div>
 
+    </div> -->
+
+    <!-- 轮播图 -->
+    <div class="layui-carousel" id="swiper">
+      <div carousel-item>
+        <div>
+          <img src="__HOME__/images2/banner1.png" alt="">
+          <button class="customize" onclick="showSearch()">立即咨询</button>
+        </div>
+        <div><img src="__HOME__/images2/banner2.png" alt=""></div>
+        <div><img src="__HOME__/images2/banner3.png" alt=""></div>
+      </div>
     </div>
 
 

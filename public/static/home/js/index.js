@@ -72,6 +72,9 @@ window.onload = function () {
       goTop.style.display = "none"
     }
 
+
+    
+
   };
 
   // 导航栏样式切换
@@ -132,3 +135,22 @@ var home_module = (function () {
     show_detail: show_detail,
   };
 })();
+
+
+$(function(){
+  //轮播图
+  layui.use('carousel', function(){
+    var carousel = layui.carousel;
+    //建造实例
+    carousel.render({
+      elem: '#swiper',
+      width: '100%',
+      height:'44.625rem',
+      arrow: 'hover',
+      // interval:3000,//间隔
+      index:0,
+      // anim:'fade'
+
+    });
+  });
+})
