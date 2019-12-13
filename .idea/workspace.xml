@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="86f1b9ed-9690-4906-9c73-bed798b919ff" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/business/index.html" afterPath="$PROJECT_DIR$/application/home/view/business/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/home/view/index/index.html" afterPath="$PROJECT_DIR$/application/home/view/index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/v1/controller/systematic/System.php" afterPath="$PROJECT_DIR$/application/v1/controller/systematic/System.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/v1/service/Systems.php" afterPath="$PROJECT_DIR$/application/v1/service/Systems.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/log/20191212_error.log" afterPath="$PROJECT_DIR$/runtime/log/20191212_error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/9e1674837d305d93ac2975e5f8ee3fd1.php" afterPath="$PROJECT_DIR$/runtime/temp/9e1674837d305d93ac2975e5f8ee3fd1.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/b98b0097f3eceb2ba5d75b5d36538488.php" afterPath="$PROJECT_DIR$/runtime/temp/b98b0097f3eceb2ba5d75b5d36538488.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/v1/view/systematic/system/slideshow.html" afterPath="$PROJECT_DIR$/application/v1/view/systematic/system/slideshow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/log/20191213_error.log" afterPath="$PROJECT_DIR$/runtime/log/20191213_error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/f719258a27355a01c9956ca7af02bb22.php" afterPath="$PROJECT_DIR$/runtime/temp/f719258a27355a01c9956ca7af02bb22.php" />
     </list>
     <ignored path="hqy_.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +33,17 @@
         <entry file="file://$PROJECT_DIR$/application/home/controller/Index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-2.25">
-              <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+              <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="System.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/v1/controller/systematic/System.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.0454545">
+              <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -43,24 +52,24 @@
       <file leaf-file-name="Systems.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/v1/service/Systems.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7222223">
-              <caret line="446" column="55" selection-start-line="446" selection-start-column="55" selection-end-line="446" selection-end-column="55" />
+            <state vertical-scroll-proportion="-4.378788">
+              <caret line="611" column="21" selection-start-line="611" selection-start-column="21" selection-end-line="611" selection-end-column="21" />
               <folding>
                 <element signature="e#92#118#0#PHP" expanded="true" />
-                <marker date="1576154158764" expanded="true" signature="5870:5880" placeholder="..." />
-                <marker date="1576154158764" expanded="true" signature="6039:6049" placeholder="..." />
-                <marker date="1576154158764" expanded="true" signature="8695:8705" placeholder="..." />
-                <marker date="1576154158764" expanded="true" signature="8849:8859" placeholder="..." />
+                <marker date="1576201903544" expanded="true" signature="5870:5880" placeholder="..." />
+                <marker date="1576201903544" expanded="true" signature="6039:6049" placeholder="..." />
+                <marker date="1576201903544" expanded="true" signature="8695:8705" placeholder="..." />
+                <marker date="1576201903544" expanded="true" signature="8849:8859" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/home/view/index/index.html">
+      <file leaf-file-name="slideshow.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/v1/view/systematic/system/slideshow.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14681107">
-              <caret line="234" column="0" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.56577414">
+              <caret line="68" column="148" selection-start-line="68" selection-start-column="137" selection-end-line="68" selection-end-column="148" />
               <folding />
             </state>
           </provider>
@@ -82,7 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/static/spirit/js/industry.js" />
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/application/v1/view/common/header.html" />
         <option value="$PROJECT_DIR$/application/v1/service/Protuctservice.php" />
@@ -119,7 +127,6 @@
         <option value="$PROJECT_DIR$/application/v1/view/systematic/system/addblogroll.html" />
         <option value="$PROJECT_DIR$/application/v1/view/systematic/system/blogroll.html" />
         <option value="$PROJECT_DIR$/application/v1/view/systematic/system/editblogroll.html" />
-        <option value="$PROJECT_DIR$/application/v1/controller/systematic/System.php" />
         <option value="$PROJECT_DIR$/application/extra/site.php" />
         <option value="$PROJECT_DIR$/application/v1/view/info/infos/index.html" />
         <option value="$PROJECT_DIR$/public/static/assets/dist/js/style.js" />
@@ -131,8 +138,10 @@
         <option value="$PROJECT_DIR$/application/home/view/launch/index.html" />
         <option value="$PROJECT_DIR$/application/home/view/business/index.html" />
         <option value="$PROJECT_DIR$/public/static/home/js/common.js" />
-        <option value="$PROJECT_DIR$/application/v1/service/Systems.php" />
         <option value="$PROJECT_DIR$/application/home/view/index/index.html" />
+        <option value="$PROJECT_DIR$/application/v1/view/systematic/system/slideshow.html" />
+        <option value="$PROJECT_DIR$/application/v1/controller/systematic/System.php" />
+        <option value="$PROJECT_DIR$/application/v1/service/Systems.php" />
       </list>
     </option>
   </component>
@@ -1048,14 +1057,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/v1/view/systematic/system/slideshow.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.5">
-          <caret line="18" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/v1/view/work/works/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.5337209">
@@ -1245,14 +1246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/v1/view/systematic/system/blogroll.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.5">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="83" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/common/model/Info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15715949">
@@ -1265,14 +1258,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.62863797">
           <caret line="26" column="17" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/v1/controller/systematic/System.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44004658">
-          <caret line="195" column="54" selection-start-line="195" selection-start-column="54" selection-end-line="195" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -1438,32 +1423,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/home/view/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14681107">
+          <caret line="234" column="0" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/v1/view/systematic/system/blogroll.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.361111">
+          <caret line="82" column="145" selection-start-line="82" selection-start-column="133" selection-end-line="82" selection-end-column="145" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/home/controller/Index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.25">
-          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+          <caret line="30" column="51" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/v1/controller/systematic/System.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.0454545">
+          <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/v1/service/Systems.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7222223">
-          <caret line="446" column="55" selection-start-line="446" selection-start-column="55" selection-end-line="446" selection-end-column="55" />
+        <state vertical-scroll-proportion="-4.378788">
+          <caret line="611" column="21" selection-start-line="611" selection-start-column="21" selection-end-line="611" selection-end-column="21" />
           <folding>
             <element signature="e#92#118#0#PHP" expanded="true" />
-            <marker date="1576154158764" expanded="true" signature="5870:5880" placeholder="..." />
-            <marker date="1576154158764" expanded="true" signature="6039:6049" placeholder="..." />
-            <marker date="1576154158764" expanded="true" signature="8695:8705" placeholder="..." />
-            <marker date="1576154158764" expanded="true" signature="8849:8859" placeholder="..." />
+            <marker date="1576201903544" expanded="true" signature="5870:5880" placeholder="..." />
+            <marker date="1576201903544" expanded="true" signature="6039:6049" placeholder="..." />
+            <marker date="1576201903544" expanded="true" signature="8695:8705" placeholder="..." />
+            <marker date="1576201903544" expanded="true" signature="8849:8859" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/home/view/index/index.html">
+    <entry file="file://$PROJECT_DIR$/application/v1/view/systematic/system/slideshow.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14681107">
-          <caret line="234" column="0" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.56577414">
+          <caret line="68" column="148" selection-start-line="68" selection-start-column="137" selection-end-line="68" selection-end-column="148" />
           <folding />
         </state>
       </provider>

@@ -117,6 +117,23 @@ class System extends AuthController
     }
 
     /**
+     * @DESC：改变轮播图的状态
+     * @return \think\response\Json
+     * @author: jason
+     * @date: 2019-12-13 09:51:08
+     */
+    public function slidestatus()
+    {
+        if($this->request->isPost() && $this->request->isAjax()){
+            $return_data = Systems::instance()->slidestatus($_POST);
+            if($return_data == false){
+                return json(['status' => 400,'msg' => '请确认操作是否正确']);
+            }
+            return json(['status' => 200,'msg' => '操作成功']);
+        }
+    }
+
+    /**
      * @DESC：友情链接
      * @return mixed
      * @author: jason

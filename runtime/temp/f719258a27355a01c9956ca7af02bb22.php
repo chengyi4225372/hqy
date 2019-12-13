@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:76:"/opt/web/hqy_/public/../application/v1/view/systematic/system/slideshow.html";i:1575011766;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576134388;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:76:"/opt/web/hqy_/public/../application/v1/view/systematic/system/slideshow.html";i:1576201600;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576134388;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -366,7 +366,11 @@
                             <img src="<?php echo $list['pic']; ?>" style="width:50px;height:50px;">
                         </td>
                         <td class="text-center">
-                            <span class="btn <?php if($list['status'] == 1): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$list['status']]; ?></span>
+                            <?php if($list['status'] == 1): ?>
+                            <span class="btn btn-success" onclick="admin_module.status_sort(this)" data-url="<?php echo url('/v1/systematic/system/slidestatus'); ?>" data-id="<?php echo $list['id']; ?>" data="2"><?php echo $status[$list['status']]; ?></span>
+                            <?php else: ?>
+                            <span class="btn btn-danger" onclick="admin_module.status_sort(this)" data-url="<?php echo url('/v1/systematic/system/slidestatus'); ?>" data-id="<?php echo $list['id']; ?>" data="1"><?php echo $status[$list['status']]; ?></span>
+                            <?php endif; ?>
                         </td>
                         <td class="text-center">
                             <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/systematic/system/editslideshow',['id' => $list['id']]); ?>" onclick="admin_module.edit_slideshow(this)">编辑</a>

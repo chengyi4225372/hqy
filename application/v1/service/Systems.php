@@ -608,4 +608,26 @@ class Systems
         return true;
     }
 
+    /**
+     * @DESC：改变轮播图的状态
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-13 09:51:41
+     */
+    public function slidestatus($params)
+    {
+        if(empty($params)){
+            return false;
+        }
+        $save = [];
+        $save['status'] = $params['status'];
+        $where = [];
+        $where['id'] = $params['id'];
+        $res = Slideshow::instance()->where($where)->update($save);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
 }
