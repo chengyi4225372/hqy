@@ -488,7 +488,7 @@ var admin_module = (function (){
         var desc = $('#desc').val();
         var urls = $('#url').val();
         var status = $('#status').val();
-        if(pic == undefined || pic == 'undefined' || pic == ''){
+        if(pic == undefined || pic == ''){
             layer.msg('请选择要上传的图片');return;
             //layer.tips('请选择要上传的图片!','#pic',{tips:[1,'#c00']});
         }
@@ -536,7 +536,7 @@ var admin_module = (function (){
         var urls = $('#url').val();
         var status = $('#status').val();
         var id = $('#site_id').val();
-        if(pic == undefined || pic == 'undefined' || pic == ''){
+        if(pic == undefined || pic == ''){
             layer.msg('请选择要上传的图片');return;
             //layer.tips('请选择要上传的图片!','#pic',{tips:[1,'#c00']});
         }
