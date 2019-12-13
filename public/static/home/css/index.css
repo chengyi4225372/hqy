@@ -418,6 +418,9 @@ body {
   /* width: 1199px; */
   overflow: hidden; }
 
+.secondary-menu div dl dt a:hover {
+  color: #7eb4fd; }
+
 .two .secondary-menu {
   position: absolute;
   left: 50%;

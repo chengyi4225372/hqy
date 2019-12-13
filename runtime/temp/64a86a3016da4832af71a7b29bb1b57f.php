@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1576206349;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1576234299;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,53 +45,56 @@
                         <a href="javascript:;">“惠”家族产品</a>
                         <!-- 二级菜单 -->
                         <div class="w secondary-menu" id="secondary-menu">
+
                             <div>
-                                <dl>
-                                    <dt><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
-                                    <dd>
-                                        ·企税降成本 薪税降税负
-
-                                    </dd>
-                                    <dd>·分红降扣率 创业降个税</dd>
-                                </dl>
-                                <dl>
-                                    <dt><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
-                                    <dd>
-                                        ·寻求多样化用工模式
-
-                                    </dd>
-                                    <dd>·提高内部人员效能</dd>
-                                </dl>
-                                <dl>
-                                    <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
-                                    <dd>
-                                        ·优化员工福利选择模块
-
-                                    </dd>
-                                    <dd>·企业成本可控透明化</dd>
-                                </dl>
-                                <dl>
-                                    <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
-                                    <dd>
-                                        ·技能价值化
-
-                                    </dd>
-                                    <dd>·成就更好自我</dd>
-                                </dl>
-                                <dl>
-                                    <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
-                                    <dd>
-                                        ·一站式解决方案
-
-                                    </dd>
-                                    <dd>·激活企业最大效益</dd>
-                                </dl>
-                                <dl>
-                                    <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
-                                    <dd>·产品内容建设中……</dd>
-                                </dl>
+                              <dl>
+                                <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
+                                <dd>
+                                  · 企税降成本 薪税降税负
+          
+                                </dd>
+                                <dd>· 分红降扣率 创业降个税</dd>
+                              </dl>
+                              <dl>
+                                <dt><a class="secStatus" href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
+                                <dd>
+                                  · 寻求多样化用工模式
+          
+                                </dd>
+                                <dd>· 提高内部人员效能</dd>
+                              </dl>
+                              <dl>
+                                <dt><a class="secStatus" href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
+                                <dd>
+                                  · 优化员工福利选择模块
+          
+                                </dd>
+                                <dd>· 企业成本可控透明化</dd>
+                              </dl>
+                              <dl>
+                                <dt><a class="secStatus" href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
+                                <dd>
+                                  · 技能价值化
+          
+                                </dd>
+                                <dd>· 成就更好自我</dd>
+                              </dl>
+                              <dl>
+                                <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
+                                <dd>
+                                  · 一站式解决方案
+          
+                                </dd>
+                                <dd>· 激活企业最大效益</dd>
+                              </dl>
+                              <dl>
+                                <dt><a class="secStatus" href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
+                                <dd>· 赋能企业互联网生态建设</dd>
+                                <dd>· 助力产业数字化转型升级</dd>
+                              </dl>
                             </div>
-                        </div><!-- 二级菜单 -->
+          
+                          </div><!-- 二级菜单 -->
                     </li>
                     <li><a href="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a></li>
                     <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>

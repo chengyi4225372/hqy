@@ -231,6 +231,20 @@ function go_news(obj) {
             'color':'#333'
         })
     })
+
+    /* 惠企云首页二级菜单动效 */
+$('.secStatus').mouseenter(function(){
+    $(this).css({'color':'#7eb4fd'})
+  }).mouseleave(function(){
+    $(this).css({'color':'#fff'})
+  })
+  
+  $('.secStatus').mousedown(function(){
+    $(this).css({'color':'#4091ff'})
+  })
+  // .mouseup(function(){
+  //   $(this).css({'color':'#fff'})
+  // })
 })
 //列表页热门搜索
 // function hotsearch(obj) {

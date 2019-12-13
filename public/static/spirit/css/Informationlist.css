@@ -356,7 +356,9 @@ a {
   height: 0;
   overflow: hidden;
 }
-
+.secStatus{
+  font-family: "Noto Sans SC";
+}
 .two .secondary-menu {
   position: absolute;
   left: 50%;
@@ -414,7 +416,8 @@ a {
 
 .secondary-menu>div:nth-child(1) dl dt a {
   font-size: 1.375rem;
-  font-family: Source Han Sans CN;
+  
+  
   font-weight: 500;
   color: white;
   line-height: 3.8125rem;
@@ -422,7 +425,8 @@ a {
 
 .secondary-menu>div:nth-child(1) dl dd {
   font-size: 0.875rem;
-  font-family: Source Han Sans CN;
+  
+  
   font-weight: 300;
   color: #feffff;
   line-height: 1.75rem;
