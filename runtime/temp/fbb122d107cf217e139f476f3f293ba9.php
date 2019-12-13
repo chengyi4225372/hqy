@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576218301;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576228876;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +26,7 @@
     /*background-image: url("<?php echo (isset($slideshow['pic']) && ($slideshow['pic'] !== '')?$slideshow['pic']:'/static/home/images/default.png'); ?>");*/
     /*}*/
 
-    .success_icon>div:nth-of-type(1) {
+    /* .success_icon>div:nth-of-type(1) {
       position: absolute;
       top: 3.0625rem;
       left: 0.875rem;
@@ -90,7 +90,7 @@
       background-size: contain;
       background-image: url('/static/home/images/huichuangye.png');
       background-size: 100% 100%;
-    }
+    } */
   </style>
 </head>
 
@@ -234,29 +234,14 @@
 
     </div>
     <!-- 文字部分-->
-    <!-- <div class="header-content-box">
-      <div class='content_text'>
-        <div class='w'><?php echo $slideshow['title']; ?></div>
-      </div>
 
-      <div class='rentong'>
-        <div class='w'><?php echo $slideshow['desc']; ?></div>
-      </div>
-
-      <div class='btn'>
-        <div class='w'>
-          <button onclick="showSearch()">定制您的方案</button>
-        </div>
-      </div>
-
-    </div> -->
 
     <!-- 轮播图 -->
     <div class="layui-carousel" id="swiper">
       <div carousel-item>
         <div>
           <img src="/static/home/images2/banner1.png" alt="">
-          <button class="customize" onclick="showSearch()">立即咨询</button>
+          <button class="customize" onclick="showSearch()">立&nbsp;即&nbsp;咨&nbsp;询</button>
         </div>
         <div><img src="/static/home/images2/banner2.png" alt=""></div>
         <div><img src="/static/home/images2/banner3.png" alt=""></div>
@@ -295,7 +280,7 @@
           <li>
             <img class="all_product-img-box" src="<?php echo (isset($v1['imgs']) && ($v1['imgs'] !== '')?$v1['imgs']:''); ?>" alt="">
             <a href="javascript:void(0)"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
-            <a href="javascript:void(0)"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?>sdfsf李厚霖地李厚霖大霖地李厚霖大霖地李厚霖大规模夺sf</a>
+            <a href="javascript:void(0)"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
             <ul class='one_pic'>
               <li><a onclick="showSearch()">获取方案</a></li>
               <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>">前往网站</a></li>
@@ -324,7 +309,7 @@
             <div class='zhaoSearch'>
               <div class='searchLogo'>
                 <i onclick="search(this)" data-url="<?php echo url('/home/index/infoList'); ?>"></i>
-                <input type="text" id="keyword" placeholder="搜索招标政策和招标信息...">
+                <input type="text" id="keyword" placeholder="搜索相关信息....">
               </div>
               <!-- <button>查询</button> -->
             </div>
@@ -424,26 +409,51 @@
 
     <!-- 近期成功案例 -->
     <input type="hidden" id="add_url" value="<?php echo url('/home/index/ajaximage'); ?>">
-    <div class='success'>
+    <ul class='success'>
       <div class='w success_content'>
         <div class='success_title'></div>
-        <div class='success_icon'>
+        <!-- <div class='success_icon'>
           <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
           <div style="cursor:pointer;" onclick="click_show(this)" keys="<?php echo $key; ?>" class="<?php echo $data_list['is_show'].$key; ?>"
             data="<?php echo $count; ?>" data-attr="<?php echo $data_list['is_show']; ?>">
             <div class='<?php if($key == 1): ?>hui_icon<?php else: ?>p_icon<?php endif; ?>'>
               <div><?php echo $data_list['title2']; ?></div>
               <div><?php echo $data_list['title3']; ?></div>
-              <?php if($key != 1): ?>
-              <!--<a href="javascript:void(0)">-->
-              <!--<img src="/static/home/images/jiantou.png" alt="">-->
-              <!--</a>-->
-              <?php endif; ?>
+              
             </div>
           </div>
           <?php endforeach; endif; else: echo "" ;endif; ?>
 
-        </div>
+        </div> -->
+        <!-- 惠家族产品介绍 -->
+        <div class="bgProduct">
+        <ul class="produtionIntro">
+          <li>
+            <span>惠灵工</span>
+            <p>为个人和企业提供安全、高效、合理的节税措施等等等等</p>
+          </li>
+          <li>
+            <span>惠灵工</span>
+            <p>为个人和企业提供安全、高效、合理的节税措施等等等等</p>
+          </li>
+          <li>
+            <span>惠灵工</span>
+            <p>为个人和企业提供安全、高效、合理的节税措施等等等等</p>
+          </li>
+          <li>
+            <span>惠灵工</span>
+            <p>为个人和企业提供安全、高效、合理的节税措施等等等等</p>
+          </li>
+          <li>
+            <span>惠灵工</span>
+            <p>为个人和企业提供安全、高效、合理的节税措施等等等等</p>
+          </li>
+          <li>
+            <span>惠灵工</span>
+            <p>为个人和企业提供安全、高效、合理的节税措施等等等等</p>
+          </li>
+       
+        </ul>
         <div class='to_detailInfo'>
           <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info_list): $mod = ($i % 2 );++$i;?>
           <div class="<?php echo $info_list['is_show']; ?>">
@@ -484,67 +494,18 @@
 
         </div>
       </div>
+      </div>
     </div>
 
     <!-- 合作伙伴 -->
     <div class='partener'>
       <div class='w partener_total'>
         <div class='parter_icon'></div>
-
-        <!-- <div class='search' id='search'>
-                <input type="text" placeholder="请输入姓名">
-                <input type="text" placeholder="请输入公司名称">
-                <input type="text" placeholder="请输入手机号码">
-                <input type="button" value='定义方案'>
-            </div> -->
-      </div>
-
-    </div>
-
-
-    <div class='partner_bottom'>
-      <div class='w content'>
-        <div class='partener_titile'>用智“慧”创造优“惠”</div>
-        <div class='parterne_info'>
-          深耕税筹行业多年，合作企业多达几千家。专业为个人和企业解决税务难题。为您提供一站式金融、税务和人力外包服务，以及专业的税筹划分析，最安全、高效、合理的节税措施。我们有最成熟的专家团队和各行业实操经验！作为国内领先的标准化税筹服务互联网平台，我们得到了上海、安徽、江西、湖北等各地政府的大力支持，为企业节税保驾护航！
-        </div>
-        <div class='parter_catefories'>
-          <dl>
-            <dt>服务产品</dt>
-            <dd>服务型税筹</dd>
-            <dd>门户型税筹</dd>
-            <dd>人力资源</dd>
-          </dl>
-          <dl>
-            <dt>招商政策</dt>
-            <dd>招商政策网</dd>
-          </dl>
-          <dl>
-            <dt>合作</dt>
-            <dd>代理合作</dd>
-          </dl>
-          <dl>
-            <dt>公司信息</dt>
-            <dd>瑟维斯有限公司</dd>
-            <dd>惠创优产业联盟</dd>
-            <dd>中兴瑞华有限公司</dd>
-          </dl>
-          <dl>
-            <dt>联系我们</dt>
-            <dd><?php echo $site_info['tel']; ?></dd>
-            <dd><?php echo $site_info['mail']; ?></dd>
-            <dd><?php echo $site_info['count_code']; ?></dd>
-          </dl>
-
-        </div>
-        <div class='concat_icon clearfix'>
-          <div><img src="/static/home/images/bo.png" alt=""></div>
-          <div><img src="/static/home/images/wx.png" alt=""></div>
-          <div><img src="/static/home/images/tie.png" alt=""></div>
-        </div>
       </div>
     </div>
 
+<!-- 底部 -->
+   
 
     <div class='goTop' id="goTop">
       <i></i>
@@ -552,6 +513,67 @@
     </div>
 
   </div>
+  <div class="bgBottom">
+  <div class="bottomBox">
+    <div class="w bottom">
+        <div class="aboutUs">
+            <span>关于我们</span>
+            <p>惠企云网络信息（湖北）有限公司深度研究财税管理及企业管理在新经济时代的创新和运用，将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】五大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案及企业管理咨询，为企业可持续发展提供有力保障！
+            </p>
+        </div>
+        <div class="w navBottom">
+            <div class="navList">
+                <dl>
+                    <dt>惠企云旗下产品</dt>
+                    <dd><a href="javascript:;">惠灵工</a></dd>
+                    <dd><a href="javascript:;">惠优税</a></dd>
+                    <dd><a href="javascript:;">惠多薪</a></dd>
+                    <dd><a href="javascript:;">惠创业</a></dd>
+                    <dd><a href="javascript:;">惠找事</a></dd>
+                </dl>
+                <dl>
+                    <dt>资讯信息</dt>
+                    <dd><a href="javascript:;">行业资讯</a></dd>
+                    <dd><a href="javascript:;">招商政策</a></dd>
+                    <dd><a href="javascript:;">招标信息</a></dd>
+                </dl>
+                <dl>
+                    <dt>招商合作</dt>
+                    <dd><a href="javascript:;">招募合伙人</a></dd>
+                </dl>
+                <dl>
+                    <dt>联系我们</dt>
+                    <dd><a href="javascript:;"></a>全国统一客服热线：400-150-9896</a></dd>
+                    <dd><a href="javascript:;"></a>专家服务电话：1818-619-4461</a></dd>
+                    <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
+                    <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
+                    <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
+                </dl>
+            </div>
+
+            <ul class="qrCode">
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weixincode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
+                    <i>及时获一手财税信息</i>
+                </li>
+                <li>
+                    <div class="pic">
+                        <img src="/static/spirit/images/weibocode.png" alt="">
+                    </div>
+                    <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
+                    <!-- <i>及时获一手财税信息</i> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
+        Reserved&nbsp;ICP证 : 鄂ICP备16008680号-3</div>
+
+</div>
+</div>
 </body>
 
 </html>

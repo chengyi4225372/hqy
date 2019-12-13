@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576205943;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576228876;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,9 +16,8 @@
     <!-- <script src='/static/spirit/js/xlPaging.js'></script> -->
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <!-- <link rel="stylesheet" href="/static/spirit/css/layui.css"  media="all"> -->
-    <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-
+    <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
     <script src="/static/spirit/js/clamp.js"></script>
 
     <script src='/static/spirit/js/Informationlist.js'></script>
@@ -345,21 +344,21 @@
                     </div>
 
                     <ul class="qrCode">
-                            <li>
-                                <div class="pic">
-                                    <img src="/static/spirit/images/weixincode.png" alt="">
-                                </div>
-                                <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                                <i>及时获一手财税信息</i>
-                            </li>
-                            <li>
-                                <div class="pic">
-                                    <img src="/static/spirit/images/weibocode.png" alt="">
-                                </div>
-                                <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
-                                <!-- <i>及时获一手财税信息</i> -->
-                            </li>
-                        </ul>
+                        <li>
+                            <div class="pic">
+                                <img src="/static/spirit/images/weixincode.png" alt="">
+                            </div>
+                            <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
+                            <i>及时获一手财税信息</i>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="/static/spirit/images/weibocode.png" alt="">
+                            </div>
+                            <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
+                            <!-- <i>及时获一手财税信息</i> -->
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
