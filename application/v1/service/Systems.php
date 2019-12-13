@@ -444,7 +444,7 @@ class Systems
     public function getOneshow()
     {
         $where['status'] = 1;
-        $return_data = Slideshow::where($where)->find()->toArray();
+        $return_data = collection(Slideshow::where($where)->select())->toArray();
         return $return_data;
     }
 

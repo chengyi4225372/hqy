@@ -16,3 +16,18 @@
 ---------------------------------------------------------------
 [ 2019-12-12T17:45:47+08:00 ] 172.26.2.252 POST /v1/info/infos/auditing.html
 [ error ] [8]未定义数组索引: auditing[/opt/web/hqy_/application/v1/service/Infosservice.php:83]
+---------------------------------------------------------------
+[ 2019-12-12T20:32:41+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-12T20:33:04+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-12T20:33:23+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-12T20:33:28+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-12T20:40:54+08:00 ] 172.26.2.252 GET /home/index/index.html
+[ error ] [8]未定义数组索引: title[/opt/web/hqy_/runtime/temp/b98b0097f3eceb2ba5d75b5d36538488.php:238]
