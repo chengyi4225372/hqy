@@ -794,7 +794,8 @@ body {
     margin: 0 auto; */
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  padding-bottom: 6.5rem; }
 
 .success_content {
   padding-top: 9.0625rem; }
@@ -832,7 +833,6 @@ body {
     position: absolute;
     -webkit-box-shadow: 5px 5px 5px #ccd4dc;
             box-shadow: 5px 5px 5px #ccd4dc;
-    border: 1px solid rgba(0, 0, 0, 0);
     background: url("http://chuantu.xyz/t6/704/1576222614x2890191687.png") no-repeat;
     -webkit-background-size: 100% 100%;
             background-size: 100% 100%;
@@ -1245,7 +1245,6 @@ body {
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #fff;
-  margin-top: 6.5rem;
   padding: 4.8125rem 0 3.3125rem 0;
   -webkit-background-size: cover;
           background-size: cover; }
@@ -1591,7 +1590,7 @@ border:none;
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
+  position: fixed;
   display: none; }
 
 .propbox {
@@ -1613,10 +1612,9 @@ border:none;
   text-align: center;
   line-height: 7.5rem;
   height: 7.5rem;
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
   font-weight: 400;
-  color: white;
   background-image: url("../images/title.png");
   -webkit-background-size: 100% 100%;
           background-size: 100% 100%; }

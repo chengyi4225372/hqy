@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576228876;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576231015;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -412,6 +412,7 @@
     <ul class='success'>
       <div class='w success_content'>
         <div class='success_title'></div>
+    
         <!-- <div class='success_icon'>
           <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
           <div style="cursor:pointer;" onclick="click_show(this)" keys="<?php echo $key; ?>" class="<?php echo $data_list['is_show'].$key; ?>"
@@ -481,18 +482,21 @@
                   <input type='hidden' id='identification' value='企业一站式服务'>
                   <input type="button" onclick='getErp()' value='定制您的方案'>
                 </div>
+                
                 <!-- 提交成果后弹窗 -->
                 <div class="mask-box2">
                   <span></span>
                   <p class="mask-box-title">提交成功</p>
                   <p class="mask-box-content">我们会在一个工作日内联系您</p>
                 </div>
+
               </div>
             </div>
           </div>
           <?php endforeach; endif; else: echo "" ;endif; ?>
 
         </div>
+      </ul>
       </div>
       </div>
     </div>
