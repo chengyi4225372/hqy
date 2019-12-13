@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1575880775;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1576217706;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -130,8 +130,7 @@
         <div class="bg_breadCrumbs">
             <div class="w bread-crumbs">
                 <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
-                <span><a class="current" style="color:#3E92FF;" onclick="go_news(this)"
-                        data-url="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a></span> <span></span>
+                <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">政府招标信息</a></span> <span></span>
             </div>
         </div>
 

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"/opt/web/hqy_/public/../application/home/view/optimal/index.html";i:1575593783;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:64:"/opt/web/hqy_/public/../application/home/view/optimal/index.html";i:1576227941;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,11 +7,11 @@
     <title>招募合伙人</title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/optimal.css">
-    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
 <body>
-    <div class='container'>
+    <div class='container' style="margin-top:60px;">
 
         <!-- 导航部分 -->
         <div class='header'>
