@@ -153,4 +153,10 @@ $(function(){
 
     });
   });
+
+/* 惠家族产品介绍 */
+  $('.produtionIntro li').on('click',function(){
+    $(this).addClass('chosenProduct').siblings().removeClass('chosenProduct')
+  })
 })
+

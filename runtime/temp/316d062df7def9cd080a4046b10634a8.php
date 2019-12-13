@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576228876;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,19 +11,19 @@
     <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>{$title}</title>
+    <title><?php echo $title; ?></title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <!-- <script src='__SPI__/js/xlPaging.js'></script> -->
-    <link rel="stylesheet" href="__SPI__/css/base.css">
-    <!-- <link rel="stylesheet" href="__SPI__/css/layui.css"  media="all"> -->
+    <!-- <script src='/static/spirit/js/xlPaging.js'></script> -->
+    <link rel="stylesheet" href="/static/spirit/css/base.css">
+    <!-- <link rel="stylesheet" href="/static/spirit/css/layui.css"  media="all"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-    <link rel="stylesheet" href="__SPI__/css/Informationlist.css">
-    <script src="__SPI__/js/clamp.js"></script>
+    <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
+    <script src="/static/spirit/js/clamp.js"></script>
 
-    <script src='__SPI__/js/Informationlist.js'></script>
-    <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
-    <script src='__HOME__/js/common.js'></script>
-    <script src='__PUBLIC__/common/js/public.js'></script>
+    <script src='/static/spirit/js/Informationlist.js'></script>
+    <script src="/static/assets/plugins/layui/layui.all.js"></script>
+    <script src='/static/home/js/common.js'></script>
+    <script src='/static/common/js/public.js'></script>
 </head>
 
 <body>
@@ -33,11 +34,11 @@
         <div class='header'>
             <div class=header_content id='headerContent'>
                 <div class='logo'>
-                    <a href="{:url('/home/index/index')}"></a>
+                    <a href="<?php echo url('/home/index/index'); ?>"></a>
                 </div>
                 <ul class='titile'>
-                    <li><a href="{:url('/home/index/index')}">首页</a></li>
-                    <li><a href="{:url('/home/optimal/index')}">招募合伙人</a>
+                    <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+                    <li><a href="<?php echo url('/home/optimal/index'); ?>">招募合伙人</a>
                     </li>
                     <li>
                         <a href="javascript:;">“惠”家族产品</a>
@@ -45,7 +46,7 @@
                         <div class="w secondary-menu" id="secondary-menu">
                             <div>
                                 <dl>
-                                    <dt><a href="{:config('curl.hys')}">惠优税</a></dt>
+                                    <dt><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
                                     <dd>
                                         ·企税降成本 薪税降税负
 
@@ -53,7 +54,7 @@
                                     <dd>·分红降扣率 创业降个税</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="{:config('curl.hlg')}">惠灵工</a></dt>
+                                    <dt><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
                                     <dd>
                                         ·寻求多样化用工模式
 
@@ -61,7 +62,7 @@
                                     <dd>·提高内部人员效能</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="{:url('/home/many/index')}">惠多薪</a></dt>
+                                    <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                                     <dd>
                                         ·优化员工福利选择模块
 
@@ -69,7 +70,7 @@
                                     <dd>·企业成本可控透明化</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="{:url('/home/searches/index')}">惠找事</a></dt>
+                                    <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                     <dd>
                                         ·技能价值化
 
@@ -77,7 +78,7 @@
                                     <dd>·成就更好自我</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="{:url('/home/business/index')}">惠创业</a></dt>
+                                    <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                     <dd>
                                         ·一站式解决方案
 
@@ -85,36 +86,36 @@
                                     <dd>·激活企业最大效益</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="{:url('/home/launch/index')}">惠企动</a></dt>
+                                    <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
                                     <dd>·产品内容建设中……</dd>
                                 </dl>
                             </div>
                         </div><!-- 二级菜单 -->
                     </li>
                     <li class='nav-active'><a href="javascript:;">政府招标信息</a></li>
-                    <li><a href="{:url('/home/index/infoList')}">政府招商信息</a></li>
-                    <li><a href="{:url('/home/index/industry')}">行业资讯</a></li>
-                    <!-- <li><a href="{:url('/home/launch/index')}">惠启动</a></li> -->
+                    <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
+                    <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
+                    <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
                 </ul>
 
                 <!--登录，注册暂时先不上线 2019年12月2号-->
 
-                <!--{if empty($userinfo['mobile'])}-->
+                <!--<?php if(empty($userinfo['mobile'])): ?>-->
                 <!--<div class='register'>-->
-                <!--<a href="javascript:void(0)" login_url="{$baseurl}" loca_url="{:config('curl.website')}"-->
+                <!--<a href="javascript:void(0)" login_url="<?php echo $baseurl; ?>" loca_url="<?php echo config('curl.website'); ?>"-->
                 <!--onclick="login_btn(this)">登录</a>-->
-                <!--<a href="{:url('/home/login/register')}">注册</a>-->
+                <!--<a href="<?php echo url('/home/login/register'); ?>">注册</a>-->
                 <!--</div>-->
-                <!--{else /}-->
+                <!--<?php else: ?>-->
                 <!--<div class="u_info">-->
-                <!--<img src="__HOME__/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">-->
-                <!--<p style="display:inline-block;color:#fff;"  id="mobile_phone">{$userinfo['mobile']}</p>-->
+                <!--<img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">-->
+                <!--<p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>-->
 
                 <!--<div class="u_info_content" id="u_info_content">-->
-                <!--<a class="u_out" href="javascript:void(0)" data-token="{$userinfo['token']}" onclick="user_logout(this)" location_url="{:url('/home/index/index')}" data-url="{:url('/home/login/logout')}">退出账号</a>-->
+                <!--<a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>" onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>-->
                 <!--</div>-->
                 <!--</div>-->
-                <!--{/if}-->
+                <!--<?php endif; ?>-->
             </div>
         </div>
 
@@ -122,15 +123,16 @@
         <div class="bg_banner">
             <div class="w banner">
 
-                <img src="__SPI__/images/banner.png" alt="">
+                <img src="/static/spirit/images/banner.png" alt="">
             </div>
         </div>
 
         <!-- 面包屑导航 -->
         <div class="bg_breadCrumbs">
             <div class="w bread-crumbs">
-                <span><a href="{:url('/home/index/index')}">首页</a></span> >
-                <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">政府招标信息</a></span> <span></span>
+                <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
+                <span><a class="current" style="color:#3E92FF;" onclick="go_news(this)"
+                        data-url="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a></span> <span></span>
             </div>
         </div>
 
@@ -146,8 +148,8 @@
                     </ul> -->
                         <div class="govPolicy fl">招标信息</div>
                         <div class="search-box fr">
-                            <input type="text" id="keyword" value="{$Think.get.keyword}" placeholder="请输入关键字">
-                            <div id="searched" style="cursor:pointer;" data-url="{:url('/home/index/infoBiao')}">搜索
+                            <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
+                            <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/infoBiao'); ?>">搜索
                             </div>
                         </div>
                     </div>
@@ -155,17 +157,17 @@
                     <!-- 热搜 -->
                     <div class="m hotWord">
                             <ul>
-                                <li style="cursor:pointer;" data-url="{:url('/home/index/industry')}"
+                                <li style="cursor:pointer;" data-url="<?php echo url('/home/index/industry'); ?>"
                                     onclick="location.href=$(this).attr('data-url')">
                                     <span>热门关键词</span>
                                 </li>
-                                {volist name='four' id='ff'}
-                                <li onclick="hotsearch(this);" data-title="{$ff.title}"
-                                    data-url="{:url('/home/index/industry')}">
-                                    <span>{$ff.title}</span>
+                                <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $i = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($i % 2 );++$i;?>
+                                <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
+                                    data-url="<?php echo url('/home/index/industry'); ?>">
+                                    <span><?php echo $ff['title']; ?></span>
                                     <span class="close">✕</span>
                                 </li>
-                                {/volist}
+                                <?php endforeach; endif; else: echo "" ;endif; ?>
                             </ul>
     
                         </div>
@@ -178,59 +180,58 @@
 
                     <div class="tabs-items show">
                         <ul id="shang">
-                            {empty name='biao'}
+                            <?php if(empty($biao) || (($biao instanceof \think\Collection || $biao instanceof \think\Paginator ) && $biao->isEmpty())): ?>
                             <li>
                                 <div class="tabs-items-content">
                                     <div class="tabs-items-content-text figcaption">
-                                        <p>抱歉，没有找到与<b style="color: #ff2222">{$Think.get.keyword}</b>的相关结果。</p>
+                                        <p>抱歉，没有找到与<b style="color: #ff2222"><?php echo \think\Request::instance()->get('keyword'); ?></b>的相关结果。</p>
                                     </div>
                                 </div>
                             </li>
-                            {else /}
-                            {volist name='biao' id='ww'}
+                            <?php else: if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ww): $mod = ($i % 2 );++$i;?>
                             <li>
                                 <!--<a href="javascript:;"-->
-                                <!--data-url="{:url('/home/index/getInfo',['mid' => $ww.id])}"-->
-                                <!--login_url="{$baseurl}"-->
-                                <!--loca_url="{:config('curl.website')}/home/index/getInfo?mid={$ww['id']}"-->
-                                <!--mobile-phone="{$userinfo['mobile']}" data-id="{$ww['id']}"-->
+                                <!--data-url="<?php echo url('/home/index/getInfo',['mid' => $ww['id']]); ?>"-->
+                                <!--login_url="<?php echo $baseurl; ?>"-->
+                                <!--loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ww['id']; ?>"-->
+                                <!--mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ww['id']; ?>"-->
                                 <!--onclick="home_module.show_detail(this)">-->
                                 <!--<div class="infoItem">-->
                                 <!--<div class="infoLeft">-->
-                                <!--<img src="{$ww.imgs?$ww.imgs:'__HOME__/images/infoItem.jpg';}" alt="">-->
+                                <!--<img src="<?php echo !empty($ww['imgs'])?$ww['imgs']:'/static/home/images/infoItem.jpg';; ?>" alt="">-->
                                 <!--</div>-->
 
                                 <!--<div class="infoRight">-->
                                 <!--<div class="rightTop">-->
-                                <!--<div class="itemTitle">{:mb_substr($ww.title,0,35,'utf-8')}</div>-->
+                                <!--<div class="itemTitle"><?php echo mb_substr($ww['title'],0,35,'utf-8'); ?></div>-->
                                 <!--<span class="itemTime">-->
-                                <!--<img src="__SPI__/images/shijian2x.png" alt=""><span>{$ww.release_time}</span>-->
+                                <!--<img src="/static/spirit/images/shijian2x.png" alt=""><span><?php echo $ww['release_time']; ?></span>-->
                                 <!--</span>-->
                                 <!--</div>-->
                                 <!--<p>-->
-                                <!--{$ww.describe}-->
+                                <!--<?php echo $ww['describe']; ?>-->
                                 <!--</p>-->
                                 <!--</div>-->
 
                                 <!--</div>-->
                                 <!--</a>-->
 
-                                <a href="{:config('curl.website')}/home/index/detailbiao?mid={$ww['id']}">
+                                <a href="<?php echo config('curl.website'); ?>/home/index/detailbiao?mid=<?php echo $ww['id']; ?>">
                                     <div class="infoItem">
                                         <div class="infoLeft">
-                                            <img src="{$ww.imgs?$ww.imgs:'__HOME__/images/infoItem.jpg';}" alt="">
+                                            <img src="<?php echo !empty($ww['imgs'])?$ww['imgs']:'/static/home/images/infoItem.jpg';; ?>" alt="">
                                         </div>
 
                                         <div class="infoRight">
                                             <div class="rightTop">
-                                                <div class="itemTitle">{:mb_substr($ww.title,0,35,'utf-8')}</div>
+                                                <div class="itemTitle"><?php echo mb_substr($ww['title'],0,35,'utf-8'); ?></div>
                                                 <span class="itemTime">
-                                                    <img src="__SPI__/images/shijian2x.png"
-                                                        alt=""><span>{$ww.release_time}</span>
+                                                    <img src="/static/spirit/images/shijian2x.png"
+                                                        alt=""><span><?php echo $ww['release_time']; ?></span>
                                                 </span>
                                             </div>
                                             <p>
-                                                {$ww.describe}
+                                                <?php echo $ww['describe']; ?>
                                             </p>
                                         </div>
 
@@ -239,19 +240,15 @@
 
 
                                 <ul class="tags">
-                                    {empty name='$ww.keyword'}
-                                    {else /}
-                                    {foreach name="$ww.keyword" item="key" key="k" }
-                                    <li onclick="hotsearch(this);" data-title="{$key}"
-                                        data-url="{:url('/home/index/infoBiao')}">{$key}</li>
-                                    {/foreach}
-                                    {/empty}
+                                    <?php if(empty($ww['keyword']) || (($ww['keyword'] instanceof \think\Collection || $ww['keyword'] instanceof \think\Paginator ) && $ww['keyword']->isEmpty())): else: if(is_array($ww['keyword']) || $ww['keyword'] instanceof \think\Collection || $ww['keyword'] instanceof \think\Paginator): if( count($ww['keyword'])==0 ) : echo "" ;else: foreach($ww['keyword'] as $k=>$key): ?>
+                                    <li onclick="hotsearch(this);" data-title="<?php echo $key; ?>"
+                                        data-url="<?php echo url('/home/index/infoBiao'); ?>"><?php echo $key; ?></li>
+                                    <?php endforeach; endif; else: echo "" ;endif; endif; ?>
                                 </ul>
                             </li>
-                            {/volist}
-                            {/empty}
+                            <?php endforeach; endif; else: echo "" ;endif; endif; ?>
                         </ul>
-                        <input type="hidden" id="sid" value="{$Think.get.keyword}">
+                        <input type="hidden" id="sid" value="<?php echo \think\Request::instance()->get('keyword'); ?>">
                     </div>
 
                 </div>
@@ -265,7 +262,7 @@
             <!--            <li>2</li>-->
             <!--            <li class="next">下一页</li>-->
             <!--        </ul>-->
-            {$biao->render()}
+            <?php echo $biao->render(); ?>
         </div>
 
 
@@ -302,9 +299,9 @@
 
                 </div>
                 <div class='concat_icon clearfix'>
-                    <div><img src="__SPI__/images/tie.png" alt=""></div>
-                    <div><img src="__SPI__/images/wx.png" alt=""></div>
-                    <div><img src="__SPI__/images/bo.png" alt=""></div>
+                    <div><img src="/static/spirit/images/tie.png" alt=""></div>
+                    <div><img src="/static/spirit/images/wx.png" alt=""></div>
+                    <div><img src="/static/spirit/images/bo.png" alt=""></div>
                 </div>
                 <div class="partener_fotter">© Copyright 2019 惠企动（湖北）科技有限公司 . All Rights Reserved</div>
             </div>
@@ -349,16 +346,16 @@
                     <ul class="qrCode">
                         <li>
                             <div class="pic">
-                                <img src="__SPI__/images/weixincode.png" alt="">
+                                <img src="/static/spirit/images/weixincode.png" alt="">
                             </div>
-                            <span><img src="__SPI__/images/weixinicon.png" alt="">微信扫码关注</span>
+                            <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
                             <i>及时获一手财税信息</i>
                         </li>
                         <li>
                             <div class="pic">
-                                <img src="__SPI__/images/weibocode.png" alt="">
+                                <img src="/static/spirit/images/weibocode.png" alt="">
                             </div>
-                            <span><img src="__SPI__/images/weiboicon.png" alt="">惠企云微博</span>
+                            <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
                             <!-- <i>及时获一手财税信息</i> -->
                         </li>
                     </ul>

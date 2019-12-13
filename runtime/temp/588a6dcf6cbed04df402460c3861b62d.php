@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"C:\phpEnv\www\hqy_\public/../application/home\view\index\detailbiao.html";i:1576206506;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1576131456;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,17 +11,17 @@
     <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="keyword" content="{$info['keyword']}">
-    <meta name="description" content="{$info['describe']}">
-    <title>{$title}</title>
-    <link rel="stylesheet" href="__SPI__/css/base.css">
-    <link rel="stylesheet" href="__SPI__/css/detail.css">
+    <meta name="keyword" content="<?php echo $info['keyword']; ?>">
+    <meta name="description" content="<?php echo $info['describe']; ?>">
+    <title><?php echo $title; ?></title>
+    <link rel="stylesheet" href="/static/spirit/css/base.css">
+    <link rel="stylesheet" href="/static/spirit/css/detail.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src='__HOME__/js/common.js'></script>
-    <script src='__PUBLIC__/common/js/public.js'></script>
-    <script src="__SPI__/js/detail.js"></script>
-    <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
+    <script src='/static/home/js/common.js'></script>
+    <script src='/static/common/js/public.js'></script>
+    <script src="/static/spirit/js/detail.js"></script>
+    <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <style>
         /* 归属信息 */
         .affiliation {
@@ -42,11 +43,11 @@
         <div class='header'>
             <div class=header_content id='headerContent'>
                 <div class='logo'>
-                    <a href="{:url('/home/index/index')}"></a>
+                    <a href="<?php echo url('/home/index/index'); ?>"></a>
                 </div>
                 <ul class='titile'>
-                    <li><a href="{:url('/home/index/index')}">首页</a></li>
-                    <li><a href="{:url('/home/optimal/index')}">招募合伙人</a>
+                    <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
+                    <li><a href="javascript:;">招募合伙人</a>
                     </li>
                     <li>
                         <a href="javascript:;">“惠”家族产品</a>
@@ -54,7 +55,7 @@
                         <div class="w secondary-menu" id="secondary-menu">
                             <div>
                                 <dl>
-                                    <dt><a href="{:config('curl.hys')}">惠优税</a></dt>
+                                    <dt><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
                                     <dd>
                                         ·企税降成本 薪税降税负
 
@@ -62,7 +63,7 @@
                                     <dd>·分红降扣率 创业降个税</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="{:config('curl.hlg')}">惠灵工</a></dt>
+                                    <dt><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
                                     <dd>
                                         ·寻求多样化用工模式
 
@@ -70,7 +71,7 @@
                                     <dd>·提高内部人员效能</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="{:url('/home/many/index')}">惠多薪</a></dt>
+                                    <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                                     <dd>
                                         ·优化员工福利选择模块
 
@@ -78,7 +79,7 @@
                                     <dd>·企业成本可控透明化</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="{:url('/home/searches/index')}">惠找事</a></dt>
+                                    <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                     <dd>
                                         ·技能价值化
 
@@ -86,7 +87,7 @@
                                     <dd>·成就更好自我</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="{:url('/home/business/index')}">惠创业</a></dt>
+                                    <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                     <dd>
                                         ·一站式解决方案
 
@@ -94,72 +95,80 @@
                                     <dd>·激活企业最大效益</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="{:url('/home/launch/index')}">惠企动</a></dt>
+                                    <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
                                     <dd>·产品内容建设中……</dd>
                                 </dl>
                             </div>
                         </div><!-- 二级菜单 -->
                     </li>
-                    <li><a href="{:url('/home/index/infoBiao')}">政府招标信息</a></li>
-                    <li class='nav-active'><a href="{:url('/home/index/infoList')}">政府招商信息</a></li>
-                    <li><a href="{:url('/home/index/industry')}">行业资讯</a></li>
-                    <!-- <li><a href="{:url('/home/launch/index')}">惠启动</a></li> -->
+                    <li  class='nav-active'><a href="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a></li>
+                    <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
+                    <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
+                    <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
                 </ul>
-                <!--{if empty($userinfo['mobile'])}-->
+                <!--<?php if(empty($userinfo['mobile'])): ?>-->
                 <!--<div class='register'>-->
                 <!--<a href="javascript:void(0)"-->
-                <!--login_url="{$baseurl}"-->
-                <!--loca_url="{:config('curl.website')}" onclick="login_btn(this)">登录</a>-->
-                <!--<a href="{:url('/home/login/register')}">注册</a>-->
+                <!--login_url="<?php echo $baseurl; ?>"-->
+                <!--loca_url="<?php echo config('curl.website'); ?>" onclick="login_btn(this)">登录</a>-->
+                <!--<a href="<?php echo url('/home/login/register'); ?>">注册</a>-->
                 <!--</div>-->
-                <!--{else /}-->
-                <!--{include file="common/login"}-->
-                <!--{/if}-->
+                <!--<?php else: ?>-->
+                <!--<?php if(empty($userinfo['mobile'])): ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
+        登陆
+    </a></div>
+    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
+</div>
+<?php else: ?>
+<div class="u_info">
+    <img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+    <p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
+
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>" onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<?php endif; ?>-->
+                <!--<?php endif; ?>-->
             </div>
         </div>
-    <div class="bgBread">
+        <div class="bgBread">
         <div class='w bread_title'>
-            <a class="actives" href="{:url('/home/index/index')}">首页 ></a>
-<<<<<<< HEAD
-            <a class="actives" href="javasrcipt:void(0)">政府招商信息</a> >
-            <a class="activees" href="javasrcipt:void(0)">新闻详情</a></div>
-=======
-            <a class="actives" onclick="go_news(this)" data-url="{:url('/home/index/infoList')}">政府招商政策</a> >
+            <a class="actives" href="<?php echo url('/home/index/index'); ?>">首页 ></a>
+            <a class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a> >
             <a class="activees" href="javasrcipt:void(0)">详情</a>
         </div>
     </div>
->>>>>>> ca69db040f51fda77a0863c4f47aa3eaab9f39cb
         <div class='main_content'>
             <div class='content_middle'>
                 <div class='pic_total'>
-                    <div class='pic_title'>{$info.title}</div>
-                    <div class='time'>{$info.release_time}</div>
+                    <div class='pic_title'><?php echo $info['title']; ?></div>
+                    <div class='time'><?php echo $info['release_time']; ?></div>
                     <div class='line'></div>
                     <div class='tuwen'>
-                        <div class='wenzi'>{$info.content}</div>
+                        <div class='wenzi'><?php echo $info['content']; ?></div>
 
                         <!-- <div class="affiliation">
                             <p>本信息来源：中国招标网</p>
                         </div> -->
 
-                        
+                      
                     </div>
                     <div class='page'>
-                            {empty name='top'}
+                            <?php if(empty($top) || (($top instanceof \think\Collection || $top instanceof \think\Paginator ) && $top->isEmpty())): ?>
                             <div><span>上一篇:</span><a href="javascript:;">已经是第一篇了</a></div>
-                            {else /}
+                            <?php else: ?>
                             <div><span>上一篇:</span><a
-                                    href="{:url('/home/index/detailshang',array('mid'=>$top.id))}">{$top.title}</a>
-                            </div>
-                            {/empty}
-
-                            {empty name='next'}
+                                    href="<?php echo url('/home/index/detailbiao',array('mid'=>$top['id'])); ?>"><?php echo $top['title']; ?></a></div>
+                            <?php endif; if(empty($next) || (($next instanceof \think\Collection || $next instanceof \think\Paginator ) && $next->isEmpty())): ?>
                             <div><span>下一篇:</span><a href="javascript:;">已经是最后一篇了</a></div>
-                            {else /}
+                            <?php else: ?>
                             <div><span>下一篇:</span><a
-                                    href="{:url('/home/index/detailshang',array('mid'=>$next.id))}">{$next.title}</a>
+                                    href="<?php echo url('/home/index/detailbiao',array('mid'=>$next['id'])); ?>"><?php echo $next['title']; ?></a>
                             </div>
-                            {/empty}
+                            <?php endif; ?>
                         </div>
                 </div>
             </div>
@@ -169,8 +178,7 @@
                 <div class="w bottom">
                     <div class="aboutUs">
                         <span>关于我们</span>
-                        <p>惠企云网络信息（湖北）有限公司深度研究财税管理及企业管理在新经济时代的创新和运用，将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】五大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案及企业管理咨询，为企业可持续发展提供有力保障！
-                        </p>
+                        <p>惠企云网络信息（湖北）有限公司深度研究财税管理及企业管理在新经济时代的创新和运用，将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】五大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案及企业管理咨询，为企业可持续发展提供有力保障！</p>
                     </div>
                     <div class="w navBottom">
                         <div class="navList">
@@ -205,23 +213,22 @@
                         <ul class="qrCode">
                                 <li>
                                     <div class="pic">
-                                        <img src="__SPI__/images/weixincode.png" alt="">
+                                        <img src="/static/spirit/images/weixincode.png" alt="">
                                     </div>
-                                    <span><img src="__SPI__/images/weixinicon.png" alt="">微信扫码关注</span>
+                                    <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
                                     <i>及时获一手财税信息</i>
                                 </li>
                                 <li>
                                     <div class="pic">
-                                        <img src="__SPI__/images/weibocode.png" alt="">
+                                        <img src="/static/spirit/images/weibocode.png" alt="">
                                     </div>
-                                    <span><img src="__SPI__/images/weiboicon.png" alt="">惠企云微博</span>
+                                    <span><img src="/static/spirit/images/weiboicon.png" alt="">惠企云微博</span>
                                     <!-- <i>及时获一手财税信息</i> -->
                                 </li>
                             </ul>
                     </div>
                 </div>
-                <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
-                    Reserved&nbsp;ICP证 : 鄂ICP备16008680号-3</div>
+                <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights Reserved&nbsp;ICP证 : 鄂ICP备16008680号-3</div>
     
             </div>
 
@@ -247,7 +254,7 @@
         menuUl.onmouseleave = function () {
             var li = document.querySelectorAll('.nav-active')[0]
             li.classList.remove('nav-active')
-            menuList[4].classList.add('nav-active')
+            menuList[3].classList.add('nav-active')
         }
     </script>
 </body>
