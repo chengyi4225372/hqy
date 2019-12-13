@@ -206,15 +206,41 @@ function go_news(obj) {
     window.location.href = url;
 }
 
+ /* 选择热词 */
+ $(function () {
+    $('.hotWord ul li').click(function () {
+        $(this).addClass('chosen')
+        $(this).children().css({ 'display': 'block' });
+    })
+    $('.close').click(function(e){
+        e.stopPropagation()
+        $(this).css({'display': 'none'})
+        $(this).parent().removeClass('chosen')
+    })
+    $('.hotWord ul li').mouseenter(function(){
+        if($(this).hasClass('chosen')){
+            return false
+        }
+        $(this).css({
+            'background':'#E7F1FF',
+            'color':'#7EB4FD'
+        })
+    }).mouseleave(function(){
+        $(this).css({
+            'background':'#F6F6F6',
+            'color':'#333'
+        })
+    })
+})
 //列表页热门搜索
-function hotsearch(obj) {
-    var keyword = $(obj).attr('data-title');
-    var url = $(obj).attr('data-url');
+// function hotsearch(obj) {
+//     var keyword = $(obj).attr('data-title');
+//     var url = $(obj).attr('data-url');
 
-    //alert(url);
-    if (keyword == '' || keyword == undefined || keyword == 'undefined') {
-        return false;
-    }
+//     //alert(url);
+//     if (keyword == '' || keyword == undefined || keyword == 'undefined') {
+//         return false;
+//     }
 
-    window.location.href = url + '?title=' + keyword;
-}
+//     window.location.href = url + '?title=' + keyword;
+// }

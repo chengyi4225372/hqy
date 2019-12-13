@@ -100,6 +100,7 @@ body {
     background: #F4F4F4;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: "Noto Sans SC";
 }
 
 p {
@@ -265,7 +266,7 @@ a {
 .titile a {
     /* padding:0 28px; */
     font-size: 1rem;
-    font-family: Microsoft YaHei;
+    font-family: "Noto Sans SC";
     font-weight: 400;
     color: #fff;
     text-decoration: none;
@@ -520,9 +521,10 @@ a {
 }
 
 .building {
-    margin: 0 auto;
-    width: 10.875rem;
     height: 1.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 3.75rem;
     font-size: 1.875rem;
     color: #4984BD;

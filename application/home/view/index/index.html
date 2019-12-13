@@ -12,6 +12,7 @@
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>惠企云</title>
   <link rel="stylesheet" href="__HOME__/css/base.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
   <link rel="stylesheet" href="__HOME__/css/index.css">
   <link rel="stylesheet" href="__PUBLIC__/assets/plugins/layui/css/layui.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -291,13 +292,14 @@
         <ul class='all_product'>
           {volist name='protuct' id='v1'}
           <li>
-            <div class="all_product-img-box"><img src="{$v1.imgs|default=''}" alt=""></div>
+            <img class="all_product-img-box" src="{$v1.imgs|default=''}" alt="">
             <a href="javascript:void(0)">{$v1.names|default=''}</a>
-            <a href="javascript:void(0)">{$v1.desc|default=''}</a>
+            <a href="javascript:void(0)">{$v1.names|default=''}</a>
             <ul class='one_pic'>
               <li><a onclick="showSearch()">获取方案</a></li>
               <li><a href="{$v1.purl|default='#'}">前往网站</a></li>
             </ul>
+            
           </li>
           {/volist}
         </ul>
