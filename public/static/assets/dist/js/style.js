@@ -488,7 +488,7 @@ var admin_module = (function (){
         var desc = $('#desc').val();
         var urls = $('#url').val();
         var status = $('#status').val();
-        if(pic == undefined || pic == 'undefined' || pic == ''){
+        if(pic == undefined || pic == ''){
             layer.msg('请选择要上传的图片');return;
             //layer.tips('请选择要上传的图片!','#pic',{tips:[1,'#c00']});
         }
@@ -536,7 +536,7 @@ var admin_module = (function (){
         var urls = $('#url').val();
         var status = $('#status').val();
         var id = $('#site_id').val();
-        if(pic == undefined || pic == 'undefined' || pic == ''){
+        if(pic == undefined || pic == ''){
             layer.msg('请选择要上传的图片');return;
             //layer.tips('请选择要上传的图片!','#pic',{tips:[1,'#c00']});
         }
@@ -917,6 +917,104 @@ var admin_module = (function (){
             },'json'
         );
     };
+    //添加友情链接
+    var add_blogroll = function add_blogroll(objthis){
+        var id = $(objthis).attr('data');
+        var url = $(objthis).attr('data-url');
+        var data = {};
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var link = $('#link').val();
+        var status = $('#status').val();
+        if(title == '' || title == undefined){
+            layer.tips('请填写标题','#title',{tips:[3,'#00a65a']});return;
+        }
+
+        if(link == '' || link == undefined){
+            layer.tips('请填写URL地址','#title',{tips:[3,'#00a65a']});return;
+        }
+        data.title = title;
+        data.describe = desc;
+        data.link = link;
+        data.status = status;
+        $.post(
+            url,
+            data,
+            function (ret){
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        parent.location.reload();
+                    });
+                }
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+            },'json'
+        );
+    };
+    //编辑友情链接
+    var edit_blogroll = function edit_blogroll(objthis){
+        var url = $(objthis).attr('data-url');
+        var data = {};
+        var id = $(objthis).attr('data');
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var link = $('#link').val();
+        var status = $('#status').val();
+        if(title == '' || title == undefined){
+            layer.tips('请填写标题','#title',{tips:[3,'#00a65a']});return;
+        }
+
+        if(link == '' || link == undefined){
+            layer.tips('请填写URL地址','#title',{tips:[3,'#00a65a']});return;
+        }
+        data.id = id;
+        data.title = title;
+        data.describe = desc;
+        data.link = link;
+        data.status = status;
+        $.post(
+            url,
+            data,
+            function (ret){
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        parent.location.reload();
+                    });
+                }
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+            },'json'
+        );
+    };
+
+    //招标、招商信息审核
+    var auditing = function auditing(objthis){
+        var url = $(objthis).attr('data-url');
+        var audit = $(objthis).attr('data');
+        var id = $(objthis).attr('data-id');
+        if(audit == 1){
+            return;
+        }
+        $.post(
+            url,
+            {id:id},
+            function (ret){
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        $(objthis).removeClass('btn-warning');
+                        $(objthis).addClass('btn-success');
+                        $(objthis).attr('data',1);
+                        $(objthis).html('已审核');
+                    });
+                }
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+            },'json'
+        );
+    };
 
     return {
         changepas: changepas,
@@ -946,6 +1044,9 @@ var admin_module = (function (){
         case_edit:case_edit,
         status_sort:status_sort,
         change_sort:change_sort,
+        add_blogroll:add_blogroll,
+        edit_blogroll:edit_blogroll,
+        auditing:auditing,
     }
 
 })();

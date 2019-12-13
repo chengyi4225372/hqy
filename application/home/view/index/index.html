@@ -233,32 +233,24 @@
 
     </div>
     <!-- 文字部分-->
-    <!-- <div class="header-content-box">
-      <div class='content_text'>
-        <div class='w'>{$slideshow['title']}</div>
-      </div>
 
-      <div class='rentong'>
-        <div class='w'>{$slideshow['desc']}</div>
-      </div>
-
-      <div class='btn'>
-        <div class='w'>
-          <button onclick="showSearch()">定制您的方案</button>
-        </div>
-      </div>
-
-    </div> -->
 
     <!-- 轮播图 -->
     <div class="layui-carousel" id="swiper">
       <div carousel-item>
+        {volist name="slideshow" id="list_item"}
+        {if $key == 0}
         <div>
-          <img src="__HOME__/images2/banner1.png" alt="">
+          <img src="{$list_item.pic}" alt="">
           <button class="customize" onclick="showSearch()">立即咨询</button>
         </div>
-        <div><img src="__HOME__/images2/banner2.png" alt=""></div>
-        <div><img src="__HOME__/images2/banner3.png" alt=""></div>
+        {else /}
+        <div><img src="{$list_item.pic}" alt=""></div>
+
+        {/if}
+        {/volist}
+
+
       </div>
     </div>
 
@@ -445,7 +437,7 @@
         </div>
         <div class='to_detailInfo'>
           {volist name="case_list" id="info_list"}
-          <div class="{$info_list['is_show']}">
+          <div class="{$info_list['is_show']}" {if $key == 1}style="display:block;"{else /}style="display:none;"{/if}>
             <div class='huichuangyou_title'>{$info_list['title']}</div>
             <div class="con">
               <div class="desc">{$info_list['desc']}</div>

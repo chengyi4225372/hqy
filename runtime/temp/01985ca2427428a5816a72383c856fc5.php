@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1575859977;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1575880775;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -9,6 +9,7 @@ use app\common\model\Menu;
 use app\common\model\Admin;
 use app\common\model\Site;
 use app\common\model\Slideshow;
+use app\common\model\Link;
 use plugin\Tree;
 use plugin\Crypt;
 use think\Config;
@@ -443,7 +444,7 @@ class Systems
     public function getOneshow()
     {
         $where['status'] = 1;
-        $return_data = Slideshow::where($where)->find()->toArray();
+        $return_data = collection(Slideshow::where($where)->select())->toArray();
         return $return_data;
     }
 
@@ -458,4 +459,175 @@ class Systems
         return $return_data;
     }
 
+    /**
+     * @DESC：友情链接首页
+     * @param $params
+     * @return mixed
+     * @author: jason
+     * @date: 2019-12-12 04:09:41
+     */
+    public function getBlogroll($params)
+    {
+        $where = [];
+        //按字段类型搜索
+        if (!empty($params['searchField']) && !empty($params['searchValue'])) {
+            $searchValue = preg_replace("/(\n)|(\s)|(\t)|(\')|(')|(，)/", ',', trim($params['searchValue']));
+            $searchValue = explode(',', $searchValue);
+
+            $searchValue = array_filter($searchValue, function ($par) {
+                return !empty($par);
+            });
+            switch ($params['searchField']) {
+                case 1:
+                    $good = array_map(function ($param) {
+                        return '%' . $param . '%';
+                    }, $searchValue);
+                    $where['title'] = array('like', $good, 'or');
+                    break;
+                case 2:
+                    $good = array_map(function ($param) {
+                        return '%' . $param . '%';
+                    }, $searchValue);
+                    $where['describe'] = array('like', $good, 'or');
+                    break;
+            }
+        }
+        if(!empty($params['status'])){
+            $where['status'] = $params['status'];
+        }
+        $list = Link::instance()->where($where)->order('sort desc,add_time desc')->paginate(15);
+        return $list;
+    }
+
+
+    /**
+     * @DESC：查询出一条友情链接
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-12 04:29:17
+     */
+    public function getOneBlogroll($params)
+    {
+        if(empty($params)) return false;
+        $where = [];
+        $where['id'] = $params['id'];
+        $res = Link::instance()->where($where)->find();
+        return $res;
+    }
+
+    /**
+     * @DESC：添加友情链接
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-12 04:23:11
+     */
+    public function addblogroll($params)
+    {
+        if(empty($params)) return false;
+        $add = [];
+        $add['add_time'] = time();
+        $add['add_user'] = Cookie('username');
+        $add['title'] = $params['title'];
+        $add['link'] = $params['link'];
+        $add['describe'] = $params['describe'];
+        $add['status'] = $params['status'];
+        $res = Link::instance()->insert($add);
+        if($res === false) return false;
+        return true;
+    }
+
+    /**
+     * @DESC：编辑友情链接
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-12 04:24:10
+     */
+    public function editblogroll($params)
+    {
+        if(empty($params)) return false;
+        if(empty($params['id'])) return false;
+        $add = [];
+        $where = [];
+        $add['title'] = $params['title'];
+        $add['link'] = $params['link'];
+        $add['describe'] = $params['describe'];
+        $add['status'] = $params['status'];
+        $where['id'] = $params['id'];
+        $res = Link::instance()->where($where)->update($add);
+        if($res === false) return false;
+        return true;
+    }
+
+    /**
+     * @DESC：友情链接排序
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-12 03:19:23
+     */
+    public function changesort($params)
+    {
+        if(empty($params)){
+            return false;
+        }
+        $save = [];
+        $save['sort'] = $params['sort'];
+        $where = [];
+        $where['id'] = $params['id'];
+        $res = Link::instance()->where($where)->update($save);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
+
+
+    /**
+     * @DESC：改变友情链接的状态
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-12 03:48:46
+     */
+    public function changestatus($params)
+    {
+        if(empty($params)){
+            return false;
+        }
+        $save = [];
+        $save['status'] = $params['status'];
+        $where = [];
+        $where['id'] = $params['id'];
+        $res = Link::instance()->where($where)->update($save);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @DESC：改变轮播图的状态
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-13 09:51:41
+     */
+    public function slidestatus($params)
+    {
+        if(empty($params)){
+            return false;
+        }
+        $save = [];
+        $save['status'] = $params['status'];
+        $where = [];
+        $where['id'] = $params['id'];
+        $res = Slideshow::instance()->where($where)->update($save);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
 }

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1575620416;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576216408;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +14,10 @@
   <title>惠企云</title>
   <link rel="stylesheet" href="/static/home/css/base.css">
   <link rel="stylesheet" href="/static/home/css/index.css">
+  <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="/static/assets/plugins/layui/layui.js"></script>
   <script src='/static/home/js/index.js'></script>
-  <script src="/static/assets/plugins/layui/layui.all.js"></script>
   <script src='/static/home/js/common.js'></script>
   <script src='/static/common/js/public.js'></script>
   <style>
@@ -232,21 +233,23 @@
 
     </div>
     <!-- 文字部分-->
-    <div class="header-content-box">
-      <div class='content_text'>
-        <div class='w'><?php echo $slideshow['title']; ?></div>
-      </div>
 
-      <div class='rentong'>
-        <div class='w'><?php echo $slideshow['desc']; ?></div>
-      </div>
 
-      <div class='btn'>
-        <div class='w'>
-          <button onclick="showSearch()">定制您的方案</button>
+    <!-- 轮播图 -->
+    <div class="layui-carousel" id="swiper">
+      <div carousel-item>
+        <?php if(is_array($slideshow) || $slideshow instanceof \think\Collection || $slideshow instanceof \think\Paginator): $i = 0; $__LIST__ = $slideshow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list_item): $mod = ($i % 2 );++$i;if($key == 0): ?>
+        <div>
+          <img src="<?php echo $list_item['pic']; ?>" alt="">
+          <button class="customize" onclick="showSearch()">立即咨询</button>
         </div>
-      </div>
+        <?php else: ?>
+        <div><img src="<?php echo $list_item['pic']; ?>" alt=""></div>
 
+        <?php endif; endforeach; endif; else: echo "" ;endif; ?>
+
+
+      </div>
     </div>
 
 
@@ -431,7 +434,7 @@
         </div>
         <div class='to_detailInfo'>
           <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info_list): $mod = ($i % 2 );++$i;?>
-          <div class="<?php echo $info_list['is_show']; ?>">
+          <div class="<?php echo $info_list['is_show']; ?>" <?php if($key == 1): ?>style="display:block;"<?php else: ?>style="display:none;"<?php endif; ?>>
             <div class='huichuangyou_title'><?php echo $info_list['title']; ?></div>
             <div class="con">
               <div class="desc"><?php echo $info_list['desc']; ?></div>

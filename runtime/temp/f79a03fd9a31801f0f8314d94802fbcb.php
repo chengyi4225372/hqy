@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:74:"/opt/web/hqy_/public/../application/v1/view/systematic/system/setting.html";i:1575011766;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576134388;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:75:"/opt/web/hqy_/public/../application/v1/view/systematic/system/blogroll.html";i:1576138269;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576134388;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -303,51 +303,98 @@
     <!-- Full Width Column -->
     <div class="content-wrapper">
         
+<div class="content" style="margin-bottom:0px;min-height:0px;">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline"  id="form">
+                <div class="panel panel-default panel-btn">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                <select class="selectpicker show-tick" title="" id="searchField" name="searchField"
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" <?php if($params['searchField'] == 1): ?>selected='selected'<?php endif; ?>>标题</option>
+                                    <option value="2" <?php if($params['searchField'] == 2): ?>selected='selected'<?php endif; ?>>描述</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" style="width:248px;" type="text" value="<?php echo $params['searchValue']; ?>" name="searchValue" id="searchValue" placeholder="多个关键字用空格或逗号隔开">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <label for="category" class="control-label">状态：</label>
+                            </div>
+                            <div class="col-sm-7">
+                                <select class="selectpicker show-tick" title="" id="category" name="category "
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" <?php if($params['status'] == 1): ?>selected='selected'<?php endif; ?>>已启用</option>
+                                    <option value="2" <?php if($params['status'] == 2): ?>selected='selected'<?php endif; ?>>已禁用</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-info" id="btn_search" type="button"  data-url="<?php echo url('/v1/systematic/system/blogroll'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!-- Main content -->
 <section class="content">
     <div class="box box-default color-palette-box" style="min-height:700px;">
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addsitesetting" data-url="<?php echo url('/v1/systematic/system/addsitesetting'); ?>">
-                <i class="fa fa-plus-circle">添加网站设置</i></button>
+                    id="infosadd" data-url="<?php echo url('/v1/systematic/system/addblogroll'); ?>">
+                <i class="fa fa-plus-circle">添加</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
-                </th>
-                <th class="text-center">网站名称</th>
-                <th class="text-center">固定电话</th>
-                <th class="text-center">地址</th>
-                <th class="text-center">ICP备案号</th>
-                <th class="text-center">邮箱</th>
+                <th class="text-center" style="width:5%;">排序</th>
+                <th class="text-center" style="width:5%;">标题</th>
+                <th class="text-center">描述</th>
+                <th class="text-center">创建时间</th>
+                <th class="text-center">创建人</th>
                 <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-                <?php if(is_array($data_list) || $data_list instanceof \think\Collection || $data_list instanceof \think\Paginator): $i = 0; $__LIST__ = $data_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list): $mod = ($i % 2 );++$i;?>
+
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "暂时没有数据" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tr>
-                    <td class="td-align td-padding">
-                        <input type="checkbox" name="box_checked" data-id="<?php echo $list['id']; ?>" class="data-check_box">
-                    </td>
-                    <td class="text-center"><?php echo $list['title']; ?></td>
-                    <td class="text-center"><?php echo $list['tel']; ?></td>
-                    <td class="text-center"><?php echo $list['count_code']; ?></td>
-                    <td class="text-center"><?php echo $list['icp']; ?></td>
-                    <td class="text-center"><?php echo $list['mail']; ?></td>
                     <td class="text-center">
-                        <span class="btn <?php if($list['status'] == 1): ?>btn-success<?php else: ?>btn-danger<?php endif; ?>"><?php echo $status[$list['status']]; ?></span>
+                        <input class="form-control form-control-sm" type="number" value="<?php echo $vo['sort']; ?>"  onblur="admin_module.change_sort(this)" data-url="<?php echo url('/v1/systematic/system/changesort'); ?>" data="<?php echo $vo['id']; ?>">
+                    </td>
+                    <td class="text-center"><?php echo $vo['title']; ?></td>
+                    <td class="text-center"><?php echo $vo['describe']; ?></td>
+                    <td class="text-center"><?php echo date('Y-m-d H:i:s',$vo['add_time']); ?></td>
+                    <td class="text-center"><?php echo $vo['add_user']; ?></td>
+                    <td class="text-center">
+                        <?php if($vo['status'] == 1): ?>
+                        <span class="btn btn-success" onclick="admin_module.status_sort(this)" data-url="<?php echo url('/v1/systematic/system/changestatus'); ?>" data-id="<?php echo $vo['id']; ?>" data="2"><?php echo $status[$vo['status']]; ?></span>
+                        <?php else: ?>
+                        <span class="btn btn-danger" onclick="admin_module.status_sort(this)" data-url="<?php echo url('/v1/systematic/system/changestatus'); ?>" data-id="<?php echo $vo['id']; ?>" data="1"><?php echo $status[$vo['status']]; ?></span>
+                        <?php endif; ?>
                     </td>
                     <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/systematic/system/editsetting',['id' => $list['id']]); ?>" data-id="" onclick="admin_module.edit_setting(this)">编辑</a>
+                        <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="<?php echo url('/v1/systematic/system/editblogroll',['id'=>$vo['id']]); ?>">编辑</a>
                     </td>
+
                 </tr>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
+                <?php endforeach; endif; else: echo "暂时没有数据" ;endif; ?>
                 </tbody>
             </table>
-            <div class="pages"></div>
+            <div class="pages"><?php echo $list->render();; ?></div>
         </div>
     </div>
 

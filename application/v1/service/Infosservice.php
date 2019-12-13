@@ -5,6 +5,7 @@ use app\common\model\Info;
 use plugin\Tree;
 use plugin\Crypt;
 use think\Config;
+use think\Cookie;
 
 class Infosservice
 {
@@ -73,6 +74,31 @@ class Infosservice
     }
 
     /**
+     * @DESC：招标、招商信息审核
+     * @param $params
+     * @return bool
+     * @author: jason
+     * @date: 2019-12-12 05:48:29
+     */
+    public function auditing($params)
+    {
+        if(empty($params)){
+            return false;
+        }
+        $save = [];
+        $where = [];
+        $save['auditing'] = 1;
+        $save['audit_user'] = Cookie('username');
+
+        $where['id'] = $params['id'];
+        $res = Info::instance()->where($where)->update($save);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
+
+    /**
      * @param $array
      * @return mixed
      */
@@ -99,7 +125,10 @@ class Infosservice
      */
     public function getId($id)
     {
-        $info = Info::instance()->where(['id' => $id])->find();
+        $where = [];
+        $where['auditing'] = 1;
+        $where['id'] = $id;
+        $info = Info::instance()->where($where)->find();
         return $info;
     }
 
@@ -109,7 +138,9 @@ class Infosservice
      */
     public function biao($array)
     {
+        $array = [];
         $array['status'] = 1;
+        $array['auditing'] = 1;
         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
         return $arr;
     }
@@ -120,7 +151,9 @@ class Infosservice
      */
     public function shang($array)
     {
+        $array = [];
         $array['status'] = 1;
+        $array['auditing'] = 1;
         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
         return $arr;
     }
@@ -131,11 +164,14 @@ class Infosservice
      */
     public function getbiao($title, $page)
     {
+        $array = [];
         if (empty($title)) {
             $array['status'] = 1;
+            $array['auditing'] = 1;
             $array['pid'] = 1;
         } else {
             $array['status'] = 1;
+            $array['auditing'] = 1;
             $array['pid'] = 1;
             $array['title|keyword|describe'] = ['like', '%' . $title . '%'];
         }
@@ -166,8 +202,10 @@ class Infosservice
     {
         if (empty($title)) {
             $array['status'] = 1;
+            $array['auditing'] = 1;
         } else {
             $array['status'] = 1;
+            $array['auditing'] = 1;
             $array['title|keyword|describe'] = ['like', '%' . $title . '%'];
         }
 
@@ -191,11 +229,14 @@ class Infosservice
      */
     public function getshang($title, $page)
     {
+        $array = [];
         if (empty($title)) {
             $array['status'] = 1;
+            $array['auditing'] = 1;
             $array['pid'] = 2;
         } else {
             $array['status'] = 1;
+            $array['auditing'] = 1;
             $array['pid'] = 2;
             $array['title|keyword|describe'] = ['like', '%' . $title . '%'];
         }
@@ -240,9 +281,9 @@ class Infosservice
         }
         $where = [
             'id' => ['<', $id],
-            'status' => 1
+            'status' => 1,
+            'auditing' => 1,
         ];
-
         $info = Info::instance()->where($where)->order('sort desc,release_time desc')->find();
 
         if (empty($info)) {
@@ -266,7 +307,8 @@ class Infosservice
 
         $where = [
             'id' => ['>', $id],
-            'status' => 1
+            'status' => 1,
+            'auditing' => 1,
         ];
         $info = Info::instance()->where($where)->order('sort desc,release_time asc')->find();
 
