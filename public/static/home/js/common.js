@@ -202,15 +202,46 @@ $('.secStatus').mouseenter(function(){
   //   $(this).css({'color':'#fff'})
   // })
 })
-//列表页热门搜索
-// function hotsearch(obj) {
-//     var keyword = $(obj).attr('data-title');
-//     var url = $(obj).attr('data-url');
 
-//     //alert(url);
-//     if (keyword == '' || keyword == undefined || keyword == 'undefined') {
-//         return false;
-//     }
+var keyword = [];
+var titles  = '';
+/** 列表页热门搜索 **/
+function hotsearch(obj) {
+     var urls = $(obj).attr('data-url');
 
-//     window.location.href = url + '?title=' + keyword;
-// }
+     var searchs = $(obj).attr('data-title');
+
+     var index = $.inArray(searchs,keyword);
+
+     if(index >= 0){
+         keyword.pop(search);
+     }
+
+     keyword.push(searchs);
+
+     if (keyword == '' || keyword == undefined || keyword == 'undefined') {
+        return false;
+      }
+
+      if(keyword.length == 0 || keyword.length =='' || keyword.length == undefined){
+          layer.msg('请选择关键字进行查询');
+          return false;
+      }
+
+     titles = keyword.join(',')
+     console.log(titles);
+     $.post(urls,{'title':titles},function(ret){
+
+     })
+}
+
+/** 清除关键字 **/
+function nullhot(obj){
+     var title = $(obj).parents('li').attr('data-title');
+     keyword.pop(title);
+     titles = keyword.join(',')
+     console.log(titles);
+    $.post(urls,{'title':titles},function(ret){
+
+    })
+}

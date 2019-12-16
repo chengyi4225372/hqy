@@ -1,5 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:104:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\login\index.html";i:1575017610;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
-<!DOCTYPE>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:104:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\login\index.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <!-- 加载样式及META信息 -->
