@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1576234283;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1576235450;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -135,8 +135,7 @@
     <div class="bg_breadCrumbs">
       <div class="w bread-crumbs">
         <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
-        <span><a class="current" style="color:#3E92FF;" onclick="go_news(this)"
-            data-url="<?php echo url('/home/index/infoList'); ?>">招商政策资讯</a></span> <span></span>
+        <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">招商政策资讯</a></span> <span></span>
       </div>
     </div>
 
