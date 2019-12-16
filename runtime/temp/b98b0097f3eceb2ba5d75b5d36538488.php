@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576466074;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576480634;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -192,7 +192,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a>
+                            <a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a>
                         </li>
                         <li>
                             <a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a>
