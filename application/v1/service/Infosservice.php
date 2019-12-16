@@ -206,9 +206,9 @@ class Infosservice
         } else {
             $array['status'] = 1;
             $array['auditing'] = 1;
-            $array['title|keyword|describe'] = ['like', '%' . $title . '%'];
+            $array['title|keyword|describe'] = ['like', '%'.$title.'%'];
         }
-
+        dump($array);
         if (empty($page) || is_null($page)) {
             $page = 10;
         }
