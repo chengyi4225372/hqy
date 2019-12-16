@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1576476417;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1576480723;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,7 +95,7 @@
           
                           </div><!-- 二级菜单 -->
                     </li>
-                    <li class='nav-active'><a href="javascript:;">政府招标信息</a></li>
+                    <li class='nav-active'><a href="javascript:;">招标信息</a></li>
                     <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
                     <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
@@ -134,7 +134,7 @@
         <div class="bg_breadCrumbs">
             <div class="w bread-crumbs">
                 <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
-                <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">政府招标信息</a></span> <span></span>
+                <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">招标信息</a></span> <span></span>
             </div>
         </div>
 
