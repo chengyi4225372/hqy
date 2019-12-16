@@ -145,10 +145,10 @@ $(function () {
     $('#searched').click(function () {
         var keyword = $('#keyword').val();
         var url = $(this).attr('data-url');
-        if (keyword == '' || keyword == undefined) {
-            layer.msg('请输入搜索条件');
-            return false;
-        }
+        //if (keyword == '' || keyword == undefined) {
+        //    layer.msg('请输入搜索条件');
+        //    return false;
+        //}
         //var urlw = "/home/index/infoList";
 
         window.location.href = url + "?keyword=" + keyword;

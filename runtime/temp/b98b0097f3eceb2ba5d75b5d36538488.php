@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576462997;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576466074;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -510,17 +510,17 @@
                 <div class="navList">
                     <dl>
                         <dt>惠企云旗下产品</dt>
-                        <dd><a href="javascript:;">惠灵工</a></dd>
-                        <dd><a href="javascript:;">惠优税</a></dd>
+                        <dd><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dd>
+                        <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
                         <dd><a href="javascript:;">惠多薪</a></dd>
                         <dd><a href="javascript:;">惠创业</a></dd>
                         <dd><a href="javascript:;">惠找事</a></dd>
                     </dl>
                     <dl>
                         <dt>资讯信息</dt>
-                        <dd><a href="javascript:;">行业资讯</a></dd>
-                        <dd><a href="javascript:;">招商政策</a></dd>
-                        <dd><a href="javascript:;">招标信息</a></dd>
+                        <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
+                        <dd><a href="<?php echo url('/home/index/infoList'); ?>">招商政策</a></dd>
+                        <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>
                     <dl>
                         <dt>招商合作</dt>

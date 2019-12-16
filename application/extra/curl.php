@@ -4,7 +4,7 @@ return [
     'hlg' => 'http://www.i35tax.com', //惠灵工
 
     //    'website' => 'http://172.26.3.13:8008/index.php',//官网
-    'website' => 'http://www.hqyonline.com/', //官网
+    'website' => 'https://www.hui7y.com/', //官网
 
     // 'website' => 'http://local.hqy.com/',//官网
 
