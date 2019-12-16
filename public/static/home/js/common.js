@@ -109,50 +109,6 @@ function closedTab() {
     $(".prop_box").hide();
 }
 
-$(function () {
-    var url = $('#add_url').val();
-
-    $.post(
-        url,
-        { data: 'getdata' },
-        function (ret) {
-            $.each(ret.pic2, function (index, item) {
-                if (index == 1) {
-                    $('.' + item.is_show + index).css('background-image', 'url(' + item.pic2 + ')');
-                } else {
-                    $('.' + item.is_show + index).css('background-image', 'url(' + item.is_pic1 + ')');
-                }
-            });
-        }
-    );
-
-});
-
-//显示案例
-function click_show(objthis) {
-    var v = $(objthis).attr('data-attr');
-    var keys = $(objthis).attr('keys');
-    var url = $('#add_url').val();
-
-    $.post(
-        url,
-        { data: 'getdata' },
-        function (ret) {
-            $.each(ret.pic2, function (index, item) {
-                $('.' + item.is_show).css('display', 'none');
-                $('.' + v).css('display', 'block');
-                if (keys == index) {
-                    $('.' + item.is_show + index).css('background-image', 'url(' + item.pic2 + ')');
-                } else {
-                    $('.' + item.is_show + index).css('background-image', 'url(' + item.is_pic1 + ')');
-                }
-            });
-        }
-    );
-
-
-
-}
 
 //首页搜索
 function search(obj) {

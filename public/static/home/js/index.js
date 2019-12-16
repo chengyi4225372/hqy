@@ -154,9 +154,25 @@ $(function(){
     });
   });
 
-/* 惠家族产品介绍 */
+
+  /* 惠家族产品介绍 */
   $('.produtionIntro li').on('click',function(){
-    $(this).addClass('chosenProduct').siblings().removeClass('chosenProduct')
+    $(this).addClass('chosenProduct').siblings().removeClass('chosenProduct');
+    var keys = $(this).attr('keys');
+    var url = $('#add_url').val();
+    $.post(
+        url,
+        { data: 'getdata' },
+        function (ret) {
+          $.each(ret.pic2, function (index, item) {
+            if (keys == index) {
+              $('.' + item.is_show).css('display', 'block');
+            } else {
+              $('.' + item.is_show).css('display', 'none');
+            }
+          });
+        }
+    );
   })
 
 

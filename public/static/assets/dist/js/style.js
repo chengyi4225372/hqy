@@ -643,7 +643,6 @@ var admin_module = (function (){
         var title2 = $('#title2').val();
         var title3 = $('#title3').val();
         var pic = $('#pic_curr').val();
-        var pic2 = $('#pic_curr2').val();
         var url = $('#url').val();
         var desc = $('#desc').val();
         var desc2 = $('#desc2').val();
@@ -674,9 +673,6 @@ var admin_module = (function (){
         if(pic == '' || pic == undefined || pic == 'undefined'){
             layer.msg('请选择要上传的图片1');return;
         }
-        if(pic2 == '' || pic2 == undefined || pic2 == 'undefined'){
-            layer.msg('请选择要上传的图片2');return;
-        }
         if(url == '' || url == undefined || url == 'undefined'){
             $('#url').focus();
             layer.tips('请填写URL!','#url',{tips:[1,'#c00']});return;
@@ -685,30 +681,7 @@ var admin_module = (function (){
             $('#desc').focus();
             layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
         }
-        if(desc2 == '' || desc2 == undefined || desc2 == 'undefined'){
-            $('#desc2').focus();
-            layer.tips('描述2不能为空!','#desc2',{tips:[1,'#c00']});return;
-        }
-        if(desc3 == '' || desc3 == undefined || desc3 == 'undefined'){
-            $('#desc3').focus();
-            layer.tips('描述3不能为空弄!','#desc3',{tips:[1,'#c00']});return;
-        }
-        if(desc4 == '' || desc4 == undefined || desc4 == 'undefined'){
-            $('#desc4').focus();
-            layer.tips('描述4不能为空!','#desc4',{tips:[1,'#c00']});return;
-        }
-        if(desc5 == '' || desc5 == undefined || desc5 == 'undefined'){
-            $('#desc5').focus();
-            layer.tips('描述5不能为空!','#desc5',{tips:[1,'#c00']});return;
-        }
-        if(desc6 == '' || desc6 == undefined || desc6 == 'undefined'){
-            $('#desc6').focus();
-            layer.tips('描述6不能为空!','#desc6',{tips:[1,'#c00']});return;
-        }
-        if(desc7 == '' || desc7 == undefined || desc7 == 'undefined'){
-            $('#desc7').focus();
-            layer.tips('描述7不能为空!','#desc7',{tips:[1,'#c00']});return;
-        }
+
         if(status == '' || status == undefined || status == 'undefined'){
             layer.msg('请选择状态');return;
         }
@@ -717,7 +690,6 @@ var admin_module = (function (){
         obj.title2 = title2;
         obj.title3 = title3;
         obj.pic = pic;
-        obj.pic2 = pic2;
         obj.url = url;
         obj.desc = desc;
         obj.desc2 = desc2;
@@ -765,7 +737,6 @@ var admin_module = (function (){
         var title2 = $('#title2').val();
         var title3 = $('#title3').val();
         var pic = $('#pic_curr').val();
-        var pic2 = $('#pic_curr2').val();
         var url = $('#url').val();
         var desc = $('#desc').val();
         var desc2 = $('#desc2').val();
@@ -798,9 +769,6 @@ var admin_module = (function (){
             layer.msg('请选择要上传的图片');return;
         }
 
-        if(pic2 == '' || pic2 == undefined || pic2 == 'undefined'){
-            layer.msg('请选择要上传的图片');return;
-        }
 
         if(url == '' || url == undefined || url == 'undefined'){
             $('#url').focus();
@@ -810,30 +778,8 @@ var admin_module = (function (){
             $('#desc').focus();
             layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
         }
-        if(desc2 == '' || desc2 == undefined || desc2 == 'undefined'){
-            $('#desc2').focus();
-            layer.tips('描述2不能为空!','#desc2',{tips:[1,'#c00']});return;
-        }
-        if(desc3 == '' || desc3 == undefined || desc3 == 'undefined'){
-            $('#desc3').focus();
-            layer.tips('描述3不能为空弄!','#desc3',{tips:[1,'#c00']});return;
-        }
-        if(desc4 == '' || desc4 == undefined || desc4 == 'undefined'){
-            $('#desc4').focus();
-            layer.tips('描述4不能为空!','#desc4',{tips:[1,'#c00']});return;
-        }
-        if(desc5 == '' || desc5 == undefined || desc5 == 'undefined'){
-            $('#desc5').focus();
-            layer.tips('描述5不能为空!','#desc5',{tips:[1,'#c00']});return;
-        }
-        if(desc6 == '' || desc6 == undefined || desc6 == 'undefined'){
-            $('#desc6').focus();
-            layer.tips('描述6不能为空!','#desc6',{tips:[1,'#c00']});return;
-        }
-        if(desc7 == '' || desc7 == undefined || desc7 == 'undefined'){
-            $('#desc7').focus();
-            layer.tips('描述7不能为空!','#desc7',{tips:[1,'#c00']});return;
-        }
+
+
         if(status == '' || status == undefined || status == 'undefined'){
             layer.msg('请选择状态');return;
         }
@@ -843,7 +789,6 @@ var admin_module = (function (){
         obj.title2 = title2;
         obj.title3 = title3;
         obj.pic = pic;
-        obj.pic2 = pic2;
         obj.url = url;
         obj.desc = desc;
         obj.desc2 = desc2;

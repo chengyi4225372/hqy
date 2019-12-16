@@ -39,21 +39,11 @@
                 <div class="form-group">
                     <label for="pic" class="col-sm-3 control-label">图片1：</label>
                     <div class="col-sm-9">
-                        <button type="button" class="layui-btn" id="pic" is_nginx="{$is_nginx}">
+                        <button type="button" class="layui-btn" id="pic"  data-url="{:url('/v1/systematic/system/uploadimg')}" is_nginx="{$is_nginx}">
                             <i class="layui-icon">&#xe67c;</i>上传图片
                         </button>
                         <img src="/static/default.png" style="width:50px;height:50px;" id="cur_pic"/>
                         <input type="hidden" name="pic_curr" id="pic_curr" value="">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="pic" class="col-sm-3 control-label">图片2：</label>
-                    <div class="col-sm-9">
-                        <button type="button" class="layui-btn" id="pic2" is_nginx="{$is_nginx}">
-                            <i class="layui-icon">&#xe67c;</i>上传图片
-                        </button>
-                        <img src="/static/default.png" style="width:50px;height:50px;" id="cur_pic2"/>
-                        <input type="hidden" name="pic_curr2" id="pic_curr2" value="">
                     </div>
                 </div>
                 <div class="form-group">
