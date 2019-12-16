@@ -15,7 +15,7 @@ return [
         // 服务器地址
         'hostname'        => '47.105.48.137',
         // 数据库名
-        'database'        => 'huiqiyun',
+        'database'        => 'test_huiqiyun',
         // 用户名
         'username'        => 'root',
         // 密码

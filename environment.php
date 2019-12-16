@@ -6,22 +6,24 @@
 // +----------------------------------------------------------------------
 
 // 版本判断
-if (PHP_VERSION < 7) {
-    exit('PHP版本过低，请升级PHP版本. (http://www.php.net/downloads.php)') . PHP_EOL;
-}
+//if (PHP_VERSION < 7) {
+//    exit('PHP版本过低，请升级PHP版本. (http://www.php.net/downloads.php)') . PHP_EOL;
+//}
 
 // +----------------------------------------------------------------------
 // | 环境设置  开发环境=development    测试环境=test    生产环境=production
 // +----------------------------------------------------------------------
 
+//生产环境
+//define('ENVIRONMENT', 'production');
+
+
 //开发环境
 define('ENVIRONMENT', 'development');
 
 //测试环境
-//define('ENVIRONMENT', 'test');
 
-//生产环境
-//define('ENVIRONMENT', 'production');
+//define('ENVIRONMENT', 'test');
 
 // 配置文件目录
 define('CONFIG_PATH', __DIR__ . '/config/' . ENVIRONMENT . '/');

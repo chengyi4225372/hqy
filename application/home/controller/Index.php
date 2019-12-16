@@ -17,7 +17,6 @@ class Index extends BaseController
     public function index()
     {
         if ($this->request->isGet()) {
-
             //慧享产品
             $array = array('status' => '1');
             $protuct = Protuctservice::instance()->normal($array);
@@ -25,6 +24,7 @@ class Index extends BaseController
 
             //招标 招商信息
             $biao = Infosservice::instance()->biao(['pid' => 1]);
+
             $shang = Infosservice::instance()->shang(['pid' => 2]);
 
             //轮播
@@ -36,6 +36,7 @@ class Index extends BaseController
             //近期成功案例
 
             $caseInfo = Caseservice::instance()->getallparent();
+//            echo '<pre>';print_r($caseInfo);exit;
             $pic = array_column($caseInfo,'pic');
             $pic2 = array_column($caseInfo,'pic2');
             $this->assign('pic1',json_encode($pic));
@@ -136,6 +137,93 @@ class Index extends BaseController
 
 
     /**
+     * @DESC：招标信息详情
+     * @return bool|mixed
+     * @author: jason
+     * @date: 2019-12-06 03:33:14
+     */
+    public function detailbiao()
+    {
+        if($this->request->isGet()){
+//            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+//                return $this->redirect('/home/index/index');
+//            }
+
+            $id = input('get.mid','','int');
+            if(empty($id) || !isset($id)|| $id <=0){
+                return false;
+            }
+            $info = infosservice::instance()->getId($id);
+            $top  = Infosservice::instance()->getTop($id);
+            $next = Infosservice::instance()->getNext($id);
+            $this->assign('info',$info);
+            $this->assign('top',$top);
+            $this->assign('next',$next);
+            $this->assign('title','招标信息详情');
+            return $this->fetch();
+        }
+        return false;
+    }
+
+    /**
+     * @DESC：招商信息详情
+     * @return bool|mixed
+     * @author: jason
+     * @date: 2019-12-06 03:36:41
+     */
+    public function detailshang()
+    {
+        if($this->request->isGet()){
+//            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+//                return $this->redirect('/home/index/index');
+//            }
+
+            $id = input('get.mid','','int');
+            if(empty($id) || !isset($id)|| $id <=0){
+                return false;
+            }
+            $info = infosservice::instance()->getId($id);
+            $top  = Infosservice::instance()->getTop($id);
+            $next = Infosservice::instance()->getNext($id);
+            $this->assign('info',$info);
+            $this->assign('top',$top);
+            $this->assign('next',$next);
+            $this->assign('title','新闻详情');
+            return $this->fetch();
+        }
+        return false;
+    }
+
+    /**
+     * @DESC：资讯
+     * @return bool|mixed
+     * @author: jason
+     * @date: 2019-12-12 06:03:12
+     */
+    public function industrydetail()
+    {
+        if($this->request->isGet()){
+//            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+//                return $this->redirect('/home/index/index');
+//            }
+
+            $id = input('get.mid','','int');
+            if(empty($id) || !isset($id)|| $id <=0){
+                return false;
+            }
+            $info = infosservice::instance()->getId($id);
+            $top  = Infosservice::instance()->getTop($id);
+            $next = Infosservice::instance()->getNext($id);
+            $this->assign('info',$info);
+            $this->assign('top',$top);
+            $this->assign('next',$next);
+            $this->assign('title','招标信息详情');
+            return $this->fetch();
+        }
+        return false;
+    }
+
+    /**
      * 新闻详情页
      * min  string | int
      */
@@ -201,5 +289,36 @@ class Index extends BaseController
             return json(['code'=>200,'msg'=>'请求成功','data'=>$list]);
         }
 
+    }
+
+    /**
+     * @DESC：行业资讯
+     * @return bool|mixed
+     * @author: jason
+     * @date: 2019-12-12 05:54:46
+     */
+    public function industry()
+    {
+        if($this->request->isGet()){
+
+//           if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+//               return $this->redirect('/home/index/index');
+//           }
+            // 招商信息
+            $keyword   = input('get.keyword','','trim');//正常搜索
+            $title     = input('get.title','','trim'); //热门搜索
+
+            $titles    =$keyword?$keyword:$title;
+
+            $biao = Infosservice::instance()->getIndustry($titles,30);
+
+            //关键字排序 最高四条
+            $four = Ificationservice::instance()->getfour();
+            $this->assign('biao',$biao);
+            $this->assign('four',$four);
+            $this->assign('title','行业资讯');
+            return $this->fetch();
+        }
+        return false;
     }
 }

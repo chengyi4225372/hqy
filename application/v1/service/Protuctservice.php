@@ -32,11 +32,11 @@ class Protuctservice
      */
     public function getList($names){
       if(empty($names) || !isset($names)){
-          $list = Protuct::instance()->where(['del_time'=>0])->order(['id'=>'desc'])->paginate(15);
+          $list = collection(Protuct::instance()->where(['del_time'=>0])->order(['id'=>'desc'])->limit(15)->select())->toArray();
       }
 
       if(!empty($names) && isset($names)){
-      $list = Protuct::instance()->where(['del_time'=>0,'names'=>['like','%'.$names.'%']])->order(['id'=>'desc'])->paginate(15);
+      $list = collection(Protuct::instance()->where(['del_time'=>0,'names'=>['like','%'.$names.'%']])->order(['id'=>'desc'])->limit(15)->select());
       }
        return $list;
     }

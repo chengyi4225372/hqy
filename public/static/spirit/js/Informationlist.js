@@ -1,24 +1,21 @@
 window.onload = function () {
 
+    
+
     var liArr = document.querySelectorAll(".tabs ul li");
     var spanArr = document.querySelectorAll(".tabs-items");
 
     for (var i = 0; i < liArr.length; i++) {
-        //绑定索引值（新增一个自定义属性：index属性）
         liArr[i].index = i;
         liArr[i].onclick = function () {
-
-            //1.点亮上面的盒子。   2.利用索引值显示下面的盒子。(排他思想)
             for (var j = 0; j < liArr.length; j++) {
                 liArr[j].className = "";
                 spanArr[j].className = "tabs-items";
             }
             this.classList.add("li-active");
-            spanArr[this.index].classList.add("show"); //【重要代码】
+            spanArr[this.index].classList.add("show");
         }
     }
-
-
 
 
 
@@ -30,7 +27,7 @@ window.onload = function () {
         console.log(document.documentElement.scrollTop);
 
         if (top >= 1080) {
-            let goTop = document.getElementById('goTop')
+            var goTop = document.getElementById('goTop')
             goTop.style.display = "block"
 
             // console.log(goTop);
@@ -55,20 +52,11 @@ window.onload = function () {
         } else if (top < 1080) {
 
             // 返回顶部样式
-            let goTop = document.getElementById('goTop')
+            var goTop = document.getElementById('goTop')
             goTop.style.display = "none"
 
         }
     }
-
-    // 文字溢出隐藏
-    // var module1 = document.querySelector(".tabs-items-content-title");
-    // $clamp(module1, { clamp: 2 });
-    // var module2 = document.querySelector(".tabs-items-content-text");
-    // $clamp(module2, { clamp: 3 });
-
-
-    
 
 };
 

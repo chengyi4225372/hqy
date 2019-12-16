@@ -456,6 +456,8 @@ var admin_module = (function (){
             e.preventDefault();
         });
     }
+
+    //招标招商信息搜索
     var btn_search = function btn_search(){
         $(document).keypress(function (e){
             if(e.keyCode == 13){
@@ -486,7 +488,7 @@ var admin_module = (function (){
         var desc = $('#desc').val();
         var urls = $('#url').val();
         var status = $('#status').val();
-        if(pic == undefined || pic == 'undefined' || pic == ''){
+        if(pic == undefined || pic == ''){
             layer.msg('请选择要上传的图片');return;
             //layer.tips('请选择要上传的图片!','#pic',{tips:[1,'#c00']});
         }
@@ -534,7 +536,7 @@ var admin_module = (function (){
         var urls = $('#url').val();
         var status = $('#status').val();
         var id = $('#site_id').val();
-        if(pic == undefined || pic == 'undefined' || pic == ''){
+        if(pic == undefined || pic == ''){
             layer.msg('请选择要上传的图片');return;
             //layer.tips('请选择要上传的图片!','#pic',{tips:[1,'#c00']});
         }
@@ -641,7 +643,6 @@ var admin_module = (function (){
         var title2 = $('#title2').val();
         var title3 = $('#title3').val();
         var pic = $('#pic_curr').val();
-        var pic2 = $('#pic_curr2').val();
         var url = $('#url').val();
         var desc = $('#desc').val();
         var desc2 = $('#desc2').val();
@@ -672,9 +673,6 @@ var admin_module = (function (){
         if(pic == '' || pic == undefined || pic == 'undefined'){
             layer.msg('请选择要上传的图片1');return;
         }
-        if(pic2 == '' || pic2 == undefined || pic2 == 'undefined'){
-            layer.msg('请选择要上传的图片2');return;
-        }
         if(url == '' || url == undefined || url == 'undefined'){
             $('#url').focus();
             layer.tips('请填写URL!','#url',{tips:[1,'#c00']});return;
@@ -683,30 +681,7 @@ var admin_module = (function (){
             $('#desc').focus();
             layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
         }
-        if(desc2 == '' || desc2 == undefined || desc2 == 'undefined'){
-            $('#desc2').focus();
-            layer.tips('描述2不能为空!','#desc2',{tips:[1,'#c00']});return;
-        }
-        if(desc3 == '' || desc3 == undefined || desc3 == 'undefined'){
-            $('#desc3').focus();
-            layer.tips('描述3不能为空弄!','#desc3',{tips:[1,'#c00']});return;
-        }
-        if(desc4 == '' || desc4 == undefined || desc4 == 'undefined'){
-            $('#desc4').focus();
-            layer.tips('描述4不能为空!','#desc4',{tips:[1,'#c00']});return;
-        }
-        if(desc5 == '' || desc5 == undefined || desc5 == 'undefined'){
-            $('#desc5').focus();
-            layer.tips('描述5不能为空!','#desc5',{tips:[1,'#c00']});return;
-        }
-        if(desc6 == '' || desc6 == undefined || desc6 == 'undefined'){
-            $('#desc6').focus();
-            layer.tips('描述6不能为空!','#desc6',{tips:[1,'#c00']});return;
-        }
-        if(desc7 == '' || desc7 == undefined || desc7 == 'undefined'){
-            $('#desc7').focus();
-            layer.tips('描述7不能为空!','#desc7',{tips:[1,'#c00']});return;
-        }
+
         if(status == '' || status == undefined || status == 'undefined'){
             layer.msg('请选择状态');return;
         }
@@ -715,7 +690,6 @@ var admin_module = (function (){
         obj.title2 = title2;
         obj.title3 = title3;
         obj.pic = pic;
-        obj.pic2 = pic2;
         obj.url = url;
         obj.desc = desc;
         obj.desc2 = desc2;
@@ -763,7 +737,6 @@ var admin_module = (function (){
         var title2 = $('#title2').val();
         var title3 = $('#title3').val();
         var pic = $('#pic_curr').val();
-        var pic2 = $('#pic_curr2').val();
         var url = $('#url').val();
         var desc = $('#desc').val();
         var desc2 = $('#desc2').val();
@@ -796,9 +769,6 @@ var admin_module = (function (){
             layer.msg('请选择要上传的图片');return;
         }
 
-        if(pic2 == '' || pic2 == undefined || pic2 == 'undefined'){
-            layer.msg('请选择要上传的图片');return;
-        }
 
         if(url == '' || url == undefined || url == 'undefined'){
             $('#url').focus();
@@ -808,30 +778,8 @@ var admin_module = (function (){
             $('#desc').focus();
             layer.tips('描述不能为空!','#desc',{tips:[1,'#c00']});return;
         }
-        if(desc2 == '' || desc2 == undefined || desc2 == 'undefined'){
-            $('#desc2').focus();
-            layer.tips('描述2不能为空!','#desc2',{tips:[1,'#c00']});return;
-        }
-        if(desc3 == '' || desc3 == undefined || desc3 == 'undefined'){
-            $('#desc3').focus();
-            layer.tips('描述3不能为空弄!','#desc3',{tips:[1,'#c00']});return;
-        }
-        if(desc4 == '' || desc4 == undefined || desc4 == 'undefined'){
-            $('#desc4').focus();
-            layer.tips('描述4不能为空!','#desc4',{tips:[1,'#c00']});return;
-        }
-        if(desc5 == '' || desc5 == undefined || desc5 == 'undefined'){
-            $('#desc5').focus();
-            layer.tips('描述5不能为空!','#desc5',{tips:[1,'#c00']});return;
-        }
-        if(desc6 == '' || desc6 == undefined || desc6 == 'undefined'){
-            $('#desc6').focus();
-            layer.tips('描述6不能为空!','#desc6',{tips:[1,'#c00']});return;
-        }
-        if(desc7 == '' || desc7 == undefined || desc7 == 'undefined'){
-            $('#desc7').focus();
-            layer.tips('描述7不能为空!','#desc7',{tips:[1,'#c00']});return;
-        }
+
+
         if(status == '' || status == undefined || status == 'undefined'){
             layer.msg('请选择状态');return;
         }
@@ -841,7 +789,6 @@ var admin_module = (function (){
         obj.title2 = title2;
         obj.title3 = title3;
         obj.pic = pic;
-        obj.pic2 = pic2;
         obj.url = url;
         obj.desc = desc;
         obj.desc2 = desc2;
@@ -865,6 +812,150 @@ var admin_module = (function (){
                     });
                 }else{
                     layer.msg(ret.msg);
+                }
+            },'json'
+        );
+    };
+
+    var status_sort = function status_sort(objthis){
+        var status = $(objthis).attr('data');
+        var url = $(objthis).attr('data-url');
+        var id = $(objthis).attr('data-id');
+        $.post(
+            url,
+            {status:status,id:id},
+            function (ret){
+                if(ret.status == 200){
+                    if(status == 2){
+                        $(objthis).removeClass('btn-success');
+                        $(objthis).addClass('btn-danger');
+                        $(objthis).attr('data',1);
+                        $(objthis).html('已禁用');
+                    }
+                    if(status == 1){
+                        $(objthis).removeClass('btn-danger');
+                        $(objthis).addClass('btn-success');
+                        $(objthis).attr('data',2);
+                        $(objthis).html('已启用');
+                    }
+                }
+            },'json'
+        );
+    };
+
+    var change_sort = function change_sort(objthis){
+        var url = $(objthis).attr('data-url');
+        var id = $(objthis).attr('data');
+        var sort = $(objthis).val();
+        $.post(
+            url,
+            {id:id,sort:sort},
+            function (ret){
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        parent.location.reload();
+                    });
+                }
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+            },'json'
+        );
+    };
+    //添加友情链接
+    var add_blogroll = function add_blogroll(objthis){
+        var id = $(objthis).attr('data');
+        var url = $(objthis).attr('data-url');
+        var data = {};
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var link = $('#link').val();
+        var status = $('#status').val();
+        if(title == '' || title == undefined){
+            layer.tips('请填写标题','#title',{tips:[3,'#00a65a']});return;
+        }
+
+        if(link == '' || link == undefined){
+            layer.tips('请填写URL地址','#title',{tips:[3,'#00a65a']});return;
+        }
+        data.title = title;
+        data.describe = desc;
+        data.link = link;
+        data.status = status;
+        $.post(
+            url,
+            data,
+            function (ret){
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        parent.location.reload();
+                    });
+                }
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+            },'json'
+        );
+    };
+    //编辑友情链接
+    var edit_blogroll = function edit_blogroll(objthis){
+        var url = $(objthis).attr('data-url');
+        var data = {};
+        var id = $(objthis).attr('data');
+        var title = $('#title').val();
+        var desc = $('#desc').val();
+        var link = $('#link').val();
+        var status = $('#status').val();
+        if(title == '' || title == undefined){
+            layer.tips('请填写标题','#title',{tips:[3,'#00a65a']});return;
+        }
+
+        if(link == '' || link == undefined){
+            layer.tips('请填写URL地址','#title',{tips:[3,'#00a65a']});return;
+        }
+        data.id = id;
+        data.title = title;
+        data.describe = desc;
+        data.link = link;
+        data.status = status;
+        $.post(
+            url,
+            data,
+            function (ret){
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        parent.location.reload();
+                    });
+                }
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
+                }
+            },'json'
+        );
+    };
+
+    //招标、招商信息审核
+    var auditing = function auditing(objthis){
+        var url = $(objthis).attr('data-url');
+        var audit = $(objthis).attr('data');
+        var id = $(objthis).attr('data-id');
+        if(audit == 1){
+            return;
+        }
+        $.post(
+            url,
+            {id:id},
+            function (ret){
+                if(ret.status == 200){
+                    layer.msg(ret.msg,{icon:6,time:1500},function (){
+                        $(objthis).removeClass('btn-warning');
+                        $(objthis).addClass('btn-success');
+                        $(objthis).attr('data',1);
+                        $(objthis).html('已审核');
+                    });
+                }
+                if(ret.status == 400){
+                    layer.msg(ret.msg,{icon:5});
                 }
             },'json'
         );
@@ -896,6 +987,11 @@ var admin_module = (function (){
         add_case:add_case,
         edit_case:edit_case,
         case_edit:case_edit,
+        status_sort:status_sort,
+        change_sort:change_sort,
+        add_blogroll:add_blogroll,
+        edit_blogroll:edit_blogroll,
+        auditing:auditing,
     }
 
 })();

@@ -63,7 +63,11 @@
                             <img src="{$list['pic']}" style="width:50px;height:50px;">
                         </td>
                         <td class="text-center">
-                            <span class="btn {if $list['status'] == 1}btn-success{else/}btn-danger{/if}">{$status[$list['status']]}</span>
+                            {if $list['status'] == 1}
+                            <span class="btn btn-success" onclick="admin_module.status_sort(this)" data-url="{:url('/v1/systematic/system/slidestatus')}" data-id="{$list['id']}" data="2">{$status[$list['status']]}</span>
+                            {else/}
+                            <span class="btn btn-danger" onclick="admin_module.status_sort(this)" data-url="{:url('/v1/systematic/system/slidestatus')}" data-id="{$list['id']}" data="1">{$status[$list['status']]}</span>
+                            {/if}
                         </td>
                         <td class="text-center">
                             <a href="javascript:void(0)" class="btn btn-info" data-url="{:url('/v1/systematic/system/editslideshow',['id' => $list['id']])}" onclick="admin_module.edit_slideshow(this)">编辑</a>

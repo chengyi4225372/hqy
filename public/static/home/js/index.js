@@ -1,31 +1,28 @@
 window.onload = function () {
+
+
   window.onscroll = function () {
     var top = document.body.scrollTop || document.documentElement.scrollTop;
-    // console.log(top)
-
     var box = document.getElementById("headerContent");
-    // this.console.log(box)
     var logo = document.getElementById("logo");
     var headerTotal = document.getElementById("headerTotal");
     var ul = document.querySelector(".content ul")
     var register = document.querySelector('.register')
     var uinfo = document.querySelector('.u_info')
-    // var goTop=document.getElementByClassName("goTop")
-    // console.log(goTop)
+    var goTop = document.querySelector("goTop")
     if (top >= 1080) {
       box.style.backgroundColor = "#031c36";
       box.style.position = 'fixed'
       box.style.top = "0px"
       box.style.left = "0px"
 
-
       box.classList.add("header_content_two")
       logo.classList.add('content_logo_two')
       ul.classList.add('two')
-      register.classList.add('register_two')
+      // register.classList.add('register_two')
 
 
-       uinfo.classList.add('u_info_two')
+      // uinfo.classList.add('u_info_two')
       // uinfo.style.marginTop = '1rem'
 
 
@@ -36,7 +33,7 @@ window.onload = function () {
       // goTop.style.top=0+'px'
 
       // 返回顶部
-      let goTop = document.getElementById('goTop')
+      var goTop = document.getElementById('goTop')
       goTop.style.display = "block"
 
       // console.log(goTop);
@@ -67,35 +64,52 @@ window.onload = function () {
       box.classList.remove("header_content_two")
       logo.classList.remove('content_logo_two')
       ul.classList.remove('two')
-      register.classList.remove('register_two')
-      uinfo.classList.remove('u_info_two')
+      // register.classList.remove('register_two')
+      // uinfo.classList.remove('u_info_two')
 
       // 返回顶部样式
-      let goTop = document.getElementById('goTop')
+      var goTop = document.getElementById('goTop')
       goTop.style.display = "none"
     }
 
 
-
+    
 
   };
 
-
-
   // 导航栏样式切换
-  let menuList = document.querySelectorAll('#headerContent ul li')
-  menuList.forEach((item, index) => {
-    item.onmouseover = function (event) {
-      let li = document.getElementsByClassName('nav-active')[0]
-      li.classList.remove('nav-active')
-      item.classList.add('nav-active')
-    }
 
-    item.onmouseout = function (event) {
-      item.classList.remove('nav-active')
-      menuList[0].classList.add('nav-active')
+  // var menuList = document.querySelectorAll('#headerContent ul li')
+  // var menuUl = document.querySelector('#headerContent ul')
+  // menuList.forEach((item, index) => {
+  //   item.onmouseenter = function (event) {
+  //     var li = document.getElementsByClassName('nav-active')[0]
+  //     li.classList.remove('nav-active')
+  //     item.classList.add('nav-active')
+  //   }
+  // })
+  // menuUl.onmouseleave = function () {
+  //   var li = document.getElementsByClassName('nav-active')[0]
+  //   li.classList.remove('nav-active')
+  //   menuList[0].classList.add('nav-active')
+  // }
+
+  var menuList = document.querySelectorAll('#headerContent ul li')
+  var menuUl = document.querySelector('#headerContent ul')
+
+  for (var i = 0; i < menuList.length; i++) {
+    menuList[i].onmouseenter = function () {
+      var li = document.querySelectorAll('.nav-active')[0]
+      li.classList.remove('nav-active')
+      this.classList.add('nav-active')
     }
-  })
+  }
+
+  menuUl.onmouseleave = function () {
+    var li = document.querySelectorAll('.nav-active')[0]
+    li.classList.remove('nav-active')
+    menuList[0].classList.add('nav-active')
+  }
 
 };
 
@@ -121,3 +135,48 @@ var home_module = (function () {
     show_detail: show_detail,
   };
 })();
+
+
+$(function(){
+  //轮播图
+  layui.use('carousel', function(){
+    var carousel = layui.carousel;
+    //建造实例
+    carousel.render({
+      elem: '#swiper',
+      width: '100%',
+      height:'44.625rem',
+      arrow: 'hover',
+      // interval:3000,//间隔
+      index:0,
+      // anim:'fade'
+
+    });
+  });
+
+
+  /* 惠家族产品介绍 */
+  $('.produtionIntro li').on('click',function(){
+    $(this).addClass('chosenProduct').siblings().removeClass('chosenProduct');
+    var keys = $(this).attr('keys');
+    var url = $('#add_url').val();
+    $.post(
+        url,
+        { data: 'getdata' },
+        function (ret) {
+          $.each(ret.pic2, function (index, item) {
+            if (keys == index) {
+              $('.' + item.is_show).css('display', 'block');
+            } else {
+              $('.' + item.is_show).css('display', 'none');
+            }
+          });
+        }
+    );
+  })
+
+
+
+})
+
+

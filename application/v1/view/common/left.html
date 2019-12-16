@@ -5,7 +5,7 @@
         <ul class="sidebar-menu">
             <li class="header">主导航</li>
 
-            <li class="treeview {if $paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting' || $path ='/v1/cate/ifications/index'}active{/if} " >
+            <li class="treeview {if $paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting' || $path ='/v1/cate/ifications/index' ||  $paths == '/v1/systematic/system/blogroll'}active{/if} " >
                 <a href="#">
                     <i class="fa fa-share"></i> <span>首页</span>
                     <span class="pull-right-container">
@@ -86,7 +86,7 @@
                         </ul>
                     </li>
 
-                    <li class="{if $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'}active{/if}">
+                    <li class="{if  $paths == '/v1/systematic/system/blogroll' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'}active{/if}">
                         <a href="#">
                             <i class="fa fa-dashboard"></i> <span>系统管理</span>
                             <span class="pull-right-container">
@@ -94,12 +94,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <!--                    <li class="{if $paths == '/v1/systematic/system/menu'}active{/if}">
-                                                    <a href="{:url('/v1/systematic/system/menu')}"><i class="fa fa-circle-o"></i> 菜单管理</a>
-                                                </li>
-                                                <li class="{if $paths == '/v1/organ/organization/index'}active{/if}">
-                                                    <a href="{:url('/v1/organ/organization/index')}"><i class="fa fa-circle-o"></i>组织架构管理</a>
-                                                </li>-->
+
                             <li class="{if $paths == '/v1/systematic/system/setting'}active{/if}">
                                 <a href="{:url('/v1/systematic/system/setting')}"><i class="fa fa-circle-o"></i>网站设置</a>
                             </li>
@@ -108,30 +103,16 @@
                                 <a href="{:url('/v1/systematic/system/slideshow')}"><i class="fa fa-circle-o"></i>首页轮播图</a>
                             </li>
 
+                            <li class="{if $paths == '/v1/systematic/system/blogroll'}active{/if}">
+                                <a href="{:url('/v1/systematic/system/blogroll')}"><i class="fa fa-circle-o"></i>友情链接</a>
+                            </li>
+
                         </ul>
                     </li>
 
                 </ul>
             </li>
 
-            <li class="treeview {if $paths == '/v1/work/works/index'} active {/if} " >
-                <a href="#">
-                    <i class="fa fa-share"></i> <span>惠灵工</span>
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="{if $paths == '/v1/work/works/index'} active {/if}">
-                        <a href="{:url('/v1/work/works/index')}">
-                            <i class="glyphicon glyphicon-user"></i> <span>行业资讯</span>
-                            <span class="pull-right-container">
-                              <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
 
         </ul>
     </section>
