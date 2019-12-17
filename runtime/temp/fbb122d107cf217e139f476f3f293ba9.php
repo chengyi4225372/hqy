@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576583268;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576588633;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576588633;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -444,7 +444,7 @@
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
-                        <dd><a href="javascript:;">招募合伙人</a></dd>
+                        <dd><a href="<?php echo url('/home/optimal/index'); ?>">招募合伙人</a></dd>
                     </dl>
                     <dl>
                         <dt>联系我们</dt>

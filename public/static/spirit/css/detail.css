@@ -212,7 +212,7 @@ a {
 
 .titile li:nth-of-type(1) a {
     font-size: 1rem;
-    font-family: Microsoft YaHei;
+    font-family: "Noto Sans SC";
     font-weight: 400;
     color: #fff;
 }
