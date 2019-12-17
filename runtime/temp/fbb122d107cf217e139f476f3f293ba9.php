@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576577274;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576583268;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,46 +76,47 @@
                                     <dl>
                                         <dt><a href="<?php echo url('/home/optimal/cooperation'); ?>">惠优税</a></dt>
                                         <dd>
-                                            ·企税降成本 薪税降税负
+                                            · 企税降成本 薪税降税负
 
                                         </dd>
-                                        <dd>·分红降扣率 创业降个税</dd>
+                                        <dd>· 分红降扣率 创业降个税</dd>
                                     </dl>
                                     <dl>
                                         <dt><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
                                         <dd>
-                                            ·寻求多样化用工模式
+                                            · 寻求多样化用工模式
 
                                         </dd>
-                                        <dd>·提高内部人员效能</dd>
+                                        <dd>· 提高内部人员效能</dd>
                                     </dl>
                                     <dl>
                                         <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                                         <dd>
-                                            ·优化员工福利选择模块
+                                            · 优化员工福利选择模块
 
                                         </dd>
-                                        <dd>·企业成本可控透明化</dd>
+                                        <dd>· 企业成本可控透明化</dd>
                                     </dl>
                                     <dl>
                                         <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                         <dd>
-                                            ·技能价值化
+                                            · 技能价值化
 
                                         </dd>
-                                        <dd>·成就更好自我</dd>
+                                        <dd>· 成就更好自我</dd>
                                     </dl>
                                     <dl>
                                         <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                         <dd>
-                                            ·一站式解决方案
+                                            · 一站式解决方案
 
                                         </dd>
-                                        <dd>·激活企业最大效益</dd>
+                                        <dd>· 激活企业最大效益</dd>
                                     </dl>
                                     <dl>
                                         <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
-                                        <dd>·产品内容建设中……</dd>
+                                        <dd>· 赋能企业互联网生态建设</dd>
+                                        <dd>· 助力产业数字化转型升级</dd>
                                     </dl>
                                 </div>
 
@@ -165,14 +166,12 @@
 <!-- 轮播图 -->
 <div class="layui-carousel" id="swiper">
     <div carousel-item>
-        <?php if(is_array($slideshow) || $slideshow instanceof \think\Collection || $slideshow instanceof \think\Paginator): $i = 0; $__LIST__ = $slideshow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list_item): $mod = ($i % 2 );++$i;if($key == 0): ?>
+        <?php if(is_array($slideshow) || $slideshow instanceof \think\Collection || $slideshow instanceof \think\Paginator): $i = 0; $__LIST__ = $slideshow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list_item): $mod = ($i % 2 );++$i;?>
         <div>
             <img src="<?php echo $slideshow[$key]['pic']; ?>" alt="">
             <button class="customize" onclick="showSearch()">立&nbsp;即&nbsp;咨&nbsp;询</button>
         </div>
-        <?php else: ?>
-        <div><img src="<?php echo $list_item['pic']; ?>" alt=""></div>
-        <?php endif; endforeach; endif; else: echo "" ;endif; ?>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
 </div>
 
@@ -181,19 +180,19 @@
 <div class='chooseUs'>
     <div class="w choose">
         <div class='choose-title'>选择我们</div>
-        <div class='choose-intro'>惠企云平台是一款基于国家政策、以合规化为基础、由金牌顾问团队打造的产品，为企业及个人提供税筹问题的全方位解决方案。</div>
+        <div class='choose-intro'>惠企云拥有优质多元产品、权威官方背书、金牌服务团队、一流技术团队、专业客服团队，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案，为企业可持续性发展提供有力保障。</div>
         <ul class='img_total'>
             <li>
                 <img src="/static/home/images/more.png" alt="">
-                <a href="javascript:void(0)">集专家智“惠”定制</a>
+                <a href="javascript:void(0)">创新模式</a>
             </li>
             <li>
                 <img src="/static/home/images/rainning.png" alt="">
-                <a href="javascript:void(0)">集专家智“惠”定制</a>
+                <a href="javascript:void(0)">深度提效</a>
             </li>
             <li>
                 <img src="/static/home/images/pig.png" alt="">
-                <a href="javascript:void(0)">给您最优“惠”</a>
+                <a href="javascript:void(0)">多元增收</a>
             </li>
         </ul>
     </div>
@@ -208,7 +207,7 @@
             <li>
                 <img class="all_product-img-box" src="<?php echo (isset($v1['imgs']) && ($v1['imgs'] !== '')?$v1['imgs']:''); ?>" alt="">
                 <a href="javascript:void(0)"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
-                <a href="javascript:void(0)"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
+                <a href="javascript:void(0)"><?php echo (isset($v1['desc']) && ($v1['desc'] !== '')?$v1['desc']:''); ?></a>
                 <ul class='one_pic'>
                     <li><a onclick="showSearch()">获取方案</a></li>
                     <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>">前往网站</a></li>
@@ -245,24 +244,10 @@
 
             <div class='zhaomethods'>
                 <div class='totalInfo_title'>招商政策</div>
-                <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
+                <?php if(empty($shang) || (($shang instanceof \think\Collection || $shang instanceof \think\Paginator ) && $shang->isEmpty())): ?>
+                <p>抱歉，没有找到相关的信息</p>
+                <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                 <div class='totalInfo_content'>
-
-                    <!--登录，注册暂时先不上线 2019年12月2号-->
-
-                    <!--<a href="javascript:void(0)" data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"-->
-                    <!--login_url="<?php echo $baseurl; ?>"-->
-                    <!--loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>"-->
-                    <!--mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>"-->
-                    <!--onclick="home_module.show_detail(this)">-->
-                    <!--<div class='zhao_contentInfo'>-->
-                    <!--<div><?php echo $ss['title']; ?></div>-->
-                    <!--<div>-->
-                    <!--<?php echo $ss['release_time']; ?>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--<div> <?php echo $ss['describe']; ?></div>-->
-                    <!--</a>-->
                     <a href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo $ss['id']; ?>">
                         <div class='zhao_contentInfo'>
                             <div><?php echo $ss['title']; ?></div>
@@ -275,7 +260,7 @@
 
                 </div>
 
-                <?php endforeach; endif; else: echo "没有更多内容" ;endif; if(count($shang) > 0): ?>
+                <?php endforeach; endif; else: echo "没有更多内容" ;endif; endif; if(count($shang) > 0): ?>
 
                 <div class='know_more_box'>
                     <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
@@ -290,8 +275,9 @@
 
             <div class='zhaoTotalInfo'>
                 <div class='totalInfo_title'>招标信息</div>
-
-                <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
+                <?php if(empty($biao) || (($biao instanceof \think\Collection || $biao instanceof \think\Paginator ) && $biao->isEmpty())): ?>
+                <p>抱歉，没有找到相关的信息</p>
+                <?php else: if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                 <div class='totalInfo_content'>
 
                     <!--登录，注册暂时先不上线 2019年12月2号-->
@@ -325,7 +311,7 @@
                     </a>
 
                 </div>
-                <?php endforeach; endif; else: echo "没有更多内容" ;endif; if(count($biao) > 0): ?>
+                <?php endforeach; endif; else: echo "没有更多内容" ;endif; endif; if(count($biao) > 0): ?>
                 <div class="know_more_box">
                     <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
                             data-url="<?php echo url('/home/index/infoBiao'); ?>"

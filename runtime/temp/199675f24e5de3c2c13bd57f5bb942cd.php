@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1576577274;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1576582026;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -150,14 +150,10 @@
                       <li>招标信息</li>
                     </ul> -->
             <div class="govPolicy fl">政府招商政策</div>
-            <div class="search-box fr">
-              <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-              <div id="searched" data-url="<?php echo url('/home/index/infoList'); ?>">搜索</div>
-            </div>
           </div>
 
           <!-- 热搜 -->
-          <div class="m hotWord">
+          <!-- <div class="m hotWord">
             <ul>
               <li style="cursor:pointer;" data-url="<?php echo url('/home/index/infoList'); ?>"
                 onclick="location.href=$(this).attr('data-url')">
@@ -171,7 +167,29 @@
               <?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
 
-          </div>
+          </div> -->
+
+          <div class="hotWord">
+            <div class="bgHot">
+                <span>热门关键词</span>
+                <ul>
+                    <li>
+                        <span>周杰伦新歌</span>
+                        <span class="close">✕</span>
+                    </li>
+                    <li>
+                        <span>周杰伦新歌</span>
+                        <span class="close">✕</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-box">
+                <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
+                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/industry/index'); ?>">搜索
+                </div>
+            </div>
+
+        </div>
 
           <div class="bg_divide">
 

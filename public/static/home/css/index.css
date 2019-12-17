@@ -570,7 +570,7 @@ body {
   border: none;
   top: 27.25rem;
   left: 22.5rem;
-  font-size: 2rem;
+  font-size: 1.965625rem;
   -webkit-border-radius: 0.25rem;
           border-radius: 0.25rem;
   cursor: pointer; }
@@ -598,11 +598,19 @@ body {
 
 .chooseUs .choose-intro {
   width: 21.875rem;
-  height: 2.75rem;
+  /* height: 2.75rem; */
+  line-height: 1.5rem;
   font-size: 1rem;
   font-family: "Source Han Sans CN", "Microsoft YaHei", "微软雅黑";
   font-weight: 300;
-  color: black; }
+  color: black; 
+  overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 4;
+-webkit-box-orient: vertical;
+
+}
 
 .img_total {
   position: absolute;
