@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:72:"C:\phpEnv\www\hqy_\public/../application/home\view\index\detailbiao.html";i:1576577274;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1576131456;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:73:"C:\phpEnv\www\hqy_\public/../application/home\view\index\detailshang.html";i:1576577274;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1576131456;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +47,7 @@
                 </div>
                 <ul class='titile'>
                     <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
-                    <li><a href="javascript:;">招募合伙人</a>
+                    <li><a href="<?php echo url('/home/optimal/index'); ?>">招募合伙人</a>
                     </li>
                     <li>
                         <a href="javascript:;">“惠”家族产品</a>
@@ -104,8 +104,8 @@
           
                           </div><!-- 二级菜单 -->
                     </li>
-                    <li  class='nav-active'><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
-                    <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
+                    <li><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
+                    <li class='nav-active'><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
                     <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
                 </ul>
@@ -137,13 +137,14 @@
                 <!--<?php endif; ?>-->
             </div>
         </div>
-        <div class="bgBread">
+    <div class="bgBread">
         <div class='w bread_title'>
             <a class="actives" href="<?php echo url('/home/index/index'); ?>">首页 ></a>
-            <a class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a> >
+            <a class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a> >
             <a class="activees" href="javasrcipt:void(0)">详情</a>
         </div>
     </div>
+
         <div class='main_content'>
             <div class='content_middle'>
                 <div class='pic_total'>
@@ -157,19 +158,20 @@
                             <p>本信息来源：中国招标网</p>
                         </div> -->
 
-                      
+                        
                     </div>
                     <div class='page'>
                             <?php if(empty($top) || (($top instanceof \think\Collection || $top instanceof \think\Paginator ) && $top->isEmpty())): ?>
                             <div><span>上一篇:</span><a href="javascript:;">已经是第一篇了</a></div>
                             <?php else: ?>
                             <div><span>上一篇:</span><a
-                                    href="<?php echo url('/home/index/detailbiao',array('mid'=>$top['id'])); ?>"><?php echo $top['title']; ?></a></div>
+                                    href="<?php echo url('/home/index/detailshang',array('mid'=>$top['id'])); ?>"><?php echo $top['title']; ?></a>
+                            </div>
                             <?php endif; if(empty($next) || (($next instanceof \think\Collection || $next instanceof \think\Paginator ) && $next->isEmpty())): ?>
                             <div><span>下一篇:</span><a href="javascript:;">已经是最后一篇了</a></div>
                             <?php else: ?>
                             <div><span>下一篇:</span><a
-                                    href="<?php echo url('/home/index/detailbiao',array('mid'=>$next['id'])); ?>"><?php echo $next['title']; ?></a>
+                                    href="<?php echo url('/home/index/detailshang',array('mid'=>$next['id'])); ?>"><?php echo $next['title']; ?></a>
                             </div>
                             <?php endif; ?>
                         </div>
@@ -181,7 +183,8 @@
                 <div class="w bottom">
                     <div class="aboutUs">
                         <span>关于我们</span>
-                        <p>惠企云网络信息（湖北）有限公司深度研究财税管理及企业管理在新经济时代的创新和运用，将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】五大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案及企业管理咨询，为企业可持续发展提供有力保障！</p>
+                        <p>惠企云网络信息（湖北）有限公司深度研究财税管理及企业管理在新经济时代的创新和运用，将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】五大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案及企业管理咨询，为企业可持续发展提供有力保障！
+                        </p>
                     </div>
                     <div class="w navBottom">
                         <div class="navList">
@@ -231,7 +234,8 @@
                             </ul>
                     </div>
                 </div>
-                <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights Reserved&nbsp;ICP证 : 鄂ICP备16008680号-3</div>
+                <div class="w copyRight">©&nbsp;Copyright&nbsp;2019&nbsp;惠企动（湖北）科技有限公司&nbsp;.&nbsp;All Rights
+                    Reserved&nbsp;ICP证 : 鄂ICP备16008680号-3</div>
     
             </div>
 
@@ -257,7 +261,7 @@
         menuUl.onmouseleave = function () {
             var li = document.querySelectorAll('.nav-active')[0]
             li.classList.remove('nav-active')
-            menuList[3].classList.add('nav-active')
+            menuList[4].classList.add('nav-active')
         }
     </script>
 </body>

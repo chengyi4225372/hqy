@@ -98,7 +98,14 @@
 
                         <a  class="btn btn-danger infos_del" data-url="{:url('/v1/info/infos/infoDels',['id'=>$vo.id])}">删除</a>
 
-                        <a class="btn {if $vo['auditing'] == 1}btn-success{else /}btn-warning{/if}" onclick="admin_module.auditing(this)" data="{$vo['auditing']}" data-url="{:url('/v1/info/infos/auditing')}" data-id="{$vo['id']}">{$audit[$vo['auditing']]}</a>
+
+                        {if $vo['auditing'] == 1}
+                        <a class="btn btn-success" onclick="admin_module.auditing(this)" data="2" data-url="{:url('/v1/info/infos/auditing')}" data-id="{$vo['id']}">{$audit[$vo['auditing']]}</a>
+                        {else/}
+                        <a class="btn btn-warning" onclick="admin_module.auditing(this)" data="1" data-url="{:url('/v1/info/infos/auditing')}" data-id="{$vo['id']}">{$audit[$vo['auditing']]}</a>
+                        {/if}
+
+
 
                     </td>
 

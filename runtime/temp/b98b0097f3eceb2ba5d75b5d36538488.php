@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576480634;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576573084;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,81 +15,11 @@
     <link rel="stylesheet" href="/static/home/css/index.css">
     <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="/static/assets/plugins/layui/layui.js"></script>
+    <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/index.js'></script>
     <script src='/static/home/js/common.js'></script>
     <script src='/static/common/js/public.js'></script>
-    <style>
-        /*.header {*/
-        /*background-image: url("<?php echo (isset($slideshow['pic']) && ($slideshow['pic'] !== '')?$slideshow['pic']:'/static/home/images/default.png'); ?>");*/
-        /*}*/
 
-        /* .success_icon>div:nth-of-type(1) {
-          position: absolute;
-          top: 3.0625rem;
-          left: 0.875rem;
-          width: 24.125rem;
-          height: 10.375rem;
-          background-size: contain;
-          background-image: url('/static/home/images/huiduoxin.png');
-          background-size: 100% 100%;
-        }
-
-        .success_icon>div:nth-of-type(2) {
-          position: absolute;
-          top: 6.625rem;
-          right: -0.1875rem;
-          width: 24.125rem;
-          height: 10.375rem;
-          background-size: 100%;
-          background-image: url('/static/home/images/huichuangyou.png');
-          background-size: 100% 100%;
-        }
-
-        .success_icon>div:nth-of-type(3) {
-          position: absolute;
-          top: 11.875rem;
-          left: -1px;
-          width: 24.125rem;
-          height: 10.375rem;
-          background-size: contain;
-          background-image: url('/static/home/images/huilinggong.png');
-          background-size: 100% 100%;
-        }
-
-        .success_icon>div:nth-of-type(4) {
-          position: absolute;
-          top: 14.3125rem;
-          right: 0.375rem;
-          width: 24.125rem;
-          height: 10.375rem;
-          background-size: 100%;
-          background-image: url('/static/home/images/huizhaoshi.png');
-          background-size: 100% 100%;
-        }
-
-        .success_icon>div:nth-of-type(5) {
-          position: absolute;
-          bottom: 6.6875rem;
-          left: 0.75rem;
-          width: 24.125rem;
-          height: 10.375rem;
-          background-size: contain;
-          background-image: url('/static/home/images/huiqidong.png');
-          background-size: 100% 100%;
-        }
-
-        .success_icon>div:nth-of-type(6) {
-          position: absolute;
-          bottom: 4.5rem;
-          right: -0.4375rem;
-          width: 24.125rem;
-          height: 10.375rem;
-          background-size: contain;
-          background-image: url('/static/home/images/huichuangye.png');
-          background-size: 100% 100%;
-        } */
-    </style>
 </head>
 
 <body id="getdata" data="<?php echo $count; ?>">
@@ -144,7 +74,7 @@
 
                                 <div>
                                     <dl>
-                                        <dt><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
+                                        <dt><a href="<?php echo url('/home/optimal/cooperation'); ?>">惠优税</a></dt>
                                         <dd>
                                             ·企税降成本 薪税降税负
 
@@ -316,7 +246,7 @@
 
             <div class='zhaomethods'>
                 <div class='totalInfo_title'>招商政策</div>
-                <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
+                <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                 <div class='totalInfo_content'>
 
                     <!--登录，注册暂时先不上线 2019年12月2号-->
@@ -346,7 +276,8 @@
 
                 </div>
 
-                <?php endforeach; endif; else: echo "" ;endif; ?>
+                <?php endforeach; endif; else: echo "没有更多内容" ;endif; if(count($shang) > 0): ?>
+
                 <div class='know_more_box'>
                     <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
                             data-url="<?php echo url('/home/index/infoList'); ?>"
@@ -354,11 +285,14 @@
                             login_url="<?php echo $baseurl; ?>">了解更多
                     </button>
                 </div>
+                <?php endif; ?>
+
             </div>
 
             <div class='zhaoTotalInfo'>
                 <div class='totalInfo_title'>招标信息</div>
-                <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
+
+                <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                 <div class='totalInfo_content'>
 
                     <!--登录，注册暂时先不上线 2019年12月2号-->
@@ -392,8 +326,7 @@
                     </a>
 
                 </div>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-
+                <?php endforeach; endif; else: echo "没有更多内容" ;endif; if(count($biao) > 0): ?>
                 <div class="know_more_box">
                     <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
                             data-url="<?php echo url('/home/index/infoBiao'); ?>"
@@ -401,6 +334,8 @@
                             login_url="<?php echo $baseurl; ?>">了解更多
                     </button>
                 </div>
+                <?php endif; ?>
+
 
             </div>
 
@@ -511,7 +446,7 @@
                     <dl>
                         <dt>惠企云旗下产品</dt>
                         <dd><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dd>
-                        <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
+                        <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">惠优税</a></dd>
                         <dd><a href="javascript:;">惠多薪</a></dd>
                         <dd><a href="javascript:;">惠创业</a></dd>
                         <dd><a href="javascript:;">惠找事</a></dd>

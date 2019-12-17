@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"C:\phpEnv\www\hqy_\public/../application/home\view\optimal\index.html";i:1576235450;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"C:\phpEnv\www\hqy_\public/../application/home\view\optimal\index.html";i:1576582752;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class='container' style="margin-top:60px;">
+    <div class='container'>
 
         <!-- 导航部分 -->
         <div class='header'>

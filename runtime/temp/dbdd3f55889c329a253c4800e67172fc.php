@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:60:"/opt/web/hqy_/public/../application/v1/view/index/index.html";i:1575011765;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576546193;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hqy_/public/../application/v1/view/info/infos/index.html";i:1576550854;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576546193;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -303,63 +303,124 @@
     <!-- Full Width Column -->
     <div class="content-wrapper">
         
-    <!-- Main content -->
-    <section class="content">
-        <div class="box box-default color-palette-box" style="min-height:700px;">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-                        <a href="<?php echo url('/v1/protuct/protucts/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>共享产品</h2></span>
-                                <span class="info-box-number"><h2><?php echo $pro_count; ?></h2></span>
+<div class="content" style="margin-bottom:0px;min-height:0px;">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline"  id="form">
+                <div class="panel panel-default panel-btn">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                <select class="selectpicker show-tick" title="" id="searchField" name="searchField"
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" <?php if($params['searchField'] == 1): ?>selected='selected'<?php endif; ?>>新闻标题</option>
+                                    <option value="2" <?php if($params['searchField'] == 2): ?>selected='selected'<?php endif; ?>>新闻关键字</option>
+                                    <option value="3" <?php if($params['searchField'] == 3): ?>selected='selected'<?php endif; ?>>新闻描述</option>
+                                </select>
                             </div>
-                        </a>
-
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
-
-                        <a href="<?php echo url('/v1/info/infos/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>招标信息</h2></span>
-                                <span class="info-box-number"><h2><?php echo $info_count; ?></h2></span>
+                            <div class="col-sm-8">
+                                <input class="form-control" style="width:248px;" type="text" value="<?php echo $params['searchValue']; ?>" name="searchValue" id="searchValue" placeholder="多个关键字用空格或逗号隔开">
                             </div>
-                        </a>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
+                        </div>
 
-                <!-- fix for small devices only -->
-                <div class="clearfix visible-sm-block"></div>
-
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-
-                        <a href="<?php echo url('/v1/users/user/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>用户信息</h2></span>
-                                <span class="info-box-number"><h2><?php echo $user_count; ?></h2></span>
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <label for="category" class="control-label">所属分类：</label>
                             </div>
-                        </a>
-                        <!-- /.info-box-content -->
+                            <div class="col-sm-7">
+                                <select class="selectpicker show-tick" title="" id="category" name="category "
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" <?php if($params['category'] == 1): ?>selected='selected'<?php endif; ?>>招标信息</option>
+                                    <option value="2" <?php if($params['category'] == 2): ?>selected='selected'<?php endif; ?>>招商信息</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-info" id="btn_search" type="button"  data-url="<?php echo url('/v1/info/infos/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                        </div>
                     </div>
-                    <!-- /.info-box -->
                 </div>
-                <!-- /.col -->
-            </div>
+                <br>
+            </form>
         </div>
-    </section>
+    </div>
+</div>
+
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+        <div class="box-header with-border">
+            <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn bg-purple btn-sm btn-dialog"
+                    id="infosadd" data-url="<?php echo url('/v1/info/infos/infosadd'); ?>">
+                <i class="fa fa-plus-circle">添加</i></button>
+        </div>
+        <div class="box-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <th class="text-center" style="width:5%;">排序</th>
+                <th class="text-center" style="width:5%;">所属分类</th>
+                <th class="text-center">展示图</th>
+                <th class="text-center" style="width:21%">新闻标题</th>
+                <th class="text-center" style="width:21%">新闻关键字</th>
+                <th class="text-center">新闻描述</th>
+                <th class="text-center">创建时间</th>
+                <th class="text-center">操作</th>
+                </thead>
+                <tbody>
+
+            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                <tr>
+                    <td class="text-center">
+                        <input class="form-control form-control-sm" type="number" value="<?php echo $vo['sort']; ?>"  onblur="admin_module.change_sort(this)" data-url="<?php echo url('/v1/info/infos/changesort'); ?>" data="<?php echo $vo['id']; ?>">
+                    </td>
+                    <td class="text-center">
+                     <?php if($vo['pid'] == '1'): ?>
+                       招标信息
+                      <?php else: ?>
+                        招商信息
+                      <?php endif; ?>
+                    </td>
+                    <td class="text-center">
+                        <a href="">
+                            <img src="<?php echo $vo['imgs']; ?>"  style="width:150px;height:60px;"/>
+                        </a>
+                    </td>
+                    <td class="text-center"><?php echo $vo['title']; ?></td>
+                    <td class="text-center"><?php echo $vo['keyword']; ?></td>
+                    <td class="text-center">
+                        <textarea rows="6" cols="30"><?php echo $vo['describe']; ?></textarea>
+                    </td>
+                    <td class="text-center"><?php echo $vo['release_time']; ?></td>
+
+                    <td class="text-center">
+                        <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="<?php echo url('/v1/info/infos/infosEdit',['id'=>$vo['id']]); ?>">编辑</a>
+
+                        <a  class="btn btn-danger infos_del" data-url="<?php echo url('/v1/info/infos/infoDels',['id'=>$vo['id']]); ?>">删除</a>
+
+
+                        <?php if($vo['auditing'] == 1): ?>
+                        <a class="btn btn-success" onclick="admin_module.auditing(this)" data="2" data-url="<?php echo url('/v1/info/infos/auditing'); ?>" data-id="<?php echo $vo['id']; ?>"><?php echo $audit[$vo['auditing']]; ?></a>
+                        <?php else: ?>
+                        <a class="btn btn-warning" onclick="admin_module.auditing(this)" data="1" data-url="<?php echo url('/v1/info/infos/auditing'); ?>" data-id="<?php echo $vo['id']; ?>"><?php echo $audit[$vo['auditing']]; ?></a>
+                        <?php endif; ?>
+
+
+
+                    </td>
+
+                </tr>
+           <?php endforeach; endif; else: echo "" ;endif; ?>
+                </tbody>
+            </table>
+            <div class="pages"><?php echo $list->render();; ?></div>
+        </div>
+    </div>
+
+</section>
 
     </div>
 

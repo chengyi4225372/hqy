@@ -530,7 +530,7 @@ a {
 }
 
 .line {
-    width: 65.625rem;
+    width: 100%;
     height: 1px;
     background: rgba(245, 245, 245, 1);
     margin-top: 1.375rem;

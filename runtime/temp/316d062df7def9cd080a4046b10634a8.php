@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576235450;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576582267;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,7 +95,7 @@
           
                           </div><!-- 二级菜单 -->
                     </li>
-                    <li class='nav-active'><a href="javascript:;">政府招标信息</a></li>
+                    <li class='nav-active'><a href="javascript:;">招标信息</a></li>
                     <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
                     <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
@@ -134,7 +134,7 @@
         <div class="bg_breadCrumbs">
             <div class="w bread-crumbs">
                 <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
-                <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">政府招标信息</a></span> <span></span>
+                <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">招标信息</a></span> <span></span>
             </div>
         </div>
 
@@ -149,15 +149,11 @@
                       <li>招标信息</li>
                     </ul> -->
                         <div class="govPolicy fl">招标信息</div>
-                        <div class="search-box fr">
-                            <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-                            <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/infoBiao'); ?>">搜索
-                            </div>
-                        </div>
+                        
                     </div>
 
                     <!-- 热搜 -->
-                    <div class="m hotWord">
+                    <!-- <div class="m hotWord">
                             <ul>
                                 <li style="cursor:pointer;" data-url="<?php echo url('/home/index/industry'); ?>"
                                     onclick="location.href=$(this).attr('data-url')">
@@ -166,12 +162,34 @@
                                 <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $i = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($i % 2 );++$i;?>
                                 <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
                                     data-url="<?php echo url('/home/index/industry'); ?>">
+                                    <input type="hidden" value="<?php echo $ff['title']; ?>" id="key<?php echo $key; ?>">
                                     <span><?php echo $ff['title']; ?></span>
                                     <span class="close">✕</span>
                                 </li>
                                 <?php endforeach; endif; else: echo "" ;endif; ?>
                             </ul>
     
+                        </div> -->
+                        <div class="hotWord">
+                            <div class="bgHot">
+                                <span>热门关键词</span>
+                                <ul>
+                                    <li>
+                                        <span>周杰伦新歌</span>
+                                        <span class="close">✕</span>
+                                    </li>
+                                    <li>
+                                        <span>周杰伦新歌</span>
+                                        <span class="close">✕</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="search-box">
+                                <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
+                                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/industry/index'); ?>">搜索
+                                </div>
+                            </div>
+                
                         </div>
 
                     <div class="bg_divide">

@@ -939,19 +939,28 @@ var admin_module = (function (){
         var url = $(objthis).attr('data-url');
         var audit = $(objthis).attr('data');
         var id = $(objthis).attr('data-id');
-        if(audit == 1){
-            return;
+        if(audit == '' || audit == undefined){
+            layer.msg('操作失败',{icon:5,time:1500});return;
         }
         $.post(
             url,
-            {id:id},
+            {id:id,audit:audit},
             function (ret){
                 if(ret.status == 200){
+
                     layer.msg(ret.msg,{icon:6,time:1500},function (){
-                        $(objthis).removeClass('btn-warning');
-                        $(objthis).addClass('btn-success');
-                        $(objthis).attr('data',1);
-                        $(objthis).html('已审核');
+                        if(audit == 2){
+                            $(objthis).removeClass('btn-success');
+                            $(objthis).addClass('btn-warning');
+                            $(objthis).attr('data',1);
+                            $(objthis).html('未审核');
+                        }
+                        if(audit == 1){
+                            $(objthis).removeClass('btn-warning');
+                            $(objthis).addClass('btn-success');
+                            $(objthis).attr('data',2);
+                            $(objthis).html('已审核');
+                        }
                     });
                 }
                 if(ret.status == 400){

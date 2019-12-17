@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1576234299;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1576577274;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,7 +96,7 @@
           
                           </div><!-- 二级菜单 -->
                     </li>
-                    <li><a href="<?php echo url('/home/index/infoBiao'); ?>">政府招标信息</a></li>
+                    <li><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
                     <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
                     <li class='nav-active'><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
@@ -160,16 +160,17 @@
 
                     <!-- 热搜 -->
                     <div class="m hotWord">
-                        <ul>
+                        <ul >
                             <li style="cursor:pointer;" data-url="<?php echo url('/home/index/industry'); ?>"
                                 onclick="location.href=$(this).attr('data-url')">
                                 <span>热门关键词</span>
                             </li>
-                            <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $i = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($i % 2 );++$i;?>
+                            <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $k = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($k % 2 );++$k;?>
                             <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
-                                data-url="<?php echo url('/home/index/industry'); ?>">
+                                data-url="<?php echo url('/home/index/industry'); ?>" data-id="<?php echo $k; ?>">
                                 <span><?php echo $ff['title']; ?></span>
-                                <span class="close">✕</span>
+                                <span class="close" onclick="nullhot(this)"
+                                      data-url="<?php echo url('/home/index/industry'); ?>">✕</span>
                             </li>
                             <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>

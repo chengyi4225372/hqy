@@ -65,10 +65,10 @@ class Infosservice
                     break;
             }
         }
-        if(!empty($params['category'])){
+        if (!empty($params['category'])) {
             $where['pid'] = $params['category'];
         }
-        $where['status'] = ['GT',0];
+        $where['status'] = ['GT', 0];
         $list = Info::instance()->where($where)->order('sort desc,release_time desc')->paginate(15);
         return $list;
     }
@@ -82,17 +82,17 @@ class Infosservice
      */
     public function auditing($params)
     {
-        if(empty($params)){
+        if (empty($params)) {
             return false;
         }
         $save = [];
         $where = [];
-        $save['auditing'] = 1;
+        $save['auditing'] = $params['audit'];
         $save['audit_user'] = Cookie('username');
 
         $where['id'] = $params['id'];
         $res = Info::instance()->where($where)->update($save);
-        if($res === false){
+        if ($res === false) {
             return false;
         }
         return true;
@@ -126,7 +126,6 @@ class Infosservice
     public function getId($id)
     {
         $where = [];
-        $where['auditing'] = 1;
         $where['id'] = $id;
         $info = Info::instance()->where($where)->find();
         return $info;
@@ -138,11 +137,25 @@ class Infosservice
      */
     public function biao($array)
     {
-        $array = [];
         $array['status'] = 1;
         $array['auditing'] = 1;
         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
-        return $arr;
+        $new_arr = [];
+        foreach ($arr as $key => $val) {
+            $new_arr[$key]['id'] = isset($val['id']) ? $val['id'] : '';
+
+            $new_arr[$key]['imgs'] = isset($val['imgs']) ? $val['imgs'] : '';
+            $new_arr[$key]['keyword'] = isset($val['keyword']) ? explode(',', $arr[$key]['keyword']) : '';
+            $new_arr[$key]['title'] = isset($val['title']) ? mb_substr($arr[$key]['title'], 0, 50, 'utf-8') : '';
+            $new_arr[$key]['content'] = isset($val['content']) ? $val['content'] : '';
+            $new_arr[$key]['describe'] = isset($val['describe']) ? $val['describe'] : '';
+            $new_arr[$key]['status'] = isset($val['status']) ? $val['status'] : '';
+            $new_arr[$key]['release_time'] = isset($val['release_time']) ? $val['release_time'] : '';
+            $new_arr[$key]['sort'] = isset($val['sort']) ? $val['sort'] : '';
+            $new_arr[$key]['auditing'] = isset($val['auditing']) ? $val['auditing'] : '';
+            $new_arr[$key]['audit_user'] = isset($val['audit_user']) ? $val['audit_user'] : '';
+        }
+        return $new_arr;
     }
 
     /**
@@ -151,11 +164,25 @@ class Infosservice
      */
     public function shang($array)
     {
-        $array = [];
         $array['status'] = 1;
         $array['auditing'] = 1;
         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
-        return $arr;
+        $new_arr = [];
+        foreach ($arr as $key => $val) {
+            $new_arr[$key]['id'] = isset($val['id']) ? $val['id'] : '';
+            $new_arr[$key]['pid'] = isset($val['pid']) ? $val['pid'] : '';
+            $new_arr[$key]['title'] = isset($val['title']) ? $val['title'] : '';
+            $new_arr[$key]['imgs'] = isset($val['imgs']) ? $val['imgs'] : '';
+            $new_arr[$key]['keyword'] = isset($val['keyword']) ? $val['keyword'] : '';
+            $new_arr[$key]['content'] = isset($val['content']) ? $val['content'] : '';
+            $new_arr[$key]['describe'] = isset($val['describe']) ? $val['describe'] : '';
+            $new_arr[$key]['status'] = isset($val['status']) ? $val['status'] : '';
+            $new_arr[$key]['release_time'] = isset($val['release_time']) ? $val['release_time'] : '';
+            $new_arr[$key]['sort'] = isset($val['sort']) ? $val['sort'] : '';
+            $new_arr[$key]['auditing'] = isset($val['auditing']) ? $val['auditing'] : '';
+            $new_arr[$key]['audit_user'] = isset($val['audit_user']) ? $val['audit_user'] : '';
+        }
+        return $new_arr;
     }
 
     /**
@@ -182,12 +209,7 @@ class Infosservice
 
         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
 
-        foreach ($arr as $k => $val) {
-            $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
-            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 50, 'utf-8');
-        }
-
-        return $arr ? $arr : '';
+        return $arr;
     }
 
     /**
@@ -206,7 +228,7 @@ class Infosservice
         } else {
             $array['status'] = 1;
             $array['auditing'] = 1;
-            $array['title|keyword|describe'] = ['like', '%'.$title.'%'];
+            $array['title|keyword|describe'] = ['like', '%' . $title . '%'];
         }
         if (empty($page) || is_null($page)) {
             $page = 10;
@@ -329,7 +351,7 @@ class Infosservice
     public function dels($id)
     {
         $ret = Info::instance()->where(['id' => $id])->update(['status' => 0]);
-        if($ret == false){
+        if ($ret == false) {
             return false;
         }
         return true;
@@ -407,7 +429,7 @@ class Infosservice
      */
     public function changesort($params)
     {
-        if(empty($params)){
+        if (empty($params)) {
             return false;
         }
         $save = [];
@@ -415,7 +437,7 @@ class Infosservice
         $where = [];
         $where['id'] = $params['id'];
         $res = Info::instance()->where($where)->update($save);
-        if($res === false){
+        if ($res === false) {
             return false;
         }
         return true;
