@@ -166,10 +166,11 @@
                             </li>
                             {volist name='four' id='ff' key='k'}
                             <li onclick="hotsearch(this);" data-title="{$ff.title}"
-                                data-url="{:url('/home/index/industry')}" data-id="{$k}">
+                                data-href="{:url('/home/index/industrydetail')}"
+                                data-url="{:url('/home/index/industryapi')}" data-id="{$k}">
                                 <span>{$ff.title}</span>
                                 <span class="close" onclick="nullhot(this)"
-                                      data-url="{:url('/home/index/industry')}">✕</span>
+                                      data-url="{:url('/home/index/industryapi')}">✕</span>
                             </li>
                             {/volist}
                         </ul>
@@ -195,32 +196,6 @@
                             {else /}
                             {volist name='biao' id='ww'}
                             <li>
-                                <!--<a href="javascript:;"-->
-                                <!--data-url="{:url('/home/index/getInfo',['mid' => $ww.id])}"-->
-                                <!--login_url="{$baseurl}"-->
-                                <!--loca_url="{:config('curl.website')}/home/index/getInfo?mid={$ww['id']}"-->
-                                <!--mobile-phone="{$userinfo['mobile']}" data-id="{$ww['id']}"-->
-                                <!--onclick="home_module.show_detail(this)">-->
-                                <!--<div class="infoItem">-->
-                                <!--<div class="infoLeft">-->
-                                <!--<img src="{$ww.imgs?$ww.imgs:'__HOME__/images/infoItem.jpg';}" alt="">-->
-                                <!--</div>-->
-
-                                <!--<div class="infoRight">-->
-                                <!--<div class="rightTop">-->
-                                <!--<div class="itemTitle">{:mb_substr($ww.title,0,35,'utf-8')}</div>-->
-                                <!--<span class="itemTime">-->
-                                <!--<img src="__SPI__/images/shijian2x.png" alt=""><span>{$ww.release_time}</span>-->
-                                <!--</span>-->
-                                <!--</div>-->
-                                <!--<p>-->
-                                <!--{$ww.describe}-->
-                                <!--</p>-->
-                                <!--</div>-->
-
-                                <!--</div>-->
-                                <!--</a>-->
-
                                 <a href="{:config('curl.website')}/home/index/industrydetail?mid={$ww['id']}">
                                     <div class="infoItem">
                                         <div class="infoLeft">
@@ -248,8 +223,7 @@
                                     {empty name='$ww.keyword'}
                                     {else /}
                                     {foreach name="$ww.keyword" item="key" key="k" }
-                                    <li onclick="hotsearch(this);" data-title="{$key}"
-                                        data-url="{:url('/home/index/industry')}">{$key}</li>
+                                    <li data-title="{$key}">{$key}</li>
                                     {/foreach}
                                     {/empty}
                                 </ul>
@@ -257,7 +231,7 @@
                             {/volist}
                             {/empty}
                         </ul>
-                        <input type="hidden" id="sid" value="{$Think.get.keyword}">
+
                     </div>
 
                 </div>

@@ -208,7 +208,6 @@ class Infosservice
             $array['auditing'] = 1;
             $array['title|keyword|describe'] = ['like', '%'.$title.'%'];
         }
-        dump($array);
         if (empty($page) || is_null($page)) {
             $page = 10;
         }
@@ -222,6 +221,73 @@ class Infosservice
 
         return $arr ? $arr : '';
     }
+
+    /**
+     * 行业资讯接口
+     * @title 搜索关键字
+     * @page  当前页数
+     * @size  每页显示条数
+     * return array
+     */
+    public function getindustryjson($title,$page,$size){
+        if (empty($title)) {
+            $array['status'] = 1;
+            $array['auditing'] = 1;
+
+        } else {
+            $new_title = explode(',',$title);
+
+            $arr_title = array_filter($new_title,function ($params){
+                return !empty($params);
+            });
+
+            $arr_w = array_map(function ($pa){
+                return '%'.$pa.'%';
+            },$arr_title);
+
+            $array['keyword'] = ['like',$arr_w,'OR'];
+            $array['status'] = 1;
+            $array['auditing'] = 1;
+        }
+        if($page == ''|| $page == 1){
+            $page = 0;
+        }
+
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit($page,$size)->select();
+        return $arr?$arr:'';
+    }
+
+    /**
+     * 行业资讯 总条数
+     * @title string
+     * return int
+     */
+     public function getindustrycount($title){
+         $where = [];
+
+         if(empty($title)){
+             $where['status'] = 1;
+             $where['auditing'] = 1;
+         }else {
+             $new_title = explode(',',$title);
+
+             $arr_title = array_filter($new_title,function ($params){
+                 return !empty($params);
+             });
+
+             $arr_w = array_map(function ($pa){
+                 return '%'.$pa.'%';
+             },$arr_title);
+
+             $where['keyword'] = ['like',$arr_w,'OR'];
+             $where['status'] = 1;
+             $where['auditing'] = 1;
+         }
+
+         $count = Info::instance()->where($where)->order('sort desc,release_time desc')->count();
+         return $count?$count:'';
+     }
+
 
     /**
      * 招商信息列表

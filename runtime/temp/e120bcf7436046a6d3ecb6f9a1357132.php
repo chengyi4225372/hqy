@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\industry.html";i:1576498947;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\industry.html";i:1576574532;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -167,10 +167,11 @@
                             </li>
                             <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $k = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($k % 2 );++$k;?>
                             <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
-                                data-url="<?php echo url('/home/index/industry'); ?>" data-id="<?php echo $k; ?>">
+                                data-href="<?php echo url('/home/index/industrydetail'); ?>"
+                                data-url="<?php echo url('/home/index/industryapi'); ?>" data-id="<?php echo $k; ?>">
                                 <span><?php echo $ff['title']; ?></span>
                                 <span class="close" onclick="nullhot(this)"
-                                      data-url="<?php echo url('/home/index/industry'); ?>">✕</span>
+                                      data-url="<?php echo url('/home/index/industryapi'); ?>">✕</span>
                             </li>
                             <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
@@ -195,32 +196,6 @@
                             </li>
                             <?php else: if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ww): $mod = ($i % 2 );++$i;?>
                             <li>
-                                <!--<a href="javascript:;"-->
-                                <!--data-url="<?php echo url('/home/index/getInfo',['mid' => $ww['id']]); ?>"-->
-                                <!--login_url="<?php echo $baseurl; ?>"-->
-                                <!--loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ww['id']; ?>"-->
-                                <!--mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ww['id']; ?>"-->
-                                <!--onclick="home_module.show_detail(this)">-->
-                                <!--<div class="infoItem">-->
-                                <!--<div class="infoLeft">-->
-                                <!--<img src="<?php echo !empty($ww['imgs'])?$ww['imgs']:'/static/home/images/infoItem.jpg';; ?>" alt="">-->
-                                <!--</div>-->
-
-                                <!--<div class="infoRight">-->
-                                <!--<div class="rightTop">-->
-                                <!--<div class="itemTitle"><?php echo mb_substr($ww['title'],0,35,'utf-8'); ?></div>-->
-                                <!--<span class="itemTime">-->
-                                <!--<img src="/static/spirit/images/shijian2x.png" alt=""><span><?php echo $ww['release_time']; ?></span>-->
-                                <!--</span>-->
-                                <!--</div>-->
-                                <!--<p>-->
-                                <!--<?php echo $ww['describe']; ?>-->
-                                <!--</p>-->
-                                <!--</div>-->
-
-                                <!--</div>-->
-                                <!--</a>-->
-
                                 <a href="<?php echo config('curl.website'); ?>/home/index/industrydetail?mid=<?php echo $ww['id']; ?>">
                                     <div class="infoItem">
                                         <div class="infoLeft">
@@ -246,14 +221,13 @@
 
                                 <ul class="tags">
                                     <?php if(empty($ww['keyword']) || (($ww['keyword'] instanceof \think\Collection || $ww['keyword'] instanceof \think\Paginator ) && $ww['keyword']->isEmpty())): else: if(is_array($ww['keyword']) || $ww['keyword'] instanceof \think\Collection || $ww['keyword'] instanceof \think\Paginator): if( count($ww['keyword'])==0 ) : echo "" ;else: foreach($ww['keyword'] as $k=>$key): ?>
-                                    <li onclick="hotsearch(this);" data-title="<?php echo $key; ?>"
-                                        data-url="<?php echo url('/home/index/industry'); ?>"><?php echo $key; ?></li>
+                                    <li data-title="<?php echo $key; ?>"><?php echo $key; ?></li>
                                     <?php endforeach; endif; else: echo "" ;endif; endif; ?>
                                 </ul>
                             </li>
                             <?php endforeach; endif; else: echo "" ;endif; endif; ?>
                         </ul>
-                        <input type="hidden" id="sid" value="<?php echo \think\Request::instance()->get('keyword'); ?>">
+
                     </div>
 
                 </div>

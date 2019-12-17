@@ -321,4 +321,30 @@ class Index extends BaseController
         }
         return false;
     }
+
+    /**
+     * 行业资讯关键字接口
+     */
+    public function industryapi(){
+        if($this->request->isPost() || $this->request->isAjax()) {
+            //行业资讯
+            $title = input('post.title', '', 'trim'); //热门搜索
+            $page  = input('post.page','','int');
+            $titles = $title? $title: '';
+            $page  = $page ?$page :'1';//当前页数
+            $size  = 30; //每页显示条数
+            $data   = Infosservice::instance()->getindustryjson($titles, $page,$size);
+            $count  =  Infosservice::instance()->getindustrycount($titles);
+            $countpage = ceil($count / $size);
+            if(!empty($data)){
+                return json(['data'=>$data,'page'=>$page,'size'=>$size,'count'=>$countpage,'code'=>200,'msg'=>'success']);
+            }
+
+            if(empty($data)){
+                return json(['data'=>'','code'=>400,'msg'=>'error']);
+            }
+
+        }
+        return false;
+    }
 }
