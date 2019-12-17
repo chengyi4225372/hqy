@@ -837,8 +837,9 @@ body {
     -webkit-box-shadow: 5px 5px 5px #ccd4dc;
             box-shadow: 5px 5px 5px #ccd4dc;
     background: url("http://chuantu.xyz/t6/704/1576222614x2890191687.png") no-repeat;
-    -webkit-background-size: 100% 100%;
-            background-size: 100% 100%;
+    background-repeat:no-repeat!important;
+    /* -webkit-background-size: 100% 100%; */
+            background-size: contain!important;
     color: #181A20;
     cursor: pointer; }
     .produtionIntro li:hover {
