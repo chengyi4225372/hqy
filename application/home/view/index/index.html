@@ -182,19 +182,19 @@
 <div class='chooseUs'>
     <div class="w choose">
         <div class='choose-title'>选择我们</div>
-        <div class='choose-intro'>惠企云平台是一款基于国家政策、以合规化为基础、由金牌顾问团队打造的产品，为企业及个人提供税筹问题的全方位解决方案。</div>
+        <div class='choose-intro'>惠企云拥有优质多元产品、权威官方背书、金牌服务团队、一流技术团队、专业客服团队，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案，为企业可持续性发展提供有力保障。</div>
         <ul class='img_total'>
             <li>
                 <img src="__HOME__/images/more.png" alt="">
-                <a href="javascript:void(0)">集专家智“惠”定制</a>
+                <a href="javascript:void(0)">创新模式</a>
             </li>
             <li>
                 <img src="__HOME__/images/rainning.png" alt="">
-                <a href="javascript:void(0)">集专家智“惠”定制</a>
+                <a href="javascript:void(0)">深度提效</a>
             </li>
             <li>
                 <img src="__HOME__/images/pig.png" alt="">
-                <a href="javascript:void(0)">给您最优“惠”</a>
+                <a href="javascript:void(0)">多元增收</a>
             </li>
         </ul>
     </div>
@@ -246,24 +246,11 @@
 
             <div class='zhaomethods'>
                 <div class='totalInfo_title'>招商政策</div>
+                {empty name='shang'}
+                <p>抱歉，没有找到相关的信息</p>
+                {else /}
                 {volist name="shang" id="ss" empty="没有更多内容"}
                 <div class='totalInfo_content'>
-
-                    <!--登录，注册暂时先不上线 2019年12月2号-->
-
-                    <!--<a href="javascript:void(0)" data-url="{:url('/home/index/getInfo',['mid' => $ss.id])}"-->
-                    <!--login_url="{$baseurl}"-->
-                    <!--loca_url="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}"-->
-                    <!--mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}"-->
-                    <!--onclick="home_module.show_detail(this)">-->
-                    <!--<div class='zhao_contentInfo'>-->
-                    <!--<div>{$ss.title}</div>-->
-                    <!--<div>-->
-                    <!--{$ss.release_time}-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--<div> {$ss.describe}</div>-->
-                    <!--</a>-->
                     <a href="{:config('curl.website')}/home/index/detailshang?mid={$ss['id']}">
                         <div class='zhao_contentInfo'>
                             <div>{$ss.title}</div>
@@ -277,6 +264,8 @@
                 </div>
 
                 {/volist}
+                {/empty}
+
 
                 {if count($shang) > 0}
 
@@ -293,7 +282,9 @@
 
             <div class='zhaoTotalInfo'>
                 <div class='totalInfo_title'>招标信息</div>
-
+                {empty name='biao'}
+                <p>抱歉，没有找到相关的信息</p>
+                {else /}
                 {volist name="biao" id="biaos" empty="没有更多内容"}
                 <div class='totalInfo_content'>
 
@@ -329,6 +320,8 @@
 
                 </div>
                 {/volist}
+                {/empty}
+
 
                 {if count($biao) > 0}
                 <div class="know_more_box">
