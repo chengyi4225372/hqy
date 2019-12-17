@@ -209,22 +209,7 @@ class Infosservice
 
         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
 
-        $new_arr = [];
-        foreach ($arr as $key => $val) {
-            $new_arr[$key]['pid'] = isset($val['pid']) ? $val['pid'] : '';
-
-            $new_arr[$key]['imgs'] = isset($val['imgs']) ? $val['imgs'] : '';
-            $new_arr[$key]['keyword'] = isset($val['keyword']) ? explode(',', $arr[$key]['keyword']) : '';
-            $new_arr[$key]['title'] = isset($val['title']) ? mb_substr($arr[$key]['title'], 0, 50, 'utf-8') : '';
-            $new_arr[$key]['content'] = isset($val['content']) ? $val['content'] : '';
-            $new_arr[$key]['describe'] = isset($val['describe']) ? $val['describe'] : '';
-            $new_arr[$key]['status'] = isset($val['status']) ? $val['status'] : '';
-            $new_arr[$key]['release_time'] = isset($val['release_time']) ? $val['release_time'] : '';
-            $new_arr[$key]['sort'] = isset($val['sort']) ? $val['sort'] : '';
-            $new_arr[$key]['auditing'] = isset($val['auditing']) ? $val['auditing'] : '';
-            $new_arr[$key]['audit_user'] = isset($val['audit_user']) ? $val['audit_user'] : '';
-        }
-        return $new_arr;
+        return $arr;
     }
 
     /**
