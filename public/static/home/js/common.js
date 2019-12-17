@@ -1,14 +1,14 @@
 //手机验证
 function checkPhone(phone) {
     var tel_reg = /^1(3|4|5|6|7|8|9)\d{9}$/;
-    if (tel_reg.test(phone)) {
-        return true;
-    } else {
+    if (!tel_reg.test(phone)) {
         return false;
+    } else {
+        return true;
     }
 }
 
-var gurl = "http://172.26.3.8:8089";
+var gurl = "http://47.105.48.137:8089";
 
 function getErp() {
     var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
