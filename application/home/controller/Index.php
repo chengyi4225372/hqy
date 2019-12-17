@@ -134,6 +134,34 @@ class Index extends BaseController
          return false;
      }
 
+    /**
+     * 招标信息 接口
+     */
+    public function getbiaoapi(){
+        if($this->request->isPost() || $this->request->isAjax()){
+            $title = input('post.title', '', 'trim'); //热门搜索
+            $page  = input('post.page','','int');
+            $titles = $title? $title: '';
+            $page  = $page ?$page :'1';//当前页数
+            $size  = 30; //每页显示条数
+
+            $data   = Infosservice::instance()->getbiaojson($titles, $page,$size);
+            $count  =  Infosservice::instance()->getbiaocount($titles);
+            $countpage = ceil($count / $size);
+
+            if(!empty($data)){
+                return json(['data'=>$data,'page'=>$page,'size'=>$size,'count'=>$countpage,'code'=>200,'msg'=>'success']);
+            }
+
+            if(empty($data)){
+                return json(['data'=>'','code'=>400,'msg'=>'error']);
+            }
+
+        }
+
+        return false;
+    }
+
 
     /**
      * @DESC：招标信息详情
@@ -271,24 +299,6 @@ class Index extends BaseController
     }
 
 
-    /**
-     * 招标信息 接口
-     */
-    public function getbiaoPage(){
-        $keyword = input('get.keyword','','trim');
-        $page    = input('get.page','','int');
-
-        $list  =  Infosservice::instance()->getbiao($keyword,$page);
-
-        if(empty($list)){
-            return json(['code'=>404,'msg'=>'没有更多了！']);
-        }
-
-        if(isset($list) && !empty($list)){
-            return json(['code'=>200,'msg'=>'请求成功','data'=>$list]);
-        }
-
-    }
 
     /**
      * @DESC：行业资讯

@@ -209,8 +209,83 @@ class Infosservice
 
         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
 
+        foreach ($arr as $k => $val) {
+            $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
+            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 50, 'utf-8');
+        }
+
         return $arr;
     }
+
+    /**
+     * 招标信息 接口
+     * @title 搜索关键字
+     * @page  当前页数
+     * @size  每页显示条数
+     * return array
+     */
+     public function getbiaojson($title,$page,$size){
+         $array = [];
+         if (empty($title)) {
+             $array['status'] = 1;
+             $array['auditing'] = 1;
+             $array['pid'] = 1;
+         } else {
+             $new_title = explode(',',$title);
+
+             $arr_title = array_filter($new_title,function ($params){
+                 return !empty($params);
+             });
+
+             $arr_w = array_map(function ($pa){
+                 return '%'.$pa.'%';
+             },$arr_title);
+
+             $array['status'] = 1;
+             $array['auditing'] = 1;
+             $array['pid'] = 1;
+             $array['keyword'] = ['like',$arr_w,'OR'];
+         }
+         if($page == ''|| $page == 1){
+             $page = 0;
+         }
+
+         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit($page,$size)->select();
+         return $arr?$arr:'';
+     }
+
+    /**
+     * 获取招标信息总条数
+     * @title string
+     * return string|int
+     */
+     public function getbiaocount($title){
+         $array = [];
+         if (empty($title)) {
+             $array['status'] = 1;
+             $array['auditing'] = 1;
+             $array['pid'] = 1;
+         } else {
+             $new_title = explode(',',$title);
+
+             $arr_title = array_filter($new_title,function ($params){
+                 return !empty($params);
+             });
+
+             $arr_w = array_map(function ($pa){
+                 return '%'.$pa.'%';
+             },$arr_title);
+
+             $array['status'] = 1;
+             $array['auditing'] = 1;
+             $array['pid'] = 1;
+             $array['keyword'] = ['like',$arr_w,'OR'];
+         }
+         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->count();
+
+         return $arr?$arr:'';
+     }
+
 
     /**
      * @DESC：行业资讯
@@ -309,6 +384,7 @@ class Infosservice
          $count = Info::instance()->where($where)->order('sort desc,release_time desc')->count();
          return $count?$count:'';
      }
+
 
 
     /**

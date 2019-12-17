@@ -173,14 +173,15 @@
                             <div class="bgHot">
                                 <span>热门关键词</span>
                                 <ul>
-                                    <li>
-                                        <span>周杰伦新歌</span>
-                                        <span class="close">✕</span>
+                                    {volist name='four' id='ff' key='k'}
+                                    <li onclick="hotsearch(this);" data-title="{$ff.title}"
+                                        data-href="{:url('/home/index/detailbiao')}"
+                                        data-url="{:url('/home/index/getbiaoapi')}" data-id="{$k}">
+                                        <span>{$ff.title}</span>
+                                        <span class="close" onclick="nullhot(this)"
+                                              data-url="{:url('/home/index/getbiaoapi')}">✕</span>
                                     </li>
-                                    <li>
-                                        <span>周杰伦新歌</span>
-                                        <span class="close">✕</span>
-                                    </li>
+                                    {/volist}
                                 </ul>
                             </div>
                             <div class="search-box">
@@ -269,7 +270,6 @@
             <div>返回顶部</div>
         </div>
 
-
     </div>
 
     <script>
@@ -291,10 +291,5 @@
         }
     </script>
 
-    
-
 </body>
-
-
-
 </html>

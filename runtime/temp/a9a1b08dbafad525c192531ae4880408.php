@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:104:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\index\index.html";i:1575017610;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\layout\default.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\header.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\left.html";i:1576584055;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\footer.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:114:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\cate\ifications\index.html";i:1575017610;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\layout\default.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\header.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\left.html";i:1576584055;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\footer.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -303,63 +303,71 @@
     <!-- Full Width Column -->
     <div class="content-wrapper">
         
-    <!-- Main content -->
-    <section class="content">
-        <div class="box box-default color-palette-box" style="min-height:700px;">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-                        <a href="<?php echo url('/v1/protuct/protucts/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>共享产品</h2></span>
-                                <span class="info-box-number"><h2><?php echo $pro_count; ?></h2></span>
-                            </div>
-                        </a>
+<div class="content" style="margin-bottom:0px;min-height:0px;">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline"  id="form">
 
-                        <!-- /.info-box-content -->
+                <div class="panel panel-default panel-btn">
+                    <div class="panel-heading">
+
+                        <div class="form-group">
+                            <input type="text"  id="keywords" class="form-control" name="title" value="<?php echo \think\Request::instance()->get('title'); ?>" placeholder="请输入标题进行搜索....">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-info" id="btnsearch" type="button"  data-url="<?php echo url('/v1/cate/ifications/index'); ?>">
+                                <i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                        </div>
                     </div>
-                    <!-- /.info-box -->
                 </div>
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
-
-                        <a href="<?php echo url('/v1/info/infos/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>招标信息</h2></span>
-                                <span class="info-box-number"><h2><?php echo $info_count; ?></h2></span>
-                            </div>
-                        </a>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-
-                <!-- fix for small devices only -->
-                <div class="clearfix visible-sm-block"></div>
-
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-
-                        <a href="<?php echo url('/v1/users/user/index'); ?>">
-                            <div class="info-box-content">
-                                <span class="info-box-text"><h2>用户信息</h2></span>
-                                <span class="info-box-number"><h2><?php echo $user_count; ?></h2></span>
-                            </div>
-                        </a>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
-                </div>
-                <!-- /.col -->
-            </div>
+                <br>
+            </form>
         </div>
-    </section>
+    </div>
+</div>
+
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+        <div class="box-header with-border">
+            <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn bg-purple btn-sm btn-dialog"
+                    id="addcates" data-url="<?php echo url('/v1/cate/ifications/add'); ?>">
+                <i class="fa fa-plus-circle">添加标签</i></button>
+        </div>
+        <div class="box-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <th class="text-center">排序</th>
+                <th class="text-center">标签名</th>
+                <th class="text-center">创建时间</th>
+                <th class="text-center">操作</th>
+                </thead>
+                <?php if(empty($list) || (($list instanceof \think\Collection || $list instanceof \think\Paginator ) && $list->isEmpty())): else: if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                <tbody>
+                <tr>
+                    <td class="text-center">
+                            <input type="text" onblur="savesort($(this).val(),$(this).attr('data-id'),this);" data-id="<?php echo $vo['id']; ?>" data-url="<?php echo url('/v1/cate/ifications/change'); ?>"  class="form-control col-xs-3" value="<?php echo $vo['sort']; ?>" />
+                    </td>
+
+                    <td class="text-center"><?php echo $vo['title']; ?></td>
+                    <td class="text-center"><?php echo $vo['create_time']; ?></td>
+                    <td class="text-center">
+                        <a  class="btn btn-info" data-url="<?php echo url('/v1/cate/ifications/edit',['mid'=>$vo['id']]); ?>"  onclick="edits(this)">编辑</a>
+
+                        <a  class="btn btn-danger" data-url="<?php echo url('/v1/cate/ifications/dels'); ?>" data-id="<?php echo $vo['id']; ?>" onclick="dels(this)">删除</a>
+                    </td>
+                </tr>
+
+                </tbody>
+                <?php endforeach; endif; else: echo "" ;endif; endif; ?>
+            </table>
+            <div class="pages"><?php echo $list->render(); ?></div>
+        </div>
+    </div>
+
+</section>
 
     </div>
 

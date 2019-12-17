@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\info\infos\index.html";i:1576480524;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\layout\default.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\header.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\left.html";i:1576480524;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\footer.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\info\infos\index.html";i:1576584055;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\layout\default.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\header.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\left.html";i:1576584055;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\footer.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -225,7 +225,7 @@
 
                     <li class="<?php if($paths == '/v1/info/infos/index' || $paths == '/v1/cate/ifications/index'): ?>active<?php endif; ?>">
                         <a href="#">
-                            <i class="glyphicon glyphicon-th-large"></i> <span>招标信息</span>
+                            <i class="glyphicon glyphicon-th-large"></i> <span>招标、招商信息</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -401,7 +401,14 @@
 
                         <a  class="btn btn-danger infos_del" data-url="<?php echo url('/v1/info/infos/infoDels',['id'=>$vo['id']]); ?>">删除</a>
 
-                        <a class="btn <?php if($vo['auditing'] == 1): ?>btn-success<?php else: ?>btn-warning<?php endif; ?>" onclick="admin_module.auditing(this)" data="<?php echo $vo['auditing']; ?>" data-url="<?php echo url('/v1/info/infos/auditing'); ?>" data-id="<?php echo $vo['id']; ?>"><?php echo $audit[$vo['auditing']]; ?></a>
+
+                        <?php if($vo['auditing'] == 1): ?>
+                        <a class="btn btn-success" onclick="admin_module.auditing(this)" data="2" data-url="<?php echo url('/v1/info/infos/auditing'); ?>" data-id="<?php echo $vo['id']; ?>"><?php echo $audit[$vo['auditing']]; ?></a>
+                        <?php else: ?>
+                        <a class="btn btn-warning" onclick="admin_module.auditing(this)" data="1" data-url="<?php echo url('/v1/info/infos/auditing'); ?>" data-id="<?php echo $vo['id']; ?>"><?php echo $audit[$vo['auditing']]; ?></a>
+                        <?php endif; ?>
+
+
 
                     </td>
 
