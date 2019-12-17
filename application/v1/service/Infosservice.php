@@ -419,6 +419,74 @@ class Infosservice
         return $arr ? $arr : '';
     }
 
+    /**
+     * 招商信息 接口
+     * @title 搜索关键字
+     * @page  当前页数
+     * @size  每页显示条数
+     * return array
+     */
+    public function getshangjson($title,$page,$size){
+        $array = [];
+        if (empty($title)) {
+            $array['status'] = 1;
+            $array['auditing'] = 1;
+            $array['pid'] = 2;
+        } else {
+            $new_title = explode(',',$title);
+
+            $arr_title = array_filter($new_title,function ($params){
+                return !empty($params);
+            });
+
+            $arr_w = array_map(function ($pa){
+                return '%'.$pa.'%';
+            },$arr_title);
+
+            $array['status'] = 1;
+            $array['auditing'] = 1;
+            $array['pid'] = 2;
+            $array['keyword'] = ['like',$arr_w,'OR'];
+        }
+        if($page == ''|| $page == 1){
+            $page = 0;
+        }
+
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit($page,$size)->select();
+        return $arr?$arr:'';
+    }
+
+    /**
+     * 获取招商信息总条数
+     * @title string
+     * return string|int
+     */
+    public function getshangcount($title){
+        $array = [];
+        if (empty($title)) {
+            $array['status'] = 1;
+            $array['auditing'] = 1;
+            $array['pid'] = 2;
+        } else {
+            $new_title = explode(',',$title);
+
+            $arr_title = array_filter($new_title,function ($params){
+                return !empty($params);
+            });
+
+            $arr_w = array_map(function ($pa){
+                return '%'.$pa.'%';
+            },$arr_title);
+
+            $array['status'] = 1;
+            $array['auditing'] = 1;
+            $array['pid'] = 2;
+            $array['keyword'] = ['like',$arr_w,'OR'];
+        }
+        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->count();
+
+        return $arr?$arr:'';
+    }
 
     /**
      * id string
@@ -494,7 +562,6 @@ class Infosservice
         $info = Info::instance()->where(['status' => 1])->count();
         return $info;
     }
-
 
     /**
      * @DESC：招商、招标信息排序

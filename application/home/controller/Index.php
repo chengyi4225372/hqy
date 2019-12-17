@@ -106,6 +106,63 @@ class Index extends BaseController
        return false;
     }
 
+    /**
+     * @DESC：招商信息详情
+     * @return bool|mixed
+     * @author: jason
+     * @date: 2019-12-06 03:36:41
+     */
+    public function detailshang()
+    {
+        if($this->request->isGet()){
+//            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+//                return $this->redirect('/home/index/index');
+//            }
+
+            $id = input('get.mid','','int');
+            if(empty($id) || !isset($id)|| $id <=0){
+                return false;
+            }
+            $info = infosservice::instance()->getId($id);
+            $top  = Infosservice::instance()->getTop($id);
+            $next = Infosservice::instance()->getNext($id);
+            $this->assign('info',$info);
+            $this->assign('top',$top);
+            $this->assign('next',$next);
+            $this->assign('title','新闻详情');
+            return $this->fetch();
+        }
+        return false;
+    }
+
+
+    /**
+     * 招商信息 接口
+     * keyword string
+     * page string |id
+     */
+    public function getshangapi(){
+       if($this->request->isPost() || $this->request->isAjax()){
+           $title = input('post.title', '', 'trim'); //热门搜索
+           $page  = input('post.page','','int');
+           $titles = $title? $title: '';
+           $page  = $page ?$page :'1';//当前页数
+           $size  = 35; //每页显示条数
+
+           $data   = Infosservice::instance()->getshangjson($titles, $page,$size);
+           $count  =  Infosservice::instance()->getshangcount($titles);
+           $countpage = ceil($count / $size);
+
+           if(!empty($data)){
+               return json(['data'=>$data,'page'=>$page,'size'=>$size,'count'=>$countpage,'code'=>200,'msg'=>'success']);
+           }
+
+           if(empty($data)){
+               return json(['data'=>'','code'=>400,'msg'=>'error']);
+           }
+       }
+       return false;
+    }
 
     /**
      * 招标列表页
@@ -143,7 +200,7 @@ class Index extends BaseController
             $page  = input('post.page','','int');
             $titles = $title? $title: '';
             $page  = $page ?$page :'1';//当前页数
-            $size  = 30; //每页显示条数
+            $size  = 35; //每页显示条数
 
             $data   = Infosservice::instance()->getbiaojson($titles, $page,$size);
             $count  =  Infosservice::instance()->getbiaocount($titles);
@@ -161,7 +218,6 @@ class Index extends BaseController
 
         return false;
     }
-
 
     /**
      * @DESC：招标信息详情
@@ -192,34 +248,6 @@ class Index extends BaseController
         return false;
     }
 
-    /**
-     * @DESC：招商信息详情
-     * @return bool|mixed
-     * @author: jason
-     * @date: 2019-12-06 03:36:41
-     */
-    public function detailshang()
-    {
-        if($this->request->isGet()){
-//            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
-//                return $this->redirect('/home/index/index');
-//            }
-
-            $id = input('get.mid','','int');
-            if(empty($id) || !isset($id)|| $id <=0){
-                return false;
-            }
-            $info = infosservice::instance()->getId($id);
-            $top  = Infosservice::instance()->getTop($id);
-            $next = Infosservice::instance()->getNext($id);
-            $this->assign('info',$info);
-            $this->assign('top',$top);
-            $this->assign('next',$next);
-            $this->assign('title','新闻详情');
-            return $this->fetch();
-        }
-        return false;
-    }
 
     /**
      * @DESC：资讯
@@ -276,30 +304,6 @@ class Index extends BaseController
         return false;
     }
 
-
-    /**
-     * 招商信息 接口
-     * keyword string
-     * page string |id
-     */
-    public function getshangPage(){
-        $keyword = input('get.keyword','','trim');
-        $page    = input('get.page','','int');
-
-        $list  =  Infosservice::instance()->getshang($keyword,$page);
-
-        if(empty($list)){
-            return json(['code'=>404,'msg'=>'没有更多了']);
-        }
-
-        if(isset($list) && !empty($list)){
-            return json(['code'=>200,'msg'=>'请求成功','data'=>$list]);
-        }
-
-    }
-
-
-
     /**
      * @DESC：行业资讯
      * @return bool|mixed
@@ -341,7 +345,7 @@ class Index extends BaseController
             $page  = input('post.page','','int');
             $titles = $title? $title: '';
             $page  = $page ?$page :'1';//当前页数
-            $size  = 30; //每页显示条数
+            $size  = 40; //每页显示条数
             $data   = Infosservice::instance()->getindustryjson($titles, $page,$size);
             $count  =  Infosservice::instance()->getindustrycount($titles);
             $countpage = ceil($count / $size);
