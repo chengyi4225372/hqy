@@ -51,6 +51,7 @@ class Infos extends AuthController
         if ($this->request->isPost()) {
             $array['pid'] = input('post.pid', '', 'int');
             $array['title'] = input('post.title', '', 'trim');
+            $array['auditing'] = 1;
             $array['content'] = input('post.content', '');
             $array['describe'] = input('post.describe', '', 'trim');
             $array['imgs'] = input('post.imgs', '', 'trim');
@@ -139,10 +140,12 @@ class Infos extends AuthController
     {
         if($this->request->isAjax() && $this->request->isPost()){
             $id = input('post.id','','int');
-            if(empty($id)) return json(['status' => 400,'msg' => '审核失败']);
-            $res = Infosservice::instance()->auditing(['id' => $id]);
-            if($res == false) return json(['status' => 400,'msg' => '审核失败']);
-            return json(['status' => 200,'msg' => '审核成功']);
+            $audit = input('post.audit','','int');
+            if(empty($id)) return json(['status' => 400,'msg' => '操作失败']);
+            if(empty($audit)) return json(['status' => 400,'msg' => '操作失败']);
+            $res = Infosservice::instance()->auditing(['id' => $id,'audit' => $audit]);
+            if($res == false) return json(['status' => 400,'msg' => '操作失败']);
+            return json(['status' => 200,'msg' => '操作成功']);
         }
     }
 

@@ -1,0 +1,6 @@
+---------------------------------------------------------------
+[ 2019-12-17T10:44:07+08:00 ] 172.26.2.252 GET /v1/info/infos/index.html
+[ error ] [8]未定义变量: data_list[/opt/web/hqy_/runtime/temp/dbdd3f55889c329a253c4800e67172fc.php:405]
+---------------------------------------------------------------
+[ 2019-12-17T10:57:39+08:00 ] 172.26.2.252 POST /v1/info/infos/auditing.html
+[ error ] [8]未定义数组索引: audit[/opt/web/hqy_/application/v1/service/Infosservice.php:90]

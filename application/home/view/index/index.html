@@ -247,6 +247,9 @@
 
             <div class='zhaomethods'>
                 <div class='totalInfo_title'>招商政策</div>
+
+                {if count($shang) > 0}
+
                 {volist name="shang" id="ss" empty="没有更多内容"}
                 <div class='totalInfo_content'>
 
@@ -278,7 +281,7 @@
                 </div>
 
                 {/volist}
-                {if count($shang) > 0}
+
                 <div class='know_more_box'>
                     <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoList')}"
@@ -292,6 +295,8 @@
 
             <div class='zhaoTotalInfo'>
                 <div class='totalInfo_title'>招标信息</div>
+
+                {if count($biao) > 0}
                 {volist name="biao" id="biaos" empty="没有更多内容"}
                 <div class='totalInfo_content'>
 
@@ -327,7 +332,6 @@
 
                 </div>
                 {/volist}
-                {if count($biao) > 0}
                 <div class="know_more_box">
                     <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoBiao')}"

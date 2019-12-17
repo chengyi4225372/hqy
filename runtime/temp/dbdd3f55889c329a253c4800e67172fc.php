@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hqy_/public/../application/v1/view/systematic/cases/index.html";i:1575527743;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576546193;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hqy_/public/../application/v1/view/info/infos/index.html";i:1576550854;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576546193;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -307,21 +307,39 @@
     <div class="row">
         <div class="col-md-12">
             <form class="form-inline"  id="form">
-
                 <div class="panel panel-default panel-btn">
                     <div class="panel-heading">
                         <div class="form-group">
-                            <label>状态：</label>
-                            <select class="form-control" name="status">
-                                <option value="">请选择</option>
-                                <option value="1" <?php if((isset($params['status'])) && ($params['status'] == 1)): ?>selected='selected'<?php endif; ?>>启用</option>
-                                <option value="2" <?php if((isset($params['status'])) && ($params['status'] == 2)): ?>selected='selected'<?php endif; ?>>禁用</option>
-                            </select>
+                            <div class="col-sm-4">
+                                <select class="selectpicker show-tick" title="" id="searchField" name="searchField"
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" <?php if($params['searchField'] == 1): ?>selected='selected'<?php endif; ?>>新闻标题</option>
+                                    <option value="2" <?php if($params['searchField'] == 2): ?>selected='selected'<?php endif; ?>>新闻关键字</option>
+                                    <option value="3" <?php if($params['searchField'] == 3): ?>selected='selected'<?php endif; ?>>新闻描述</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" style="width:248px;" type="text" value="<?php echo $params['searchValue']; ?>" name="searchValue" id="searchValue" placeholder="多个关键字用空格或逗号隔开">
+                            </div>
                         </div>
 
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <label for="category" class="control-label">所属分类：</label>
+                            </div>
+                            <div class="col-sm-7">
+                                <select class="selectpicker show-tick" title="" id="category" name="category "
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" <?php if($params['category'] == 1): ?>selected='selected'<?php endif; ?>>招标信息</option>
+                                    <option value="2" <?php if($params['category'] == 2): ?>selected='selected'<?php endif; ?>>招商信息</option>
+                                </select>
+                            </div>
+                        </div>
 
                         <div class="form-group">
-                            <button class="btn btn-info" id="btn_search" type="Submit"  data-url="<?php echo url('/v1/users/user/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                            <button class="btn btn-info" id="btn_search" type="button"  data-url="<?php echo url('/v1/info/infos/index'); ?>"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
                         </div>
                     </div>
                 </div>
@@ -337,80 +355,68 @@
         <div class="box-header with-border">
             <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
             <button type="button" class="btn bg-purple btn-sm btn-dialog"
-                    id="addcase" data-url="<?php echo url('/v1/systematic/cases/addcase'); ?>">
-                <i class="fa fa-plus-circle">添加主案例</i></button>
+                    id="infosadd" data-url="<?php echo url('/v1/info/infos/infosadd'); ?>">
+                <i class="fa fa-plus-circle">添加</i></button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="td-align td-width-40px">
-                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
-                </th>
-                <th class="text-center">排序</th>
-                <th class="text-center">标题</th>
-                <th class="text-center">标题2</th>
-                <th class="text-center">标题3</th>
-                <th class="text-center">图片</th>
-                <th class="text-center">URL</th>
-                <th class="text-center">描述</th>
-                <th class="text-center">描述2</th>
-                <th class="text-center">描述3</th>
-                <th class="text-center">描述4</th>
-                <th class="text-center">描述5</th>
-                <th class="text-center">描述6</th>
-                <th class="text-center">描述7</th>
-                <th class="text-center">状态</th>
-                <th class="text-center">样式名称</th>
+                <th class="text-center" style="width:5%;">排序</th>
+                <th class="text-center" style="width:5%;">所属分类</th>
+                <th class="text-center">展示图</th>
+                <th class="text-center" style="width:21%">新闻标题</th>
+                <th class="text-center" style="width:21%">新闻关键字</th>
+                <th class="text-center">新闻描述</th>
+                <th class="text-center">创建时间</th>
                 <th class="text-center">操作</th>
                 </thead>
                 <tbody>
-                <?php if(is_array($data['list']['data']) || $data['list']['data'] instanceof \think\Collection || $data['list']['data'] instanceof \think\Paginator): $i = 0; $__LIST__ = $data['list']['data'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
+
+            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tr>
-                    <td class="td-align td-padding">
-                        <input type="checkbox" name="box_checked" data-id="<?php echo isset($data_list['id']) ? $data_list['id'] : ''; ?>" class="data-check_box">
-                    </td>
-                    <td class="td-align td-padding">
-                        <input class="form-control form-control-sm" type="number"
-                               value="<?php echo $data_list['sort']; ?>"
-                               id="sort_num" onblur="admin_module.change_sort(this)" data-url="<?php echo url('/v1/systematic/cases/changesort'); ?>" data="<?php echo $data_list['id']; ?>">
-                    </td>
-                    <td class="text-center"><?php echo isset($data_list['title']) ? $data_list['title'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['title2']) ? $data_list['title2'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['title3']) ? $data_list['title3'] : ''; ?></td>
                     <td class="text-center">
-                        <?php if(isset($data_list['pic']) && !empty($data_list['pic'])): ?>
-                        <img src="<?php echo $data_list['pic']; ?>" style="width:50px;height:50px;"/>
+                        <input class="form-control form-control-sm" type="number" value="<?php echo $vo['sort']; ?>"  onblur="admin_module.change_sort(this)" data-url="<?php echo url('/v1/info/infos/changesort'); ?>" data="<?php echo $vo['id']; ?>">
+                    </td>
+                    <td class="text-center">
+                     <?php if($vo['pid'] == '1'): ?>
+                       招标信息
+                      <?php else: ?>
+                        招商信息
+                      <?php endif; ?>
+                    </td>
+                    <td class="text-center">
+                        <a href="">
+                            <img src="<?php echo $vo['imgs']; ?>"  style="width:150px;height:60px;"/>
+                        </a>
+                    </td>
+                    <td class="text-center"><?php echo $vo['title']; ?></td>
+                    <td class="text-center"><?php echo $vo['keyword']; ?></td>
+                    <td class="text-center">
+                        <textarea rows="6" cols="30"><?php echo $vo['describe']; ?></textarea>
+                    </td>
+                    <td class="text-center"><?php echo $vo['release_time']; ?></td>
+
+                    <td class="text-center">
+                        <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="<?php echo url('/v1/info/infos/infosEdit',['id'=>$vo['id']]); ?>">编辑</a>
+
+                        <a  class="btn btn-danger infos_del" data-url="<?php echo url('/v1/info/infos/infoDels',['id'=>$vo['id']]); ?>">删除</a>
+
+
+                        <?php if($vo['auditing'] == 1): ?>
+                        <a class="btn btn-success" onclick="admin_module.auditing(this)" data="2" data-url="<?php echo url('/v1/info/infos/auditing'); ?>" data-id="<?php echo $vo['id']; ?>"><?php echo $audit[$vo['auditing']]; ?></a>
                         <?php else: ?>
-                        <img src="/static/default.png" style="width:50px;height:50px;"/>
+                        <a class="btn btn-warning" onclick="admin_module.auditing(this)" data="1" data-url="<?php echo url('/v1/info/infos/auditing'); ?>" data-id="<?php echo $vo['id']; ?>"><?php echo $audit[$vo['auditing']]; ?></a>
                         <?php endif; ?>
 
+
+
                     </td>
-                    <td><?php echo isset($data_list['url']) ? $data_list['url'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['desc']) ? $data_list['desc'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['desc2']) ? $data_list['desc2'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['desc3']) ? $data_list['desc3'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['desc4']) ? $data_list['desc4'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['desc5']) ? $data_list['desc5'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['desc6']) ? $data_list['desc6'] : ''; ?></td>
-                    <td class="text-center"><?php echo isset($data_list['desc7']) ? $data_list['desc7'] : ''; ?></td>
-                    <td class="text-center">
-                        <?php if($data_list['status'] == 1): ?>
-                        <span class="btn btn-success" onclick="admin_module.status_sort(this)" data-url="<?php echo url('/v1/systematic/cases/casestatus'); ?>" data-id="<?php echo $data_list['id']; ?>" data="2"><?php echo $status[$data_list['status']]; ?></span>
-                        <?php else: ?>
-                        <span class="btn btn-danger" onclick="admin_module.status_sort(this)" data-url="<?php echo url('/v1/systematic/cases/casestatus'); ?>" data-id="<?php echo $data_list['id']; ?>" data="1"><?php echo $status[$data_list['status']]; ?></span>
-                        <?php endif; ?>
-                    </td>
-                    <td class="text-center"><?php echo $data_list['is_show']; ?></td>
-                    <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info" data-url="<?php echo url('/v1/systematic/cases/editcase',['id' => $data_list['id']]); ?>" onclick="admin_module.edit_case(this)">编辑</a>
-                    </td>
+
                 </tr>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-
-
+           <?php endforeach; endif; else: echo "" ;endif; ?>
                 </tbody>
             </table>
-            <div class="pages"><?php echo $data['page']; ?></div>
+            <div class="pages"><?php echo $list->render();; ?></div>
         </div>
     </div>
 

@@ -87,7 +87,7 @@ class Infosservice
         }
         $save = [];
         $where = [];
-        $save['auditing'] = 1;
+        $save['auditing'] = $params['audit'];
         $save['audit_user'] = Cookie('username');
 
         $where['id'] = $params['id'];
@@ -126,7 +126,6 @@ class Infosservice
     public function getId($id)
     {
         $where = [];
-        $where['auditing'] = 1;
         $where['id'] = $id;
         $info = Info::instance()->where($where)->find();
         return $info;
@@ -138,7 +137,6 @@ class Infosservice
      */
     public function biao($array)
     {
-        $array = [];
         $array['status'] = 1;
         $array['auditing'] = 1;
         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
@@ -151,7 +149,6 @@ class Infosservice
      */
     public function shang($array)
     {
-        $array = [];
         $array['status'] = 1;
         $array['auditing'] = 1;
         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
@@ -208,7 +205,6 @@ class Infosservice
             $array['auditing'] = 1;
             $array['title|keyword|describe'] = ['like', '%'.$title.'%'];
         }
-        dump($array);
         if (empty($page) || is_null($page)) {
             $page = 10;
         }
