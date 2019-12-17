@@ -16,45 +16,44 @@ class Index extends BaseController
 
     public function index()
     {
-        if ($this->request->isGet()) {
-            //慧享产品
-            $array = array('status' => '1');
-            $protuct = Protuctservice::instance()->normal($array);
-            $this->assign('protuct', $protuct);
+        //慧享产品
+        $array = array('status' => '1');
+        $protuct = Protuctservice::instance()->normal($array);
+        $this->assign('protuct', $protuct);
 
-            //招标 招商信息
-            $biao = Infosservice::instance()->biao(['pid' => 1]);
+        //招标 招商信息
+        $biao = Infosservice::instance()->biao(['pid' => 1]);
 
-            $shang = Infosservice::instance()->shang(['pid' => 2]);
+        $shang = Infosservice::instance()->shang(['pid' => 2]);
 
-            //轮播
-            $slideshow = Systems::instance()->getOneshow();
 
-            //有关电话号码、邮箱、地址
-            $siteInfo = Systems::instance()->getOneSite();
+        //轮播
+        $slideshow = Systems::instance()->getOneshow();
 
-            //近期成功案例
+        //有关电话号码、邮箱、地址
+        $siteInfo = Systems::instance()->getOneSite();
 
-            $caseInfo = Caseservice::instance()->getallparent();
+        //近期成功案例
+
+        $caseInfo = Caseservice::instance()->getallparent();
 //            echo '<pre>';print_r($caseInfo);exit;
-            $pic = array_column($caseInfo,'pic');
-            $pic2 = array_column($caseInfo,'pic2');
-            $this->assign('pic1',json_encode($pic));
-            $this->assign('pic2',json_encode($pic2));
-            $this->assign('count',count($caseInfo));
-            $this->assign('case_list', $caseInfo);
+        $pic = array_column($caseInfo,'pic');
+        $pic2 = array_column($caseInfo,'pic2');
+        $this->assign('pic1',json_encode($pic));
+        $this->assign('pic2',json_encode($pic2));
+        $this->assign('count',count($caseInfo));
+        $this->assign('case_list', $caseInfo);
 
 
-            $this->assign('site_info',$siteInfo);
+        $this->assign('site_info',$siteInfo);
 
-            $this->assign('slideshow', $slideshow);
-            $this->assign('biao', $biao);
-            $this->assign('shang', $shang);
-            //用户信息
-            $this->assign('userinfo',$this->userinfo);
-            return $this->fetch();
-        }
-        return false;
+        $this->assign('slideshow', $slideshow);
+        $this->assign('biao', $biao);
+        $this->assign('shang', $shang);
+        //用户信息
+        $this->assign('userinfo',$this->userinfo);
+        return $this->fetch();
+
     }
 
     /**

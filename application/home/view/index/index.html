@@ -73,7 +73,7 @@
 
                                 <div>
                                     <dl>
-                                        <dt><a href="{:config('curl.hys')}">惠优税</a></dt>
+                                        <dt><a href="{:url('/home/optimal/cooperation')}">惠优税</a></dt>
                                         <dd>
                                             ·企税降成本 薪税降税负
 
@@ -130,8 +130,7 @@
                             <a href="{:url('/home/index/industry')}">行业资讯</a>
                         </li>
                     </ul>
-
-                    <!--登录，注册暂时先不上线 2019年12月2号-->
+                    
 
                     <!--<div class='register' id="{if empty($userinfo['mobile'])}register{else /}registers{/if}">-->
                     <!--<a href="javascript:void(0)" login_url="{$baseurl}" loca_url="{:config('curl.website')}"-->
@@ -247,9 +246,6 @@
 
             <div class='zhaomethods'>
                 <div class='totalInfo_title'>招商政策</div>
-
-                {if count($shang) > 0}
-
                 {volist name="shang" id="ss" empty="没有更多内容"}
                 <div class='totalInfo_content'>
 
@@ -282,6 +278,8 @@
 
                 {/volist}
 
+                {if count($shang) > 0}
+
                 <div class='know_more_box'>
                     <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoList')}"
@@ -296,7 +294,6 @@
             <div class='zhaoTotalInfo'>
                 <div class='totalInfo_title'>招标信息</div>
 
-                {if count($biao) > 0}
                 {volist name="biao" id="biaos" empty="没有更多内容"}
                 <div class='totalInfo_content'>
 
@@ -332,6 +329,8 @@
 
                 </div>
                 {/volist}
+
+                {if count($biao) > 0}
                 <div class="know_more_box">
                     <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoBiao')}"
@@ -451,7 +450,7 @@
                     <dl>
                         <dt>惠企云旗下产品</dt>
                         <dd><a href="{:config('curl.hlg')}">惠灵工</a></dd>
-                        <dd><a href="{:config('curl.hys')}">惠优税</a></dd>
+                        <dd><a href="{:url('/home/optimal/cooperation')}">惠优税</a></dd>
                         <dd><a href="javascript:;">惠多薪</a></dd>
                         <dd><a href="javascript:;">惠创业</a></dd>
                         <dd><a href="javascript:;">惠找事</a></dd>

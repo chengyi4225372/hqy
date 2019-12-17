@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576547178;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576573084;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,7 +74,7 @@
 
                                 <div>
                                     <dl>
-                                        <dt><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
+                                        <dt><a href="<?php echo url('/home/optimal/cooperation'); ?>">惠优税</a></dt>
                                         <dd>
                                             ·企税降成本 薪税降税负
 
@@ -246,8 +246,7 @@
 
             <div class='zhaomethods'>
                 <div class='totalInfo_title'>招商政策</div>
-
-                <?php if(count($shang) > 0): if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
+                <?php if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
                 <div class='totalInfo_content'>
 
                     <!--登录，注册暂时先不上线 2019年12月2号-->
@@ -277,7 +276,7 @@
 
                 </div>
 
-                <?php endforeach; endif; else: echo "没有更多内容" ;endif; ?>
+                <?php endforeach; endif; else: echo "没有更多内容" ;endif; if(count($shang) > 0): ?>
 
                 <div class='know_more_box'>
                     <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
@@ -293,7 +292,7 @@
             <div class='zhaoTotalInfo'>
                 <div class='totalInfo_title'>招标信息</div>
 
-                <?php if(count($biao) > 0): if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
+                <?php if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                 <div class='totalInfo_content'>
 
                     <!--登录，注册暂时先不上线 2019年12月2号-->
@@ -327,7 +326,7 @@
                     </a>
 
                 </div>
-                <?php endforeach; endif; else: echo "没有更多内容" ;endif; ?>
+                <?php endforeach; endif; else: echo "没有更多内容" ;endif; if(count($biao) > 0): ?>
                 <div class="know_more_box">
                     <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
                             data-url="<?php echo url('/home/index/infoBiao'); ?>"
@@ -447,7 +446,7 @@
                     <dl>
                         <dt>惠企云旗下产品</dt>
                         <dd><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dd>
-                        <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
+                        <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">惠优税</a></dd>
                         <dd><a href="javascript:;">惠多薪</a></dd>
                         <dd><a href="javascript:;">惠创业</a></dd>
                         <dd><a href="javascript:;">惠找事</a></dd>
