@@ -165,14 +165,10 @@
 <div class="layui-carousel" id="swiper">
     <div carousel-item>
         {volist name="slideshow" id="list_item" empty=""}
-        {if $key == 0}
         <div>
             <img src="{$slideshow[$key]['pic']}" alt="">
             <button class="customize" onclick="showSearch()">立&nbsp;即&nbsp;咨&nbsp;询</button>
         </div>
-        {else /}
-        <div><img src="{$list_item.pic}" alt=""></div>
-        {/if}
         {/volist}
     </div>
 </div>
@@ -209,7 +205,7 @@
             <li>
                 <img class="all_product-img-box" src="{$v1.imgs|default=''}" alt="">
                 <a href="javascript:void(0)">{$v1.names|default=''}</a>
-                <a href="javascript:void(0)">{$v1.names|default=''}</a>
+                <a href="javascript:void(0)">{$v1.desc|default=''}</a>
                 <ul class='one_pic'>
                     <li><a onclick="showSearch()">获取方案</a></li>
                     <li><a href="{$v1.purl|default='#'}">前往网站</a></li>
