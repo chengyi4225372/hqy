@@ -99,7 +99,7 @@ class Index extends BaseController
            $four = Ificationservice::instance()->getfour();
 
            $this->assign('shang',$shang);
-           $this->assign('title','招商招标信息列表');
+           $this->assign('title','政府招商信息');
            $this->assign('four',$four);
            return $this->fetch();
        }
