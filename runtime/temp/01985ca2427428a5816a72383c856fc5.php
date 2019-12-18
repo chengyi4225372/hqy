@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1576583759;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576581561;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1576587007;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576581561;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -174,14 +174,15 @@
                             <div class="bgHot">
                                 <span>热门关键词</span>
                                 <ul>
-                                    <li>
-                                        <span>周杰伦新歌</span>
-                                        <span class="close">✕</span>
+                                    <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $k = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($k % 2 );++$k;?>
+                                    <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
+                                        data-href="<?php echo url('/home/index/detailbiao'); ?>"
+                                        data-url="<?php echo url('/home/index/getbiaoapi'); ?>" data-id="<?php echo $k; ?>">
+                                        <span><?php echo $ff['title']; ?></span>
+                                        <span class="close" onclick="nullhot(this)"
+                                              data-url="<?php echo url('/home/index/getbiaoapi'); ?>">✕</span>
                                     </li>
-                                    <li>
-                                        <span>周杰伦新歌</span>
-                                        <span class="close">✕</span>
-                                    </li>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </ul>
                             </div>
                             <div class="search-box">
@@ -210,32 +211,6 @@
                             </li>
                             <?php else: if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ww): $mod = ($i % 2 );++$i;?>
                             <li>
-                                <!--<a href="javascript:;"-->
-                                <!--data-url="<?php echo url('/home/index/getInfo',['mid' => $ww['id']]); ?>"-->
-                                <!--login_url="<?php echo $baseurl; ?>"-->
-                                <!--loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ww['id']; ?>"-->
-                                <!--mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ww['id']; ?>"-->
-                                <!--onclick="home_module.show_detail(this)">-->
-                                <!--<div class="infoItem">-->
-                                <!--<div class="infoLeft">-->
-                                <!--<img src="<?php echo !empty($ww['imgs'])?$ww['imgs']:'/static/home/images/infoItem.jpg';; ?>" alt="">-->
-                                <!--</div>-->
-
-                                <!--<div class="infoRight">-->
-                                <!--<div class="rightTop">-->
-                                <!--<div class="itemTitle"><?php echo mb_substr($ww['title'],0,35,'utf-8'); ?></div>-->
-                                <!--<span class="itemTime">-->
-                                <!--<img src="/static/spirit/images/shijian2x.png" alt=""><span><?php echo $ww['release_time']; ?></span>-->
-                                <!--</span>-->
-                                <!--</div>-->
-                                <!--<p>-->
-                                <!--<?php echo $ww['describe']; ?>-->
-                                <!--</p>-->
-                                <!--</div>-->
-
-                                <!--</div>-->
-                                <!--</a>-->
-
                                 <a href="<?php echo config('curl.website'); ?>/home/index/detailbiao?mid=<?php echo $ww['id']; ?>">
                                     <div class="infoItem">
                                         <div class="infoLeft">
@@ -246,8 +221,8 @@
                                             <div class="rightTop">
                                                 <div class="itemTitle"><?php echo mb_substr($ww['title'],0,35,'utf-8'); ?></div>
                                                 <span class="itemTime">
-                                                    <img src="/static/spirit/images/shijian2x.png"
-                                                        alt=""><span><?php echo $ww['release_time']; ?></span>
+                                                    <img src="/static/spirit/images/shijian2x.png" alt="">
+                                                    <span><?php echo $ww['release_time']; ?></span>
                                                 </span>
                                             </div>
                                             <p>
@@ -257,8 +232,6 @@
 
                                     </div>
                                 </a>
-
-
                                 <ul class="tags">
                                     <?php if(empty($ww['keyword']) || (($ww['keyword'] instanceof \think\Collection || $ww['keyword'] instanceof \think\Paginator ) && $ww['keyword']->isEmpty())): else: if(is_array($ww['keyword']) || $ww['keyword'] instanceof \think\Collection || $ww['keyword'] instanceof \think\Paginator): if( count($ww['keyword'])==0 ) : echo "" ;else: foreach($ww['keyword'] as $k=>$key): ?>
                                     <li onclick="hotsearch(this);" data-title="<?php echo $key; ?>"
@@ -355,7 +328,6 @@
             <div>返回顶部</div>
         </div>
 
-
     </div>
 
     <script>
@@ -377,10 +349,5 @@
         }
     </script>
 
-    
-
 </body>
-
-
-
 </html>

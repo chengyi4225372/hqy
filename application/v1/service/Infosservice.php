@@ -69,7 +69,7 @@ class Infosservice
             $where['pid'] = $params['category'];
         }
         $where['status'] = ['GT', 0];
-        $list = Info::instance()->where($where)->order('sort desc,release_time desc')->paginate(15);
+        $list = Info::instance()->where($where)->order('id desc,release_time desc')->paginate(15);
         return $list;
     }
 
@@ -139,23 +139,8 @@ class Infosservice
     {
         $array['status'] = 1;
         $array['auditing'] = 1;
-        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
-        $new_arr = [];
-        foreach ($arr as $key => $val) {
-            $new_arr[$key]['id'] = isset($val['id']) ? $val['id'] : '';
-
-            $new_arr[$key]['imgs'] = isset($val['imgs']) ? $val['imgs'] : '';
-            $new_arr[$key]['keyword'] = isset($val['keyword']) ? explode(',', $arr[$key]['keyword']) : '';
-            $new_arr[$key]['title'] = isset($val['title']) ? mb_substr($arr[$key]['title'], 0, 50, 'utf-8') : '';
-            $new_arr[$key]['content'] = isset($val['content']) ? $val['content'] : '';
-            $new_arr[$key]['describe'] = isset($val['describe']) ? $val['describe'] : '';
-            $new_arr[$key]['status'] = isset($val['status']) ? $val['status'] : '';
-            $new_arr[$key]['release_time'] = isset($val['release_time']) ? $val['release_time'] : '';
-            $new_arr[$key]['sort'] = isset($val['sort']) ? $val['sort'] : '';
-            $new_arr[$key]['auditing'] = isset($val['auditing']) ? $val['auditing'] : '';
-            $new_arr[$key]['audit_user'] = isset($val['audit_user']) ? $val['audit_user'] : '';
-        }
-        return $new_arr;
+        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit(0, 2)->select();
+        return $arr;
     }
 
     /**
@@ -166,23 +151,8 @@ class Infosservice
     {
         $array['status'] = 1;
         $array['auditing'] = 1;
-        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit(0, 2)->select();
-        $new_arr = [];
-        foreach ($arr as $key => $val) {
-            $new_arr[$key]['id'] = isset($val['id']) ? $val['id'] : '';
-            $new_arr[$key]['pid'] = isset($val['pid']) ? $val['pid'] : '';
-            $new_arr[$key]['title'] = isset($val['title']) ? $val['title'] : '';
-            $new_arr[$key]['imgs'] = isset($val['imgs']) ? $val['imgs'] : '';
-            $new_arr[$key]['keyword'] = isset($val['keyword']) ? $val['keyword'] : '';
-            $new_arr[$key]['content'] = isset($val['content']) ? $val['content'] : '';
-            $new_arr[$key]['describe'] = isset($val['describe']) ? $val['describe'] : '';
-            $new_arr[$key]['status'] = isset($val['status']) ? $val['status'] : '';
-            $new_arr[$key]['release_time'] = isset($val['release_time']) ? $val['release_time'] : '';
-            $new_arr[$key]['sort'] = isset($val['sort']) ? $val['sort'] : '';
-            $new_arr[$key]['auditing'] = isset($val['auditing']) ? $val['auditing'] : '';
-            $new_arr[$key]['audit_user'] = isset($val['audit_user']) ? $val['audit_user'] : '';
-        }
-        return $new_arr;
+        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit(0, 2)->select();
+        return $arr;
     }
 
     /**
@@ -207,7 +177,7 @@ class Infosservice
             $page = 10;
         }
 
-        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
@@ -250,7 +220,7 @@ class Infosservice
              $page = 0;
          }
 
-         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit($page,$size)->select();
+         $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit($page,$size)->select();
          return $arr?$arr:'';
      }
 
@@ -281,7 +251,7 @@ class Infosservice
              $array['pid'] = 1;
              $array['keyword'] = ['like',$arr_w,'OR'];
          }
-         $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->count();
+         $arr = Info::instance()->where($array)->order('id desc,release_time desc')->count();
 
          return $arr?$arr:'';
      }
@@ -309,7 +279,7 @@ class Infosservice
             $page = 10;
         }
 
-        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
@@ -350,7 +320,7 @@ class Infosservice
             $page = 0;
         }
 
-        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit($page,$size)->select();
+        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit($page,$size)->select();
         return $arr?$arr:'';
     }
 
@@ -381,7 +351,7 @@ class Infosservice
              $where['auditing'] = 1;
          }
 
-         $count = Info::instance()->where($where)->order('sort desc,release_time desc')->count();
+         $count = Info::instance()->where($where)->order('id desc,release_time desc')->count();
          return $count?$count:'';
      }
 
@@ -409,7 +379,7 @@ class Infosservice
             $page = 15;
         }
 
-        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
@@ -452,7 +422,7 @@ class Infosservice
             $page = 0;
         }
 
-        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->limit($page,$size)->select();
+        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit($page,$size)->select();
         return $arr?$arr:'';
     }
 
@@ -483,7 +453,7 @@ class Infosservice
             $array['pid'] = 2;
             $array['keyword'] = ['like',$arr_w,'OR'];
         }
-        $arr = Info::instance()->where($array)->order('sort desc,release_time desc')->count();
+        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->count();
 
         return $arr?$arr:'';
     }
@@ -506,18 +476,19 @@ class Infosservice
      * id string
      * return array|null
      */
-    public function getTop($id)
+    public function getTop($id,$pid = '')
     {
+        $where = [];
         if (empty($id) || !isset($id)) {
             return false;
         }
         $where = [
-            'id' => ['<', $id],
+            'id' => ['GT', $id],
             'status' => 1,
             'auditing' => 1,
         ];
-        $info = Info::instance()->where($where)->order('sort desc,release_time desc')->find();
-
+        if(!empty($pid)) $where['pid'] = $pid;
+        $info = Info::instance()->where($where)->order('id desc,release_time desc')->find();
         if (empty($info)) {
             return $info = '';
         } else {
@@ -531,18 +502,19 @@ class Infosservice
      * id string
      * return array|null
      */
-    public function getNext($id)
+    public function getNext($id,$pid = '')
     {
         if (empty($id) || !isset($id)) {
             return false;
         }
 
         $where = [
-            'id' => ['>', $id],
+            'id' => ['LT', $id],
             'status' => 1,
             'auditing' => 1,
         ];
-        $info = Info::instance()->where($where)->order('sort desc,release_time asc')->find();
+        if(!empty($pid)) $where['pid'] = $pid;
+        $info = Info::instance()->where($where)->order('id desc,release_time asc')->find();
 
         if (empty($info)) {
             return $info = '';

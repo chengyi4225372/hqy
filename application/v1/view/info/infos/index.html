@@ -58,7 +58,7 @@
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="text-center" style="width:5%;">排序</th>
+                <!--<th class="text-center" style="width:5%;">排序</th>-->
                 <th class="text-center" style="width:5%;">所属分类</th>
                 <th class="text-center">展示图</th>
                 <th class="text-center" style="width:21%">新闻标题</th>
@@ -71,9 +71,9 @@
 
             {volist name='list' id='vo'}
                 <tr>
-                    <td class="text-center">
+<!--                    <td class="text-center">
                         <input class="form-control form-control-sm" type="number" value="{$vo.sort}"  onblur="admin_module.change_sort(this)" data-url="{:url('/v1/info/infos/changesort')}" data="{$vo.id}">
-                    </td>
+                    </td>-->
                     <td class="text-center">
                      {eq name='$vo.pid' value='1'}
                        招标信息
@@ -82,9 +82,10 @@
                       {/eq}
                     </td>
                     <td class="text-center">
-                        <a href="">
+                        <a href="javascript:void(0)" class="skuimg" bigsrc="{$vo.imgs}">
                             <img src="{$vo.imgs}"  style="width:150px;height:60px;"/>
                         </a>
+
                     </td>
                     <td class="text-center">{$vo.title}</td>
                     <td class="text-center">{$vo.keyword}</td>
