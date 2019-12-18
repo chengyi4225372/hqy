@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576652519;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576655934;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576660020;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576655934;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -216,6 +216,7 @@
                     <li><a onclick="showSearch()">获取方案</a></li>
                     <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>">前往网站</a></li>
                 </ul>
+                <div class="downBorder"></div>
 
             </li>
             <?php endforeach; endif; else: echo "" ;endif; ?>
