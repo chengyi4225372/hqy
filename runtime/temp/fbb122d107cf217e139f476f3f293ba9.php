@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576650057;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576637760;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576659586;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576657019;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -130,7 +130,7 @@
                             <a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a>
                         </li>
                         <li>
-                            <a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a>
+                            <a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a>
                         </li>
                         <li>
                             <a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a>
@@ -216,6 +216,7 @@
                     <li><a onclick="showSearch()">获取方案</a></li>
                     <li><a href="<?php echo (isset($v1['purl']) && ($v1['purl'] !== '')?$v1['purl']:'#'); ?>">前往网站</a></li>
                 </ul>
+                <div class="downBorder"></div>
 
             </li>
             <?php endforeach; endif; else: echo "" ;endif; ?>
@@ -247,7 +248,7 @@
             </div>
 
             <div class='zhaomethods'>
-                <div class='totalInfo_title'>招商政策</div>
+                <div class='totalInfo_title'>政府招商政策</div>
                 <?php if(empty($shang) || (($shang instanceof \think\Collection || $shang instanceof \think\Paginator ) && $shang->isEmpty())): ?>
                 <p>抱歉，没有找到相关的信息</p>
                 <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$item_list): $mod = ($i % 2 );++$i;?>
@@ -450,7 +451,7 @@
                             <img src="/static/spirit/images/weixincode.png" alt="">
                         </div>
                         <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                        <i>及时获知一手财税信息</i>
+                        <i>及时获知一手财税消息</i>
                     </li>
                     <li>
                         <div class="pic">
