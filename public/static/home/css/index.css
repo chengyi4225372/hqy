@@ -688,16 +688,15 @@ display: -webkit-box;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  border-bottom: 4px solid #000;
-  -webkit-border-image: -webkit-gradient(linear, left top, right top, from(#4091ff), to(#2f6ab5)) 30 30;
+  /* border-bottom: 4px solid #000; */
+  /* -webkit-border-image: -webkit-gradient(linear, left top, right top, from(#4091ff), to(#2f6ab5)) 30 30;
   -webkit-border-image: -webkit-linear-gradient(left, #4091ff, #2f6ab5) 30 30;
        -o-border-image: -o-linear-gradient(left, #4091ff, #2f6ab5) 30 30;
           border-image: -webkit-gradient(linear, left top, right top, from(#4091ff), to(#2f6ab5)) 30 30;
-          border-image: linear-gradient(to right, #4091ff, #2f6ab5) 30 30;
-  
-
-border-image-slice:0 0 100% 0;
-          margin-right: 5.625rem;
+          border-image: linear-gradient(to right, #4091ff, #2f6ab5) 30 30; */
+/* border-image-slice:0 0 100% 0; */
+/* border-bottom-color:linear-gradient(0deg, #4091ff, #2f6ab5); */
+  margin-right: 5.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -787,6 +786,16 @@ border-image-slice:0 0 100% 0;
     -o-transition: all 1s;
     transition: all 1s; }
 
+    .all_product > li .downBorder{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: .25rem;
+      background: url('../images/downBorder.png');
+    }
+
+
 .all_product > li:hover {
   -webkit-transform: translateY(-10px);
       -ms-transform: translateY(-10px);
@@ -800,6 +809,8 @@ border-image-slice:0 0 100% 0;
       -ms-transform: scale(1.1);
        -o-transform: scale(1.1);
           transform: scale(1.1); }
+
+
 
 /* 近期成功案例 */
 .success {

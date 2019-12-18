@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1576588986;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576637760;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1576657019;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576657019;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,12 +96,11 @@
             </div><!-- 二级菜单 -->
           </li>
           <li><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
-          <li class='nav-active'><a href="javascript:;">政府招商信息</a></li>
+          <li class='nav-active'><a href="javascript:;">政府招商政策</a></li>
           <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
           <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
         </ul>
 
-        <!--登录，注册暂时先不上线 2019年12月2号-->
 
         <!--<?php if(empty($userinfo['mobile'])): ?>-->
         <!--<div class='register'>-->
@@ -135,7 +134,7 @@
     <div class="bg_breadCrumbs">
       <div class="w bread-crumbs">
         <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
-        <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">招商政策资讯</a></span> <span></span>
+        <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">政府招商政策</a></span> <span></span>
       </div>
     </div>
 
@@ -152,7 +151,7 @@
             <div class="govPolicy fl">政府招商政策</div>
           </div>
 
-          
+
 
           <div class="hotWord">
             <div class="bgHot">
@@ -171,7 +170,7 @@
             </div>
             <div class="search-box">
                 <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/industry/index'); ?>">搜索
+                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/industry/index'); ?>">搜索
                 </div>
             </div>
 
@@ -316,7 +315,7 @@
                             <img src="/static/spirit/images/weixincode.png" alt="">
                         </div>
                         <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                        <i>及时获知一手财税信息</i>
+                        <i>及时获知一手财税消息</i>
                     </li>
                     <li>
                         <div class="pic">
