@@ -269,10 +269,12 @@ class Infosservice
     {
         if (empty($title)) {
             $array['status'] = 1;
+            $array['pid']    = 3;
             $array['auditing'] = 1;
         } else {
             $array['status'] = 1;
             $array['auditing'] = 1;
+            $array['pid']      = 3;
             $array['title|keyword|describe'] = ['like', '%' . $title . '%'];
         }
         if (empty($page) || is_null($page)) {
@@ -299,6 +301,7 @@ class Infosservice
     public function getindustryjson($title,$page,$size){
         if (empty($title)) {
             $array['status'] = 1;
+            $array['pid']    = 3;
             $array['auditing'] = 1;
 
         } else {
@@ -314,6 +317,7 @@ class Infosservice
 
             $array['keyword'] = ['like',$arr_w,'OR'];
             $array['status'] = 1;
+            $array['pid']    = 3;
             $array['auditing'] = 1;
         }
         if($page == ''|| $page == 1){
@@ -335,6 +339,7 @@ class Infosservice
          if(empty($title)){
              $where['status'] = 1;
              $where['auditing'] = 1;
+             $array['pid']    = 3;
          }else {
              $new_title = explode(',',$title);
 
@@ -348,6 +353,7 @@ class Infosservice
 
              $where['keyword'] = ['like',$arr_w,'OR'];
              $where['status'] = 1;
+             $array['pid']    = 3;
              $where['auditing'] = 1;
          }
 

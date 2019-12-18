@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\info\infos\index.html";i:1576584055;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\layout\default.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\header.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\left.html";i:1576584055;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\footer.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\info\infos\index.html";i:1576659191;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\layout\default.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\header.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\left.html";i:1576658138;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\footer.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -225,7 +225,7 @@
 
                     <li class="<?php if($paths == '/v1/info/infos/index' || $paths == '/v1/cate/ifications/index'): ?>active<?php endif; ?>">
                         <a href="#">
-                            <i class="glyphicon glyphicon-th-large"></i> <span>招标、招商信息</span>
+                            <i class="glyphicon glyphicon-th-large"></i> <span>招标、招商信息，行业资讯</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -235,7 +235,7 @@
                                 <a href="<?php echo url('/v1/cate/ifications/index'); ?>"><i class="fa fa-circle-o"></i>关键字标签列表</a>
                             </li>
                             <li class="<?php if($paths == '/v1/info/infos/index'): ?>active<?php endif; ?>">
-                                <a href="<?php echo url('/v1/info/infos/index'); ?>"><i class="fa fa-circle-o"></i>信息详情列表</a>
+                                <a href="<?php echo url('/v1/info/infos/index'); ?>"><i class="fa fa-circle-o"></i>新闻信息列表</a>
                             </li>
                         </ul>
                     </li>
@@ -334,6 +334,7 @@
                                     <option value="">全部</option>
                                     <option value="1" <?php if($params['category'] == 1): ?>selected='selected'<?php endif; ?>>招标信息</option>
                                     <option value="2" <?php if($params['category'] == 2): ?>selected='selected'<?php endif; ?>>招商信息</option>
+                                    <option value="2" <?php if($params['category'] == 3): ?>selected='selected'<?php endif; ?>>行业资讯</option>
                                 </select>
                             </div>
                         </div>
@@ -361,7 +362,7 @@
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="text-center" style="width:5%;">排序</th>
+                <!--<th class="text-center" style="width:5%;">排序</th>-->
                 <th class="text-center" style="width:5%;">所属分类</th>
                 <th class="text-center">展示图</th>
                 <th class="text-center" style="width:21%">新闻标题</th>
@@ -374,20 +375,23 @@
 
             <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
                 <tr>
-                    <td class="text-center">
+<!--                    <td class="text-center">
                         <input class="form-control form-control-sm" type="number" value="<?php echo $vo['sort']; ?>"  onblur="admin_module.change_sort(this)" data-url="<?php echo url('/v1/info/infos/changesort'); ?>" data="<?php echo $vo['id']; ?>">
-                    </td>
+                    </td>-->
                     <td class="text-center">
-                     <?php if($vo['pid'] == '1'): ?>
-                       招标信息
-                      <?php else: ?>
+                     <?php if($vo['pid'] == 1): ?>
+                        招标信息
+                       <?php elseif($vo['pid'] == 2): ?>
                         招商信息
+                       <?php else: ?>
+                        行业资讯
                       <?php endif; ?>
                     </td>
                     <td class="text-center">
-                        <a href="">
+                        <a href="javascript:void(0)" class="skuimg" bigsrc="<?php echo $vo['imgs']; ?>">
                             <img src="<?php echo $vo['imgs']; ?>"  style="width:150px;height:60px;"/>
                         </a>
+
                     </td>
                     <td class="text-center"><?php echo $vo['title']; ?></td>
                     <td class="text-center"><?php echo $vo['keyword']; ?></td>

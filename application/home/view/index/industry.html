@@ -160,11 +160,11 @@
                             <ul>
                               {volist name='four' id='ff' key='k'}
                               <li onclick="hotsearch(this);" data-title="{$ff.title}"
-                                  data-href="{:url('/home/index/detailshang')}"
-                                  data-url="{:url('/home/index/getshangapi')}" data-id="{$k}">
+                                  data-href="{:url('/home/index/industrydetail')}"
+                                  data-url="{:url('/home/index/industryapi')}" data-id="{$k}">
                                 <span>{$ff.title}</span>
                                 <span class="close" onclick="nullhot(this)"
-                                      data-url="{:url('/home/index/getshangapi')}">✕</span>
+                                      data-url="{:url('/home/index/industryapi')}">✕</span>
                               </li>
                               {/volist}
                             </ul>

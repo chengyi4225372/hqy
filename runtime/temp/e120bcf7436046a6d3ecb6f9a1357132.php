@@ -1,14 +1,14 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\industry.html";i:1576584055;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576584055;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\industry.html";i:1576659077;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576656992;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit" />
-    <meta name="force-rendering" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-    <!-- <script>/*@cc_on window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script> -->
-    <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+    <meta name="force-rendering" content="webkit"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title><?php echo $title; ?></title>
@@ -51,7 +51,7 @@
                                 <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
                                 <dd>
                                   · 企税降成本 薪税降税负
-          
+
                                 </dd>
                                 <dd>· 分红降扣率 创业降个税</dd>
                               </dl>
@@ -59,7 +59,7 @@
                                 <dt><a class="secStatus" href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
                                 <dd>
                                   · 寻求多样化用工模式
-          
+
                                 </dd>
                                 <dd>· 提高内部人员效能</dd>
                               </dl>
@@ -67,7 +67,7 @@
                                 <dt><a class="secStatus" href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                                 <dd>
                                   · 优化员工福利选择模块
-          
+
                                 </dd>
                                 <dd>· 企业成本可控透明化</dd>
                               </dl>
@@ -75,7 +75,7 @@
                                 <dt><a class="secStatus" href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                 <dd>
                                   · 技能价值化
-          
+
                                 </dd>
                                 <dd>· 成就更好自我</dd>
                               </dl>
@@ -83,7 +83,7 @@
                                 <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                 <dd>
                                   · 一站式解决方案
-          
+
                                 </dd>
                                 <dd>· 激活企业最大效益</dd>
                               </dl>
@@ -93,11 +93,11 @@
                                 <dd>· 助力产业数字化转型升级</dd>
                               </dl>
                             </div>
-          
+
                           </div><!-- 二级菜单 -->
                     </li>
                     <li><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
-                    <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
+                    <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
                     <li class='nav-active'><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
                 </ul>
@@ -151,31 +151,31 @@
                       <li>招标信息</li>
                     </ul> -->
                         <div class="govPolicy fl">行业资讯</div>
-                        <div class="search-box fr">
-                            <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-                            <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/industry'); ?>">搜索
-                            </div>
-                        </div>
+                        
                     </div>
 
                     <!-- 热搜 -->
-                    <div class="m hotWord">
-                        <ul >
-                            <li style="cursor:pointer;" data-url="<?php echo url('/home/index/industry'); ?>"
-                                onclick="location.href=$(this).attr('data-url')">
-                                <span>热门关键词</span>
-                            </li>
-                            <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $k = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($k % 2 );++$k;?>
-                            <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
-                                data-href="<?php echo url('/home/index/industrydetail'); ?>"
-                                data-url="<?php echo url('/home/index/industryapi'); ?>" data-id="<?php echo $k; ?>">
+                    <div class="hotWord">
+                        <div class="bgHot">
+                            <span>热门关键词</span>
+                            <ul>
+                              <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $k = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($k % 2 );++$k;?>
+                              <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
+                                  data-href="<?php echo url('/home/index/industrydetail'); ?>"
+                                  data-url="<?php echo url('/home/index/industryapi'); ?>" data-id="<?php echo $k; ?>">
                                 <span><?php echo $ff['title']; ?></span>
                                 <span class="close" onclick="nullhot(this)"
                                       data-url="<?php echo url('/home/index/industryapi'); ?>">✕</span>
-                            </li>
-                            <?php endforeach; endif; else: echo "" ;endif; ?>
-                        </ul>
-
+                              </li>
+                              <?php endforeach; endif; else: echo "" ;endif; ?>
+                            </ul>
+                        </div>
+                        <div class="search-box">
+                            <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
+                            <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/industry/index'); ?>">搜索
+                            </div>
+                        </div>
+            
                     </div>
 
                     <div class="bg_divide">
@@ -291,7 +291,7 @@
                             <img src="/static/spirit/images/weixincode.png" alt="">
                         </div>
                         <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                        <i>及时获一手财税信息</i>
+                        <i>及时获知一手财税消息</i>
                     </li>
                     <li>
                         <div class="pic">
