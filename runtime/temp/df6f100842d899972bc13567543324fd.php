@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"C:\phpEnv\www\hqy_\public/../application/home\view\index\detailshang.html";i:1576588633;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1576131456;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576588633;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"/opt/web/hqy_/public/../application/home/view/index/industrydetail.html";i:1576581915;s:53:"/opt/web/hqy_/application/home/view/common/login.html";i:1575456051;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576581561;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,7 +47,7 @@
                 </div>
                 <ul class='titile'>
                     <li><a href="<?php echo url('/home/index/index'); ?>">首页</a></li>
-                    <li><a href="<?php echo url('/home/optimal/index'); ?>">招募合伙人</a>
+                    <li><a href="javascript:;">招募合伙人</a>
                     </li>
                     <li>
                         <a href="javascript:;">“惠”家族产品</a>
@@ -105,8 +105,8 @@
                           </div><!-- 二级菜单 -->
                     </li>
                     <li><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
-                    <li class='nav-active'><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
-                    <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
+                    <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
+                    <li  class='nav-active'><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
                 </ul>
                 <!--<?php if(empty($userinfo['mobile'])): ?>-->
@@ -137,14 +137,13 @@
                 <!--<?php endif; ?>-->
             </div>
         </div>
-    <div class="bgBread">
+        <div class="bgBread">
         <div class='w bread_title'>
             <a class="actives" href="<?php echo url('/home/index/index'); ?>">首页 ></a>
-            <a class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a> >
+            <a class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/infoBiao'); ?>">行业资讯</a> >
             <a class="activees" href="javasrcipt:void(0)">详情</a>
         </div>
     </div>
-
         <div class='main_content'>
             <div class='content_middle'>
                 <div class='pic_total'>
@@ -158,20 +157,19 @@
                             <p>本信息来源：中国招标网</p>
                         </div> -->
 
-                        
+                      
                     </div>
                     <div class='page'>
                             <?php if(empty($top) || (($top instanceof \think\Collection || $top instanceof \think\Paginator ) && $top->isEmpty())): ?>
                             <div><span>上一篇:</span><a href="javascript:;">已经是第一篇了</a></div>
                             <?php else: ?>
                             <div><span>上一篇:</span><a
-                                    href="<?php echo url('/home/index/detailshang',array('mid'=>$top['id'])); ?>"><?php echo $top['title']; ?></a>
-                            </div>
+                                    href="<?php echo url('/home/index/detailbiao',array('mid'=>$top['id'])); ?>"><?php echo $top['title']; ?></a></div>
                             <?php endif; if(empty($next) || (($next instanceof \think\Collection || $next instanceof \think\Paginator ) && $next->isEmpty())): ?>
                             <div><span>下一篇:</span><a href="javascript:;">已经是最后一篇了</a></div>
                             <?php else: ?>
                             <div><span>下一篇:</span><a
-                                    href="<?php echo url('/home/index/detailshang',array('mid'=>$next['id'])); ?>"><?php echo $next['title']; ?></a>
+                                    href="<?php echo url('/home/index/detailbiao',array('mid'=>$next['id'])); ?>"><?php echo $next['title']; ?></a>
                             </div>
                             <?php endif; ?>
                         </div>
@@ -265,7 +263,7 @@
         menuUl.onmouseleave = function () {
             var li = document.querySelectorAll('.nav-active')[0]
             li.classList.remove('nav-active')
-            menuList[4].classList.add('nav-active')
+            menuList[5].classList.add('nav-active')
         }
     </script>
 </body>

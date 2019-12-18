@@ -95,12 +95,11 @@
             </div><!-- 二级菜单 -->
           </li>
           <li><a href="{:url('/home/index/infoBiao')}">招标信息</a></li>
-          <li class='nav-active'><a href="javascript:;">政府招商信息</a></li>
+          <li class='nav-active'><a href="javascript:;">政府招商政策</a></li>
           <li><a href="{:url('/home/index/industry')}">行业资讯</a></li>
           <!-- <li><a href="{:url('/home/launch/index')}">惠启动</a></li> -->
         </ul>
 
-        <!--登录，注册暂时先不上线 2019年12月2号-->
 
         <!--{if empty($userinfo['mobile'])}-->
         <!--<div class='register'>-->
@@ -134,7 +133,7 @@
     <div class="bg_breadCrumbs">
       <div class="w bread-crumbs">
         <span><a href="{:url('/home/index/index')}">首页</a></span> >
-        <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">招商政策资讯</a></span> <span></span>
+        <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">政府招商政策</a></span> <span></span>
       </div>
     </div>
 
@@ -151,22 +150,7 @@
             <div class="govPolicy fl">政府招商政策</div>
           </div>
 
-          <!-- 热搜 -->
-          <!-- <div class="m hotWord">
-            <ul>
-              <li style="cursor:pointer;" data-url="{:url('/home/index/infoList')}"
-                onclick="location.href=$(this).attr('data-url')">
-                <span>热门关键词</span>
-              </li>
-              {volist name='four' id='ff'}
-              <li onclick="hotsearch(this);" data-title="{$ff.title}" data-url="{:url('/home/index/infoList')}">
-                <span>{$ff.title}</span>
-                <span class="close">✕</span>
-              </li>
-              {/volist}
-            </ul>
 
-          </div> -->
 
           <div class="hotWord">
             <div class="bgHot">
@@ -185,7 +169,7 @@
             </div>
             <div class="search-box">
                 <input type="text" id="keyword" value="{$Think.get.keyword}" placeholder="请输入关键字">
-                <div id="searched" style="cursor:pointer;" data-url="{:url('/home/industry/index')}">搜索
+                <div id="searched" style="cursor:pointer;" data-url="{:url('/home/index/industry/index')}">搜索
                 </div>
             </div>
 

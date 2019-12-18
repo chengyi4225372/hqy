@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"/opt/web/hqy_/public/../application/home/view/many/index.html";i:1576467076;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:61:"/opt/web/hqy_/public/../application/home/view/many/index.html";i:1576654164;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>招募合伙人</title>
+    <title>惠多薪</title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/optimal.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -27,19 +27,19 @@
 </div>
 </div>
 </body>
-<script>
-    $(function () {
-        var count = 3;
-        var timer = setInterval(function () {
-            $('.clock').html(count);
-            count--;
-            if (count < 0) {
-                clearInterval(timer)
-                location.href="<?php echo url('/home/index/index'); ?>"
-            }
-        }, 1000)
+<!--<script>-->
+    <!--$(function () {-->
+        <!--var count = 3;-->
+        <!--var timer = setInterval(function () {-->
+            <!--$('.clock').html(count);-->
+            <!--count&#45;&#45;;-->
+            <!--if (count < 0) {-->
+                <!--clearInterval(timer)-->
+                <!--location.href="<?php echo url('/home/index/index'); ?>"-->
+            <!--}-->
+        <!--}, 1000)-->
 
-    })
-</script>
+    <!--})-->
+<!--</script>-->
 
 </html>

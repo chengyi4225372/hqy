@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="renderer" content="webkit" />
-    <meta name="force-rendering" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-    <!-- <script>/*@cc_on window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script> -->
-    <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+    <meta name="force-rendering" content="webkit"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>{$title}</title>
@@ -50,7 +50,7 @@
                                 <dt><a class="secStatus" href="{:config('curl.hys')}">惠优税</a></dt>
                                 <dd>
                                   · 企税降成本 薪税降税负
-          
+
                                 </dd>
                                 <dd>· 分红降扣率 创业降个税</dd>
                               </dl>
@@ -58,7 +58,7 @@
                                 <dt><a class="secStatus" href="{:config('curl.hlg')}">惠灵工</a></dt>
                                 <dd>
                                   · 寻求多样化用工模式
-          
+
                                 </dd>
                                 <dd>· 提高内部人员效能</dd>
                               </dl>
@@ -66,7 +66,7 @@
                                 <dt><a class="secStatus" href="{:url('/home/many/index')}">惠多薪</a></dt>
                                 <dd>
                                   · 优化员工福利选择模块
-          
+
                                 </dd>
                                 <dd>· 企业成本可控透明化</dd>
                               </dl>
@@ -74,7 +74,7 @@
                                 <dt><a class="secStatus" href="{:url('/home/searches/index')}">惠找事</a></dt>
                                 <dd>
                                   · 技能价值化
-          
+
                                 </dd>
                                 <dd>· 成就更好自我</dd>
                               </dl>
@@ -82,7 +82,7 @@
                                 <dt><a class="secStatus" href="{:url('/home/business/index')}">惠创业</a></dt>
                                 <dd>
                                   · 一站式解决方案
-          
+
                                 </dd>
                                 <dd>· 激活企业最大效益</dd>
                               </dl>
@@ -92,11 +92,11 @@
                                 <dd>· 助力产业数字化转型升级</dd>
                               </dl>
                             </div>
-          
+
                           </div><!-- 二级菜单 -->
                     </li>
                     <li><a href="{:url('/home/index/infoBiao')}">招标信息</a></li>
-                    <li><a href="{:url('/home/index/infoList')}">政府招商信息</a></li>
+                    <li><a href="{:url('/home/index/infoList')}">政府招商政策</a></li>
                     <li class='nav-active'><a href="{:url('/home/index/industry')}">行业资讯</a></li>
                     <!-- <li><a href="{:url('/home/launch/index')}">惠启动</a></li> -->
                 </ul>
@@ -150,31 +150,31 @@
                       <li>招标信息</li>
                     </ul> -->
                         <div class="govPolicy fl">行业资讯</div>
-                        <div class="search-box fr">
-                            <input type="text" id="keyword" value="{$Think.get.keyword}" placeholder="请输入关键字">
-                            <div id="searched" style="cursor:pointer;" data-url="{:url('/home/index/industry')}">搜索
-                            </div>
-                        </div>
+                        
                     </div>
 
                     <!-- 热搜 -->
-                    <div class="m hotWord">
-                        <ul >
-                            <li style="cursor:pointer;" data-url="{:url('/home/index/industry')}"
-                                onclick="location.href=$(this).attr('data-url')">
-                                <span>热门关键词</span>
-                            </li>
-                            {volist name='four' id='ff' key='k'}
-                            <li onclick="hotsearch(this);" data-title="{$ff.title}"
-                                data-href="{:url('/home/index/industrydetail')}"
-                                data-url="{:url('/home/index/industryapi')}" data-id="{$k}">
+                    <div class="hotWord">
+                        <div class="bgHot">
+                            <span>热门关键词</span>
+                            <ul>
+                              {volist name='four' id='ff' key='k'}
+                              <li onclick="hotsearch(this);" data-title="{$ff.title}"
+                                  data-href="{:url('/home/index/detailshang')}"
+                                  data-url="{:url('/home/index/getshangapi')}" data-id="{$k}">
                                 <span>{$ff.title}</span>
                                 <span class="close" onclick="nullhot(this)"
-                                      data-url="{:url('/home/index/industryapi')}">✕</span>
-                            </li>
-                            {/volist}
-                        </ul>
-
+                                      data-url="{:url('/home/index/getshangapi')}">✕</span>
+                              </li>
+                              {/volist}
+                            </ul>
+                        </div>
+                        <div class="search-box">
+                            <input type="text" id="keyword" value="{$Think.get.keyword}" placeholder="请输入关键字">
+                            <div id="searched" style="cursor:pointer;" data-url="{:url('/home/index/industry/index')}">搜索
+                            </div>
+                        </div>
+            
                     </div>
 
                     <div class="bg_divide">

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576583268;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576650057;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576637760;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +7,10 @@
     <meta name="renderer" content="webkit"/>
     <meta name="force-rendering" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>惠企云</title>
@@ -246,16 +250,16 @@
                 <div class='totalInfo_title'>招商政策</div>
                 <?php if(empty($shang) || (($shang instanceof \think\Collection || $shang instanceof \think\Paginator ) && $shang->isEmpty())): ?>
                 <p>抱歉，没有找到相关的信息</p>
-                <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
+                <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$item_list): $mod = ($i % 2 );++$i;?>
                 <div class='totalInfo_content'>
-                    <a href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo $ss['id']; ?>">
+                    <a href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo isset($item_list['id']) ? $item_list['id'] : ''; ?>">
                         <div class='zhao_contentInfo'>
-                            <div><?php echo $ss['title']; ?></div>
+                            <div><?php echo isset($item_list['title']) ? $item_list['title'] : ''; ?></div>
                             <div>
-                                <?php echo $ss['release_time']; ?>
+                                <?php echo isset($item_list['release_time']) ? $item_list['release_time'] : ''; ?>
                             </div>
                         </div>
-                        <div> <?php echo $ss['describe']; ?></div>
+                        <div><?php echo isset($item_list['describe']) ? $item_list['describe'] : ''; ?></div>
                     </a>
 
                 </div>
@@ -280,25 +284,9 @@
                 <?php else: if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                 <div class='totalInfo_content'>
 
-                    <!--登录，注册暂时先不上线 2019年12月2号-->
 
-                    <!--<a href="javascript:void(0)" data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"-->
-                    <!--login_url="<?php echo $baseurl; ?>"-->
-                    <!--loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>"-->
-                    <!--mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>"-->
-                    <!--onclick="home_module.show_detail(this)">-->
-                    <!--<div class='zhao_contentInfo'>-->
-                    <!--<div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>-->
-                    <!--<div>-->
-                    <!--<?php echo $biaos['release_time']; ?>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                    <!--<?php echo $biaos['describe']; ?>-->
-                    <!--</div>-->
-                    <!--</a>-->
 
-                    <a href="<?php echo config('curl.website'); ?>/home/index/detailbiao?mid=<?php echo $ss['id']; ?>">
+                    <a href="<?php echo config('curl.website'); ?>/home/index/detailbiao?mid=<?php echo $biaos['id']; ?>">
                         <div class='zhao_contentInfo'>
                             <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
                             <div>
@@ -444,7 +432,7 @@
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
-                        <dd><a href="javascript:;">招募合伙人</a></dd>
+                        <dd><a href="<?php echo url('/home/optimal/index'); ?>">招募合伙人</a></dd>
                     </dl>
                     <dl>
                         <dt>联系我们</dt>
@@ -462,7 +450,7 @@
                             <img src="/static/spirit/images/weixincode.png" alt="">
                         </div>
                         <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                        <i>及时获一手财税信息</i>
+                        <i>及时获知一手财税信息</i>
                     </li>
                     <li>
                         <div class="pic">

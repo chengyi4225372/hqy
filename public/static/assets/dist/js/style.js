@@ -970,6 +970,23 @@ var admin_module = (function (){
         );
     };
 
+    $('.skuimg').on('click', function () {
+        var bigsrc = $(this).attr('bigsrc');
+        if (typeof bigsrc == 'undefined') {
+            return false;
+        }
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['500px', '500px'],
+            skin: 'layui-layer-nobg', //没有背景色
+            anim: 1, //0-6的动画形式，-1不开启
+            shadeClose: true,
+            content: '<img src="' + bigsrc + '" width="500" height="500">'
+        });
+    });
+
     return {
         changepas: changepas,
         change_password: change_password,
