@@ -1,4 +1,4 @@
-var baseUrl = 'http://172.26.3.12:8089';
+var baseUrl = 'http://47.105.48.137:8040';
 function user_logout(objthis){
 
 
