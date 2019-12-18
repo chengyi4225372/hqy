@@ -250,16 +250,16 @@
                 {empty name='shang'}
                 <p>抱歉，没有找到相关的信息</p>
                 {else /}
-                {volist name="shang" id="ss" empty="没有更多内容"}
+                {volist name="shang" id="item_list" empty="没有更多内容"}
                 <div class='totalInfo_content'>
-                    <a href="{:config('curl.website')}/home/index/detailshang?mid={$ss['id']}">
+                    <a href="{:config('curl.website')}/home/index/detailshang?mid={:isset($item_list['id']) ? $item_list['id'] : ''}">
                         <div class='zhao_contentInfo'>
-                            <div>{$ss.title}</div>
+                            <div>{:isset($item_list['title']) ? $item_list['title'] : ''}</div>
                             <div>
-                                {$ss.release_time}
+                                {:isset($item_list['release_time']) ? $item_list['release_time'] : ''}
                             </div>
                         </div>
-                        <div> {$ss.describe}</div>
+                        <div>{:isset($item_list['describe']) ? $item_list['describe'] : ''}</div>
                     </a>
 
                 </div>
@@ -289,25 +289,9 @@
                 {volist name="biao" id="biaos" empty="没有更多内容"}
                 <div class='totalInfo_content'>
 
-                    <!--登录，注册暂时先不上线 2019年12月2号-->
 
-                    <!--<a href="javascript:void(0)" data-url="{:url('/home/index/getInfo',['mid' => $ss.id])}"-->
-                    <!--login_url="{$baseurl}"-->
-                    <!--loca_url="{:config('curl.website')}/home/index/getInfo?mid={$ss['id']}"-->
-                    <!--mobile-phone="{$userinfo['mobile']}" data-id="{$ss['id']}"-->
-                    <!--onclick="home_module.show_detail(this)">-->
-                    <!--<div class='zhao_contentInfo'>-->
-                    <!--<div>{$biaos.title|default=''}</div>-->
-                    <!--<div>-->
-                    <!--{$biaos.release_time}-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                    <!--{$biaos.describe}-->
-                    <!--</div>-->
-                    <!--</a>-->
 
-                    <a href="{:config('curl.website')}/home/index/detailbiao?mid={$ss['id']}">
+                    <a href="{:config('curl.website')}/home/index/detailbiao?mid={$biaos['id']}">
                         <div class='zhao_contentInfo'>
                             <div>{$biaos.title|default=''}</div>
                             <div>

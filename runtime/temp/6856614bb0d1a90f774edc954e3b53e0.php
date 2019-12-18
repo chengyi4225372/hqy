@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_list.html";i:1576583759;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576581561;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_list.html";i:1576587007;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576581561;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -173,14 +173,15 @@
             <div class="bgHot">
                 <span>热门关键词</span>
                 <ul>
-                    <li>
-                        <span>周杰伦新歌</span>
-                        <span class="close">✕</span>
-                    </li>
-                    <li>
-                        <span>周杰伦新歌</span>
-                        <span class="close">✕</span>
-                    </li>
+                  <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $k = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($k % 2 );++$k;?>
+                  <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
+                      data-href="<?php echo url('/home/index/detailshang'); ?>"
+                      data-url="<?php echo url('/home/index/getshangapi'); ?>" data-id="<?php echo $k; ?>">
+                    <span><?php echo $ff['title']; ?></span>
+                    <span class="close" onclick="nullhot(this)"
+                          data-url="<?php echo url('/home/index/getshangapi'); ?>">✕</span>
+                  </li>
+                  <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
             <div class="search-box">

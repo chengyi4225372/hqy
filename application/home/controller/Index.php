@@ -124,8 +124,8 @@ class Index extends BaseController
                 return false;
             }
             $info = infosservice::instance()->getId($id);
-            $top  = Infosservice::instance()->getTop($id);
-            $next = Infosservice::instance()->getNext($id);
+            $top  = Infosservice::instance()->getTop($id,2);
+            $next = Infosservice::instance()->getNext($id,2);
             $this->assign('info',$info);
             $this->assign('top',$top);
             $this->assign('next',$next);
@@ -237,8 +237,8 @@ class Index extends BaseController
                 return false;
             }
             $info = infosservice::instance()->getId($id);
-            $top  = Infosservice::instance()->getTop($id);
-            $next = Infosservice::instance()->getNext($id);
+            $top  = Infosservice::instance()->getTop($id,1);
+            $next = Infosservice::instance()->getNext($id,1);
             $this->assign('info',$info);
             $this->assign('top',$top);
             $this->assign('next',$next);
