@@ -1237,7 +1237,7 @@ letter-spacing: -0.0625rem;
   cursor: pointer;
   margin-bottom: 1rem; }
 
-.diandianone {
+/* .diandianone {
   position: absolute;
   top: 6.5625rem;
   left: 50%;
@@ -1263,7 +1263,46 @@ letter-spacing: -0.0625rem;
   height: 12.75rem;
   -webkit-background-size: contain;
           background-size: contain;
-  background-image: url("../images/xiaodian.png"); }
+  background-image: url("../images/xiaodian.png"); } */
+
+  .diandianone {
+    position: absolute;
+    top: 6.5625rem;
+    left: 50%;
+    /* -webkit-transform: translateX(-47.875rem);
+    -ms-transform: translateX(-47.875rem);
+    -o-transform: translateX(-47.875rem);
+    transform: translateX(-47.875rem); */
+    -webkit-transform: translateX(-58.1875rem);
+    -moz-transform: translateX(-58.1875rem);
+    -ms-transform: translateX(-58.1875rem);
+    -o-transform: translateX(-58.1875rem);
+    transform: translateX(-58.1875rem);
+    /* width: 10.3125rem;
+    height: 12.75rem; */
+    width: 20.6875rem;
+    height: 25.5625rem;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-image: url("../images/xiaodian.png");
+  }
+  
+  .diandiantwo {
+    position: absolute;
+    top: 29.6875rem;
+    left: 50%;
+    -webkit-transform: translateX(37.5rem);
+    -ms-transform: translateX(37.5rem);
+    -o-transform: translateX(37.5rem);
+    transform: translateX(37.5rem);
+    /* width: 10.3125rem;
+    height: 12.75rem; */
+    width: 20.6875rem;
+    height: 25.5625rem;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-image: url("../images/xiaodian.png");
+  }
 
 /* 合作伙伴 */
 .partener {

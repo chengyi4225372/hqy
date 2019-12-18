@@ -2,3 +2,72 @@
 [ 2019-12-18T14:23:58+08:00 ] 127.0.0.1 GET /home/index/infoList.html
 [ error ] [2002]SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
 [C:\phpEnv\www\hqy_\thinkphp\library\think\db\Connection.php:295]
+---------------------------------------------------------------
+[ 2019-12-18T18:44:21+08:00 ] 127.0.0.1 GET /
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T18:59:48+08:00 ] 127.0.0.1 GET /
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:03:33+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:05:52+08:00 ] 127.0.0.1 GET /
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:05:53+08:00 ] 127.0.0.1 GET /
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:05:55+08:00 ] 127.0.0.1 GET /
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:51+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:51+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:52+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:52+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:52+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:52+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:58+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:58+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:58+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:59+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:59+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:06:59+08:00 ] 127.0.0.1 GET /home/index/infoBiao.html
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:07:10+08:00 ] 127.0.0.1 GET /
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:07:10+08:00 ] 127.0.0.1 GET /
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:07:11+08:00 ] 127.0.0.1 GET /
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:07:11+08:00 ] 127.0.0.1 GET /
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
+---------------------------------------------------------------
+[ 2019-12-18T19:07:11+08:00 ] 127.0.0.1 GET /
+[ error ] [0]璇硶瑙ｆ瀽閿欒: syntax error, unexpected '<<' (T_SL)[C:\phpEnv\www\hqy_\application\home\controller\Index.php:352]
