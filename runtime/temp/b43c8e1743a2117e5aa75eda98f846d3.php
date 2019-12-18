@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\info\infos\index.html";i:1576659191;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\layout\default.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\header.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\left.html";i:1576658138;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\footer.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\info\infos\index.html";i:1576659939;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\layout\default.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\header.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\left.html";i:1576658138;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\footer.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -334,7 +334,7 @@
                                     <option value="">全部</option>
                                     <option value="1" <?php if($params['category'] == 1): ?>selected='selected'<?php endif; ?>>招标信息</option>
                                     <option value="2" <?php if($params['category'] == 2): ?>selected='selected'<?php endif; ?>>招商信息</option>
-                                    <option value="2" <?php if($params['category'] == 3): ?>selected='selected'<?php endif; ?>>行业资讯</option>
+                                    <option value="3" <?php if($params['category'] == 3): ?>selected='selected'<?php endif; ?>>行业资讯</option>
                                 </select>
                             </div>
                         </div>
