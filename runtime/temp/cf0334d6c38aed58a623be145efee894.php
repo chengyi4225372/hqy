@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"C:\phpEnv\www\hqy_\public/../application/home\view\many\index.html";i:1576577274;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"C:\phpEnv\www\hqy_\public/../application/home\view\launch\index.html";i:1576577274;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +12,9 @@
 
 <body>
 
-
 <div>
     <div class="fourzerofour">
-        <img src="/static/hdx_error.png">
+        <img src="/static/hqd_error.png">
     </div>
     <div class="building">
         正在建设中...

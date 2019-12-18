@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1576588986;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576588633;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1576588986;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576637760;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -316,7 +316,7 @@
                             <img src="/static/spirit/images/weixincode.png" alt="">
                         </div>
                         <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                        <i>及时获一手财税信息</i>
+                        <i>及时获知一手财税信息</i>
                     </li>
                     <li>
                         <div class="pic">
