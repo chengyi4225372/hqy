@@ -8,7 +8,7 @@ function checkPhone(phone) {
     }
 }
 
-var gurl = "https://47.105.48.137:8089";
+var gurl = "http://47.105.48.137:8089";
 
 function getErp() {
     var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
