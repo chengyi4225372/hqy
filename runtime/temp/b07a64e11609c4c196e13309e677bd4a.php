@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:111:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\detailbiao.html";i:1576584055;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\login.html";i:1575017610;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576584055;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:111:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\detailbiao.html";i:1576656992;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\login.html";i:1575017610;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576656992;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +59,7 @@
                                 <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
                                 <dd>
                                   · 企税降成本 薪税降税负
-          
+
                                 </dd>
                                 <dd>· 分红降扣率 创业降个税</dd>
                               </dl>
@@ -67,7 +67,7 @@
                                 <dt><a class="secStatus" href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
                                 <dd>
                                   · 寻求多样化用工模式
-          
+
                                 </dd>
                                 <dd>· 提高内部人员效能</dd>
                               </dl>
@@ -75,7 +75,7 @@
                                 <dt><a class="secStatus" href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                                 <dd>
                                   · 优化员工福利选择模块
-          
+
                                 </dd>
                                 <dd>· 企业成本可控透明化</dd>
                               </dl>
@@ -83,7 +83,7 @@
                                 <dt><a class="secStatus" href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                 <dd>
                                   · 技能价值化
-          
+
                                 </dd>
                                 <dd>· 成就更好自我</dd>
                               </dl>
@@ -91,7 +91,7 @@
                                 <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                 <dd>
                                   · 一站式解决方案
-          
+
                                 </dd>
                                 <dd>· 激活企业最大效益</dd>
                               </dl>
@@ -101,11 +101,11 @@
                                 <dd>· 助力产业数字化转型升级</dd>
                               </dl>
                             </div>
-          
+
                           </div><!-- 二级菜单 -->
                     </li>
                     <li  class='nav-active'><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
-                    <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
+                    <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
                     <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
                 </ul>
@@ -222,7 +222,7 @@
                             <img src="/static/spirit/images/weixincode.png" alt="">
                         </div>
                         <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                        <i>及时获一手财税信息</i>
+                        <i>及时获知一手财税消息</i>
                     </li>
                     <li>
                         <div class="pic">

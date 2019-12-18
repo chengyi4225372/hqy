@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576656992;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576656992;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\detailshang.html";i:1576656992;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\login.html";i:1575017610;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576656992;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,26 +11,35 @@
     <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keyword" content="<?php echo $info['keyword']; ?>">
+    <meta name="description" content="<?php echo $info['describe']; ?>">
     <title><?php echo $title; ?></title>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <!-- <script src='/static/spirit/js/xlPaging.js'></script> -->
     <link rel="stylesheet" href="/static/spirit/css/base.css">
-    <!-- <link rel="stylesheet" href="/static/spirit/css/layui.css"  media="all"> -->
+    <link rel="stylesheet" href="/static/spirit/css/detail.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-    <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
-    <script src="/static/spirit/js/clamp.js"></script>
-
-    <script src='/static/spirit/js/Informationlist.js'></script>
-    <script src="/static/assets/plugins/layui/layui.all.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src='/static/home/js/common.js'></script>
     <script src='/static/common/js/public.js'></script>
+    <script src="/static/spirit/js/detail.js"></script>
+    <script src="/static/assets/plugins/layui/layui.all.js"></script>
+    <style>
+        /* 归属信息 */
+        .affiliation {
+            text-align: right;
+            font-size: 10px;
+            color: #ccc;
+            padding-right: 20px;
+            margin-top: 200px;
+        }
+
+        .page {
+            margin-top: 60px;
+        }
+    </style>
 </head>
 
 <body>
-
     <div class='container'>
-
-        <!-- 导航部分 -->
         <div class='header'>
             <div class=header_content id='headerContent'>
                 <div class='logo'>
@@ -47,7 +56,7 @@
 
                             <div>
                               <dl>
-                                <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>" style="font-family: Noto Sans SC;">惠优税</a></dt>
+                                <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
                                 <dd>
                                   · 企税降成本 薪税降税负
 
@@ -95,152 +104,81 @@
 
                           </div><!-- 二级菜单 -->
                     </li>
-                    <li class='nav-active'><a href="javascript:;">招标信息</a></li>
-                    <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
+                    <li><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
+                    <li class='nav-active'><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
                     <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
                 </ul>
-
-                <!--登录，注册暂时先不上线 2019年12月2号-->
-
                 <!--<?php if(empty($userinfo['mobile'])): ?>-->
                 <!--<div class='register'>-->
-                <!--<a href="javascript:void(0)" login_url="<?php echo $baseurl; ?>" loca_url="<?php echo config('curl.website'); ?>"-->
-                <!--onclick="login_btn(this)">登录</a>-->
+                <!--<a href="javascript:void(0)"-->
+                <!--login_url="<?php echo $baseurl; ?>"-->
+                <!--loca_url="<?php echo config('curl.website'); ?>" onclick="login_btn(this)">登录</a>-->
                 <!--<a href="<?php echo url('/home/login/register'); ?>">注册</a>-->
                 <!--</div>-->
                 <!--<?php else: ?>-->
-                <!--<div class="u_info">-->
-                <!--<img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">-->
-                <!--<p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>-->
+                <!--<?php if(empty($userinfo['mobile'])): ?>
+<div class="loging clearfix">
+    <div class="register-btn"><a href="<?php echo $baseurl; ?>" target="_blank">
+        登陆
+    </a></div>
+    <div class="loging-btn"><a href="<?php echo url('/home/login/register'); ?>">注册</a></div>
+</div>
+<?php else: ?>
+<div class="u_info">
+    <img src="/static/home/images/user_img.png" style="width:30px;height:30px; vertical-align: middle;">
+    <p style="display:inline-block;color:#fff;"  id="mobile_phone"><?php echo $userinfo['mobile']; ?></p>
 
-                <!--<div class="u_info_content" id="u_info_content">-->
-                <!--<a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>" onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>-->
-                <!--</div>-->
-                <!--</div>-->
+    <div class="u_info_content" id="u_info_content">
+        <a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>" onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>" data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
+    </div>
+</div>
+<?php endif; ?>-->
                 <!--<?php endif; ?>-->
             </div>
         </div>
-
-
-        <div class="bg_banner">
-            <div class="w banner">
-
-                <img src="/static/spirit/images/banner.png" alt="">
-            </div>
+    <div class="bgBread">
+        <div class='w bread_title'>
+            <a class="actives" href="<?php echo url('/home/index/index'); ?>">首页 ></a>
+            <a class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a> >
+            <a class="activees" href="javasrcipt:void(0)">详情</a>
         </div>
+    </div>
 
-        <!-- 面包屑导航 -->
-        <div class="bg_breadCrumbs">
-            <div class="w bread-crumbs">
-                <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
-                <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">招标信息</a></span> <span></span>
-            </div>
-        </div>
+        <div class='main_content'>
+            <div class='content_middle'>
+                <div class='pic_total'>
+                    <div class='pic_title'><?php echo $info['title']; ?></div>
+                    <div class='time'><?php echo $info['release_time']; ?></div>
+                    <div class='line'></div>
+                    <div class='tuwen'>
+                        <div class='wenzi'><?php echo $info['content']; ?></div>
 
-        <!-- 信息列表 -->
-        <div class="content-box">
-            <div class="m content">
+                        <!-- <div class="affiliation">
+                            <p>本信息来源：中国招标网</p>
+                        </div> -->
 
-                <div class="information-list">
-                    <div class="tabs clearfix">
-                        <!-- <ul class="clearfix fl">
-                      <li class="li-active">招商政策</li>
-                      <li>招标信息</li>
-                    </ul> -->
-                        <div class="govPolicy fl">招标信息</div>
-
+                        
                     </div>
-
-                    <!-- 热搜 -->
-                        <div class="hotWord">
-                            <div class="bgHot">
-                                <span>热门关键词</span>
-                                <ul>
-                                    <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $k = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($k % 2 );++$k;?>
-                                    <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
-                                        data-href="<?php echo url('/home/index/detailbiao'); ?>"
-                                        data-url="<?php echo url('/home/index/getbiaoapi'); ?>" data-id="<?php echo $k; ?>">
-                                        <span><?php echo $ff['title']; ?></span>
-                                        <span class="close" onclick="nullhot(this)"
-                                              data-url="<?php echo url('/home/index/getbiaoapi'); ?>">✕</span>
-                                    </li>
-                                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                                </ul>
+                    <div class='page'>
+                            <?php if(empty($top) || (($top instanceof \think\Collection || $top instanceof \think\Paginator ) && $top->isEmpty())): ?>
+                            <div><span>上一篇:</span><a href="javascript:;">已经是第一篇了</a></div>
+                            <?php else: ?>
+                            <div><span>上一篇:</span><a
+                                    href="<?php echo url('/home/index/detailshang',array('mid'=>$top['id'])); ?>"><?php echo $top['title']; ?></a>
                             </div>
-                            <div class="search-box">
-                                <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-                                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/industry/index'); ?>">搜索
-                                </div>
+                            <?php endif; if(empty($next) || (($next instanceof \think\Collection || $next instanceof \think\Paginator ) && $next->isEmpty())): ?>
+                            <div><span>下一篇:</span><a href="javascript:;">已经是最后一篇了</a></div>
+                            <?php else: ?>
+                            <div><span>下一篇:</span><a
+                                    href="<?php echo url('/home/index/detailshang',array('mid'=>$next['id'])); ?>"><?php echo $next['title']; ?></a>
                             </div>
-
+                            <?php endif; ?>
                         </div>
-
-                    <div class="bg_divide">
-
-                        <div class="divide"></div>
-                    </div>
-
-
-                    <div class="tabs-items show">
-                        <ul id="shang">
-                            <?php if(empty($biao) || (($biao instanceof \think\Collection || $biao instanceof \think\Paginator ) && $biao->isEmpty())): ?>
-                            <li>
-                                <div class="tabs-items-content">
-                                    <div class="tabs-items-content-text figcaption">
-                                        <p>抱歉，没有找到与<b style="color: #ff2222"><?php echo \think\Request::instance()->get('keyword'); ?></b>的相关结果。</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <?php else: if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ww): $mod = ($i % 2 );++$i;?>
-                            <li>
-                                <a href="<?php echo config('curl.website'); ?>/home/index/detailbiao?mid=<?php echo $ww['id']; ?>">
-                                    <div class="infoItem">
-                                        <div class="infoLeft">
-                                            <img src="<?php echo !empty($ww['imgs'])?$ww['imgs']:'/static/home/images/infoItem.jpg';; ?>" alt="">
-                                        </div>
-
-                                        <div class="infoRight">
-                                            <div class="rightTop">
-                                                <div class="itemTitle"><?php echo mb_substr($ww['title'],0,35,'utf-8'); ?></div>
-                                                <span class="itemTime">
-                                                    <img src="/static/spirit/images/shijian2x.png" alt="">
-                                                    <span><?php echo $ww['release_time']; ?></span>
-                                                </span>
-                                            </div>
-                                            <p>
-                                                <?php echo $ww['describe']; ?>
-                                            </p>
-                                        </div>
-
-                                    </div>
-                                </a>
-                                <ul class="tags">
-                                    <?php if(empty($ww['keyword']) || (($ww['keyword'] instanceof \think\Collection || $ww['keyword'] instanceof \think\Paginator ) && $ww['keyword']->isEmpty())): else: if(is_array($ww['keyword']) || $ww['keyword'] instanceof \think\Collection || $ww['keyword'] instanceof \think\Paginator): if( count($ww['keyword'])==0 ) : echo "" ;else: foreach($ww['keyword'] as $k=>$key): ?>
-                                    <li onclick="hotsearch(this);" data-title="<?php echo $key; ?>"
-                                        data-url="<?php echo url('/home/index/infoBiao'); ?>"><?php echo $key; ?></li>
-                                    <?php endforeach; endif; else: echo "" ;endif; endif; ?>
-                                </ul>
-                            </li>
-                            <?php endforeach; endif; else: echo "" ;endif; endif; ?>
-                        </ul>
-                        <input type="hidden" id="sid" value="<?php echo \think\Request::instance()->get('keyword'); ?>">
-                    </div>
-
                 </div>
             </div>
         </div>
-        <!-- 分页 -->
-        <div class="pageNation">
-            <!--        <ul class="page">-->
-            <!--            <li class="prev">上一页</li>-->
-            <!--            <li class="currentPage">1</li>-->
-            <!--            <li>2</li>-->
-            <!--            <li class="next">下一页</li>-->
-            <!--        </ul>-->
-            <?php echo $biao->render(); ?>
-        </div>
-
+        <!-- 底部 -->
         <div class="bgBottom">
     <div class="bottomBox">
         <div class="w bottom">
@@ -312,7 +250,6 @@
         </div>
 
     </div>
-
     <script>
         var menuList = document.querySelectorAll('#headerContent ul li')
         var menuUl = document.querySelector('#headerContent ul')
@@ -328,9 +265,9 @@
         menuUl.onmouseleave = function () {
             var li = document.querySelectorAll('.nav-active')[0]
             li.classList.remove('nav-active')
-            menuList[3].classList.add('nav-active')
+            menuList[4].classList.add('nav-active')
         }
     </script>
-
 </body>
+
 </html>
