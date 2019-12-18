@@ -206,7 +206,7 @@ $('.secStatus').mouseenter(function(){
 /** 全局变量 **/
 var keyword = []; //关键字 数组
 var titles  = ''; //关键字分割成字符串
-var hrefs   ='';  //详情页url
+var hrefs   = '';  //详情页url
 var urls    = ''; //ajax 提交url
 var key     = ''; //分割关键字
 /** 列表页热门搜索 **/
@@ -220,7 +220,7 @@ function hotsearch(obj) {
      var index = $.inArray(searchs,keyword);
 
      if(index >= 0){
-         keyword.pop(search);
+         keyword.pop(searchs);
      }
 
      keyword.push(searchs);
@@ -257,7 +257,7 @@ function hotsearch(obj) {
                    content+= "<li><a href="+hrefs+"?mid="+index.id+">";
                    content+= "<div class='infoItem'><div class='infoLeft'>";
                    //默认图片
-                   if(index.img == '' || index.imgs == undefined){
+                   if(index.imgs == '' || index.imgs == undefined){
                    content+= "<img src='/static/home/images/infoItem.jpg'></div>";
                    }else{
                    content+="<img src="+index.imgs+"></div>";
@@ -350,7 +350,7 @@ function nullhot(obj){
                     content+= "<li><a href="+hrefs+"?mid="+index.id+">";
                     content+= "<div class='infoItem'><div class='infoLeft'>";
                     //默认图片
-                    if(index.img == '' || index.imgs == undefined){
+                    if(index.imgs == '' || index.imgs == undefined){
                         content+= "<img src='/static/home/images/infoItem.jpg'></div>";
                     }else{
                         content+="<img src="+index.imgs+"></div>";
@@ -461,7 +461,7 @@ function pagehrefs(purls,i,titles,pages,count){
                     content+= "<li><a href="+hrefs+"?mid="+index.id+">";
                     content+= "<div class='infoItem'><div class='infoLeft'>";
                     //默认图片
-                    if(index.img == '' || index.imgs == undefined){
+                    if(index.imgs == '' || index.imgs == undefined){
                         content+= "<img src='/static/home/images/infoItem.jpg'></div>";
                     }else{
                         content+="<img src="+index.imgs+"></div>";
