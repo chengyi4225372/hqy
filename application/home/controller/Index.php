@@ -349,9 +349,9 @@ class Index extends BaseController
             if(empty($id) || !isset($id)|| $id <=0){
                 return false;
             }
-            $info = infosservice::instance()->getId($id);
-            $top  = Infosservice::instance()->getTop($id);
-            $next = Infosservice::instance()->getNext($id);
+            $info = infosservice::instance()->getId($id,3);
+            $top  = Infosservice::instance()->getTop($id,3);
+            $next = Infosservice::instance()->getNext($id,3);
             $this->assign('info',$info);
             $this->assign('top',$top);
             $this->assign('next',$next);
