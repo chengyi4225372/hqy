@@ -694,7 +694,10 @@ display: -webkit-box;
        -o-border-image: -o-linear-gradient(left, #4091ff, #2f6ab5) 30 30;
           border-image: -webkit-gradient(linear, left top, right top, from(#4091ff), to(#2f6ab5)) 30 30;
           border-image: linear-gradient(to right, #4091ff, #2f6ab5) 30 30;
-  margin-right: 5.625rem;
+  
+
+border-image-slice:0 0 100% 0;
+          margin-right: 5.625rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
