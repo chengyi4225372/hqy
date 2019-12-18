@@ -112,12 +112,10 @@ class Login extends BaseController
         $array['mobile'] = $mobile;
         $array['token'] = $token;
         $array['userType'] = $userType;
-//        if($_GET['msg4'] === 'undefined'){
-//            echo 333333;exit;
-//        }
-//        echo "<pre>";print_r($_GET);exit;
-//        //请求惠灵工的页面的接口把用户信息带过去
+
+        //请求惠灵工的页面的接口把用户信息带过去
         $res = curl_post($hlg_url.'/home/login/savetokens',$array);
+
         //把手机号、token、用户类型存到【会找事】页面的cookie里面
         $res2 = curl_post($hzs_url.'/home/login/savetokens',$array);
         if(isset($_GET['msg4']) && !empty($_GET['msg4']) && $_GET['msg4'] !== 'undefined'){
