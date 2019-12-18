@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1576587007;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576581561;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1576640562;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576581561;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +50,7 @@
                                 <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>" style="font-family: Noto Sans SC;">惠优税</a></dt>
                                 <dd>
                                   · 企税降成本 薪税降税负
-          
+
                                 </dd>
                                 <dd>· 分红降扣率 创业降个税</dd>
                               </dl>
@@ -58,7 +58,7 @@
                                 <dt><a class="secStatus" href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
                                 <dd>
                                   · 寻求多样化用工模式
-          
+
                                 </dd>
                                 <dd>· 提高内部人员效能</dd>
                               </dl>
@@ -66,7 +66,7 @@
                                 <dt><a class="secStatus" href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                                 <dd>
                                   · 优化员工福利选择模块
-          
+
                                 </dd>
                                 <dd>· 企业成本可控透明化</dd>
                               </dl>
@@ -74,7 +74,7 @@
                                 <dt><a class="secStatus" href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                 <dd>
                                   · 技能价值化
-          
+
                                 </dd>
                                 <dd>· 成就更好自我</dd>
                               </dl>
@@ -82,7 +82,7 @@
                                 <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                 <dd>
                                   · 一站式解决方案
-          
+
                                 </dd>
                                 <dd>· 激活企业最大效益</dd>
                               </dl>
@@ -92,11 +92,11 @@
                                 <dd>· 助力产业数字化转型升级</dd>
                               </dl>
                             </div>
-          
+
                           </div><!-- 二级菜单 -->
                     </li>
                     <li class='nav-active'><a href="javascript:;">招标信息</a></li>
-                    <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a></li>
+                    <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
                     <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
                 </ul>
@@ -149,27 +149,10 @@
                       <li>招标信息</li>
                     </ul> -->
                         <div class="govPolicy fl">招标信息</div>
-                        
+
                     </div>
 
                     <!-- 热搜 -->
-                    <!-- <div class="m hotWord">
-                            <ul>
-                                <li style="cursor:pointer;" data-url="<?php echo url('/home/index/industry'); ?>"
-                                    onclick="location.href=$(this).attr('data-url')">
-                                    <span>热门关键词</span>
-                                </li>
-                                <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $i = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($i % 2 );++$i;?>
-                                <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
-                                    data-url="<?php echo url('/home/index/industry'); ?>">
-                                    <input type="hidden" value="<?php echo $ff['title']; ?>" id="key<?php echo $key; ?>">
-                                    <span><?php echo $ff['title']; ?></span>
-                                    <span class="close">✕</span>
-                                </li>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
-                            </ul>
-    
-                        </div> -->
                         <div class="hotWord">
                             <div class="bgHot">
                                 <span>热门关键词</span>
@@ -190,7 +173,7 @@
                                 <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/industry/index'); ?>">搜索
                                 </div>
                             </div>
-                
+
                         </div>
 
                     <div class="bg_divide">

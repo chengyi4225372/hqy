@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_list.html";i:1576587007;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576581561;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_list.html";i:1576640903;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576581561;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,12 +96,11 @@
             </div><!-- 二级菜单 -->
           </li>
           <li><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
-          <li class='nav-active'><a href="javascript:;">政府招商信息</a></li>
+          <li class='nav-active'><a href="javascript:;">政府招商政策</a></li>
           <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
           <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
         </ul>
 
-        <!--登录，注册暂时先不上线 2019年12月2号-->
 
         <!--<?php if(empty($userinfo['mobile'])): ?>-->
         <!--<div class='register'>-->
@@ -135,7 +134,7 @@
     <div class="bg_breadCrumbs">
       <div class="w bread-crumbs">
         <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
-        <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">招商政策资讯</a></span> <span></span>
+        <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">政府招商政策</a></span> <span></span>
       </div>
     </div>
 
@@ -152,22 +151,7 @@
             <div class="govPolicy fl">政府招商政策</div>
           </div>
 
-          <!-- 热搜 -->
-          <!-- <div class="m hotWord">
-            <ul>
-              <li style="cursor:pointer;" data-url="<?php echo url('/home/index/infoList'); ?>"
-                onclick="location.href=$(this).attr('data-url')">
-                <span>热门关键词</span>
-              </li>
-              <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $i = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($i % 2 );++$i;?>
-              <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>" data-url="<?php echo url('/home/index/infoList'); ?>">
-                <span><?php echo $ff['title']; ?></span>
-                <span class="close">✕</span>
-              </li>
-              <?php endforeach; endif; else: echo "" ;endif; ?>
-            </ul>
 
-          </div> -->
 
           <div class="hotWord">
             <div class="bgHot">

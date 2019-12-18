@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576583759;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576581561;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576639575;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576649813;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -126,7 +126,7 @@
                             <a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a>
                         </li>
                         <li>
-                            <a href="<?php echo url('/home/index/infoList'); ?>">政府招商信息</a>
+                            <a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a>
                         </li>
                         <li>
                             <a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a>
@@ -243,19 +243,19 @@
             </div>
 
             <div class='zhaomethods'>
-                <div class='totalInfo_title'>招商政策</div>
+                <div class='totalInfo_title'>政府招商政策</div>
                 <?php if(empty($shang) || (($shang instanceof \think\Collection || $shang instanceof \think\Paginator ) && $shang->isEmpty())): ?>
                 <p>抱歉，没有找到相关的信息</p>
-                <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$ss): $mod = ($i % 2 );++$i;?>
+                <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$item_list): $mod = ($i % 2 );++$i;?>
                 <div class='totalInfo_content'>
-                    <a href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo $ss['id']; ?>">
+                    <a href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo isset($item_list['id']) ? $item_list['id'] : ''; ?>">
                         <div class='zhao_contentInfo'>
-                            <div><?php echo $ss['title']; ?></div>
+                            <div><?php echo isset($item_list['title']) ? $item_list['title'] : ''; ?></div>
                             <div>
-                                <?php echo $ss['release_time']; ?>
+                                <?php echo isset($item_list['release_time']) ? $item_list['release_time'] : ''; ?>
                             </div>
                         </div>
-                        <div> <?php echo $ss['describe']; ?></div>
+                        <div><?php echo isset($item_list['describe']) ? $item_list['describe'] : ''; ?></div>
                     </a>
 
                 </div>
@@ -280,25 +280,9 @@
                 <?php else: if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                 <div class='totalInfo_content'>
 
-                    <!--登录，注册暂时先不上线 2019年12月2号-->
 
-                    <!--<a href="javascript:void(0)" data-url="<?php echo url('/home/index/getInfo',['mid' => $ss['id']]); ?>"-->
-                    <!--login_url="<?php echo $baseurl; ?>"-->
-                    <!--loca_url="<?php echo config('curl.website'); ?>/home/index/getInfo?mid=<?php echo $ss['id']; ?>"-->
-                    <!--mobile-phone="<?php echo $userinfo['mobile']; ?>" data-id="<?php echo $ss['id']; ?>"-->
-                    <!--onclick="home_module.show_detail(this)">-->
-                    <!--<div class='zhao_contentInfo'>-->
-                    <!--<div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>-->
-                    <!--<div>-->
-                    <!--<?php echo $biaos['release_time']; ?>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--<div>-->
-                    <!--<?php echo $biaos['describe']; ?>-->
-                    <!--</div>-->
-                    <!--</a>-->
 
-                    <a href="<?php echo config('curl.website'); ?>/home/index/detailbiao?mid=<?php echo $ss['id']; ?>">
+                    <a href="<?php echo config('curl.website'); ?>/home/index/detailbiao?mid=<?php echo $biaos['id']; ?>">
                         <div class='zhao_contentInfo'>
                             <div><?php echo (isset($biaos['title']) && ($biaos['title'] !== '')?$biaos['title']:''); ?></div>
                             <div>
@@ -462,7 +446,7 @@
                             <img src="/static/spirit/images/weixincode.png" alt="">
                         </div>
                         <span><img src="/static/spirit/images/weixinicon.png" alt="">微信扫码关注</span>
-                        <i>及时获一手财税信息</i>
+                        <i>及时获知一手财税消息</i>
                     </li>
                     <li>
                         <div class="pic">
