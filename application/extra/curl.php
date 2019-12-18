@@ -12,7 +12,7 @@ return [
     'hzs' => 'http://www.35serve.com', //会找事
 
     //    'hys' => 'http://172.26.3.13:8011/index.php',//惠优税
-    'hys' => 'http://admin.hqyonline.com/', //惠优税
+    'hys' => 'http://hui3y.hui7y.com/', //惠优税
 
     'redirect_url' => 'http://172.26.3.12:8009/#', //登录重定向地址
     'login_url' => 'http://172.26.3.12:8009/#/login', //登录地址
