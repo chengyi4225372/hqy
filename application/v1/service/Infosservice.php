@@ -494,7 +494,7 @@ class Infosservice
             'auditing' => 1,
         ];
         if(!empty($pid)) $where['pid'] = $pid;
-        $info = Info::instance()->where($where)->order('id desc,release_time desc')->find();
+        $info = Info::instance()->where($where)->order('id asc,release_time asc')->find();
         if (empty($info)) {
             return $info = '';
         } else {
@@ -520,7 +520,7 @@ class Infosservice
             'auditing' => 1,
         ];
         if(!empty($pid)) $where['pid'] = $pid;
-        $info = Info::instance()->where($where)->order('id desc,release_time asc')->find();
+        $info = Info::instance()->where($where)->order('id desc,release_time desc')->find();
 
         if (empty($info)) {
             return $info = '';
