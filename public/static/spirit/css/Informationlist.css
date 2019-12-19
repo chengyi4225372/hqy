@@ -339,12 +339,12 @@ a {
 /* 次级菜单 */
 .secondary-menu {
   position: absolute;
-  left: 50%;
+  left: 0;
   top: 3.7125rem;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
+  /*-webkit-transform: translateX(-50%);*/
+  /*-ms-transform: translateX(-50%);*/
+  /*-o-transform: translateX(-50%);*/
+  /*transform: translateX(-50%);*/
   /* height: 9.375rem; */
   background: rgba(64, 145, 255, 0.5);
   z-index: 1;

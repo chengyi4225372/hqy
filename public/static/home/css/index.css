@@ -404,12 +404,12 @@ body {
 /* 次级菜单 */
 .secondary-menu {
   position: absolute;
-  left: 50%;
+  left: 0;
   top: 6.4125rem;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-       -o-transform: translateX(-50%);
-          transform: translateX(-50%);
+  /*-webkit-transform: translateX(-50%);*/
+  /*    -ms-transform: translateX(-50%);*/
+  /*     -o-transform: translateX(-50%);*/
+  /*        transform: translateX(-50%);*/
   background: rgba(64, 145, 255, 0.5);
   z-index: -999;
   /* display: none; */

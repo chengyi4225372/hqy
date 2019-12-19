@@ -341,9 +341,9 @@ a {
 /* 次级菜单 */
 .secondary-menu {
     position: absolute;
-    left: 50%;
+    left: 0;
     top: 3.7125rem;
-    transform: translateX(-50%);
+    /*transform: translateX(-50%);*/
     /* height: 9.375rem; */
     background: rgba(64, 145, 255, .5);
     z-index: 1;
