@@ -220,6 +220,11 @@ class Infosservice
              $page = 0;
          }
 
+         if($page >1){
+             $page = ($page -1) * $size;
+         }
+
+
          $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit($page,$size)->select();
          return $arr?$arr:'';
      }
@@ -320,8 +325,13 @@ class Infosservice
             $array['pid']    = 3;
             $array['auditing'] = 1;
         }
+
         if($page == ''|| $page == 1){
             $page = 0;
+        }
+
+        if($page >1){
+            $page = ($page -1) * $size;
         }
 
         $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit($page,$size)->select();
@@ -426,6 +436,10 @@ class Infosservice
         }
         if($page == ''|| $page == 1){
             $page = 0;
+        }
+
+        if($page >1){
+            $page = ($page -1) * $size;
         }
 
         $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit($page,$size)->select();
