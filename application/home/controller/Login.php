@@ -113,11 +113,16 @@ class Login extends BaseController
         $array['token'] = $token;
         $array['userType'] = $userType;
 
+        //todo 这个暂时先这样，后面还要改
+        $this->redirect($hlg_url.'/home/index/index?line='.$mobile.'&userType='.$userType.'&ttttt='.$token.'&location=yes');return;
         //请求惠灵工的页面的接口把用户信息带过去
         $res = curl_post($hlg_url.'/home/login/savetokens',$array);
+        //todo 这个暂时先这样，后面还要改
+
 
         //把手机号、token、用户类型存到【会找事】页面的cookie里面
         $res2 = curl_post($hzs_url.'/home/login/savetokens',$array);
+
         if(isset($_GET['msg4']) && !empty($_GET['msg4']) && $_GET['msg4'] !== 'undefined'){
             $this->redirect($_GET['msg4']);
         }

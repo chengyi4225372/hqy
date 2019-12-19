@@ -91,3 +91,75 @@
 [ 2019-12-18T18:02:57+08:00 ] 172.26.2.252 GET /home/index/index.html
 [ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[/opt/web/hqy_/application/home/controller/Index.php:352]
 >>>>>>> e5f361a4cfdca9e115e54c972426b485ea8d6118
+---------------------------------------------------------------
+[ 2019-12-18T13:52:41+00:00 ] 172.26.2.252 GET /
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:52:42+00:00 ] 172.26.2.252 GET /assets/dist/img/error.svg
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:52:44+00:00 ] 172.26.2.252 GET /assets/img/favicon.ico
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:06+00:00 ] 172.26.2.252 GET /
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:06+00:00 ] 172.26.2.252 GET /assets/dist/img/error.svg
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:06+00:00 ] 172.26.2.252 GET /assets/img/favicon.ico
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:27+00:00 ] 172.26.2.252 GET /
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:27+00:00 ] 172.26.2.252 GET /assets/dist/img/error.svg
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:27+00:00 ] 172.26.2.252 GET /assets/img/favicon.ico
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:44+00:00 ] 172.26.2.252 GET /
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:45+00:00 ] 172.26.2.252 GET /assets/dist/img/error.svg
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:45+00:00 ] 172.26.2.252 GET /assets/img/favicon.ico
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:53+00:00 ] 172.26.2.252 GET /
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:53+00:00 ] 172.26.2.252 GET /assets/dist/img/error.svg
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:54:53+00:00 ] 172.26.2.252 GET /assets/img/favicon.ico
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:55:55+00:00 ] 172.26.2.252 GET /
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:55:55+00:00 ] 172.26.2.252 GET /assets/dist/img/error.svg
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:55:55+00:00 ] 172.26.2.252 GET /assets/img/favicon.ico
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:56:44+00:00 ] 172.26.2.252 GET /
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:56:45+00:00 ] 172.26.2.252 GET /assets/dist/img/error.svg
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:56:45+00:00 ] 172.26.2.252 GET /assets/img/favicon.ico
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:57:08+00:00 ] 172.26.2.252 GET /
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:57:09+00:00 ] 172.26.2.252 GET /assets/dist/img/error.svg
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
+---------------------------------------------------------------
+[ 2019-12-18T13:57:09+00:00 ] 172.26.2.252 GET /assets/img/favicon.ico
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[/opt/web/hqy_/application/extra/curl.php:15]
