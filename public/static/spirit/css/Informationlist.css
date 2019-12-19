@@ -125,7 +125,11 @@ a {
 ::-webkit-input-placeholder {
   /* WebKit browsers */
   font-size: 1rem;
+<<<<<<< HEAD
+  font-family: "Noto Sans SC";
+=======
   font-family: Microsoft YaHei;
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   font-weight: 400;
   color: #e0e0e0;
 }
@@ -133,7 +137,11 @@ a {
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   font-size: 1rem;
+<<<<<<< HEAD
+  font-family: "Noto Sans SC";
+=======
   font-family: Microsoft YaHei;
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   font-weight: 400;
   color: #e0e0e0;
 }
@@ -141,7 +149,11 @@ a {
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   font-size: 1rem;
+<<<<<<< HEAD
+  font-family: "Noto Sans SC";
+=======
   font-family: Microsoft YaHei;
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   font-weight: 400;
   color: #e0e0e0;
 }
@@ -149,7 +161,11 @@ a {
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
   font-size: 1rem;
+<<<<<<< HEAD
+  font-family: "Noto Sans SC";
+=======
   font-family: Microsoft YaHei;
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   font-weight: 400;
   color: #e0e0e0 !important;
 }
@@ -238,8 +254,13 @@ a {
 
 .titile li:nth-of-type(1) a {
   font-size: 1rem;
+<<<<<<< HEAD
+  font-family: "Noto Sans SC";
+  font-weight: bold;
+=======
   font-family: Microsoft YaHei;
   font-weight: 400;
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   color: #fff;
 }
 
@@ -259,7 +280,11 @@ a {
   /* padding:0 28px; */
   font-size: 1rem;
   font-family: "Noto Sans SC";
+<<<<<<< HEAD
+  font-weight: bold;
+=======
   font-weight: 400;
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   color: #fff;
   text-decoration: none;
 }
@@ -290,7 +315,11 @@ a {
 .header_content .titile .nav-active>a {
   position: relative;
   font-size: 1rem;
+<<<<<<< HEAD
+  font-weight: bold;
+=======
   font-weight: 500;
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   color: #006ebc;
 }
 
@@ -455,7 +484,11 @@ a {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 0.875rem;
+<<<<<<< HEAD
+  font-family: "PingFang SC", "Noto Sans SC", "微软雅黑";
+=======
   font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   font-weight: 500;
   color: #333333;
   background: white;
@@ -642,6 +675,18 @@ a {
           border-radius: .1875rem; }
 
 .search-box input {
+<<<<<<< HEAD
+          width: 13.75rem;
+          height: 2rem;
+          padding: 0;
+          padding-left: 1.5rem;
+          background: #f6f6f6;
+          -webkit-border-radius: .1875rem 0px 0px .1875rem;
+          border-radius: .1875rem 0px 0px .1875rem;      
+        
+        
+        }
+=======
   width: 13.75rem;
   height: 2rem;
   padding: 0;
@@ -649,6 +694,7 @@ a {
   background: #f6f6f6;
   -webkit-border-radius: .1875rem 0px 0px .1875rem;
           border-radius: .1875rem 0px 0px .1875rem; }
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 
 /* .search-box>div::after {
     content: '';
@@ -756,6 +802,20 @@ a {
   display: none;
   position: absolute;
   color: #fff;
+<<<<<<< HEAD
+  top: .3rem;
+  right: .375rem;
+  /* -webkit-transition: all .8s;
+  -o-transition: all .8s;
+  transition: all .8s;  */
+}
+
+/* .hotWord ul li .close:hover {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+          transform: rotate(360deg); } */
+=======
   top: .3125rem;
   right: .375rem;
   -webkit-transition: all .8s;
@@ -767,6 +827,7 @@ a {
       -ms-transform: rotate(360deg);
        -o-transform: rotate(360deg);
           transform: rotate(360deg); }
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 
 
 
@@ -883,7 +944,11 @@ a {
 .tabs-items-content-title {
   height: 1.125rem;
   font-size: 1.125rem;
+<<<<<<< HEAD
+  font-family: "Noto Sans SC";
+=======
   font-family: Source Han Sans CN;
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   font-weight: 400;
   color: #19263c;
   padding-top: 0.8125rem;
@@ -1079,6 +1144,14 @@ a {
   line-height: 1.125rem;
   font-weight: 500;
   color: #333;
+<<<<<<< HEAD
+
+  width: 22.1875rem;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+=======
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 }
 
 .infoRight .itemTime {

@@ -251,6 +251,32 @@
                     </div>
                 </div>
 
+<<<<<<< HEAD
+
+                <div class='zhaoTotalInfo'>
+                    <div class='totalInfo_title'>招标信息</div>
+                    {empty name='biao'}
+                    <p>抱歉，没有找到相关的信息</p>
+                    {else /}
+                    {volist name="biao" id="biaos" empty="没有更多内容"}
+                    <div class='totalInfo_content'>
+
+
+
+                        <a href="{:config('curl.website')}/home/index/detailbiao?mid={$biaos['id']}">
+                            <div class='zhao_contentInfo'>
+                                <div>{$biaos.title|default=''}</div>
+                                <div>
+                                    {$biaos.release_time}
+                                </div>
+                            </div>
+                            <div>
+                                {$biaos.describe}
+                            </div>
+                        </a>
+
+                    </div>
+=======
                 <div class='zhaomethods'>
                     <div class='totalInfo_title'>政府招商政策</div>
                     {empty name='shang'}
@@ -271,20 +297,54 @@
 
                     </div>
 
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                     {/volist}
                     {/empty}
 
 
+<<<<<<< HEAD
+                    {if count($biao) > 0}
+                    <div class="know_more_box">
+                        <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
+                            data-url="{:url('/home/index/infoBiao')}"
+                            loca_url="{:config('curl.website')}/home/index/infoBiao" login_url="{$baseurl}">了解更多
+=======
                     {if count($shang) > 0}
 
                     <div class='know_more_box'>
                         <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoList')}"
                             loca_url="{:config('curl.website')}/home/index/infoList" login_url="{$baseurl}">了解更多
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                         </button>
                     </div>
                     {/if}
 
+<<<<<<< HEAD
+
+                </div>
+
+                <div class='zhaomethods'>
+                    <div class='totalInfo_title'>政府招商政策</div>
+                    {empty name='shang'}
+                    <p>抱歉，没有找到相关的信息</p>
+                    {else /}
+                    {volist name="shang" id="item_list" empty="没有更多内容"}
+                    <div class='totalInfo_content'>
+                        <a
+                            href="{:config('curl.website')}/home/index/detailshang?mid={:isset($item_list['id']) ? $item_list['id'] : ''}">
+                            <div class='zhao_contentInfo'>
+                                <div>{:isset($item_list['title']) ? $item_list['title'] : ''}</div>
+                                <div>
+                                    {:isset($item_list['release_time']) ? $item_list['release_time'] : ''}
+                                </div>
+                            </div>
+                            <div>{:isset($item_list['describe']) ? $item_list['describe'] : ''}</div>
+                        </a>
+
+                    </div>
+
+=======
                 </div>
 
                 <div class='zhaoTotalInfo'>
@@ -310,21 +370,39 @@
                         </a>
 
                     </div>
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                     {/volist}
                     {/empty}
 
 
+<<<<<<< HEAD
+                    {if count($shang) > 0}
+
+                    <div class='know_more_box'>
+                        <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
+                            data-url="{:url('/home/index/infoList')}"
+                            loca_url="{:config('curl.website')}/home/index/infoList" login_url="{$baseurl}">了解更多
+=======
                     {if count($biao) > 0}
                     <div class="know_more_box">
                         <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoBiao')}"
                             loca_url="{:config('curl.website')}/home/index/infoBiao" login_url="{$baseurl}">了解更多
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                         </button>
                     </div>
                     {/if}
 
+<<<<<<< HEAD
+                </div>
+
+
+                
+
+=======
 
                 </div>
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 
             </div>
         </div>
