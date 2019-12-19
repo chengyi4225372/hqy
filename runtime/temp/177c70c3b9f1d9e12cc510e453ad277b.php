@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1576744025;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576744911;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1576744025;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576745469;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -425,26 +425,15 @@
                     <dl>
                         <dt>资讯信息</dt>
                         <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
-<<<<<<< HEAD
 
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
-
-                        <dd><a href="<?php echo url('/home/index/infoList'); ?>">招商政策</a></dd>
-
-=======
-                        <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
->>>>>>> 8285d8550b14bac5d6f3904dbb27acc4748bb8f7
+                        
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
-<<<<<<< HEAD
 
                         <dd><a href="javascript:;">招募合伙人</a></dd>
-
-=======
-                        <dd><a href="javascript:;">招募合伙人</a></dd>
->>>>>>> 8285d8550b14bac5d6f3904dbb27acc4748bb8f7
                     </dl>
                     <dl>
                         <dt>联系我们</dt>
