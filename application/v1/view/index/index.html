@@ -1,0 +1,60 @@
+{extend name="layout/default" /}
+{block name='content'}
+    <!-- Main content -->
+    <section class="content">
+        <div class="box box-default color-palette-box" style="min-height:700px;">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
+                        <a href="{:url('/v1/protuct/protucts/index')}">
+                            <div class="info-box-content">
+                                <span class="info-box-text"><h2>共享产品</h2></span>
+                                <span class="info-box-number"><h2>{$pro_count}</h2></span>
+                            </div>
+                        </a>
+
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
+
+                        <a href="{:url('/v1/info/infos/index')}">
+                            <div class="info-box-content">
+                                <span class="info-box-text"><h2>招标信息</h2></span>
+                                <span class="info-box-number"><h2>{$info_count}</h2></span>
+                            </div>
+                        </a>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+
+                <!-- fix for small devices only -->
+                <div class="clearfix visible-sm-block"></div>
+
+                <!-- /.col -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+
+                        <a href="{:url('/v1/users/user/index')}">
+                            <div class="info-box-content">
+                                <span class="info-box-text"><h2>用户信息</h2></span>
+                                <span class="info-box-number"><h2>{$user_count}</h2></span>
+                            </div>
+                        </a>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </div>
+    </section>
+{/block}

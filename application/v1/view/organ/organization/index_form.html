@@ -1,0 +1,38 @@
+<form class="form-inline"  id="form">
+
+    <div class="panel panel-default panel-btn">
+        <div class="panel-heading">
+            <div class="form-group">
+                <label>状态：</label>
+                <select class="form-control" name="status">
+                    <option value="">请选择</option>
+                    <option value="1" {if $params['status'] == 1}selected='selected'{/if}>启用</option>
+                    <option value="0" {if $params['status'] == 0}selected='selected'{/if}>禁用</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>是否绑定账号：</label>
+                <select class="form-control" name="binding">
+                    <option value="">请选择</option>
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="text"  class="form-control" name="user_name" value=" {if isset($params['user_name'])}{$params['user_name']}{/if}"  placeholder="多姓名搜索(空格逗号隔开)">
+            </div>
+
+            <div class="form-group">
+                <input type="text"  class="form-control" name="account" value=""  placeholder="多帐号搜索(逗号隔开)">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-info" id="btn_search" type="Submit"  data-url="{:url('v1/organization/index')}"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+            </div>
+        </div>
+    </div>
+    <br>
+</form>
+

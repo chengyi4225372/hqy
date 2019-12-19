@@ -1,0 +1,81 @@
+{extend name="layout/default" /}
+{block name='content'}
+<div class="content" style="margin-bottom:0px;min-height:0px;">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline">
+                <div class="panel panel-default panel-btn">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <input type="text"  class="form-control" name="names" id="names" value="{$Think.get.names}" placeholder="请输入产品名称搜索...">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-info" id="btn_search_protuct" type="button"  data-url="{:url('/v1/protuct/protucts/index')}"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+        <div class="box-header with-border">
+            <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn bg-purple btn-sm btn-dialog" id="addprotuct"
+                    data-url="{:url('/v1/protuct/protucts/add')}">
+                <i class="fa fa-plus-circle">添加</i></button>
+        </div>
+        <div class="box-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <th class="td-align td-width-40px">
+                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/><span></span>
+                </th>
+                <th class="text-center">产品名称</th>
+                <th class="text-center">产品图</th>
+                <th class="text-center">产品描述</th>
+                <th class="text-center">链接地址</th>
+                <th class="text-center">状态</th>
+                <th class="text-center">操作</th>
+                </thead>
+                <tbody>
+               {volist name='list' id='vo'}
+                <tr>
+                    <td class="td-align td-padding">
+                        <input type="checkbox" name="box_checked" data-id="{$vo.id}" class="data-check_box">
+                    </td>
+                    <td class="text-center">{$vo.names}</td>
+                    <td class="text-center">
+                        <a href="{$vo.imgs}">
+                        <img src="{$vo.imgs}" style="width: 90px;height: 90px;">
+                        </a>
+                    </td>
+                    <td class="text-center">{$vo.desc|default=''}</td>
+                    <td class="text-center">{$vo.purl|default=''}</td>
+                    <td class="text-center">
+                        {if condition="$vo.status eq 1"}
+                        <span class="btn btn-success">正常</span>
+                        {else /}
+                        <span class="btn btn-danger">禁用</span>
+                        {/if}
+                    </td>
+
+                    <td class="text-center">
+                        <a  class="btn btn-info edit-protuct" data-url="{:url('/v1/protuct/protucts/edit',['id'=>$vo.id])}">编辑</a>
+                    </td>
+                </tr>
+                {/volist}
+                </tbody>
+            </table>
+            <div class="pages"></div>
+        </div>
+    </div>
+
+</section>
+{/block}

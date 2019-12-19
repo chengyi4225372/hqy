@@ -1,0 +1,393 @@
+﻿
+用户个体信息提交:
+/user/info/geti
+user_id_check 用户ID
+token_check 用户TOKEN
+name     名称
+zhusuo     企业住所
+jingying   经营地
+youbian   邮编
+shouji   联系电话
+zhiben   注册资本（万元）   数字
+leixing   企业类型
+hesuan   核算方式  0独立核算   1非独立核算
+renshu  从业人数
+hangye  行业类型
+fanwen  经营范围
+hehuo 合伙人
+    hehuoren_name  合伙人名字
+    hehuoren_code  合伙人身份证号
+返回：
+
+用户充值记录：
+/user/pay_log/index
+user_id_check 用户ID
+token_check 用户TOKEN
+page  页数
+返回：
+
+工作详情添加：
+/user/user_person_des/add
+user_id_check 用户ID
+token_check 用户TOKEN
+name 工作名称
+type 工作类型
+link 工作链接
+key   关键功能
+des 工作简介
+z  工作职责
+返回：
+
+工作详情修改：
+/user/user_person_des/edit
+user_id_check 用户ID
+token_check 用户TOKEN
+id  ID
+name 工作名称
+type 工作类型
+link 工作链接
+key   关键功能
+des 工作简介
+z  工作职责
+返回：
+
+工作详情删除：
+/user/user_person_des/del
+user_id_check 用户ID
+token_check 用户TOKEN
+id  ID
+返回：
+
+工作技能表添加：
+/user/user_person_ji/add
+user_id_check 用户ID
+token_check 用户TOKEN
+name 技能描述
+fen  评分
+返回：
+
+工作技能表修改：
+/user/user_person_ji/edit
+user_id_check 用户ID
+token_check 用户TOKEN
+id  ID
+name 技能描述
+fen  评分
+返回：
+
+工作技能表删除：
+/user/user_person_ji/del
+user_id_check 用户ID
+token_check 用户TOKEN
+id  ID
+返回：
+
+工作经历添加：
+/user/user_person_job/add
+user_id_check 用户ID
+token_check 用户TOKEN
+begin 开始时间 时间戳
+end 结束时间 时间戳
+company 公司名称
+job 职位名称
+des 介绍
+返回：
+
+工作经历修改：
+/user/user_person_job/edit
+user_id_check 用户ID
+token_check 用户TOKEN
+id  ID
+begin 开始时间 时间戳
+end 结束时间 时间戳
+company 公司名称
+job 职位名称
+des 介绍
+返回：
+
+工作经历删除：
+/user/user_person_job/del
+user_id_check 用户ID
+token_check 用户TOKEN
+id  ID
+返回：
+
+学习经历添加：
+/user/user_person_edu/add
+user_id_check 用户ID
+token_check 用户TOKEN
+begin 开始时间 时间戳
+end 结束时间 时间戳
+school 学校名称
+job 专业名称
+li   学历
+des  介绍
+返回：
+
+学习经历修改：
+/user/user_person_edu/edit
+user_id_check 用户ID
+token_check 用户TOKEN
+id  ID
+begin 开始时间 时间戳
+end 结束时间 时间戳
+school 学校名称
+job 专业名称
+li   学历
+des  介绍
+返回：
+
+学习经历删除：
+/user/user_person_edu/del
+user_id_check 用户ID
+token_check 用户TOKEN
+id  ID
+返回：
+
+企业用户需求支付成功：
+/user/goods/goodspay
+/user/goods/pay
+user_id_check 用户ID
+token_check 用户TOKEN
+id 需求ID
+返回：
+
+企业用户确认成果：
+/user/goods/pay
+user_id_check 用户ID
+token_check 用户TOKEN
+id 需求申请ID
+price  金额
+返回：
+
+个人申请列表：
+/user/goods_order/index
+user_id_check 用户ID
+token_check 用户TOKEN
+返回：
+
+个人申请详情：
+/user/goods_order/info
+user_id_check 用户ID
+token_check 用户TOKEN
+id goods_order_id
+返回：
+
+个人需求完成上传成果：
+/user/goods_order/ok/
+user_id_check 用户ID
+token_check 用户TOKEN
+id 需求申请ID
+over  完成效果预览  1.jpg,2.jpg,3.jpg
+source  成功稿件压缩包
+返回：
+
+企业需求选择接单用户：
+/user/goods/ok/
+user_id_check 用户ID
+token_check 用户TOKEN
+goods_id 需求ID
+order_id 申请ID  多选   2,5,7
+返回：
+
+前台需求列表：
+/index/goods/index
+titletype  类型 1兼职 2全职 3其它
+返回：
+
+前台需求详情：
+/index/goods/goodsinfo
+id
+返回：
+
+接单记录删除:
+/user/goods_order/del
+user_id_check 用户ID
+token_check 用户TOKEN
+id 申请ID
+返回：
+
+申请接单：
+/user/goods_order/add
+user_id_check 用户ID
+token_check 用户TOKEN
+goods_id 项目ID
+msg   申请理由
+file  申请作品预览  可选  1.jpg,2.jpg,3.jpg
+返回：
+
+是否申请过
+/user/goods_order/isadd
+user_id_check 用户ID
+token_check 用户TOKEN
+id 项目ID
+返回：
+
+文件上传：
+/user/api/file_upload
+/index/api/file_upload
+user_id_check 用户ID
+token_check 用户TOKEN
+file 上传文件名
+返回：
+
+需求列表：
+/user/goods/index
+user_id_check 用户ID
+token_check 用户TOKEN
+title  标题
+show  审核状态  0未审核  1已经审核
+pay 付款状态 0未支付 1已经支付
+suan 结算状态  0未结算 1已结算
+titletype  类型 1兼职 2全职 3其它
+pricetype  结算方式 1月结 2日结 3其它
+page  页数
+返回：
+
+需求附加文件删除：
+/user/goods/delfile
+user_id_check 用户ID
+token_check 用户TOKEN
+id 文件ID
+返回：
+
+需求删除：
+/user/goods/del
+user_id_check 用户ID
+token_check 用户TOKEN
+id 需求ID
+返回：
+
+需求修改：
+/user/goods/edit
+user_id_check 用户ID
+token_check 用户TOKEN
+id 需求ID
+
+需求查询：
+/user/goods/info
+user_id_check 用户ID
+token_check 用户TOKEN
+id 需求ID
+
+
+title 任务名称
+titletype  类型 1兼职 2全职 3其它
+price 项目金额
+pricetype  结算方式 1月结 2日结 3其它
+address 工作地点  XX省XX市XX区XX路1号门
+timeb 工作时间起
+timee 工作时间止
+des   详情
+返回：
+
+需求发布：
+/user/goods/add
+user_id_check 用户ID
+token_check 用户TOKEN
+title 任务名称
+titletype  类型 1兼职 2全职 3其它
+price 项目金额
+pricetype  结算方式 1月结 2日结 3其它
+address 工作地点  XX省XX市XX区XX路1号门
+timeb 工作时间起
+timee 工作时间止
+sort   分类
+des   详情
+返回：
+
+企业用户认证：
+/user/info/company
+user_id_check 用户ID
+token_check 用户TOKEN
+name 公司名称
+type  行业
+pic  营业执照
+pro  省
+city  市
+address 常用地址
+year  从业年限
+faren_name 法人名字
+faren_z 法人身份证正
+faren_f 法人身份证反
+返回：
+
+个人用户认证:
+/user/info/person
+user_id_check 用户ID
+token_check 用户TOKEN
+name 身份证名字
+code 身份证号码
+pic 身份证正面图片地址-上传接口
+picf 身份证反面图片地址-上传接口
+job       职业状态1   IT互联网
+jobname   职业状态2   JAVA工程师
+jtype 工作时间类型
+jtime 工作时间
+timelong 每周工作时长
+jobarea 工作区域
+jobaddress 工作地点
+money 日薪
+des   个人介绍   巴拉巴拉
+返回：
+
+用户基本信息修改：
+/user/info/edit
+user_id_check 用户ID
+token_check 用户TOKEN
+返回：
+
+用户资料修改：
+/user/info/edit
+user_id_check 用户ID
+token_check 用户TOKEN
+email 邮箱
+face    头像
+address  地址
+返回：
+
+用户密码修改：
+/user/info/editpassword
+user_id_check 用户ID
+token_check 用户TOKEN
+password 新密码
+返回：
+
+用户基本信息查询：
+/user/info/info
+user_id_check 用户ID
+token_check 用户TOKEN
+返回：
+
+用户密码找回：(先请求短信接口得到验证码)
+/index/api/getpwd
+code 短信验证码
+user_id 用户ID
+newpwd 新密码
+返回：
+
+用户退出登录：
+/index/api/loginout
+id 用户user_id
+token 用户TOKEN
+
+密码用户登录：
+/index/api/loginpassword
+phone 手机号码
+password 验证码
+返回：
+user_id 用户ID
+token   用户TOKEN
+
+手机号用户登录：
+/index/api/loginphone
+phone 手机号码
+smscode 验证码
+usertype 1个人 2企业
+返回：
+user_id 用户ID
+token   用户TOKEN
+
+短信验证码：
+/index/api/sms
+phone 手机号码

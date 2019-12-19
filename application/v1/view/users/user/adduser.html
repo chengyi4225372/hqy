@@ -1,0 +1,45 @@
+{extend name="layout/dialog" /}
+{block name='content'}
+<style>
+    .dialog-content{margin:20px;}
+    .dialog-footer{position:fixed;right:39%;top:82%}
+    .red-color{color:red;}
+</style>
+<div class="dialog-content">
+    <form class="form-horizontal dialog-form" id="form">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label"><span class="red-color">*</span>用户名称：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="username" name="username">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">密码：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="password" name="password" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tel" class="col-sm-3 control-label">电话：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="tel" class="form-control form-control-sm" name="tel" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mail" class="col-sm-3 control-label">邮箱：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="mail" class="form-control form-control-sm" name="mail" value=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="td-align dialog-footer">
+            <button class="btn btn-warning" onclick="admin_module.cancel_btn()"> <i class="fa fa-close"></i> 取消</button>
+            <input type="hidden" name="is_add" value="1">
+            <button class="btn btn-primary" type="button" onclick="admin_module.user_add(this)" data-url="{:url('/v1/users/user/adduser')}"><i class="fa fa-save"></i> 确定提交</button>
+        </div>
+    </form>
+</div>
+{/block}

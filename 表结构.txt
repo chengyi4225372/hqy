@@ -1,0 +1,167 @@
+
+user_geti
+id
+user_id
+name     名称
+zhusuo     企业住所
+jingying   经营地
+youbian   邮编
+shouji   联系电话
+zhiben   注册资本（万元）
+leixing   企业类型
+hesuan   核算方式  0独立核算   1非独立核算
+renshu  从业人数
+hangye  行业类型
+fanwen  经营范围
+faren_name  法人名字
+faren_code  法人证件号码
+state   0未审核   1已经审核
+
+user_geti_hehuoren
+id
+geti_id
+name     名字
+code     号码
+
+account 用户账户表
+id
+uid   用户ID
+amount   金额
+last_time 最后时间
+
+bill_log 开票记录
+id
+uid 用户
+price 面额
+apptime 申请开票时间
+opentime 开票时间
+isbill  是否开票
+
+invest_log 充值记录
+id
+uid 用户
+price 面额
+time 申请开票时间
+isbill 是否开票
+
+user 用户表
+id
+phone 手机
+email 邮箱
+password 密码
+token token
+smscode 短信验证
+face    头像
+address  地址
+usertype 用户类型 0未知 1个人 2企业
+userstate 认证状态 0未认证 1已认证
+
+user_person 个人表
+id
+user_id
+name 名称
+code 身份证号码
+pic  身份证正面图片
+picf  身份证反面图片
+job       职业状态1
+jobname   职业状态2
+jtype 工作时间类型
+jtime 工作时间
+timelong 每周工作时长
+jobarea 工作区域
+jobaddress 工作地点
+money 日薪
+des   个人介绍
+state 状态 0未审核 1已经审核
+
+user_person_ji 技能表
+id
+user_id
+name 技能描述
+fen  评分
+
+user_person_des 工作详情
+id
+user_id
+name 工作名称
+type 工作类型
+link 工作链接
+key   关键功能
+des 工作简介
+z  工作职责
+
+user_person_job 工作表
+id
+user_id
+begin 开始时间 时间戳
+end 结束时间 时间戳
+company 公司名称
+job 职位名称
+des 介绍
+
+user_person_edu  学校表
+id
+user_id
+begin 开始时间 时间戳
+end 结束时间 时间戳
+school 学校名称
+job 专业名称
+li   学历
+des  介绍
+
+user_company 企业表
+id
+user_id
+company 公司名称
+type    行业
+pic  营业执照
+pro  省
+city  市
+address 常用地址
+year  从业年限
+faren_name 法人名字
+faren_z 法人身份证正
+faren_f 法人身份证反
+state 状态 0未审核 1已经审核
+
+filem 临时文件上传表
+id
+url   路径
+time  时间
+
+goods 项目
+id
+goodsid 订单编号
+user_id 用户ID
+title 任务名称
+titletype  类型 1兼职 2全职 3其它
+price 项目金额
+pricetype  结算方式 1月结 2日结 3其它
+address 工作地点  XX省XX市XX区XX路1号门
+timeb 工作时间起
+timee 工作时间止
+sort   分类
+des   详情
+order_id 接单ID   单选 76  多选 1,3,8
+show  审核状态  0未审核  1已经审核
+pay 付款状态发布时的 0未支付 1已经支付
+suan 结算状态分给用户的  0未结算 1已结算（锁定）
+
+goods_order
+id
+goods_id 项目ID
+user_id  用户ID
+msg   申请理由
+file  申请作品预览  1.jpg,2.jpg,3.jpg
+over  完成效果预览  1.jpg,2.jpg,3.jpg
+source  成功稿件压缩包
+time  申请时间
+price 雇主分配金额
+pay   雇主支付状态   0未支付  1已支付
+state  状态 0正常  1锁定 雇主已选单（锁定）
+ok     完结状态  0未完结   1已完结
+
+goods_file 项目资料
+id
+goods_id
+url

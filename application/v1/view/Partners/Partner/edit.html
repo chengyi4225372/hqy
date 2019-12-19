@@ -1,0 +1,41 @@
+{extend name="layout/dialog" /}
+{block name='content'}
+<style>
+    .dialog-content{margin:20px;}
+    .dialog-footer{position:fixed;right:39%;top:82%}
+    .red-color{color:red;}
+</style>
+<div class="dialog-content">
+    <form class="form-horizontal dialog-form" id="form">
+        <div class="row">
+            <div class="col-md-9">
+
+                <div class="form-group">
+                    <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>产品图片：</label>
+                    <div class="col-sm-9">
+                        <input type="file"  onchange="upload_files()" style="display:none;" class="form-control form-control-sm" id="file">
+                        <img id="imgs" src="{$info.imgs|default='__PUBLIC__/default.png'}" style="width:90px;height:80px;">
+                        <input type="hidden" id="Images" value="{$info.imgs}">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="url" class="col-sm-3 control-label">跳转地址：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="iurl" class="form-control form-control-sm"  value="{$info.iurl}"/>
+                    </div>
+                </div>
+
+                <input type="hidden" id="mid" value="{$info.id}">
+
+
+            </div>
+        </div>
+        <div class="td-align dialog-footer">
+            <button class="btn btn-primary editpartners" type="button"   data-url="{:url('/v1/partners/partner/edit')}"><i class="fa fa-save"></i> 确定提交</button>
+            <button class="btn btn-warning cancle" > <i class="fa fa-close"></i> 取消</button>
+        </div>
+    </form>
+</div>
+{/block}

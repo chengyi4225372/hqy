@@ -1,0 +1,52 @@
+{extend name="layout/default" /}
+{block name='content'}
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+        <div class="box-header with-border">
+            <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn bg-purple btn-sm btn-dialog"
+                    id="addsitesetting" data-url="{:url('/v1/systematic/system/addsitesetting')}">
+                <i class="fa fa-plus-circle">添加网站设置</i></button>
+        </div>
+        <div class="box-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <th class="td-align td-width-40px">
+                    <input class="data-check_box_total" onclick="admin_module.check_out(this)" type="checkbox"/>
+                </th>
+                <th class="text-center">网站名称</th>
+                <th class="text-center">固定电话</th>
+                <th class="text-center">地址</th>
+                <th class="text-center">ICP备案号</th>
+                <th class="text-center">邮箱</th>
+                <th class="text-center">状态</th>
+                <th class="text-center">操作</th>
+                </thead>
+                <tbody>
+                {volist name="data_list" id="list"}
+                <tr>
+                    <td class="td-align td-padding">
+                        <input type="checkbox" name="box_checked" data-id="{$list['id']}" class="data-check_box">
+                    </td>
+                    <td class="text-center">{$list['title']}</td>
+                    <td class="text-center">{$list['tel']}</td>
+                    <td class="text-center">{$list['count_code']}</td>
+                    <td class="text-center">{$list['icp']}</td>
+                    <td class="text-center">{$list['mail']}</td>
+                    <td class="text-center">
+                        <span class="btn {if $list['status'] == 1}btn-success{else/}btn-danger{/if}">{$status[$list['status']]}</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="javascript:void(0)" class="btn btn-info" data-url="{:url('/v1/systematic/system/editsetting',['id' => $list['id']])}" data-id="" onclick="admin_module.edit_setting(this)">编辑</a>
+                    </td>
+                </tr>
+                {/volist}
+                </tbody>
+            </table>
+            <div class="pages"></div>
+        </div>
+    </div>
+
+</section>
+{/block}

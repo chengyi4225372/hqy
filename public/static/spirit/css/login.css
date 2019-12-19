@@ -1,0 +1,613 @@
+.w {
+    width: 75rem;
+    margin: 0 auto;
+}
+
+/* 浮动 */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* 清除浮动 */
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* 分成120等分 */
+html {
+    font-size: 16px;
+}
+
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 6.66666666666667px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+        font-size: 8.53333333333333px;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    html {
+        font-size: 9.58333333333333px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    html {
+        font-size: 10.6666666666667px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    html {
+        font-size: 11.38333333333333px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    html {
+        font-size: 13.3333333333px;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    margin: 0
+}
+
+ul,
+li,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+select {
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    border: solid 1px #DDD;
+
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("../images/selectimg.png") no-repeat scroll right center transparent;
+    background-size: 16px 10px;
+
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 20px;
+    padding-left: 5px;
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand {
+    display: none;
+}
+
+input,
+button,
+textarea {
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: 0;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.login_header {
+    /* position:relative; */
+    width: 100%;
+    height: 67.5rem;
+    background-size: 100% 100%;
+
+}
+
+.header {
+    /* position:absolute;
+    top:0;
+    left:0; */
+    width: 100%;
+    height: 6.25rem;
+    background: rgba(255, 255, 255, 1);
+}
+
+
+.header_content {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    padding: 1.625rem 0 0 0px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 75rem;
+    height: 6.25rem;
+}
+
+.header_content .logo {
+    width: 12rem;
+    height: 3.25rem;
+    background-image: url('../images/logo22.png');
+    background-size: 100% 100%;
+}
+
+.header_content .logo a {
+    display: block;
+    width: 100%;
+    /*height: 100%;*/
+}
+
+.header_content .a_href {
+    padding-top: 1.625rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.header_content .a_href a {
+    font-size: 1rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(68, 139, 255, 1);
+}
+
+.login_content {
+    width: 100%;
+    height: 61.25rem;
+    /* background-image: url('../images/login.jpg');
+    background-size: 100% 100%; */
+    background: url('../images/login.jpg') no-repeat 100% 100%;
+}
+
+.login_xin {
+    width: 40rem;
+    height: 43.75rem;
+    margin: 0 auto;
+    padding-top: 5.625rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.login_box {
+    width: 40rem;
+    height: 43.75rem;
+    /* padding: .625rem 4.125rem 0 4.125rem; */
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: -webkit-box;
+    /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: -0.125rem 0px 0.625rem 0px rgba(44, 44, 44, 0.1);
+    border-radius: .25rem;
+    /* padding: 59px 130px 56px 130px; */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.login_box .login_title {
+    width: 21.75rem;
+    height: 5.25rem;
+    font-size: 1.5rem;
+    background: url('../images/biaodanbeijing.png') no-repeat;
+    margin: 0 auto;
+    transform: translateY(-29%);
+    font-family: "Microsoft YaHei", "微软雅黑";
+    font-weight: 400;
+    line-height: 5.25rem;
+
+    /* color: rgba(47, 128, 237, 1); */
+    color: #fff;
+    text-align: center;
+}
+
+.change_style {
+    /* margin: 45px 77px 91px 75px; */
+    margin-top: 6.25rem;
+
+}
+
+.account {
+    color: rgba(153, 153, 153, 1);
+}
+
+.account_login {
+    width: 6rem;
+    height: 1.5rem;
+    font-size: 1.125rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(50, 50, 50, 1);
+    margin-right: 1.875rem;
+    cursor: pointer;
+}
+
+
+.ge {
+    display: inline-block;
+    width: .125rem;
+    height: 1rem;
+    margin-bottom: -0.125rem;
+    background: rgba(77, 77, 77, 1);
+}
+
+.phone {
+    width: 6rem;
+    height: 1.5rem;
+    font-size: 1.125rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(50, 50, 50, 1);
+    margin-left: 1.875rem;
+    cursor: pointer;
+}
+
+.active {
+    color: rgba(47, 128, 237, 1);
+}
+
+.user_info {
+    position: relative;
+    margin-top: 5.6875rem;
+}
+
+.phone_user {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+
+.phone_user:nth-child(1) {
+    display: none;
+}
+
+.phone_box,
+.code_box {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    width: 26.25rem;
+    height: 3rem;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(194, 194, 194, 1);
+    border-radius: .125rem;
+    line-height: 3rem;
+    padding-right: 1px;
+}
+
+.select {
+    position: relative;
+    width: 4.625rem;
+    height: 3rem;
+    outline: none;
+    border: none;
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    padding-left: .9375rem;
+    vertical-align: top;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.phone_box i,
+.code_box i {
+    width: .125rem;
+    height: 1.25rem;
+    background: rgba(0, 0, 0, .2);
+}
+
+.phone_input {
+    position: relative;
+    height: 2.675rem;
+    flex: 1;
+    padding-left: .9375rem;
+    font-size: 1rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+}
+
+.code_box {
+    margin-top: 2.625rem;
+}
+
+.code_input {
+    position: relative;
+    font-size: 1rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    padding-left: 1.0625rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 13rem;
+    height: 97%;
+}
+
+
+.huo_code {
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(47, 128, 237, 1);
+    line-height: 1.875rem;
+    margin-left: 3.875rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.goRegister {
+    margin-top: 1.5625rem;
+    text-align: right;
+    font-size: .875rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+}
+
+.phone_user button {
+    width: 20rem;
+    height: 3.5rem;
+    background: linear-gradient(90deg, rgba(124, 219, 249, 1), rgba(47, 128, 237, 1));
+    opacity: 0.96;
+    border-radius: .25rem;
+    border: none;
+    outline: none;
+    margin-left: 3.125rem;
+    margin-top: 6.25rem;
+    font-size: 1.25rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+
+}
+
+.goRegister a {
+    font-size: .875rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #2F80ED
+}
+
+/* 账号登陆 */
+.accout_name,
+.password {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    width: 26.25rem;
+    height: 3.125rem;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(194, 194, 194, 1);
+    border-radius: .125rem;
+    padding-left: .9375rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.userName,
+.u_pass {
+    position: relative;
+    display: inline-block;
+    width: 5.9375rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+}
+
+.userName::after,
+.u_pass::after {
+    position: absolute;
+    right: 0;
+    top: .875rem;
+    content: '';
+    width: .125rem;
+    height: 1.25rem;
+    background: rgba(0, 0, 0, .2);
+}
+
+.accout_input,
+.pass_input {
+    width: 19.1125rem;
+    height: 97%;
+    padding-left: 1rem;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    border: none;
+    outline: none;
+}
+
+.password {
+    margin-top: 2.625rem;
+}
+
+/* 下拉框 */
+.phone_box {
+    /* position: relative; */
+}
+
+#main {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    position: relative;
+    width: 6.25rem;
+    margin-right: .625rem;
+}
+
+#content {
+    padding-left: .625rem;
+    background: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-family: MicrosoftYaHei;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+
+#selectImg {
+    position: absolute;
+    bottom: 0;
+    right: .625rem;
+    cursor: pointer;
+}
+
+#selectItem {
+    display: none;
+    border: 1px solid #eee;
+}
+
+#selectItem ul {
+    list-style: none;
+}
+
+#selectItem ul li {
+    height: 1.875rem;
+    line-height: 1.875rem;
+    padding-left: .625rem;
+    cursor: pointer;
+}
+
+#selectItem ul li:hover {
+    background-color: #f5f7fa;
+}

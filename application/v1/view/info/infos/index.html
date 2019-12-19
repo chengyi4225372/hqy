@@ -1,0 +1,130 @@
+{extend name="layout/default" /}
+{block name='content'}
+<div class="content" style="margin-bottom:0px;min-height:0px;">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="form-inline"  id="form">
+                <div class="panel panel-default panel-btn">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                <select class="selectpicker show-tick" title="" id="searchField" name="searchField"
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" {if $params['searchField'] == 1}selected='selected'{/if}>新闻标题</option>
+                                    <option value="2" {if $params['searchField'] == 2}selected='selected'{/if}>新闻关键字</option>
+                                    <option value="3" {if $params['searchField'] == 3}selected='selected'{/if}>新闻描述</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" style="width:248px;" type="text" value="{$params['searchValue']}" name="searchValue" id="searchValue" placeholder="多个关键字用空格或逗号隔开">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <label for="category" class="control-label">所属分类：</label>
+                            </div>
+                            <div class="col-sm-7">
+                                <select class="selectpicker show-tick" title="" id="category" name="category "
+                                        data-live-search="true">
+                                    <option value="">全部</option>
+                                    <option value="1" {if $params['category'] == 1}selected='selected'{/if}>招标信息</option>
+                                    <option value="2" {if $params['category'] == 2}selected='selected'{/if}>招商信息</option>
+                                    <option value="3" {if $params['category'] == 3}selected='selected'{/if}>行业资讯</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-info" id="btn_search" type="button"  data-url="{:url('/v1/info/infos/index')}"><i class="glyphicon glyphicon-search" aria-hidden="true"></i>搜索</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+        <div class="box-header with-border">
+            <button type="button" class="btn btn-sm btn-refresh"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn bg-purple btn-sm btn-dialog"
+                    id="infosadd" data-url="{:url('/v1/info/infos/infosadd')}">
+                <i class="fa fa-plus-circle">添加</i></button>
+        </div>
+        <div class="box-body">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <!--<th class="text-center" style="width:5%;">排序</th>-->
+                <th class="text-center" style="width:5%;">所属分类</th>
+                <th class="text-center">展示图</th>
+                <th class="text-center" style="width:21%">新闻标题</th>
+                <th class="text-center" style="width:21%">新闻关键字</th>
+                <th class="text-center">新闻描述</th>
+                <th class="text-center">创建时间</th>
+                <th class="text-center">操作</th>
+                </thead>
+                <tbody>
+
+            {volist name='list' id='vo'}
+                <tr>
+<!--                    <td class="text-center">
+                        <input class="form-control form-control-sm" type="number" value="{$vo.sort}"  onblur="admin_module.change_sort(this)" data-url="{:url('/v1/info/infos/changesort')}" data="{$vo.id}">
+                    </td>-->
+                    <td class="text-center">
+                     {if condition ="$vo.pid eq 1"}
+                        招标信息
+                       {elseif condition="$vo.pid eq 2" /}
+                        招商信息
+                       {else /}
+                        行业资讯
+                      {/if}
+                    </td>
+                    <td class="text-center">
+                        <a href="javascript:void(0)" class="skuimg" bigsrc="{$vo.imgs}">
+                            <img src="{$vo.imgs}"  style="width:150px;height:60px;"/>
+                        </a>
+
+                    </td>
+                    <td class="text-center">{$vo.title}</td>
+                    <td class="text-center">{$vo.keyword}</td>
+                    <td class="text-center">
+                        <textarea rows="6" cols="30">{$vo.describe}</textarea>
+                    </td>
+                    <td class="text-center">{$vo.release_time}</td>
+
+                    <td class="text-center">
+                        <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="{:url('/v1/info/infos/infosEdit',['id'=>$vo.id])}">编辑</a>
+
+                        <a  class="btn btn-danger infos_del" data-url="{:url('/v1/info/infos/infoDels',['id'=>$vo.id])}">删除</a>
+
+
+                        {if $vo['auditing'] == 1}
+                        <a class="btn btn-success" onclick="admin_module.auditing(this)" data="2" data-url="{:url('/v1/info/infos/auditing')}" data-id="{$vo['id']}">{$audit[$vo['auditing']]}</a>
+                        {else/}
+                        <a class="btn btn-warning" onclick="admin_module.auditing(this)" data="1" data-url="{:url('/v1/info/infos/auditing')}" data-id="{$vo['id']}">{$audit[$vo['auditing']]}</a>
+                        {/if}
+
+
+
+                    </td>
+
+                </tr>
+           {/volist}
+                </tbody>
+            </table>
+            <div class="pages">{$list->render();}</div>
+        </div>
+    </div>
+
+</section>
+{/block}
+
+
+
+
+
