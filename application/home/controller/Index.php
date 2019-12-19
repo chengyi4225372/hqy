@@ -84,11 +84,7 @@ class Index extends BaseController
      */
     public function infoList(){
        if($this->request->isGet()){
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 8285d8550b14bac5d6f3904dbb27acc4748bb8f7
 //           if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
 //               return $this->redirect('/home/index/index');
 //           }

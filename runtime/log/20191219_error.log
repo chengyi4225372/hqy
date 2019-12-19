@@ -588,3 +588,30 @@
 [ 2019-12-19T15:30:52+08:00 ] 127.0.0.1 GET /home/index/index.html
 [ error ] [0]语法解析错误: syntax error, unexpected 'else' (T_ELSE), expecting end of file[C:\phpEnv\www\hqy_\runtime\temp\fbb122d107cf217e139f476f3f293ba9.php:260]
 >>>>>>> 8285d8550b14bac5d6f3904dbb27acc4748bb8f7
+---------------------------------------------------------------
+[ 2019-12-19T16:42:19+08:00 ] 127.0.0.1 GET /
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\extra\curl.php:14]
+---------------------------------------------------------------
+[ 2019-12-19T16:42:19+08:00 ] 127.0.0.1 GET /assets/dist/img/error.svg
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\extra\curl.php:14]
+---------------------------------------------------------------
+[ 2019-12-19T16:42:19+08:00 ] 127.0.0.1 GET /assets/img/favicon.ico
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\extra\curl.php:14]
+---------------------------------------------------------------
+[ 2019-12-19T16:42:20+08:00 ] 127.0.0.1 GET /
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\extra\curl.php:14]
+---------------------------------------------------------------
+[ 2019-12-19T16:42:20+08:00 ] 127.0.0.1 GET /assets/dist/img/error.svg
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\extra\curl.php:14]
+---------------------------------------------------------------
+[ 2019-12-19T16:42:20+08:00 ] 127.0.0.1 GET /assets/img/favicon.ico
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\extra\curl.php:14]
+---------------------------------------------------------------
+[ 2019-12-19T16:42:20+08:00 ] 127.0.0.1 GET /
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\extra\curl.php:14]
+---------------------------------------------------------------
+[ 2019-12-19T16:42:20+08:00 ] 127.0.0.1 GET /assets/dist/img/error.svg
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\extra\curl.php:14]
+---------------------------------------------------------------
+[ 2019-12-19T16:42:20+08:00 ] 127.0.0.1 GET /assets/img/favicon.ico
+[ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\extra\curl.php:14]
