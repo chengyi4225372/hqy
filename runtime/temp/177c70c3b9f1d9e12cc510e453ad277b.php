@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1576675037;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576674561;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1576736545;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576736240;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,11 +18,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
     <link rel="stylesheet" href="/static/home/css/index.css">
     <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript" src="/static/spirit/js/jquery.js"></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/index.js'></script>
-    <script src='/static/home/js/common.js'></script>
     <script src='/static/common/js/public.js'></script>
+    <script src='/static/home/js/common.js'></script>
 
 </head>
 
@@ -78,7 +79,7 @@
 
                                     <div>
                                         <dl>
-                                            <dt><a href="<?php echo url('/home/optimal/cooperation'); ?>">惠优税</a></dt>
+                                            <dt><a href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
                                             <dd>
                                                 · 企税降成本 薪税降税负
 
@@ -86,7 +87,7 @@
                                             <dd>· 分红降扣率 创业降个税</dd>
                                         </dl>
                                         <dl>
-                                            <dt><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
+                                            <dt><a href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
                                             <dd>
                                                 · 寻求多样化用工模式
 
@@ -425,9 +426,9 @@
                         <dt>惠企云旗下产品</dt>
                         <dd><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dd>
                         <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
-                        <dd><a href="javascript:;">惠多薪</a></dd>
-                        <dd><a href="javascript:;">惠创业</a></dd>
-                        <dd><a href="javascript:;">惠找事</a></dd>
+                        <dd><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dd>
+                        <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
+                        <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
                     </dl>
                     <dl>
                         <dt>资讯信息</dt>

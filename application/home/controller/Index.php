@@ -17,7 +17,6 @@ class Index extends BaseController
 
     public function index()
     {
-
         //慧享产品
         $array = array('status' => '1');
         $protuct = Protuctservice::instance()->normal($array);
