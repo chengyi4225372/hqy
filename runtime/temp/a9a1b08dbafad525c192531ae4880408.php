@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:114:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\cate\ifications\index.html";i:1575017610;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\layout\default.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\header.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\left.html";i:1576584055;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\footer.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:114:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/v1\view\cate\ifications\index.html";i:1575017610;s:97:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\layout\default.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\meta.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\header.html";i:1576480524;s:94:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\left.html";i:1576658138;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\footer.html";i:1575017610;s:96:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\view\common\script.html";i:1575017610;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -225,7 +225,7 @@
 
                     <li class="<?php if($paths == '/v1/info/infos/index' || $paths == '/v1/cate/ifications/index'): ?>active<?php endif; ?>">
                         <a href="#">
-                            <i class="glyphicon glyphicon-th-large"></i> <span>招标、招商信息</span>
+                            <i class="glyphicon glyphicon-th-large"></i> <span>招标、招商信息，行业资讯</span>
                             <span class="pull-right-container">
                               <i class="fa fa-angle-left pull-right"></i>
                             </span>
@@ -235,7 +235,7 @@
                                 <a href="<?php echo url('/v1/cate/ifications/index'); ?>"><i class="fa fa-circle-o"></i>关键字标签列表</a>
                             </li>
                             <li class="<?php if($paths == '/v1/info/infos/index'): ?>active<?php endif; ?>">
-                                <a href="<?php echo url('/v1/info/infos/index'); ?>"><i class="fa fa-circle-o"></i>信息详情列表</a>
+                                <a href="<?php echo url('/v1/info/infos/index'); ?>"><i class="fa fa-circle-o"></i>新闻信息列表</a>
                             </li>
                         </ul>
                     </li>

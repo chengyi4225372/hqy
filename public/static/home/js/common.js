@@ -10,9 +10,9 @@ function checkPhone(phone) {
 
 var gurl = "http://47.105.48.137:8089";
 
+/** 提交公海 **/
 function getErp() {
     var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
-
     var data = {};
 
     data.contactName = $.trim($("#contactName").val());//联系姓名

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1576656992;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576656992;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1576656992;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576674561;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -284,7 +284,7 @@
                     <dl>
                         <dt>惠企云旗下产品</dt>
                         <dd><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dd>
-                        <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">惠优税</a></dd>
+                        <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
                         <dd><a href="javascript:;">惠多薪</a></dd>
                         <dd><a href="javascript:;">惠创业</a></dd>
                         <dd><a href="javascript:;">惠找事</a></dd>
