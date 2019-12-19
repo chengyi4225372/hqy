@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576673536;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576675178;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1576725810;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1576675178;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,7 +78,7 @@
 
                                     <div>
                                         <dl>
-                                            <dt><a href="<?php echo url('/home/optimal/cooperation'); ?>">惠优税</a></dt>
+                                            <dt><a href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
                                             <dd>
                                                 · 企税降成本 薪税降税负
 
@@ -86,7 +86,7 @@
                                             <dd>· 分红降扣率 创业降个税</dd>
                                         </dl>
                                         <dl>
-                                            <dt><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
+                                            <dt><a href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
                                             <dd>
                                                 · 寻求多样化用工模式
 
