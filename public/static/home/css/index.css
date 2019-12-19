@@ -230,13 +230,9 @@ body {
 
 .header_content .content_logo_two {
   /* height: 60px; */
-<<<<<<< HEAD
   width: 8.5rem;
   height: 2.125rem;
   margin-top: .9375rem;
-=======
-  margin-top: 0.5375rem;
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   background-image: url("../images/H_1.png"); }
 
 .header_content ul {
@@ -585,10 +581,7 @@ body {
 .chooseUs {
   min-width: 75rem;
   /* position:relative; */
-<<<<<<< HEAD
   padding-bottom: .625rem;
-=======
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   margin: 0 auto;
   height: 15.3125rem;
   background-color: #fff; }
@@ -598,27 +591,17 @@ body {
   height: 9.375rem; }
 
 .chooseUs .choose-title {
-<<<<<<< HEAD
   /* height: 7.9375rem;
   line-height: 7.9375rem;
   margin-bottom: 0.1875rem; */
   padding: 2.5rem 0 2.5rem 0;
-=======
-  height: 7.9375rem;
-  line-height: 7.9375rem;
-  margin-bottom: 0.1875rem;
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   font-size: 1.875rem;
   font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
   font-weight: 700;
   color: black; }
 
 .chooseUs .choose-intro {
-<<<<<<< HEAD
   width: 27rem;
-=======
-  width: 21.875rem;
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   /* height: 2.75rem; */
   line-height: 1.5rem;
   font-size: 1rem;
@@ -630,11 +613,7 @@ text-overflow: ellipsis;
 display: -webkit-box;
 -webkit-line-clamp: 4;
 -webkit-box-orient: vertical;
-<<<<<<< HEAD
 /* letter-spacing: -0.0625rem; */
-=======
-letter-spacing: -0.0625rem;
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 
 }
 
@@ -648,11 +627,7 @@ letter-spacing: -0.0625rem;
   text-align: center;
   float: left; }
 
-<<<<<<< HEAD
 /* .img_total:nth-of-type(1) img {
-=======
-.img_total:nth-of-type(1) img {
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   width: 3.875rem;
   height: 4.3125rem; }
 
@@ -662,11 +637,7 @@ letter-spacing: -0.0625rem;
 
 .img_total :nth-of-type(3) img {
   width: 4.375rem;
-<<<<<<< HEAD
   height: 3.75rem; } */
-=======
-  height: 3.75rem; }
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 
 .img_total > li > a {
   margin-top: 1rem;
@@ -680,13 +651,8 @@ letter-spacing: -0.0625rem;
 .img_total > li:nth-of-type(2) {
   margin: 0 11.25rem; }
 
-<<<<<<< HEAD
 /* .img_total > li:nth-of-type(3) {
   margin-top: 0.3125rem; } */
-=======
-.img_total > li:nth-of-type(3) {
-  margin-top: 0.3125rem; }
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 
 /* 慧想产品 */
 .hui_product {
@@ -1707,7 +1673,6 @@ border:none;
   width: 37.5rem;
   height: 35.625rem;
   z-index: 20000;
-<<<<<<< HEAD
   background-color: #ccc; 
 
 }
@@ -1716,31 +1681,18 @@ border:none;
   position: relative;
   /* width: 37.5rem; */
   width: 100%;
-=======
-  background-color: #ccc; }
-
-.propbox .title {
-  position: relative;
-  width: 37.5rem;
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
   text-align: center;
   line-height: 7.5rem;
   height: 7.5rem;
   font-size: 1.875rem;
   font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
   font-weight: 400;
-<<<<<<< HEAD
   /* background-image: url("../images/title.png");
   -webkit-background-size: 100% 100%;
           background-size: 100% 100%;  */
     background: url("../images/title.png") no-repeat;
     background-size:100%;
         }
-=======
-  background-image: url("../images/title.png");
-  -webkit-background-size: 100% 100%;
-          background-size: 100% 100%; }
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 
 .total-input {
   width: 37.5rem;

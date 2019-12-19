@@ -423,3 +423,30 @@
 [ 2019-12-19T14:44:10+08:00 ] 127.0.0.1 GET /assets/img/favicon.ico
 [ error ] [0]Parse error: syntax error, unexpected '<<' (T_SL), expecting ']'[C:\phpEnv\www\hqy_\application\extra\curl.php:14]
 >>>>>>> dbf9f79d80c42c0ba15931cfc931a9cdf1f6a90f
+---------------------------------------------------------------
+[ 2019-12-19T15:48:23+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:87]
+---------------------------------------------------------------
+[ 2019-12-19T15:48:25+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:87]
+---------------------------------------------------------------
+[ 2019-12-19T15:50:40+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:87]
+---------------------------------------------------------------
+[ 2019-12-19T15:50:41+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:87]
+---------------------------------------------------------------
+[ 2019-12-19T15:51:58+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:87]
+---------------------------------------------------------------
+[ 2019-12-19T15:51:59+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:87]
+---------------------------------------------------------------
+[ 2019-12-19T15:51:59+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:87]
+---------------------------------------------------------------
+[ 2019-12-19T15:52:00+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:87]
+---------------------------------------------------------------
+[ 2019-12-19T15:52:01+08:00 ] 127.0.0.1 GET /
+[ error ] [0]语法解析错误: syntax error, unexpected '<<' (T_SL)[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:87]

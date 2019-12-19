@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
     <link rel="stylesheet" href="__HOME__/css/index.css">
     <link rel="stylesheet" href="__PUBLIC__/assets/plugins/layui/css/layui.css">
-
-    <script type="text/javascript" src="__SPI__/js/jquery.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
     <script src='__HOME__/js/index.js'></script>
     <script src='__PUBLIC__/common/js/public.js'></script>
@@ -251,7 +250,6 @@
                     </div>
                 </div>
 
-<<<<<<< HEAD
 
                 <div class='zhaoTotalInfo'>
                     <div class='totalInfo_title'>招标信息</div>
@@ -276,51 +274,19 @@
                         </a>
 
                     </div>
-=======
-                <div class='zhaomethods'>
-                    <div class='totalInfo_title'>政府招商政策</div>
-                    {empty name='shang'}
-                    <p>抱歉，没有找到相关的信息</p>
-                    {else /}
-                    {volist name="shang" id="item_list" empty="没有更多内容"}
-                    <div class='totalInfo_content'>
-                        <a
-                            href="{:config('curl.website')}/home/index/detailshang?mid={:isset($item_list['id']) ? $item_list['id'] : ''}">
-                            <div class='zhao_contentInfo'>
-                                <div>{:isset($item_list['title']) ? $item_list['title'] : ''}</div>
-                                <div>
-                                    {:isset($item_list['release_time']) ? $item_list['release_time'] : ''}
-                                </div>
-                            </div>
-                            <div>{:isset($item_list['describe']) ? $item_list['describe'] : ''}</div>
-                        </a>
-
-                    </div>
-
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                     {/volist}
                     {/empty}
 
 
-<<<<<<< HEAD
                     {if count($biao) > 0}
                     <div class="know_more_box">
                         <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoBiao')}"
                             loca_url="{:config('curl.website')}/home/index/infoBiao" login_url="{$baseurl}">了解更多
-=======
-                    {if count($shang) > 0}
-
-                    <div class='know_more_box'>
-                        <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
-                            data-url="{:url('/home/index/infoList')}"
-                            loca_url="{:config('curl.website')}/home/index/infoList" login_url="{$baseurl}">了解更多
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                         </button>
                     </div>
                     {/if}
 
-<<<<<<< HEAD
 
                 </div>
 
@@ -344,65 +310,25 @@
 
                     </div>
 
-=======
-                </div>
-
-                <div class='zhaoTotalInfo'>
-                    <div class='totalInfo_title'>招标信息</div>
-                    {empty name='biao'}
-                    <p>抱歉，没有找到相关的信息</p>
-                    {else /}
-                    {volist name="biao" id="biaos" empty="没有更多内容"}
-                    <div class='totalInfo_content'>
-
-
-
-                        <a href="{:config('curl.website')}/home/index/detailbiao?mid={$biaos['id']}">
-                            <div class='zhao_contentInfo'>
-                                <div>{$biaos.title|default=''}</div>
-                                <div>
-                                    {$biaos.release_time}
-                                </div>
-                            </div>
-                            <div>
-                                {$biaos.describe}
-                            </div>
-                        </a>
-
-                    </div>
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                     {/volist}
                     {/empty}
 
 
-<<<<<<< HEAD
                     {if count($shang) > 0}
 
                     <div class='know_more_box'>
                         <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
                             data-url="{:url('/home/index/infoList')}"
                             loca_url="{:config('curl.website')}/home/index/infoList" login_url="{$baseurl}">了解更多
-=======
-                    {if count($biao) > 0}
-                    <div class="know_more_box">
-                        <button class='know_more' mobile-phone="{$userinfo['mobile']}" onclick="showUrl(this)"
-                            data-url="{:url('/home/index/infoBiao')}"
-                            loca_url="{:config('curl.website')}/home/index/infoBiao" login_url="{$baseurl}">了解更多
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                         </button>
                     </div>
                     {/if}
 
-<<<<<<< HEAD
                 </div>
 
 
                 
 
-=======
-
-                </div>
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 
             </div>
         </div>
@@ -413,20 +339,7 @@
     <ul class='success'>
         <div class='w success_content'>
             <div class='success_title'></div>
-
-            <!-- <div class='success_icon'>
-          {volist name="case_list" id="data_list"}
-          <div style="cursor:pointer;" onclick="click_show(this)" keys="{$key}" class="{$data_list['is_show'].$key}"
-            data="{$count}" data-attr="{$data_list['is_show']}">
-            <div class='{if $key == 1}hui_icon{else /}p_icon{/if}'>
-              <div>{$data_list['title2']}</div>
-              <div>{$data_list['title3']}</div>
-              
-            </div>
-          </div>
-          {/volist}
-
-        </div> -->
+            
             <!-- 惠家族产品介绍 -->
             <div class="bgProduct">
                 <ul class="produtionIntro">

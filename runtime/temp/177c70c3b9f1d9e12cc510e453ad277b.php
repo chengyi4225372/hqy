@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1576736545;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576736240;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1576742155;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576742047;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
     <link rel="stylesheet" href="/static/home/css/index.css">
     <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
-
-    <script type="text/javascript" src="/static/spirit/js/jquery.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/index.js'></script>
     <script src='/static/common/js/public.js'></script>
@@ -252,36 +251,6 @@
                     </div>
                 </div>
 
-                <div class='zhaomethods'>
-                    <div class='totalInfo_title'>政府招商政策</div>
-                    <?php if(empty($shang) || (($shang instanceof \think\Collection || $shang instanceof \think\Paginator ) && $shang->isEmpty())): ?>
-                    <p>抱歉，没有找到相关的信息</p>
-                    <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$item_list): $mod = ($i % 2 );++$i;?>
-                    <div class='totalInfo_content'>
-                        <a
-                            href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo isset($item_list['id']) ? $item_list['id'] : ''; ?>">
-                            <div class='zhao_contentInfo'>
-                                <div><?php echo isset($item_list['title']) ? $item_list['title'] : ''; ?></div>
-                                <div>
-                                    <?php echo isset($item_list['release_time']) ? $item_list['release_time'] : ''; ?>
-                                </div>
-                            </div>
-                            <div><?php echo isset($item_list['describe']) ? $item_list['describe'] : ''; ?></div>
-                        </a>
-
-                    </div>
-
-                    <?php endforeach; endif; else: echo "没有更多内容" ;endif; endif; if(count($shang) > 0): ?>
-
-                    <div class='know_more_box'>
-                        <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
-                            data-url="<?php echo url('/home/index/infoList'); ?>"
-                            loca_url="<?php echo config('curl.website'); ?>/home/index/infoList" login_url="<?php echo $baseurl; ?>">了解更多
-                        </button>
-                    </div>
-                    <?php endif; ?>
-
-                </div>
 
                 <div class='zhaoTotalInfo'>
                     <div class='totalInfo_title'>招标信息</div>
@@ -317,6 +286,41 @@
 
                 </div>
 
+                <div class='zhaomethods'>
+                    <div class='totalInfo_title'>政府招商政策</div>
+                    <?php if(empty($shang) || (($shang instanceof \think\Collection || $shang instanceof \think\Paginator ) && $shang->isEmpty())): ?>
+                    <p>抱歉，没有找到相关的信息</p>
+                    <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$item_list): $mod = ($i % 2 );++$i;?>
+                    <div class='totalInfo_content'>
+                        <a
+                            href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo isset($item_list['id']) ? $item_list['id'] : ''; ?>">
+                            <div class='zhao_contentInfo'>
+                                <div><?php echo isset($item_list['title']) ? $item_list['title'] : ''; ?></div>
+                                <div>
+                                    <?php echo isset($item_list['release_time']) ? $item_list['release_time'] : ''; ?>
+                                </div>
+                            </div>
+                            <div><?php echo isset($item_list['describe']) ? $item_list['describe'] : ''; ?></div>
+                        </a>
+
+                    </div>
+
+                    <?php endforeach; endif; else: echo "没有更多内容" ;endif; endif; if(count($shang) > 0): ?>
+
+                    <div class='know_more_box'>
+                        <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
+                            data-url="<?php echo url('/home/index/infoList'); ?>"
+                            loca_url="<?php echo config('curl.website'); ?>/home/index/infoList" login_url="<?php echo $baseurl; ?>">了解更多
+                        </button>
+                    </div>
+                    <?php endif; ?>
+
+                </div>
+
+
+                
+
+
             </div>
         </div>
     </div>
@@ -326,20 +330,7 @@
     <ul class='success'>
         <div class='w success_content'>
             <div class='success_title'></div>
-
-            <!-- <div class='success_icon'>
-          <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
-          <div style="cursor:pointer;" onclick="click_show(this)" keys="<?php echo $key; ?>" class="<?php echo $data_list['is_show'].$key; ?>"
-            data="<?php echo $count; ?>" data-attr="<?php echo $data_list['is_show']; ?>">
-            <div class='<?php if($key == 1): ?>hui_icon<?php else: ?>p_icon<?php endif; ?>'>
-              <div><?php echo $data_list['title2']; ?></div>
-              <div><?php echo $data_list['title3']; ?></div>
-              
-            </div>
-          </div>
-          <?php endforeach; endif; else: echo "" ;endif; ?>
-
-        </div> -->
+            
             <!-- 惠家族产品介绍 -->
             <div class="bgProduct">
                 <ul class="produtionIntro">
@@ -433,12 +424,18 @@
                     <dl>
                         <dt>资讯信息</dt>
                         <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
+
+                        <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
+
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">招商政策</a></dd>
+
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
-                        <dd><a href="<?php echo url('/home/optimal/index'); ?>">招募合伙人</a></dd>
+
+                        <dd><a href="javascript:;">招募合伙人</a></dd>
+
                     </dl>
                     <dl>
                         <dt>联系我们</dt>

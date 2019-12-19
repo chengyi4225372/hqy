@@ -1,19 +1,19 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:105:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\many\index.html";i:1576742342;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>惠找事</title>
-    <link rel="stylesheet" href="__SPI__/css/base.css">
-    <link rel="stylesheet" href="__SPI__/css/optimal.css">
+    <title>惠多薪</title>
+    <link rel="stylesheet" href="/static/spirit/css/base.css">
+    <link rel="stylesheet" href="/static/spirit/css/optimal.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
 <body style="background: #fff;">
-
 <div>
     <div class="fourzerofour">
-        <img src="__PUBLIC__/hzs_error.png">
+        <img src="/static/hdx_error2.png">
     </div>
     <div class="building">
         正在建设中...
@@ -21,7 +21,7 @@
     <div class="goHome">
 
         <span><i class="clock">3</i>秒后返回首页</span>
-        <a href="{:url('/home/index/index')}">回到首页</a>
+        <a href="<?php echo url('/home/index/index'); ?>">回到首页</a>
 
     </div>
 </div>
@@ -35,10 +35,13 @@
             count--;
             if (count < 0) {
                 clearInterval(timer)
-                location.href="{:url('/home/index/index')}"
+                location.href="<?php echo url('/home/index/index'); ?>"
             }
         }, 1000)
+<<<<<<< HEAD
+=======
 
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
     })
 </script>
 
