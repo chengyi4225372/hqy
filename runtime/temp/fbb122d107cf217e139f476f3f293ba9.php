@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576736950;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576736950;}*/ ?>
-=======
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576668593;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576657019;}*/ ?>
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,13 +21,8 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/index.js'></script>
-<<<<<<< HEAD
     <script src='/static/common/js/public.js'></script>
     <script src='/static/home/js/common.js'></script>
-=======
-    <script src='/static/home/js/common.js'></script>
-    <script src='/static/common/js/public.js'></script>
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 
 </head>
 
@@ -87,11 +78,7 @@
 
                                     <div>
                                         <dl>
-<<<<<<< HEAD
                                             <dt><a href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
-=======
-                                            <dt><a href="<?php echo url('/home/optimal/cooperation'); ?>">惠优税</a></dt>
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                                             <dd>
                                                 · 企税降成本 薪税降税负
 
@@ -99,11 +86,7 @@
                                             <dd>· 分红降扣率 创业降个税</dd>
                                         </dl>
                                         <dl>
-<<<<<<< HEAD
                                             <dt><a href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
-=======
-                                            <dt><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                                             <dd>
                                                 · 寻求多样化用工模式
 
@@ -268,39 +251,6 @@
                     </div>
                 </div>
 
-<<<<<<< HEAD
-=======
-                <div class='zhaomethods'>
-                    <div class='totalInfo_title'>政府招商政策</div>
-                    <?php if(empty($shang) || (($shang instanceof \think\Collection || $shang instanceof \think\Paginator ) && $shang->isEmpty())): ?>
-                    <p>抱歉，没有找到相关的信息</p>
-                    <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$item_list): $mod = ($i % 2 );++$i;?>
-                    <div class='totalInfo_content'>
-                        <a
-                            href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo isset($item_list['id']) ? $item_list['id'] : ''; ?>">
-                            <div class='zhao_contentInfo'>
-                                <div><?php echo isset($item_list['title']) ? $item_list['title'] : ''; ?></div>
-                                <div>
-                                    <?php echo isset($item_list['release_time']) ? $item_list['release_time'] : ''; ?>
-                                </div>
-                            </div>
-                            <div><?php echo isset($item_list['describe']) ? $item_list['describe'] : ''; ?></div>
-                        </a>
-
-                    </div>
-
-                    <?php endforeach; endif; else: echo "没有更多内容" ;endif; endif; if(count($shang) > 0): ?>
-
-                    <div class='know_more_box'>
-                        <button class='know_more' mobile-phone="<?php echo $userinfo['mobile']; ?>" onclick="showUrl(this)"
-                            data-url="<?php echo url('/home/index/infoList'); ?>"
-                            loca_url="<?php echo config('curl.website'); ?>/home/index/infoList" login_url="<?php echo $baseurl; ?>">了解更多
-                        </button>
-                    </div>
-                    <?php endif; ?>
-
-                </div>
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 
                 <div class='zhaoTotalInfo'>
                     <div class='totalInfo_title'>招标信息</div>
@@ -336,7 +286,6 @@
 
                 </div>
 
-<<<<<<< HEAD
                 <div class='zhaomethods'>
                     <div class='totalInfo_title'>政府招商政策</div>
                     <?php if(empty($shang) || (($shang instanceof \think\Collection || $shang instanceof \think\Paginator ) && $shang->isEmpty())): ?>
@@ -372,8 +321,6 @@
                 
 
 
-=======
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
             </div>
         </div>
     </div>
@@ -482,11 +429,7 @@
                     <dl>
                         <dt>惠企云旗下产品</dt>
                         <dd><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dd>
-<<<<<<< HEAD
                         <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
-=======
-                        <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">惠优税</a></dd>
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                         <dd><a href="javascript:;">惠多薪</a></dd>
                         <dd><a href="javascript:;">惠创业</a></dd>
                         <dd><a href="javascript:;">惠找事</a></dd>
@@ -494,20 +437,12 @@
                     <dl>
                         <dt>资讯信息</dt>
                         <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
-<<<<<<< HEAD
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
-=======
-                        <dd><a href="<?php echo url('/home/index/infoList'); ?>">招商政策</a></dd>
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
-<<<<<<< HEAD
                         <dd><a href="javascript:;">招募合伙人</a></dd>
-=======
-                        <dd><a href="<?php echo url('/home/optimal/index'); ?>">招募合伙人</a></dd>
->>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                     </dl>
                     <dl>
                         <dt>联系我们</dt>
