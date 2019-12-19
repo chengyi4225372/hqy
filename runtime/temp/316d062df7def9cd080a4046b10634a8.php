@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576657019;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576736950;}*/ ?>
+=======
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576657019;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576657019;}*/ ?>
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
 <!DOCTYPE html>
 <html lang="en">
 
@@ -255,7 +259,11 @@
                     <dl>
                         <dt>惠企云旗下产品</dt>
                         <dd><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dd>
+<<<<<<< HEAD
                         <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
+=======
+                        <dd><a href="<?php echo url('/home/optimal/cooperation'); ?>">惠优税</a></dd>
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                         <dd><a href="javascript:;">惠多薪</a></dd>
                         <dd><a href="javascript:;">惠创业</a></dd>
                         <dd><a href="javascript:;">惠找事</a></dd>
@@ -263,12 +271,20 @@
                     <dl>
                         <dt>资讯信息</dt>
                         <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
+<<<<<<< HEAD
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
+=======
+                        <dd><a href="<?php echo url('/home/index/infoList'); ?>">招商政策</a></dd>
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
+<<<<<<< HEAD
                         <dd><a href="javascript:;">招募合伙人</a></dd>
+=======
+                        <dd><a href="<?php echo url('/home/optimal/index'); ?>">招募合伙人</a></dd>
+>>>>>>> ebe57fda5c5dc94df04396e6c11ae2583881eb3f
                     </dl>
                     <dl>
                         <dt>联系我们</dt>

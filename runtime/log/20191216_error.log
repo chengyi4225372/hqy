@@ -1,0 +1,87 @@
+---------------------------------------------------------------
+[ 2019-12-16T09:10:04+08:00 ] 172.26.2.252 GET /
+[ error ] [8]未定义数组下标: 0[/opt/web/hqy_/runtime/temp/b98b0097f3eceb2ba5d75b5d36538488.php:241]
+---------------------------------------------------------------
+[ 2019-12-16T10:22:42+08:00 ] 172.26.2.252 GET /
+[ error ] [8]未定义数组索引: pic1[/opt/web/hqy_/runtime/temp/b98b0097f3eceb2ba5d75b5d36538488.php:434]
+---------------------------------------------------------------
+[ 2019-12-16T10:29:09+08:00 ] 172.26.2.252 POST /v1/systematic/cases/editcase.html?id=4
+[ error ] [8]未定义数组索引: case_id[/opt/web/hqy_/application/v1/service/Caseservice.php:141]
+---------------------------------------------------------------
+[ 2019-12-16T10:38:11+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-16T10:39:05+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-16T10:41:17+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-16T10:42:35+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-16T10:42:50+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-16T10:43:03+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-16T10:43:17+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-16T10:43:48+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-16T10:44:13+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-16T10:44:27+08:00 ] 172.26.2.252 POST /v1/systematic/system/uploadimg.html
+[ error ] [2]mkdir(): File exists[/opt/web/hqy_/application/v1/service/Systems.php:360]
+---------------------------------------------------------------
+[ 2019-12-16T18:47:01+08:00 ] 127.0.0.1 GET /home/index/industry.html?title%5B%5D=%E7%81%B5%E6%B4%BB%E7%94%A8%E5%B7%A5
+[ error ] [0]variable type error：array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\thinkphp\library\think\Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-16T18:47:01+08:00 ] 127.0.0.1 GET /home/index/industry.html?title%5B%5D=%E7%81%B5%E6%B4%BB%E7%94%A8%E5%B7%A5&title%5B%5D=%E4%BA%BA%E5%8A%9B%E5%A4%96%E5%8C%85
+[ error ] [0]variable type error：array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\thinkphp\library\think\Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-16T18:47:02+08:00 ] 127.0.0.1 GET /home/index/industry.html?title%5B%5D=%E7%81%B5%E6%B4%BB%E7%94%A8%E5%B7%A5&title%5B%5D=%E4%BA%BA%E5%8A%9B%E5%A4%96%E5%8C%85&title%5B%5D=%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E6%95%B0%E5%AD%97%E8%BD%AC%E5%8C%96
+[ error ] [0]variable type error：array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\thinkphp\library\think\Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-16T18:48:36+08:00 ] 127.0.0.1 GET /home/index/industry.html?title=%5B%22%E7%81%B5%E6%B4%BB%E7%94%A8%E5%B7%A5%22%5D
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\service\Infosservice.php:209]
+---------------------------------------------------------------
+[ 2019-12-16T18:48:37+08:00 ] 127.0.0.1 GET /home/index/industry.html?title=%5B%22%E7%81%B5%E6%B4%BB%E7%94%A8%E5%B7%A5%22%2C%22%E4%BA%BA%E5%8A%9B%E5%A4%96%E5%8C%85%22%5D
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\service\Infosservice.php:209]
+---------------------------------------------------------------
+[ 2019-12-16T18:49:36+08:00 ] 127.0.0.1 GET /home/index/industry.html
+[ error ] [2]implode(): Invalid arguments passed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:310]
+---------------------------------------------------------------
+[ 2019-12-16T18:49:50+08:00 ] 127.0.0.1 GET /home/index/industry.html
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\service\Infosservice.php:209]
+---------------------------------------------------------------
+[ 2019-12-16T18:49:51+08:00 ] 127.0.0.1 GET /home/index/industry.html
+[ error ] [8]Array to string conversion[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\service\Infosservice.php:209]
+---------------------------------------------------------------
+[ 2019-12-16T18:55:24+08:00 ] 127.0.0.1 GET /home/index/industry.html
+[ error ] [2]implode(): Invalid arguments passed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:311]
+---------------------------------------------------------------
+[ 2019-12-16T18:55:25+08:00 ] 127.0.0.1 GET /home/index/industry.html
+[ error ] [2]implode(): Invalid arguments passed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:311]
+---------------------------------------------------------------
+[ 2019-12-16T18:55:26+08:00 ] 127.0.0.1 GET /home/index/industry.html
+[ error ] [2]implode(): Invalid arguments passed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:311]
+---------------------------------------------------------------
+[ 2019-12-16T18:55:27+08:00 ] 127.0.0.1 GET /home/index/industry.html
+[ error ] [2]implode(): Invalid arguments passed[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\controller\Index.php:311]
+---------------------------------------------------------------
+[ 2019-12-16T18:56:21+08:00 ] 127.0.0.1 GET /home/index/industry.html?title%5B%5D=%E7%81%B5%E6%B4%BB%E7%94%A8%E5%B7%A5
+[ error ] [0]variable type error：array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\thinkphp\library\think\Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-16T18:56:50+08:00 ] 127.0.0.1 GET /home/index/industry.html?title%5B%5D=%E7%81%B5%E6%B4%BB%E7%94%A8%E5%B7%A5
+[ error ] [0]variable type error：array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\thinkphp\library\think\Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-16T18:57:10+08:00 ] 127.0.0.1 GET /home/index/industry.html?title%5B%5D=%E7%81%B5%E6%B4%BB%E7%94%A8%E5%B7%A5
+[ error ] [0]variable type error：array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\thinkphp\library\think\Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-16T18:57:14+08:00 ] 127.0.0.1 GET /home/index/industry.html?title%5B%5D=%E7%81%B5%E6%B4%BB%E7%94%A8%E5%B7%A5&title%5B%5D=%E4%BA%BA%E5%8A%9B%E5%A4%96%E5%8C%85
+[ error ] [0]variable type error：array[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\thinkphp\library\think\Request.php:1133]
