@@ -1,16 +1,16 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\business\index.html";i:1576577274;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\business\index.html";i:1576727807;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>招募合伙人</title>
+    <title>惠创业</title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/optimal.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
-<body>
+<body style="background: #fff;">
 
 <div>
     <div class="fourzerofour">
@@ -20,8 +20,8 @@
         正在建设中...
     </div>
     <div class="goHome">
-        <span><i class="clock">3</i>秒后返回首页</span>
-        <a href="<?php echo url('/home/index/index'); ?>">回到首页</a>
+        <span><i class="clock">3</i>秒后返回主站</span>
+        <a href="<?php echo url('/home/index/index'); ?>">点击跳转</a>
     </div>
 </div>
 </div>

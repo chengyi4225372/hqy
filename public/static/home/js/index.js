@@ -150,6 +150,7 @@ $(function(){
       // interval:3000,//间隔
       index:0,
       // anim:'fade'
+      autoplay:false
 
     });
   });

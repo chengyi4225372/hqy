@@ -570,8 +570,10 @@ body {
   position: absolute;
   outline: none;
   border: none;
-  top: 27.25rem;
-  left: 22.5rem;
+  /* top: 27.25rem;
+  left: 22.5rem; */
+  top: 61%;
+    left: 18.95%;
   font-size: 1.965625rem;
   -webkit-border-radius: 0.25rem;
           border-radius: 0.25rem;
