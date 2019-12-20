@@ -130,7 +130,7 @@ class Index extends BaseController
             $this->assign('info',$info);
             $this->assign('top',$top);
             $this->assign('next',$next);
-            $this->assign('title','新闻详情');
+            $this->assign('title','政府招商政策');
             return $this->fetch();
         }
         return false;
@@ -358,7 +358,7 @@ class Index extends BaseController
             $this->assign('info',$info);
             $this->assign('top',$top);
             $this->assign('next',$next);
-            $this->assign('title','招标信息详情');
+            $this->assign('title','新闻资讯');
             return $this->fetch();
         }
         return false;
