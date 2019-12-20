@@ -209,61 +209,15 @@ class Login extends BaseController
     }
 
     /**
-     * @DESC：测试单点登录
-     * @author: jason
-     * @date: 2019-12-20 11:42:40
-     */
-    public function testLogin()
-    {
-        $loginlogModel = new Loginlog();
-        session_start();
-        //惠灵工
-        $hlg_url = Config::get('curl.hlg');
-        //会找事
-        $hzs_url = Config::get('curl.hzs');
-
-        $mobile = 13410129433;
-        $token = 'BACDEDFKLJIKOKKLJKJLJKJ';
-        $userType = 'B';
-        Cookie::set('mobile', $mobile);
-        Cookie::set('token', $token);
-        Cookie::set('userType', $userType);
-        Cookie::set('userType', $userType);
-        $where = [];
-        if (!empty($mobile)) {
-            $add = [];
-            $add['mobile'] = $mobile;
-            $add['token'] = $token;
-            $add['userType'] = $userType;
-            $add['cookieid'] = session_id();
-            $add['ip'] = \request()->ip();
-            $add['add_time'] = time();
-            $info = $loginlogModel::instance()->where($where)->find();
-            if (count($info) > 0) {
-                $loginlogModel::instance()->where($where['mobile'])->delete();
-                $loginlogModel::instance()->insert($add);
-            } else {
-                $loginlogModel::instance()->insert($add);
-            }
-        }
-//        $array = [];
-//        $array['mobile'] = $mobile;
-//        $array['token'] = $token;
-//        $array['userType'] = $userType;
-//        $res = curl_post($hlg_url.'/home/login/savetokens',$array);exit;
-    }
-
-
-    /**
      * @DESC：惠灵工跳转过来获取cookie
      * @author: jason
      * @date: 2019-12-20 08:35:19
      */
     public function hlg_local()
     {
-        $mobile = Cookie::set('mobile');
-        $token = Cookie::set('token');
-        $userType = Cookie::set('userType');
+        $mobile = Cookie::get('mobile');
+        $token = Cookie::get('token');
+        $userType = Cookie::get('userType');
         $hlg_url = Config('curl.hlg');
         $this->redirect($hlg_url.'/home/index/index?line='.$mobile.'&ttttt='.$token.'&userType='.$userType.'&location=yes');
     }
