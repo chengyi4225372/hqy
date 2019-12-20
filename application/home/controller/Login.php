@@ -214,6 +214,7 @@ class Login extends BaseController
      */
     public function testLogin()
     {
+        session_start();
         //惠灵工
         $hlg_url = Config::get('curl.hlg');
         //会找事
@@ -229,10 +230,11 @@ class Login extends BaseController
         $array['mobile'] = $mobile;
         $array['token'] = $token;
         $array['userType'] = $userType;
+        $array['session_id'] = session_id();
 
 
-        echo '<pre>';print_r($_COOKIE);exit;
-        $res = curl_post($hlg_url.'/home/login/savetokens',$array);
+        exit;
+        $res = curl_post($hlg_url.'/home/login/savetokens',$array);exit;
 
         //把手机号、token、用户类型存到【会找事】页面的cookie里面
         $res2 = curl_post($hzs_url.'/home/login/savetokens',$array);
@@ -246,6 +248,23 @@ class Login extends BaseController
         if ($userType == 'C') {
             $this->redirect($this->base_urls . '/personTask/myTask');
         }
+    }
+
+    /**
+     * @DESC：其他页面获取本页面的session_id
+     * @author: jason
+     * @date: 2019-12-20 03:07:41
+     */
+    public function getsession()
+    {
+        //允许跨域.
+        header("Access-Control-Allow-Origin:*");
+        session_start();
+        $mobile = Cookie::get('mobile');
+        $token = Cookie::get('token');
+        $userType = Cookie::get('userType');
+        $phpsessid = isset($_COOKIE['PHPSESSID']) ? $_COOKIE['PHPSESSID'] : '';
+        return json(['status' => 200,'session_id' => $phpsessid,'mobile' => $mobile,'token' => $token,'userType' => $userType]);
     }
 
 }
