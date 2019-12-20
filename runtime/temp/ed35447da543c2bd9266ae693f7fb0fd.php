@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576805636;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576804839;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576656992;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576746676;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,7 +97,7 @@
                     </li>
                     <li class='nav-active'><a href="javascript:;">招标信息</a></li>
                     <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
-                    <li><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></li>
+                    <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
                 </ul>
 
@@ -263,14 +263,15 @@
                     <dl>
                         <dt>资讯信息</dt>
                         <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
+
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
+
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
 
                         <dd><a href="javascript:;">招募合伙人</a></dd>
-
                     </dl>
                     <dl>
                         <dt>联系我们</dt>

@@ -8,7 +8,7 @@ function checkPhone(phone) {
     }
 }
 
-var gurl = "http://47.105.48.137:8089";
+var gurl = "https://test.zxrhgb.com";
 
 /** 提交公海 **/
 function getErp() {
