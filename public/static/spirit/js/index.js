@@ -18,9 +18,9 @@ window.onload = function () {
     // 返回顶部
     window.onscroll = function () {
         var top = document.body.scrollTop || document.documentElement.scrollTop;
-        console.log(top)
-        console.log(document.body.scrollTop);
-        console.log(document.documentElement.scrollTop);
+        // console.log(top)
+        // console.log(document.body.scrollTop);
+        // console.log(document.documentElement.scrollTop);
 
         if (top >= 1080) {
             let goTop = document.getElementById('goTop')

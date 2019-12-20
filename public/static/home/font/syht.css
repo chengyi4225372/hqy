@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "syht";
+  src: url("syht.woff2") format("woff2"),
+       url("syht.woff") format("woff"),
+       url("syht.ttf") format("truetype"),
+       url("syht.eot") format("embedded-opentype"),
+       url("syht.svg") format("svg"),
+       url("syht.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

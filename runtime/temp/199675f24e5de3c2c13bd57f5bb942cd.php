@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1576805645;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576804839;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1576847336;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +18,7 @@
   <!-- <link rel="stylesheet" href="/static/spirit/css/layui.css"  media="all"> -->
   <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+  <link rel="stylesheet" href="/static/home/font/syht.css">
   <script src="/static/spirit/js/clamp.js"></script>
 
   <script src='/static/spirit/js/Informationlist.js'></script>
@@ -235,7 +236,7 @@
                           <img src="/static/spirit/images/shijian2x.png" alt=""><span><?php echo $sh['release_time']; ?></span>
                         </span>
                       </div>
-                      <p>
+                      <p class="limitP">
                         <?php echo $sh['describe']; ?>
                       </p>
 
@@ -291,7 +292,7 @@
                     </dl>
                     <dl>
                         <dt>资讯信息</dt>
-                        <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
+                        <dd><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></dd>
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>
@@ -369,6 +370,9 @@
       li.classList.remove('nav-active')
       menuList[4].classList.add('nav-active')
     }
+
+            /* 信息列表显示2行加省略号 */
+            $('.limitP').each(function () { $clamp($(this)[0], { clamp: 2 }) })
   </script>
 
  

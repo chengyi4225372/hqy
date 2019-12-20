@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:72:"C:\phpEnv\www\hqy_\public/../application/home\view\index\detailbiao.html";i:1576657019;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1576131456;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576745649;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:72:"C:\phpEnv\www\hqy_\public/../application/home\view\index\detailbiao.html";i:1576840329;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1576131456;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/detail.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+    <link rel="stylesheet" href="/static/home/font/syht.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src='/static/home/js/common.js'></script>
     <script src='/static/common/js/public.js'></script>
@@ -106,7 +107,7 @@
                     </li>
                     <li  class='nav-active'><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
                     <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
-                    <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
+                    <li><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
                 </ul>
                 <!--<?php if(empty($userinfo['mobile'])): ?>-->
@@ -192,13 +193,13 @@
                         <dt>惠企云旗下产品</dt>
                         <dd><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dd>
                         <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
-                        <dd><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dd>
-                        <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
-                        <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
+                        <dd><a href="javascript:;">惠多薪</a></dd>
+                        <dd><a href="javascript:;">惠创业</a></dd>
+                        <dd><a href="javascript:;">惠找事</a></dd>
                     </dl>
                     <dl>
                         <dt>资讯信息</dt>
-                        <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
+                        <dd><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></dd>
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>

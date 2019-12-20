@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"C:\phpEnv\www\hqy_\public/../application/home\view\optimal\index.html";i:1576743957;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"C:\phpEnv\www\hqy_\public/../application/home\view\optimal\index.html";i:1576842423;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
     <link rel="stylesheet" href="/static/spirit/css/optimal.css">
+    <link rel="stylesheet" href="/static/home/font/syht.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
@@ -32,46 +33,47 @@
                                 <dl>
                                     <dt><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
                                     <dd>
-                                        ·企税降成本 薪税降税负
+                                        · 企税降成本 薪税降税负
 
                                     </dd>
-                                    <dd>·分红降扣率 创业降个税</dd>
+                                    <dd>· 分红降扣率 创业降个税</dd>
                                 </dl>
                                 <dl>
                                     <dt><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
                                     <dd>
-                                        ·寻求多样化用工模式
+                                        · 寻求多样化用工模式
 
                                     </dd>
-                                    <dd>·提高内部人员效能</dd>
+                                    <dd>· 提高内部人员效能</dd>
                                 </dl>
                                 <dl>
                                     <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                                     <dd>
-                                        ·优化员工福利选择模块
+                                        · 优化员工福利选择模块
 
                                     </dd>
-                                    <dd>·企业成本可控透明化</dd>
+                                    <dd>· 企业成本可控透明化</dd>
                                 </dl>
                                 <dl>
                                     <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                     <dd>
-                                        ·技能价值化
+                                        · 技能价值化
 
                                     </dd>
-                                    <dd>·成就更好自我</dd>
+                                    <dd>· 成就更好自我</dd>
                                 </dl>
                                 <dl>
                                     <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                     <dd>
-                                        ·一站式解决方案
+                                        · 一站式解决方案
 
                                     </dd>
-                                    <dd>·激活企业最大效益</dd>
+                                    <dd>· 激活企业最大效益</dd>
                                 </dl>
                                 <dl>
                                     <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
-                                    <dd>·产品内容建设中……</dd>
+                                    <dd>· 赋能企业互联网生态建设</dd>
+                                    <dd>· 助力产业数字化转型升级</dd>
                                 </dl>
                             </div>
                         </div><!-- 二级菜单 -->

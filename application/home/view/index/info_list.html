@@ -17,6 +17,7 @@
   <!-- <link rel="stylesheet" href="__SPI__/css/layui.css"  media="all"> -->
   <link rel="stylesheet" href="__SPI__/css/Informationlist.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+  <link rel="stylesheet" href="__HOME__/font/syht.css">
   <script src="__SPI__/js/clamp.js"></script>
 
   <script src='__SPI__/js/Informationlist.js'></script>
@@ -235,7 +236,7 @@
                           <img src="__SPI__/images/shijian2x.png" alt=""><span>{$sh.release_time}</span>
                         </span>
                       </div>
-                      <p>
+                      <p class="limitP">
                         {$sh.describe}
                       </p>
 
@@ -309,6 +310,9 @@
       li.classList.remove('nav-active')
       menuList[4].classList.add('nav-active')
     }
+
+            /* 信息列表显示2行加省略号 */
+            $('.limitP').each(function () { $clamp($(this)[0], { clamp: 2 }) })
   </script>
 
  

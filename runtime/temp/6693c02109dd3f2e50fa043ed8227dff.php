@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\searches\index.html";i:1576745275;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\searches\index.html";i:1576840413;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +7,7 @@
     <title>惠找事</title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/optimal.css">
+    <link rel="stylesheet" href="/static/home/font/syht.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1576805616;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1576847344;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +18,7 @@
     <!-- <link rel="stylesheet" href="/static/spirit/css/layui.css"  media="all"> -->
     <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-
+    <link rel="stylesheet" href="/static/home/font/syht.css">
     <script src="/static/spirit/js/clamp.js"></script>
 
     <script src='/static/spirit/js/industry.js'></script>
@@ -216,7 +216,7 @@
                                                         alt=""><span><?php echo $ww['release_time']; ?></span>
                                                 </span>
                                             </div>
-                                            <p>
+                                            <p class="limitP">
                                                 <?php echo $ww['describe']; ?>
                                             </p>
                                         </div>
@@ -346,6 +346,9 @@
         li.classList.remove('nav-active')
         menuList[4].classList.add('nav-active')
     }
+
+            /* 信息列表显示2行加省略号 */
+            $('.limitP').each(function () { $clamp($(this)[0], { clamp: 2 }) })
 </script>
 
 
