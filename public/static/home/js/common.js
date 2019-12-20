@@ -53,9 +53,88 @@ function getErp() {
 
             //201 号码已经存在
             if (ret.status == 200 && ret.rel == true) {
-                layer.msg('提交成功', function () {
+                $('.mask-box1').fadeIn(1000);
+                window.setTimeout(function () {
+                    $('.mask-box1').fadeOut(1000, function () {
+                        window.location.reload();
+                        $('.form-btn').attr('disabled', "false");
+                    });
+                }, 3000)
+            }
+
+            if (ret.status == 201) {
+                layer.msg(ret.message, function () {
                     parent.location.reload();
                 })
+            }
+
+            if (ret.status == 500) {
+                layer.msg('网络错误，请稍后再提交。', function () {
+                    parent.location.reload();
+                });
+            }
+        },
+        error: function (ret) {
+            console.log(ret);
+        }
+
+    })
+
+}
+
+/** 慧企云 慧家族产品 进入公海
+ * @k  循环的下标
+ **/
+function hgetErp(vals) {
+    var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
+    var arr = {};
+
+
+    arr.contactName = $.trim($("#hcontactName"+vals).val());//联系姓名
+    arr.companyName = $.trim($("#hcompanyName"+vals).val()); //公司
+    arr.contactMobile =$.trim($("#hcontactMobile"+vals).val());//手机
+    arr.source = $("#hsource").val(); //渠道
+    arr.identification = $("#hidentification").val();//标识
+
+    if (arr.contactMobile == '' || arr.contactMobile == undefined) {
+        layer.msg('请填写联系电话');
+        return false;
+    }
+
+    if (checkPhone(arr.contactMobile) === false) {
+        layer.msg("联系电话不合法");
+        return false;
+    }
+
+    if (arr.companyName == '' || arr.companyName == undefined) {
+        layer.msg('请填写公司名称');
+        return false;
+    }
+
+    if (arr.contactName == '' || arr.contactName == undefined) {
+        layer.msg('请填写您的姓名');
+        return false;
+    }
+
+    $.ajax({
+        url: urkl,
+        type: "post",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        arrType: 'json',
+        data: JSON.stringify(arr),
+        success: function (ret) {
+
+            //201 号码已经存在
+            if (ret.status == 200 && ret.rel == true) {
+                $('.mask-box2').fadeIn(1000);
+                window.setTimeout(function () {
+                    $('.mask-box2').fadeOut(1000, function () {
+                        window.location.reload();
+                        $('.form-btn').attr('disabled', "false");
+                    });
+                }, 3000)
             }
 
             if (ret.status == 201) {

@@ -17,7 +17,6 @@ class Index extends BaseController
 
     public function index()
     {
-
         //慧享产品
         $array = array('status' => '1');
         $protuct = Protuctservice::instance()->normal($array);
@@ -85,7 +84,7 @@ class Index extends BaseController
      */
     public function infoList(){
        if($this->request->isGet()){
-            
+
 //           if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
 //               return $this->redirect('/home/index/index');
 //           }

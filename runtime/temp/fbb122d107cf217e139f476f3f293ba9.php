@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576736950;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576736950;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1576764697;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576745649;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -331,19 +331,6 @@
         <div class='w success_content'>
             <div class='success_title'></div>
 
-            <!-- <div class='success_icon'>
-          <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
-          <div style="cursor:pointer;" onclick="click_show(this)" keys="<?php echo $key; ?>" class="<?php echo $data_list['is_show'].$key; ?>"
-            data="<?php echo $count; ?>" data-attr="<?php echo $data_list['is_show']; ?>">
-            <div class='<?php if($key == 1): ?>hui_icon<?php else: ?>p_icon<?php endif; ?>'>
-              <div><?php echo $data_list['title2']; ?></div>
-              <div><?php echo $data_list['title3']; ?></div>
-              
-            </div>
-          </div>
-          <?php endforeach; endif; else: echo "" ;endif; ?>
-
-        </div> -->
             <!-- 惠家族产品介绍 -->
             <div class="bgProduct">
                 <ul class="produtionIntro">
@@ -358,9 +345,10 @@
 
                 </ul>
                 <div class='to_detailInfo'>
-                    <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info_list): $mod = ($i % 2 );++$i;?>
+                    <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $k = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info_list): $mod = ($k % 2 );++$k;?>
                     <div class="<?php echo $info_list['is_show']; ?>" <?php if($key==1): ?>style="display:block;"
-                        <?php else: ?>style="display:none;"<?php endif; ?>> <div class='huichuangyou_title'><?php echo $info_list['title']; ?></div>
+                        <?php else: ?>style="display:none;"<?php endif; ?>>
+                    <div class='huichuangyou_title'><?php echo $info_list['title']; ?></div>
                     <div class="con">
                         <div class="desc"><?php echo $info_list['desc']; ?></div>
                         <div class="desc"><?php echo $info_list['desc2']; ?></div>
@@ -371,18 +359,18 @@
                         <div class="desc"><?php echo $info_list['desc7']; ?></div>
                         <div class='total_input'>
                             <div>
-                                <input type="text" id='contactName' placeholder="请输入您的姓名..">
+                                <input type="text" id='hcontactName<?php echo $k; ?>' placeholder="请输入您的姓名.." />
                             </div>
                             <div>
-                                <input type="text" id="companyName" placeholder="请输入您的公司名称..">
+                                <input type="text" id="hcompanyName<?php echo $k; ?>" placeholder="请输入您的公司名称.." />
                             </div>
                             <div>
-                                <input type="text" id='contactMobile' placeholder="请输入您的手机号..">
+                                <input type="text" id='hcontactMobile<?php echo $k; ?>' placeholder="请输入您的手机号.." />
                             </div>
                             <div>
-                                <input type='hidden' id='source' value='门户首页'>
-                                <input type='hidden' id='identification' value='企业一站式服务'>
-                                <input type="button" onclick='getErp()' value='定制您的方案'>
+                                <input type='hidden' id='hsource' value='门户首页' />
+                                <input type='hidden' id='hidentification' value='企业一站式服务' />
+                                <input type="button" class="form-btn" onclick="hgetErp('<?php echo $k; ?>')" value='定制您的方案' />
                             </div>
                             <!-- 提交成果后弹窗 -->
                             <div class="mask-box2">
@@ -430,9 +418,9 @@
                         <dt>惠企云旗下产品</dt>
                         <dd><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dd>
                         <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
-                        <dd><a href="javascript:;">惠多薪</a></dd>
-                        <dd><a href="javascript:;">惠创业</a></dd>
-                        <dd><a href="javascript:;">惠找事</a></dd>
+                        <dd><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dd>
+                        <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
+                        <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
                     </dl>
                     <dl>
                         <dt>资讯信息</dt>
@@ -442,7 +430,9 @@
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
+
                         <dd><a href="javascript:;">招募合伙人</a></dd>
+
                     </dl>
                     <dl>
                         <dt>联系我们</dt>

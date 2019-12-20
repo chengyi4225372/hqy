@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576657019;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576736950;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1576657019;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576745649;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -256,9 +256,9 @@
                         <dt>惠企云旗下产品</dt>
                         <dd><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dd>
                         <dd><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dd>
-                        <dd><a href="javascript:;">惠多薪</a></dd>
-                        <dd><a href="javascript:;">惠创业</a></dd>
-                        <dd><a href="javascript:;">惠找事</a></dd>
+                        <dd><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dd>
+                        <dd><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dd>
+                        <dd><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dd>
                     </dl>
                     <dl>
                         <dt>资讯信息</dt>
@@ -268,7 +268,9 @@
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
+
                         <dd><a href="javascript:;">招募合伙人</a></dd>
+
                     </dl>
                     <dl>
                         <dt>联系我们</dt>

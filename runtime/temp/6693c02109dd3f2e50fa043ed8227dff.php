@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\searches\index.html";i:1576727785;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\searches\index.html";i:1576745275;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +12,6 @@
 
 <body style="background: #fff;">
 
-
 <div>
     <div class="fourzerofour">
         <img src="/static/hzs_error.png">
@@ -21,8 +20,10 @@
         正在建设中...
     </div>
     <div class="goHome">
+
         <span><i class="clock">3</i>秒后返回主站</span>
         <a href="<?php echo url('/home/index/index'); ?>">点击跳转</a>
+
     </div>
 </div>
 </div>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"C:\phpEnv\www\hqy_\public/../application/home\view\many\index.html";i:1576727827;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"C:\phpEnv\www\hqy_\public/../application/home\view\many\index.html";i:1576745275;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +11,11 @@
 </head>
 
 <body style="background: #fff;">
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 8285d8550b14bac5d6f3904dbb27acc4748bb8f7
 <div>
     <div class="fourzerofour">
         <img src="/static/hdx_error2.png">
@@ -21,8 +24,10 @@
         正在建设中...
     </div>
     <div class="goHome">
+
         <span><i class="clock">3</i>秒后返回主站</span>
         <a href="<?php echo url('/home/index/index'); ?>">点击跳转</a>
+
     </div>
 </div>
 </div>
