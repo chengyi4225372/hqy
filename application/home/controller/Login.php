@@ -3,7 +3,8 @@
 namespace app\home\controller;
 
 use app\common\controller\BaseController;
-use  think\Controller;
+use app\common\model\Loginlog;
+use think\Controller;
 use think\Cookie;
 use think\Cache;
 use think\Config;
@@ -214,57 +215,57 @@ class Login extends BaseController
      */
     public function testLogin()
     {
+        $loginlogModel = new Loginlog();
         session_start();
         //惠灵工
         $hlg_url = Config::get('curl.hlg');
         //会找事
         $hzs_url = Config::get('curl.hzs');
 
-        $mobile = 18681524382;
+        $mobile = 13410129433;
         $token = 'BACDEDFKLJIKOKKLJKJLJKJ';
-        $userType = 'C';
+        $userType = 'B';
         Cookie::set('mobile', $mobile);
         Cookie::set('token', $token);
         Cookie::set('userType', $userType);
-        $array = [];
-        $array['mobile'] = $mobile;
-        $array['token'] = $token;
-        $array['userType'] = $userType;
-        $array['session_id'] = session_id();
-
-
-        exit;
-        $res = curl_post($hlg_url.'/home/login/savetokens',$array);exit;
-
-        //把手机号、token、用户类型存到【会找事】页面的cookie里面
-        $res2 = curl_post($hzs_url.'/home/login/savetokens',$array);
-
-        if(isset($_GET['msg4']) && !empty($_GET['msg4']) && $_GET['msg4'] !== 'undefined'){
-            $this->redirect($_GET['msg4']);
+        Cookie::set('userType', $userType);
+        $where = [];
+        if (!empty($mobile)) {
+            $add = [];
+            $add['mobile'] = $mobile;
+            $add['token'] = $token;
+            $add['userType'] = $userType;
+            $add['cookieid'] = session_id();
+            $add['ip'] = \request()->ip();
+            $add['add_time'] = time();
+            $info = $loginlogModel::instance()->where($where)->find();
+            if (count($info) > 0) {
+                $loginlogModel::instance()->where($where['mobile'])->delete();
+                $loginlogModel::instance()->insert($add);
+            } else {
+                $loginlogModel::instance()->insert($add);
+            }
         }
-        if ($userType == 'B') {
-            $this->redirect($this->base_urls . '/task/task');
-        }
-        if ($userType == 'C') {
-            $this->redirect($this->base_urls . '/personTask/myTask');
-        }
+//        $array = [];
+//        $array['mobile'] = $mobile;
+//        $array['token'] = $token;
+//        $array['userType'] = $userType;
+//        $res = curl_post($hlg_url.'/home/login/savetokens',$array);exit;
     }
 
+
     /**
-     * @DESC：其他页面获取本页面的session_id
+     * @DESC：惠灵工跳转过来获取cookie
      * @author: jason
-     * @date: 2019-12-20 03:07:41
+     * @date: 2019-12-20 08:35:19
      */
-    public function getsession()
+    public function hlg_local()
     {
-        //允许跨域.
-        header("Access-Control-Allow-Origin:*");
-        session_start();
-        $mobile = Cookie::get('mobile');
-        $token = Cookie::get('token');
-        $userType = Cookie::get('userType');
-        $phpsessid = isset($_COOKIE['PHPSESSID']) ? $_COOKIE['PHPSESSID'] : '';
-        return json(['status' => 200,'session_id' => $phpsessid,'mobile' => $mobile,'token' => $token,'userType' => $userType]);
+        $mobile = Cookie::set('mobile');
+        $token = Cookie::set('token');
+        $userType = Cookie::set('userType');
+        $hlg_url = Config('curl.hlg');
+        $this->redirect($hlg_url.'/home/index/index?line='.$mobile.'&ttttt='.$token.'&userType='.$userType.'&location=yes');
     }
 
 }
