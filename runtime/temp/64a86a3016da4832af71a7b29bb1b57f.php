@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1576847344;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1576847857;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,49 +48,48 @@
 
                             <div>
                                 <dl>
-                                    <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
+                                    <dt><a href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
                                     <dd>
-                                        · 企税降成本 薪税降税负
+                                        · 企业财税筹划定制
 
                                     </dd>
-                                    <dd>· 分红降扣率 创业降个税</dd>
+                                    <dd>· 一体化解决方案</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a class="secStatus" href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
+                                    <dt><a href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
                                     <dd>
-                                        · 寻求多样化用工模式
+                                        · 企业灵活用工平台
+                                    </dd>
+                                    <dd>· 财税优化综合服务</dd>
+                                </dl>
+                                <dl>
+                                    <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
+                                    <dd>
+                                        · 优化薪酬结构
 
                                     </dd>
-                                    <dd>· 提高内部人员效能</dd>
+                                    <dd>· 为企业降本增效</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a class="secStatus" href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
+                                    <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                     <dd>
-                                        · 优化员工福利选择模块
+                                        · 精选各地好工作
 
                                     </dd>
-                                    <dd>· 企业成本可控透明化</dd>
+                                    <dd>· 高效缔结，轻松入职</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a class="secStatus" href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
+                                    <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                     <dd>
-                                        · 技能价值化
+                                        · 武汉创业公司
 
                                     </dd>
-                                    <dd>· 成就更好自我</dd>
+                                    <dd>· 一站式商务服务</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
-                                    <dd>
-                                        · 一站式解决方案
-
-                                    </dd>
-                                    <dd>· 激活企业最大效益</dd>
-                                </dl>
-                                <dl>
-                                    <dt><a class="secStatus" href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
-                                    <dd>· 赋能企业互联网生态建设</dd>
-                                    <dd>· 助力产业数字化转型升级</dd>
+                                    <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
+                                    <dd>· 企业互联网生态管理</dd>
+                                    <dd>· 全行业全渠道数字化转型</dd>
                                 </dl>
                             </div>
 
