@@ -207,4 +207,45 @@ class Login extends BaseController
         return json(['status' => 200,'message' => 'success']);
     }
 
+    /**
+     * @DESC：测试单点登录
+     * @author: jason
+     * @date: 2019-12-20 11:42:40
+     */
+    public function testLogin()
+    {
+        //惠灵工
+        $hlg_url = Config::get('curl.hlg');
+        //会找事
+        $hzs_url = Config::get('curl.hzs');
+
+        $mobile = 18681524382;
+        $token = 'BACDEDFKLJIKOKKLJKJLJKJ';
+        $userType = 'C';
+        Cookie::set('mobile', $mobile);
+        Cookie::set('token', $token);
+        Cookie::set('userType', $userType);
+        $array = [];
+        $array['mobile'] = $mobile;
+        $array['token'] = $token;
+        $array['userType'] = $userType;
+
+
+        echo '<pre>';print_r($_COOKIE);exit;
+        $res = curl_post($hlg_url.'/home/login/savetokens',$array);
+
+        //把手机号、token、用户类型存到【会找事】页面的cookie里面
+        $res2 = curl_post($hzs_url.'/home/login/savetokens',$array);
+
+        if(isset($_GET['msg4']) && !empty($_GET['msg4']) && $_GET['msg4'] !== 'undefined'){
+            $this->redirect($_GET['msg4']);
+        }
+        if ($userType == 'B') {
+            $this->redirect($this->base_urls . '/task/task');
+        }
+        if ($userType == 'C') {
+            $this->redirect($this->base_urls . '/personTask/myTask');
+        }
+    }
+
 }
