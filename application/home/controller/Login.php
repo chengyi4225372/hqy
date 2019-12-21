@@ -215,11 +215,11 @@ class Login extends BaseController
      */
     public function hlg_local()
     {
-        $mobile = Cookie::get('mobile');
-        $token = Cookie::get('token');
-        $userType = Cookie::get('userType');
+        $mobile = Cookie::get('mobile') ? Cookie::get('mobile') : '';
+        $token = Cookie::get('token') ? Cookie::get('token') : '';
+        $userType = Cookie::get('userType') ? Cookie::get('userType') : '';
         $hlg_url = Config('curl.hlg');
-        $this->redirect($hlg_url.'/home/index/index?line='.$mobile.'&ttttt='.$token.'&userType='.$userType.'&location=yes');
+        $this->redirect($hlg_url.'/home/login/index2?line='.$mobile.'&ttttt='.$token.'&userType='.$userType.'&location=yes');
     }
 
 }
