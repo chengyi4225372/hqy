@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1577072354;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1577086061;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -96,7 +96,7 @@
             </div><!-- 二级菜单 -->
           </li>
           <li><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
-          <li class='nav-active'><a href="javascript:;">政府招商政策</a></li>
+          <li class='nav-active'><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
           <li><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></li>
           <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
         </ul>
@@ -170,7 +170,7 @@
             </div>
             <div class="search-box">
                 <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/industry/index'); ?>">搜索
+                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/infoList'); ?>">搜索
                 </div>
             </div>
 

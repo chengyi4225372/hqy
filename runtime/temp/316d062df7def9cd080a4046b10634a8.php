@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1577085817;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1577086231;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -97,7 +97,7 @@
 
                         </div><!-- 二级菜单 -->
                     </li>
-                    <li class='nav-active'><a href="javascript:;">招标信息</a></li>
+                    <li class='nav-active'><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
                     <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
                     <li><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
