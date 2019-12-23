@@ -100,7 +100,7 @@ body {
     background: #F4F4F4;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "Noto Sans SC";
+    font-family: "Noto Sans SC","syht";
 }
 
 p {
@@ -133,7 +133,7 @@ a {
 ::-webkit-input-placeholder {
     /* WebKit browsers */
     font-size: 1rem;
-    font-family: "Noto Sans SC";
+    font-family: "Noto Sans SC","syht";
     font-weight: 400;
     color: rgba(224, 224, 224, 1);
 }
@@ -141,7 +141,7 @@ a {
 :-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
     font-size: 1rem;
-    font-family: "Noto Sans SC";
+    font-family: "Noto Sans SC","syht";
     font-weight: 400;
     color: rgba(224, 224, 224, 1);
 }
@@ -149,7 +149,7 @@ a {
 ::-moz-placeholder {
     /* Mozilla Firefox 19+ */
     font-size: 1rem;
-    font-family: "Noto Sans SC";
+    font-family: "Noto Sans SC","syht";
     font-weight: 400;
     color: rgba(224, 224, 224, 1);
 }
@@ -157,7 +157,7 @@ a {
 :-ms-input-placeholder {
     /* Internet Explorer 10+ */
     font-size: 1rem;
-    font-family: "Noto Sans SC";
+    font-family: "Noto Sans SC","syht";
     font-weight: 400;
     color: rgba(224, 224, 224, 1) !important;
 }
@@ -246,7 +246,7 @@ a {
 
 .titile li:nth-of-type(1) a {
     font-size: 1rem;
-    font-family: "Noto Sans SC";
+    font-family: "Noto Sans SC","syht";
     font-weight: bold;
     color: #fff;
 }
@@ -267,7 +267,7 @@ a {
 .titile a {
     /* padding:0 28px; */
     font-size: 1rem;
-    font-family: "Noto Sans SC";
+    font-family: "Noto Sans SC","syht";
     font-weight: bold;
     color: #fff;
     text-decoration: none;
@@ -328,7 +328,7 @@ a {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
-    font-family: Source Han Sans CN;
+    font-family: "Noto Sans SC","syht";
     font-weight: 500;
     color: rgba(0, 105, 179, 1);
     color: #fff;
@@ -405,7 +405,7 @@ a {
 
 .secondary-menu>div:nth-child(1) dl dt a {
     font-size: 1.375rem;
-    font-family: Source Han Sans CN;
+    font-family: "Noto Sans SC","syht";
     font-weight: bold;
     color: rgba(255, 255, 255, 1);
     line-height: 3.8125rem;
@@ -413,7 +413,7 @@ a {
 
 .secondary-menu>div:nth-child(1) dl dd {
     font-size: .875rem;
-    font-family: Source Han Sans CN;
+    font-family: "Noto Sans SC","syht";
     font-weight: 300;
     color: rgba(254, 255, 255, 1);
     line-height: 1.75rem;
@@ -443,7 +443,7 @@ a {
     -ms-box-sizing: border-box;
     box-sizing: border-box;
     font-size: .875rem;
-    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
+    font-family: "Noto Sans SC","syht";
     font-weight: 500;
     color: rgba(51, 51, 51, 1);
     background: rgba(255, 255, 255, 1);
@@ -453,7 +453,7 @@ a {
 
 .u_info_content .u_out {
     font-size: .875rem;
-    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
+    font-family: "Noto Sans SC","syht";
     color: #333;
     display: block;
     width: 100%;

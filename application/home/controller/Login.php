@@ -3,7 +3,8 @@
 namespace app\home\controller;
 
 use app\common\controller\BaseController;
-use  think\Controller;
+use app\common\model\Loginlog;
+use think\Controller;
 use think\Cookie;
 use think\Cache;
 use think\Config;
@@ -205,6 +206,20 @@ class Login extends BaseController
         Cookie::clear('token');
         Cookie::clear('userType');
         return json(['status' => 200,'message' => 'success']);
+    }
+
+    /**
+     * @DESC：惠灵工跳转过来获取cookie
+     * @author: jason
+     * @date: 2019-12-20 08:35:19
+     */
+    public function hlg_local()
+    {
+        $mobile = Cookie::get('mobile') ? Cookie::get('mobile') : '';
+        $token = Cookie::get('token') ? Cookie::get('token') : '';
+        $userType = Cookie::get('userType') ? Cookie::get('userType') : '';
+        $hlg_url = Config('curl.hlg');
+        $this->redirect($hlg_url.'/home/login/index2?line='.$mobile.'&ttttt='.$token.'&userType='.$userType.'&location=yes');
     }
 
 }

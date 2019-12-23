@@ -82,7 +82,7 @@ html {
 
 body {
   min-width: 75rem;
-  font-family: "Noto Sans SC"; }
+  font-family: "Noto Sans SC","syht"!important; }
 
 .w {
   width: 75rem;
@@ -122,7 +122,7 @@ body {
 .title_icon > div:nth-child(1) {
   float: left;
   font-size: 0.6875rem;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: white;
   height: 100%;
@@ -135,7 +135,7 @@ body {
 .title_icon > div:nth-child(2) > div {
   float: right;
   font-size: 11px;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: white;
   line-height: 1.5625rem; }
@@ -262,7 +262,7 @@ body {
   font-size: 1rem;
   display: inline-block;
   /* padding: 0 1.5625rem; */
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   text-align: center;
   line-height: 6.4375rem;
   text-decoration: none;
@@ -272,7 +272,7 @@ body {
 .header_content .two > li > a {
   font-size: 1rem;
   display: inline-block;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   text-align: center;
   line-height: 3.85rem;
   text-decoration: none;
@@ -367,7 +367,7 @@ body {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   font-size: 14px;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: 500;
   color: #0069b3; }
 
@@ -385,7 +385,7 @@ body {
   -webkit-border-radius: 4px;
   border-radius: 4px;
   font-size: 14px;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: 500;
   color: #fff; }
 
@@ -397,7 +397,7 @@ body {
 
 .register a {
   font-size: 1rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: white; }
 
@@ -474,14 +474,14 @@ body {
 
 .secondary-menu > div:nth-child(1) dl dt a {
   font-size: 1.375rem;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: bold;
   color: white;
   line-height: 3.8125rem; }
 
 .secondary-menu > div:nth-child(1) dl dd {
   font-size: 0.875rem;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: 300;
   color: #feffff;
   line-height: 1.75rem; }
@@ -506,7 +506,7 @@ body {
 
 .header-content-box .content_text div {
   font-size: 4.5rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: bold;
   color: rgba(255, 255, 255, 1);
 }
@@ -522,7 +522,7 @@ body {
 
 .rentong .w {
   font-size: 2.25rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 300;
   color: rgba(255, 255, 255, 1);
 }
@@ -541,7 +541,7 @@ body {
   border-radius: .25rem;
    outline:none; 
   font-size: 1.5rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
   cursor: pointer;
@@ -594,7 +594,7 @@ body {
   margin-bottom: 0.1875rem; */
   padding: 2.5rem 0 2.5rem 0;
   font-size: 1.875rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 700;
   color: black; }
 
@@ -603,7 +603,7 @@ body {
   /* height: 2.75rem; */
   line-height: 1.5rem;
   font-size: 1rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 300;
   color: black;
   overflow: hidden;
@@ -640,7 +640,7 @@ body {
   display: block;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: black; }
 
@@ -730,7 +730,7 @@ body {
 
 .all_product > li > a {
   display: block;
-  font-family: "Noto Sans SC"; }
+  font-family: "Noto Sans SC","syht"; }
 
 .all_product > li > a:nth-of-type(1) {
   font-size: 1.5rem;
@@ -855,7 +855,7 @@ body {
   background-size: contain; }
 
 .produtionIntro li {
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   width: 20.3125rem;
   height: 6.25rem;
   -webkit-border-radius: 0.3125rem;
@@ -935,7 +935,7 @@ body {
 
 .huichuangyou_title {
   font-size: 1.875rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: black;
   margin-top: 1.3125rem;
@@ -1053,7 +1053,7 @@ body {
 
 .con div {
   font-size: 0.875rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 300; }
 
 /* 招标信息  */
@@ -1107,7 +1107,7 @@ body {
   line-height: 4.5rem;
   border-bottom: 1px solid #ccc;
   font-size: 1.5rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 500;
   color: #333333; }
 
@@ -1116,14 +1116,14 @@ body {
   line-height: 4.375rem;
   margin-top: 0.8125rem;
   font-size: 0.5625rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #19263c; }
 
 .totalInfo_content {
   padding: 0 0.4375rem 0 0.375rem;
   font-size: 0.5625rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 300;
   color: #333333; }
 
@@ -1133,14 +1133,14 @@ body {
 .zhaoTotalInfo .zhao_contentInfo div:nth-of-type(1) {
   float: left;
   font-size: 1.125rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #19263c; }
 
 .zhaoTotalInfo .zhao_contentInfo div:nth-of-type(2) {
   float: right;
   font-size: 0.75rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #999999; }
 
@@ -1148,7 +1148,7 @@ body {
   position: relative;
   max-height: 2.575rem;
   font-size: 0.875rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 300;
   color: #333333;
   -o-text-overflow: -o-ellipsis-lastline;
@@ -1176,7 +1176,7 @@ body {
   /* float: right; */
   margin: 2.1875rem 0 0 0;
   font-size: 0.875rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: white;
   -webkit-border-radius: 0.25rem;
@@ -1204,7 +1204,7 @@ body {
   line-height: 4.5rem;
   border-bottom: 1px solid #ccc;
   font-size: 1.5rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 500;
   color: #333333; }
 
@@ -1219,14 +1219,14 @@ body {
 .zhaomethods .zhao_contentInfo div:nth-of-type(1) {
   float: left;
   font-size: 1.125rem !important;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #19263c; }
 
 .zhaomethods .zhao_contentInfo div:nth-of-type(2) {
   float: right;
   font-size: 0.75rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #999999; }
 
@@ -1244,7 +1244,7 @@ body {
   text-align: center;
   margin: 2.1875rem 0 0 0;
   font-size: 0.875rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: white;
   -webkit-border-radius: 0.25rem;
@@ -1365,7 +1365,7 @@ body {
 
 .goTop div {
   font-size: 0.875rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #323232; }
 
@@ -1374,7 +1374,7 @@ body {
   background: #fff; }
 
 .bottomBox {
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   background: #323c48;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1391,13 +1391,13 @@ body {
   padding-top: 5.25rem;
   padding-bottom: 2.375rem;
   border-bottom: 1px solid #7a7a7a;
-  font-family: "Noto Sans SC"; }
+  font-family: "Noto Sans SC","syht"; }
 
 .bottomBox .bottom .aboutUs span {
   font-size: 1.875rem;
   line-height: 1.875rem;
   color: #fff;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: 500; }
 
 .bottomBox .bottom .aboutUs p {
@@ -1440,18 +1440,24 @@ body {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.125rem;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   margin-bottom: 3.25rem; }
 
 .bottomBox .bottom .navBottom .navList dl dd {
   margin-bottom: 1.875rem;
-  font-size: 1.125rem; }
+  font-size: 1.125rem; 
+  font-family: "Noto Sans SC","syht";
+
+}
 
 .bottomBox .bottom .navBottom .navList dl dd a {
   display: block;
   color: #dcdcdc;
   font-size: 1.125rem;
-  line-height: 1.125rem; }
+  line-height: 1.125rem;
+  font-family: "Noto Sans SC","syht";
+
+ }
 
 .bottomBox .bottom .navBottom .navList dl:first-child dd:nth-of-type(3) a,
 .bottomBox .bottom .navBottom .navList dl:first-child dd:nth-of-type(4) a,
@@ -1626,7 +1632,7 @@ border-radius:4px;
     width:280px;
     height:36px;
     font-size:18px;
-font-family:"Noto Sans SC","Microsoft YaHei", "微软雅黑";
+font-family:"Noto Sans SC","syht";
 font-weight:400;
 color:rgba(255,255,255,1);
 background:rgba(64,145,255,1);
@@ -1713,7 +1719,7 @@ border:none;
   line-height: 7.5rem;
   height: 7.5rem;
   font-size: 1.875rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   /* background-image: url("../images/title.png");
   -webkit-background-size: 100% 100%;
@@ -1768,7 +1774,7 @@ border:none;
   border: none;
   margin: 2.3125rem 2.4375rem 0px 2.5625rem;
   font-size: 1.5rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: white;
   cursor: pointer; }
@@ -1778,7 +1784,7 @@ border:none;
   width: 5rem;
   height: 2.5rem;
   font-size: 0.875rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: black;
   line-height: 4.5rem;
@@ -1829,7 +1835,7 @@ input:-webkit-autofill {
   width: 4.5rem;
   height: 2rem;
   font-size: 0.875rem;
-  font-family: "Noto Sans SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: white;
   background: #4091ff;
@@ -1895,7 +1901,7 @@ input:-webkit-autofill {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 0.875rem;
-  font-family: "Noto Sans SC","PingFang SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 500;
   color: #333333;
   background: white;
@@ -1910,7 +1916,7 @@ input:-webkit-autofill {
 
 .u_info_content .u_out {
   font-size: 0.875rem;
-  font-family: "Noto Sans SC","PingFang SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   color: #333;
   display: block;
   width: 100%;
@@ -2014,7 +2020,7 @@ input:-webkit-autofill {
 .mask-box2 .mask-box-title {
   text-align: center;
   font-size: 1.125rem;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: bold;
   color: white;
   margin: 0 0 1.25rem 0; }
@@ -2023,6 +2029,6 @@ input:-webkit-autofill {
 .mask-box2 .mask-box-content {
   text-align: center;
   font-size: 0.875rem;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: white; }

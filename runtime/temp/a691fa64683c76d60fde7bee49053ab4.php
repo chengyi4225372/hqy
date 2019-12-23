@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"C:\phpEnv\www\hqy_\public/../application/home\view\many\index.html";i:1576745275;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:66:"C:\phpEnv\www\hqy_\public/../application/home\view\many\index.html";i:1576840399;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,15 +7,12 @@
     <title>惠多薪</title>
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/optimal.css">
+    <link rel="stylesheet" href="/static/home/font/syht.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 
 <body style="background: #fff;">
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 8285d8550b14bac5d6f3904dbb27acc4748bb8f7
 <div>
     <div class="fourzerofour">
         <img src="/static/hdx_error2.png">

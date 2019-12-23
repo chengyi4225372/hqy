@@ -66,7 +66,10 @@ body {
   background: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Noto Sans SC"; }
+  font-family: "Noto Sans SC","syht";
+
+
+}
 
 p {
   margin: 0; }
@@ -95,28 +98,28 @@ a {
 ::-webkit-input-placeholder {
   /* WebKit browsers */
   font-size: 1rem;
-  font-family: Microsoft YaHei;
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #e0e0e0; }
 
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   font-size: 1rem;
-  font-family: Microsoft YaHei;
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #e0e0e0; }
 
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   font-size: 1rem;
-  font-family: Microsoft YaHei;
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #e0e0e0; }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
   font-size: 1rem;
-  font-family: Microsoft YaHei;
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #e0e0e0 !important; }
 
@@ -195,7 +198,7 @@ a {
 
 .titile li:nth-of-type(1) a {
   font-size: 1rem;
-  font-family: Microsoft YaHei;
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #fff; }
 
@@ -211,7 +214,7 @@ a {
 .titile a {
   /* padding:0 28px; */
   font-size: 1rem;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #fff;
   text-decoration: none; }
@@ -272,7 +275,7 @@ a {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   font-size: 14px;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: 500;
   color: #0069b3;
   color: #fff; }
@@ -301,7 +304,7 @@ a {
   overflow: hidden; }
 
 .secStatus {
-  font-family: "Noto Sans SC" !important; }
+  font-family: "Noto Sans SC","syht" !important; }
 
 .two .secondary-menu {
   position: absolute;
@@ -355,14 +358,14 @@ a {
 
 .secondary-menu > div:nth-child(1) dl dt a {
   font-size: 1.375rem;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: 500;
   color: white;
   line-height: 3.8125rem; }
 
 .secondary-menu > div:nth-child(1) dl dd {
   font-size: 0.875rem;
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC","syht";
   font-weight: 300;
   color: #feffff;
   line-height: 1.75rem; }
@@ -389,7 +392,7 @@ a {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 0.875rem;
-  font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   font-weight: 500;
   color: #333333;
   background: white;
@@ -400,7 +403,7 @@ a {
 
 .u_info_content .u_out {
   font-size: 0.875rem;
-  font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑";
+  font-family: "Noto Sans SC","syht";
   color: #333;
   display: block;
   width: 100%;
@@ -504,7 +507,7 @@ a {
     padding: 1.25rem 0;
     margin-right: 2.375rem;
     font-size: 1rem;
-    font-family: Source Han Sans CN;
+    font-family: "Noto Sans SC","syht";
     font-weight: 400;
     color: rgba(153, 153, 153, 1);
     cursor: pointer;
@@ -515,7 +518,7 @@ a {
 
 .tabs ul .li-active {
     font-size: 1rem;
-    font-family: Source Han Sans CN;
+    font-family: "Noto Sans SC","syht";
     font-weight: 400;
     color: rgba(64, 145, 255, 1);
 }
@@ -773,7 +776,7 @@ a {
 .tabs-items-content-text {
   height: 2.625rem;
   font-size: 0.75rem;
-  font-family: Microsoft YaHei;
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #999999;
   margin-bottom: 1.625rem;
@@ -829,7 +832,7 @@ a {
 
 .tabs-items-content-time span:nth-child(2) {
   font-size: 0.75rem;
-  font-family: Microsoft YaHei;
+  font-family: "Noto Sans SC","syht";
   font-weight: 400;
   color: #999999; }
 
@@ -1209,7 +1212,7 @@ a {
             font-weight: 500;
             font-size: 1.125rem;
             line-height: 1.125rem;
-            font-family: "Noto Sans SC";
+            font-family: "Noto Sans SC","syht";
             margin-bottom: 3.25rem; }
           .bottomBox .bottom .navBottom .navList dl dd {
             margin-bottom: 1.875rem;
@@ -1346,7 +1349,7 @@ a {
 
 .goTop div {
   font-size: 0.875rem;
-  font-family: "Microsoft YaHei", "微软雅黑";
+  font-family:"Noto Sans SC","syht";
   font-weight: 400;
   color: #323232; }
 
