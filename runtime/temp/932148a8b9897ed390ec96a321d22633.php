@@ -1,6 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"C:\phpEnv\www\hqy_\public/../application/home\view\optimal\index.html";i:1576842423;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"C:\phpEnv\www\hqy_\public/../application/home\view\optimal\index.html";i:1577072410;}*/ ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@
                         <div class="w secondary-menu" id="secondary-menu">
                             <div>
                                 <dl>
-                                    <dt><a href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
                                     <dd>
                                         · 企税降成本 薪税降税负
 
@@ -39,7 +39,7 @@
                                     <dd>· 分红降扣率 创业降个税</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
                                     <dd>
                                         · 寻求多样化用工模式
 
@@ -47,7 +47,7 @@
                                     <dd>· 提高内部人员效能</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                                     <dd>
                                         · 优化员工福利选择模块
 
@@ -55,7 +55,7 @@
                                     <dd>· 企业成本可控透明化</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                     <dd>
                                         · 技能价值化
 
@@ -63,7 +63,7 @@
                                     <dd>· 成就更好自我</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                     <dd>
                                         · 一站式解决方案
 
@@ -71,7 +71,7 @@
                                     <dd>· 激活企业最大效益</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
                                     <dd>· 赋能企业互联网生态建设</dd>
                                     <dd>· 助力产业数字化转型升级</dd>
                                 </dl>

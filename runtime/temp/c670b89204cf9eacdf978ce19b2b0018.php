@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industrydetail.html";i:1576850357;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1576131456;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:76:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industrydetail.html";i:1576919138;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1576131456;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +56,7 @@
 
                             <div>
                                 <dl>
-                                    <dt><a href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
                                     <dd>
                                         · 企业财税筹划定制
 
@@ -64,14 +64,14 @@
                                     <dd>· 一体化解决方案</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
                                     <dd>
                                         · 企业灵活用工平台
                                     </dd>
                                     <dd>· 财税优化综合服务</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                                     <dd>
                                         · 优化薪酬结构
 
@@ -79,7 +79,7 @@
                                     <dd>· 为企业降本增效</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                                     <dd>
                                         · 精选各地好工作
 
@@ -87,7 +87,7 @@
                                     <dd>· 高效缔结，轻松入职</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                     <dd>
                                         · 武汉创业公司
 
@@ -95,7 +95,7 @@
                                     <dd>· 一站式商务服务</dd>
                                 </dl>
                                 <dl>
-                                    <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
+                                    <dt><a class="secStatus" href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
                                     <dd>· 企业互联网生态管理</dd>
                                     <dd>· 全行业全渠道数字化转型</dd>
                                 </dl>
