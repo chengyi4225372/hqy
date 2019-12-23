@@ -115,14 +115,14 @@ class Login extends BaseController
         $array['userType'] = $userType;
 
         //todo 这个暂时先这样，后面还要改
-        $this->redirect($hlg_url.'/home/index/index?line='.$mobile.'&userType='.$userType.'&ttttt='.$token.'&location=yes');return;
+        //$this->redirect($hlg_url.'/home/index/index?line='.$mobile.'&userType='.$userType.'&ttttt='.$token.'&location=yes');return;
         //请求惠灵工的页面的接口把用户信息带过去
         //todo 这个暂时先这样，后面还要改
 
-        $res = curl_post($hlg_url.'/home/login/savetokens',$array);
+//        $res = curl_post($hlg_url.'/home/login/savetokens',$array);
 
         //把手机号、token、用户类型存到【会找事】页面的cookie里面
-        $res2 = curl_post($hzs_url.'/home/login/savetokens',$array);
+//        $res2 = curl_post($hzs_url.'/home/login/savetokens',$array);
 
         if(isset($_GET['msg4']) && !empty($_GET['msg4']) && $_GET['msg4'] !== 'undefined'){
             $this->redirect($_GET['msg4']);
@@ -183,9 +183,9 @@ class Login extends BaseController
         //会找事
         $hzs_url = Config::get('curl.hzs');
         if ($this->request->isAjax() && $this->request->isPost()) {
-            Cookie::clear('mobile');
-            Cookie::clear('token');
-            Cookie::clear('userType');
+            Cookie::set('mobile','');
+            Cookie::set('token','');
+            Cookie::set('userType','');
             $res = curl_get($hlg_url.'/home/login/apilogout');
             $res2 = curl_get($hzs_url.'/home/login/apilogout');
             return json(['status' => true, 'message' => '退出登录成功']);
@@ -202,9 +202,9 @@ class Login extends BaseController
     public function apilogout()
     {
         header("Access-Control-Allow-Origin:*");
-        Cookie::clear('mobile');
-        Cookie::clear('token');
-        Cookie::clear('userType');
+        Cookie::set('mobile','');
+        Cookie::set('token','');
+        Cookie::set('userType','');
         return json(['status' => 200,'message' => 'success']);
     }
 
@@ -219,7 +219,23 @@ class Login extends BaseController
         $token = Cookie::get('token') ? Cookie::get('token') : '';
         $userType = Cookie::get('userType') ? Cookie::get('userType') : '';
         $hlg_url = Config('curl.hlg');
-        $this->redirect($hlg_url.'/home/login/index2?line='.$mobile.'&ttttt='.$token.'&userType='.$userType.'&location=yes');
+        if(!empty($mobile)){
+            $this->redirect($hlg_url.'/home/index/index?line='.$mobile.'&ttttt='.$token.'&userType='.$userType.'&location=yes&is_empty=no');
+        }
+        $this->redirect($hlg_url.'/home/index/index?is_empty=yes');
     }
 
+    /**
+     * @DESC：惠灵工退出登录
+     * @author: jason
+     * @date: 2019-12-23 02:52:46
+     */
+    public function hlg_logout()
+    {
+        Cookie::set('mobile','');
+        Cookie::set('token','');
+        Cookie::set('userType','');
+        $hlg_url = Config('curl.hlg');
+        $this->redirect($hlg_url.'/home/index/index');
+    }
 }
