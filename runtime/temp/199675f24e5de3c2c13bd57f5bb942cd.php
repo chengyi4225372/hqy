@@ -1,6 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1576847857;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_list.html";i:1577086061;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -48,7 +48,7 @@
 
               <div>
                 <dl>
-                  <dt><a href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
+                  <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
                   <dd>
                     · 企业财税筹划定制
 
@@ -56,14 +56,14 @@
                   <dd>· 一体化解决方案</dd>
                 </dl>
                 <dl>
-                  <dt><a href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
+                  <dt><a class="secStatus" href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
                   <dd>
                     · 企业灵活用工平台
                   </dd>
                   <dd>· 财税优化综合服务</dd>
                 </dl>
                 <dl>
-                  <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
+                  <dt><a class="secStatus" href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                   <dd>
                     · 优化薪酬结构
 
@@ -71,7 +71,7 @@
                   <dd>· 为企业降本增效</dd>
                 </dl>
                 <dl>
-                  <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
+                  <dt><a class="secStatus" href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                   <dd>
                     · 精选各地好工作
 
@@ -79,7 +79,7 @@
                   <dd>· 高效缔结，轻松入职</dd>
                 </dl>
                 <dl>
-                  <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
+                  <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                   <dd>
                     · 武汉创业公司
 
@@ -87,7 +87,7 @@
                   <dd>· 一站式商务服务</dd>
                 </dl>
                 <dl>
-                  <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
+                  <dt><a class="secStatus" href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
                   <dd>· 企业互联网生态管理</dd>
                   <dd>· 全行业全渠道数字化转型</dd>
                 </dl>
@@ -96,7 +96,7 @@
             </div><!-- 二级菜单 -->
           </li>
           <li><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
-          <li class='nav-active'><a href="javascript:;">政府招商政策</a></li>
+          <li class='nav-active'><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
           <li><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></li>
           <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
         </ul>
@@ -170,7 +170,7 @@
             </div>
             <div class="search-box">
                 <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/industry/index'); ?>">搜索
+                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/infoList'); ?>">搜索
                 </div>
             </div>
 

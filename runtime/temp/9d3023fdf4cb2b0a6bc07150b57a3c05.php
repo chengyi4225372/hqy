@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1576656992;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576746676;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1577083558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576807098;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +18,7 @@
   <!-- <link rel="stylesheet" href="/static/spirit/css/layui.css"  media="all"> -->
   <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+  <link rel="stylesheet" href="/static/home/font/syht.css">
   <script src="/static/spirit/js/clamp.js"></script>
 
   <script src='/static/spirit/js/Informationlist.js'></script>
@@ -47,57 +48,56 @@
 
               <div>
                 <dl>
-                  <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>">惠优税</a></dt>
+                  <dt><a href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
                   <dd>
-                    · 企税降成本 薪税降税负
+                    · 企业财税筹划定制
 
                   </dd>
-                  <dd>· 分红降扣率 创业降个税</dd>
+                  <dd>· 一体化解决方案</dd>
                 </dl>
                 <dl>
-                  <dt><a class="secStatus" href="<?php echo config('curl.hlg'); ?>">惠灵工</a></dt>
+                  <dt><a href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
                   <dd>
-                    · 寻求多样化用工模式
+                    · 企业灵活用工平台
+                  </dd>
+                  <dd>· 财税优化综合服务</dd>
+                </dl>
+                <dl>
+                  <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
+                  <dd>
+                    · 优化薪酬结构
 
                   </dd>
-                  <dd>· 提高内部人员效能</dd>
+                  <dd>· 为企业降本增效</dd>
                 </dl>
                 <dl>
-                  <dt><a class="secStatus" href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
+                  <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                   <dd>
-                    · 优化员工福利选择模块
+                    · 精选各地好工作
 
                   </dd>
-                  <dd>· 企业成本可控透明化</dd>
+                  <dd>· 高效缔结，轻松入职</dd>
                 </dl>
                 <dl>
-                  <dt><a class="secStatus" href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
+                  <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                   <dd>
-                    · 技能价值化
+                    · 武汉创业公司
 
                   </dd>
-                  <dd>· 成就更好自我</dd>
+                  <dd>· 一站式商务服务</dd>
                 </dl>
                 <dl>
-                  <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
-                  <dd>
-                    · 一站式解决方案
-
-                  </dd>
-                  <dd>· 激活企业最大效益</dd>
-                </dl>
-                <dl>
-                  <dt><a class="secStatus" href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
-                  <dd>· 赋能企业互联网生态建设</dd>
-                  <dd>· 助力产业数字化转型升级</dd>
+                  <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
+                  <dd>· 企业互联网生态管理</dd>
+                  <dd>· 全行业全渠道数字化转型</dd>
                 </dl>
               </div>
 
             </div><!-- 二级菜单 -->
           </li>
           <li><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
-          <li class='nav-active'><a href="javascript:;">政府招商政策</a></li>
-          <li><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
+          <li class='nav-active'><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
+          <li><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></li>
           <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
         </ul>
 
@@ -170,7 +170,7 @@
             </div>
             <div class="search-box">
                 <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/industry/index'); ?>">搜索
+                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/infoList'); ?>">搜索
                 </div>
             </div>
 
@@ -235,7 +235,7 @@
                           <img src="/static/spirit/images/shijian2x.png" alt=""><span><?php echo $sh['release_time']; ?></span>
                         </span>
                       </div>
-                      <p>
+                      <p class="limitP">
                         <?php echo $sh['describe']; ?>
                       </p>
 
@@ -291,16 +291,15 @@
                     </dl>
                     <dl>
                         <dt>资讯信息</dt>
-                        <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
-
+                        <dd><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></dd>
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
-
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
 
                         <dd><a href="javascript:;">招募合伙人</a></dd>
+
                     </dl>
                     <dl>
                         <dt>联系我们</dt>
@@ -370,6 +369,9 @@
       li.classList.remove('nav-active')
       menuList[4].classList.add('nav-active')
     }
+
+            /* 信息列表显示2行加省略号 */
+            $('.limitP').each(function () { $clamp($(this)[0], { clamp: 2 }) })
   </script>
 
  

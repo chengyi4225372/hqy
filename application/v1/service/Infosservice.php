@@ -349,7 +349,7 @@ class Infosservice
          if(empty($title)){
              $where['status'] = 1;
              $where['auditing'] = 1;
-             $array['pid']    = 3;
+             $where['pid']    = 3;
          }else {
              $new_title = explode(',',$title);
 
@@ -363,7 +363,7 @@ class Infosservice
 
              $where['keyword'] = ['like',$arr_w,'OR'];
              $where['status'] = 1;
-             $array['pid']    = 3;
+             $where['pid']    = 3;
              $where['auditing'] = 1;
          }
 
