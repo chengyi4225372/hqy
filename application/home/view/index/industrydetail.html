@@ -146,14 +146,14 @@
                             <div><span>上一篇:</span><a href="javascript:;">已经是第一篇了</a></div>
                             {else /}
                             <div><span>上一篇:</span><a
-                                    href="{:url('/home/index/detailbiao',array('mid'=>$top.id))}">{$top.title}</a></div>
+                                    href="{:url('/home/index/industrydetail',array('mid'=>$top.id))}">{$top.title}</a></div>
                             {/empty}
 
                             {empty name='next'}
                             <div><span>下一篇:</span><a href="javascript:;">已经是最后一篇了</a></div>
                             {else /}
                             <div><span>下一篇:</span><a
-                                    href="{:url('/home/index/detailbiao',array('mid'=>$next.id))}">{$next.title}</a>
+                                    href="{:url('/home/index/industrydetail',array('mid'=>$next.id))}">{$next.title}</a>
                             </div>
                             {/empty}
                         </div>

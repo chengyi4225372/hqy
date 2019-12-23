@@ -96,7 +96,7 @@
 
                         </div><!-- 二级菜单 -->
                     </li>
-                    <li class='nav-active'><a href="javascript:;">招标信息</a></li>
+                    <li class='nav-active'><a href="{:url('/home/index/infoBiao')}">招标信息</a></li>
                     <li><a href="{:url('/home/index/infoList')}">政府招商政策</a></li>
                     <li><a href="{:url('/home/index/industry')}">新闻资讯</a></li>
                     <!-- <li><a href="{:url('/home/launch/index')}">惠启动</a></li> -->
@@ -154,6 +154,27 @@
                     </div>
 
                     <!-- 热搜 -->
+<<<<<<< HEAD
+                        <div class="hotWord">
+                            <div class="bgHot">
+                                <span>热门关键词</span>
+                                <ul>
+                                    {volist name='four' id='ff' key='k'}
+                                    <li onclick="hotsearch(this);" data-title="{$ff.title}"
+                                        data-href="{:url('/home/index/detailbiao')}"
+                                        data-url="{:url('/home/index/getbiaoapi')}" data-id="{$k}">
+                                        <span>{$ff.title}</span>
+                                        <span class="close" onclick="nullhot(this)"
+                                              data-url="{:url('/home/index/getbiaoapi')}">✕</span>
+                                    </li>
+                                    {/volist}
+                                </ul>
+                            </div>
+                            <div class="search-box">
+                                <input type="text" id="keyword" value="{$Think.get.keyword}" placeholder="请输入关键字">
+                                <div id="searched" style="cursor:pointer;" data-url="{:url('/home/index/infoBiao')}">搜索
+                                </div>
+=======
                     <div class="hotWord">
                         <div class="bgHot">
                             <span>热门关键词</span>
@@ -173,6 +194,7 @@
                             <input type="text" id="keyword" value="{$Think.get.keyword}" placeholder="请输入关键字">
                             <div id="searched" style="cursor:pointer;" data-url="{:url('/home/index/industry/index')}">
                                 搜索
+>>>>>>> 29118ef4d2d98f2ce67175fb3d78557fa561df1f
                             </div>
                         </div>
 

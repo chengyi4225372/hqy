@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1576744025;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576746676;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1576807098;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576807098;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -133,7 +133,7 @@
                                 <a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a>
                             </li>
                             <li>
-                                <a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a>
+                                <a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a>
                             </li>
                         </ul>
 
@@ -188,7 +188,7 @@
         <div class="w choose">
             <div class='choose-title'>选择我们</div>
             <div class='choose-intro'>
-                惠企云拥有优质多元产品、权威官方背书、金牌服务团队、一流技术团队、专业客服团队，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案，为企业可持续性发展提供有力保障。</div>
+                惠企云拥有优质多元产品、权威官方背书、金牌服务团队、一流财税团队、专业客服团队，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案，为企业可持续性发展提供有力保障。</div>
             <ul class='img_total'>
                 <li>
                     <img src="/static/home/images/more.png" alt="">
@@ -424,16 +424,15 @@
                     </dl>
                     <dl>
                         <dt>资讯信息</dt>
-                        <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
-
+                        <dd><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></dd>
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
-
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
 
                         <dd><a href="javascript:;">招募合伙人</a></dd>
+
                     </dl>
                     <dl>
                         <dt>联系我们</dt>

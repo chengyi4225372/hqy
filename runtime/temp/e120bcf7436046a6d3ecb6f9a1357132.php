@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\industry.html";i:1576675037;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576746676;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\industry.html";i:1576807098;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576807098;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,7 +98,7 @@
                     </li>
                     <li><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></li>
                     <li><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></li>
-                    <li class='nav-active'><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></li>
+                    <li class='nav-active'><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></li>
                     <!-- <li><a href="<?php echo url('/home/launch/index'); ?>">惠启动</a></li> -->
                 </ul>
 
@@ -141,7 +141,7 @@
             <div class="w bread-crumbs">
                 <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
                 <span><a class="current" style="color:#3E92FF;" onclick="go_news(this)"
-                        data-url="<?php echo url('/home/index/industry'); ?>">行业资讯</a></span> <span></span>
+                        data-url="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></span> <span></span>
             </div>
         </div>
 
@@ -155,7 +155,7 @@
                       <li class="li-active">招商政策</li>
                       <li>招标信息</li>
                     </ul> -->
-                        <div class="govPolicy fl">行业资讯</div>
+                        <div class="govPolicy fl">新闻资讯</div>
 
                     </div>
 
@@ -273,16 +273,15 @@
                     </dl>
                     <dl>
                         <dt>资讯信息</dt>
-                        <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
-
+                        <dd><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></dd>
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
-
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>
                     <dl>
                         <dt>招商合作</dt>
 
                         <dd><a href="javascript:;">招募合伙人</a></dd>
+
                     </dl>
                     <dl>
                         <dt>联系我们</dt>
