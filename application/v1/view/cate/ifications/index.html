@@ -9,7 +9,27 @@
                     <div class="panel-heading">
 
                         <div class="form-group">
-                            <input type="text"  id="keywords" class="form-control" name="title" value="{$Think.get.title}" placeholder="请输入标题进行搜索....">
+                            <label>关键字：</label>
+                            <input type="text"  id="keywords" class="form-control" style="width:312px;" name="title" value="{$params['title']}" placeholder="多个关键字用中英文逗号或空格隔开...">
+                        </div>
+
+                        <div class="form-group">
+                            <label>状态：</label>
+                            <select class="form-control" id="status" name="status">
+                                <option value="">请选择</option>
+                                <option value="1" {if (isset($params['status'])) && ($params['status'] == 1)}selected='selected'{/if}>启用</option>
+                                <option value="-1" {if (isset($params['status'])) && ($params['status'] == -1)}selected='selected'{/if}>禁用</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>显示的页面：</label>
+                            <select id="disable" class="selectpicker" multiple  title="全部" >
+                                <option value="">全部</option>
+                                {volist name="disable" id="disable_list"}
+                                <option value="{$key}" {if in_array($key,$params['disable'])}selected='selected'{/if}>{$disable_list}</option>
+                                {/volist}
+                            </select>
                         </div>
 
                         <div class="form-group">
@@ -36,9 +56,11 @@
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
-                <th class="text-center">排序</th>
+                <th class="text-center" style="width:200px;">排序</th>
                 <th class="text-center">标签名</th>
+                <th class="text-center">显示对应的页面</th>
                 <th class="text-center">创建时间</th>
+                <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
                 {empty name='list'}
@@ -53,11 +75,17 @@
                     </td>
 
                     <td class="text-center">{$vo.title}</td>
+                    <td class="text-center">{$vo.disable}</td>
                     <td class="text-center">{$vo.create_time}</td>
                     <td class="text-center">
+                        {if $vo['status'] == 1}
+                        <span class="btn btn-success" onclick="dels(this)" data-url="{:url('/v1/cate/ifications/dels')}" data-id="{$vo['id']}" data="-1">已启用</span>
+                        {else/}
+                        <span class="btn btn-danger" onclick="dels(this)" data-url="{:url('/v1/cate/ifications/dels')}" data-id="{$vo['id']}" data="1">已禁止</span>
+                        {/if}
+                    </td>
+                    <td class="text-center">
                         <a  class="btn btn-info" data-url="{:url('/v1/cate/ifications/edit',['mid'=>$vo.id])}"  onclick="edits(this)">编辑</a>
-
-                        <a  class="btn btn-danger" data-url="{:url('/v1/cate/ifications/dels')}" data-id="{$vo.id}" onclick="dels(this)">删除</a>
                     </td>
                 </tr>
 
