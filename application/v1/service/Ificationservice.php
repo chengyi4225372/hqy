@@ -82,7 +82,7 @@ class Ificationservice
             return false;
         }
 
-        $info = Ification::instance()->where(['status' => 1, 'id' => $id])->find()->toArray();
+        $info = Ification::instance()->where(['id' => $id])->find();
         if (count($info) > 0) {
             $info['id'] = $info['id'];
             $info['title'] = $info['title'];
@@ -190,7 +190,7 @@ class Ificationservice
         if(empty($params)) return [];
         $where['disable'] = ['like', '%'.$params.'%'];
         $where['status'] = 1;
-        $resfour = collection(Ification::instance()->where($where)->order('sort desc')->limit(4)->select())->toArray();
+        $resfour = collection(Ification::instance()->where($where)->order('sort desc')->limit(6)->select())->toArray();
         return $resfour ? $resfour : '';
     }
 
