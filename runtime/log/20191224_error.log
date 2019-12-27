@@ -1,0 +1,126 @@
+---------------------------------------------------------------
+[ 2019-12-24T15:49:45+08:00 ] 172.26.2.252 GET /v1/cate/ifications/index.html
+[ error ] [8]未定义数组索引: title[/opt/web/hqy_/application/v1/service/Ificationservice.php:38]
+---------------------------------------------------------------
+[ 2019-12-24T15:50:18+08:00 ] 172.26.2.252 GET /v1/cate/ifications/index.html
+[ error ] [8]未定义数组索引: title[/opt/web/hqy_/application/v1/service/Ificationservice.php:38]
+---------------------------------------------------------------
+[ 2019-12-24T15:51:00+08:00 ] 172.26.2.252 GET /v1/cate/ifications/index.html
+[ error ] [8]未定义数组索引: title[/opt/web/hqy_/application/v1/service/Ificationservice.php:38]
+---------------------------------------------------------------
+[ 2019-12-24T15:52:05+08:00 ] 172.26.2.252 GET /v1/cate/ifications/index.html
+[ error ] [8]未定义数组索引: title[/opt/web/hqy_/application/v1/service/Ificationservice.php:38]
+---------------------------------------------------------------
+[ 2019-12-24T15:52:34+08:00 ] 172.26.2.252 GET /v1/cate/ifications/index.html
+[ error ] [8]未定义数组索引: title[/opt/web/hqy_/application/v1/service/Ificationservice.php:38]
+---------------------------------------------------------------
+[ 2019-12-24T16:26:41+08:00 ] 172.26.2.252 GET /v1/cate/ifications/index.html
+[ error ] [8]未定义数组索引: disable[/opt/web/hqy_/application/v1/controller/cate/Ifications.php:20]
+---------------------------------------------------------------
+[ 2019-12-24T16:27:09+08:00 ] 172.26.2.252 GET /v1/cate/ifications/index.html
+[ error ] [8]未定义数组索引: disable[/opt/web/hqy_/application/v1/controller/cate/Ifications.php:20]
+---------------------------------------------------------------
+[ 2019-12-24T16:29:55+08:00 ] 172.26.2.252 GET /v1/cate/ifications/index.html?title=&status=&disable=1,2
+[ error ] [2]in_array() expects parameter 2 to be array, string given[/opt/web/hqy_/runtime/temp/a67e6ddc4f2c1cca16230751aac49d49.php:332]
+---------------------------------------------------------------
+[ 2019-12-24T16:32:12+08:00 ] 172.26.2.252 GET /v1/cate/ifications/index.html?title=&status=&disable=1,2
+[ error ] [2]array_filter() expects parameter 1 to be array, string given[/opt/web/hqy_/application/v1/controller/cate/Ifications.php:26]
+---------------------------------------------------------------
+[ 2019-12-24T17:09:06+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [2]Illegal string offset 'title'[/opt/web/hqy_/thinkphp/library/think/Model.php:429]
+---------------------------------------------------------------
+[ 2019-12-24T17:09:10+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [2]Illegal string offset 'title'[/opt/web/hqy_/thinkphp/library/think/Model.php:429]
+---------------------------------------------------------------
+[ 2019-12-24T17:10:13+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [2]Illegal string offset 'title'[/opt/web/hqy_/thinkphp/library/think/Model.php:429]
+---------------------------------------------------------------
+[ 2019-12-24T17:11:05+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [2]Illegal string offset 'title'[/opt/web/hqy_/thinkphp/library/think/Model.php:429]
+---------------------------------------------------------------
+[ 2019-12-24T17:12:15+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [2]Illegal string offset 'title'[/opt/web/hqy_/thinkphp/library/think/Model.php:429]
+---------------------------------------------------------------
+[ 2019-12-24T17:14:10+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [2]Illegal string offset 'title'[/opt/web/hqy_/thinkphp/library/think/Model.php:429]
+---------------------------------------------------------------
+[ 2019-12-24T17:14:31+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [2]Illegal string offset 'title'[/opt/web/hqy_/thinkphp/library/think/Model.php:429]
+---------------------------------------------------------------
+[ 2019-12-24T17:15:58+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [2]Illegal string offset 'title'[/opt/web/hqy_/thinkphp/library/think/Model.php:429]
+---------------------------------------------------------------
+[ 2019-12-24T17:26:24+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=7
+[ error ] [2]in_array() expects parameter 2 to be array, string given[/opt/web/hqy_/runtime/temp/b344f0e3c44f6d89f7225ba402444a11.php:74]
+---------------------------------------------------------------
+[ 2019-12-24T17:30:40+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=7
+[ error ] [8]Trying to get property of non-object[/opt/web/hqy_/application/v1/service/Ificationservice.php:78]
+---------------------------------------------------------------
+[ 2019-12-24T17:31:13+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=7
+[ error ] [8]Trying to get property of non-object[/opt/web/hqy_/application/v1/service/Ificationservice.php:79]
+---------------------------------------------------------------
+[ 2019-12-24T17:31:31+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=7
+[ error ] [2]in_array() expects parameter 2 to be array, string given[/opt/web/hqy_/runtime/temp/b344f0e3c44f6d89f7225ba402444a11.php:74]
+---------------------------------------------------------------
+[ 2019-12-24T17:31:39+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=7
+[ error ] [2]in_array() expects parameter 2 to be array, string given[/opt/web/hqy_/runtime/temp/b344f0e3c44f6d89f7225ba402444a11.php:74]
+---------------------------------------------------------------
+[ 2019-12-24T17:32:17+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=8
+[ error ] [2]in_array() expects parameter 2 to be array, string given[/opt/web/hqy_/runtime/temp/b344f0e3c44f6d89f7225ba402444a11.php:74]
+---------------------------------------------------------------
+[ 2019-12-24T17:33:42+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=7
+[ error ] [2]in_array() expects parameter 2 to be array, string given[/opt/web/hqy_/runtime/temp/b344f0e3c44f6d89f7225ba402444a11.php:74]
+---------------------------------------------------------------
+[ 2019-12-24T17:34:50+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=7
+[ error ] [8]Trying to get property of non-object[/opt/web/hqy_/application/v1/service/Ificationservice.php:78]
+---------------------------------------------------------------
+[ 2019-12-24T17:35:37+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=7
+[ error ] [2]Illegal string offset 'id'[/opt/web/hqy_/application/v1/service/Ificationservice.php:78]
+---------------------------------------------------------------
+[ 2019-12-24T17:44:00+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=7
+[ error ] [2]Cannot use a scalar value as an array[/opt/web/hqy_/application/v1/service/Ificationservice.php:80]
+---------------------------------------------------------------
+[ 2019-12-24T17:49:11+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=7
+[ error ] [2]Cannot use a scalar value as an array[/opt/web/hqy_/application/v1/service/Ificationservice.php:80]
+---------------------------------------------------------------
+[ 2019-12-24T17:49:21+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=7
+[ error ] [2]Cannot use a scalar value as an array[/opt/web/hqy_/application/v1/service/Ificationservice.php:80]
+---------------------------------------------------------------
+[ 2019-12-24T17:56:02+08:00 ] 172.26.2.252 POST /v1/cate/ifications/edit.html
+[ error ] [0]variable type error：array[/opt/web/hqy_/thinkphp/library/think/Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-24T17:57:58+08:00 ] 172.26.2.252 POST /v1/cate/ifications/edit.html
+[ error ] [0]variable type error：array[/opt/web/hqy_/thinkphp/library/think/Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-24T17:58:24+08:00 ] 172.26.2.252 POST /v1/cate/ifications/edit.html
+[ error ] [0]variable type error：array[/opt/web/hqy_/thinkphp/library/think/Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-24T18:01:04+08:00 ] 172.26.2.252 POST /v1/cate/ifications/edit.html
+[ error ] [0]variable type error：array[/opt/web/hqy_/thinkphp/library/think/Request.php:1133]
+---------------------------------------------------------------
+[ 2019-12-24T18:07:36+08:00 ] 172.26.2.252 POST /v1/cate/ifications/edit.html
+[ error ] [2]implode(): Invalid arguments passed[/opt/web/hqy_/application/v1/controller/cate/Ifications.php:90]
+---------------------------------------------------------------
+[ 2019-12-24T18:46:28+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [10501]SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'sort' at row 1[/opt/web/hqy_/thinkphp/library/think/db/Connection.php:463]
+---------------------------------------------------------------
+[ 2019-12-24T18:47:27+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [10501]SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'sort' at row 1[/opt/web/hqy_/thinkphp/library/think/db/Connection.php:463]
+---------------------------------------------------------------
+[ 2019-12-24T18:47:54+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [10501]SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'sort' at row 1[/opt/web/hqy_/thinkphp/library/think/db/Connection.php:463]
+---------------------------------------------------------------
+[ 2019-12-24T18:48:27+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [10501]SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'sort' at row 1[/opt/web/hqy_/thinkphp/library/think/db/Connection.php:463]
+---------------------------------------------------------------
+[ 2019-12-24T18:49:53+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [10501]SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'sort' at row 1[/opt/web/hqy_/thinkphp/library/think/db/Connection.php:463]
+---------------------------------------------------------------
+[ 2019-12-24T18:50:24+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [10501]SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'sort' at row 1[/opt/web/hqy_/thinkphp/library/think/db/Connection.php:463]
+---------------------------------------------------------------
+[ 2019-12-24T18:50:38+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [10501]SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'sort' at row 1[/opt/web/hqy_/thinkphp/library/think/db/Connection.php:463]
+---------------------------------------------------------------
+[ 2019-12-24T18:50:53+08:00 ] 172.26.2.252 POST /v1/cate/ifications/add.html
+[ error ] [10501]SQLSTATE[22003]: Numeric value out of range: 1264 Out of range value for column 'sort' at row 1[/opt/web/hqy_/thinkphp/library/think/db/Connection.php:463]

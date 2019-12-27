@@ -18,6 +18,17 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="col-sm-3 control-label">需要显示的页面：</label>
+                    <div class="col-sm-9">
+                        <select id="disable" class="selectpicker form-control" multiple  title="请选择..." >
+                            {volist name="disable" id="disable_list"}
+                            <option value="{$key}">{$disable_list}</option>
+                            {/volist}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="sort" class="col-sm-3 control-label">
                     <span class="red-color">*</span>排序：</label>
                     <div class="col-sm-9">

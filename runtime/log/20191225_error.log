@@ -1,0 +1,9 @@
+---------------------------------------------------------------
+[ 2019-12-25T10:06:12+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=3
+[ error ] [0]致命错误: Call to a member function toArray() on null[/opt/web/hqy_/application/v1/service/Ificationservice.php:85]
+---------------------------------------------------------------
+[ 2019-12-25T10:06:20+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=3
+[ error ] [0]致命错误: Call to a member function toArray() on null[/opt/web/hqy_/application/v1/service/Ificationservice.php:85]
+---------------------------------------------------------------
+[ 2019-12-25T10:07:52+08:00 ] 172.26.2.252 GET /v1/cate/ifications/edit.html?mid=3
+[ error ] [2]Illegal string offset 'title'[/opt/web/hqy_/runtime/temp/b344f0e3c44f6d89f7225ba402444a11.php:65]
