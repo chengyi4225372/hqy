@@ -1,0 +1,120 @@
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" style="height: auto;">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">主导航</li>
+
+            <li class="treeview {if $paths == '/v1/users/user/index' || $paths == '/v1/protuct/protucts/index' || $paths == '/v1/info/infos/index' || $paths == '/v1/partners/partner/index' || $paths == '/v1/systematic/cases/index' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting' || $path ='/v1/cate/ifications/index' ||  $paths == '/v1/systematic/system/blogroll'}active{/if} " >
+                <a href="#">
+                    <i class="fa fa-share"></i> <span>首页</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{if $paths == '/v1/users/user/index'}active{/if}">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-user"></i> <span>用户管理</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="{if $paths == '/v1/users/user/index'}active{/if}">
+                                <a href="{:url('/v1/users/user/index')}"><i class="fa fa-circle-o"></i>用户列表</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="{if $paths == '/v1/protuct/protucts/index'}active{/if}">
+                        <a href="#">
+                            <i class="fa fa-folder"></i> <span>慧享产品</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="{if $paths == '/v1/protuct/protucts/index'}active{/if}">
+                                <a href="{:url('/v1/protuct/protucts/index')}"><i class="fa fa-circle-o"></i>产品列表</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="{if $paths == '/v1/info/infos/index' || $paths == '/v1/cate/ifications/index'}active{/if}">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-th-large"></i> <span>招标、招商信息，行业资讯</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="{if $paths == '/v1/cate/ifications/index'}active{/if}">
+                                <a href="{:url('/v1/cate/ifications/index')}"><i class="fa fa-circle-o"></i>关键字标签列表</a>
+                            </li>
+                            <li class="{if $paths == '/v1/info/infos/index'}active{/if}">
+                                <a href="{:url('/v1/info/infos/index')}"><i class="fa fa-circle-o"></i>新闻信息列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- 注释
+                    <li class="{if $paths == '/v1/partners/partner/index'}active{/if}">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-book"></i> <span>合作伙伴</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="{if $paths == '/v1/partners/partner/index'}active{/if}">
+                                <a href="{:url('/v1/partners/partner/index')}"><i class="fa fa-circle-o"></i>合作伙伴列表</a>
+                            </li>
+                        </ul>
+                    </li>
+                     -->
+                    <li class="{if $paths == '/v1/systematic/cases/index'}active{/if}">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-inbox"></i> <span>案例管理</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li class="{if $paths == '/v1/systematic/cases/index'}active{/if}">
+                                <a href="{:url('/v1/systematic/cases/index')}"><i class="fa fa-circle-o"></i>案例列表</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="{if  $paths == '/v1/systematic/system/blogroll' || $paths == '/v1/systematic/system/slideshow' || $paths == '/v1/systematic/system/setting'}active{/if}">
+                        <a href="#">
+                            <i class="fa fa-dashboard"></i> <span>系统管理</span>
+                            <span class="pull-right-container">
+                              <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+
+                            <li class="{if $paths == '/v1/systematic/system/setting'}active{/if}">
+                                <a href="{:url('/v1/systematic/system/setting')}"><i class="fa fa-circle-o"></i>网站设置</a>
+                            </li>
+
+                            <li class="{if $paths == '/v1/systematic/system/slideshow'}active{/if}">
+                                <a href="{:url('/v1/systematic/system/slideshow')}"><i class="fa fa-circle-o"></i>首页轮播图</a>
+                            </li>
+
+                            <li class="{if $paths == '/v1/systematic/system/blogroll'}active{/if}">
+                                <a href="{:url('/v1/systematic/system/blogroll')}"><i class="fa fa-circle-o"></i>友情链接</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
