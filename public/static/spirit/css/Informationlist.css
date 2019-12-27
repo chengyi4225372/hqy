@@ -719,6 +719,7 @@ a {
 .hotWord .bgHot > span {
   margin-right: 1.25rem;
   color: #D61313;
+  white-space: nowrap;
   font-size: .875rem; }
 
 .hotWord ul {
@@ -755,6 +756,9 @@ a {
   -ms-flex-align: center;
   align-items: center;
   position: relative; }
+  .hotWord ul li span{
+    white-space: nowrap;
+  }
 
 .hotWord ul li .close {
   display: none;
@@ -1125,7 +1129,7 @@ a {
 }
 
 .infoRight p {
-  font-size: 0.75rem;
+  font-size: .875rem;
   /* height: 2.125rem; */
   width: 47.5rem;
   line-height: 1.0625rem;
@@ -1416,11 +1420,13 @@ a {
   line-height: 1.125rem;
   font-family:"Noto Sans SC","syht";
   margin-bottom: 3.25rem;
+  white-space: nowrap;
 }
 
 .bottomBox .bottom .navBottom .navList dl dd {
   margin-bottom: 1.875rem;
   font-size: 1.125rem;
+  white-space: nowrap;
 }
 
 .bottomBox .bottom .navBottom .navList dl dd a {
@@ -1428,6 +1434,7 @@ a {
   color: #dcdcdc;
   font-size: 1.125rem;
   line-height: 1.125rem;
+  white-space: nowrap;
 }
 
 .bottomBox .bottom .navBottom .navList dl:first-child dd:nth-of-type(3) a,
@@ -1520,6 +1527,7 @@ a {
   font-size: .75rem;
   font-style: normal;
   color: #fff;
+  white-space: nowrap;
 }
 
 .bottomBox .bottom .navBottom .qrCode li:first-child {

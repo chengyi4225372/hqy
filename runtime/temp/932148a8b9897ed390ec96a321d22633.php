@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"C:\phpEnv\www\hqy_\public/../application/home\view\optimal\index.html";i:1577072410;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:69:"C:\phpEnv\www\hqy_\public/../application/home\view\optimal\index.html";i:1577085841;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -72,8 +72,8 @@
                                 </dl>
                                 <dl>
                                     <dt><a class="secStatus" href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
-                                    <dd>· 赋能企业互联网生态建设</dd>
-                                    <dd>· 助力产业数字化转型升级</dd>
+                                    <dd>· 企业互联网生态管理</dd>
+                                            <dd>· 全行业全渠道数字化转型</dd>
                                 </dl>
                             </div>
                         </div><!-- 二级菜单 -->

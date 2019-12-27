@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1577082303;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1577082303;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1577086421;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -423,7 +423,7 @@
                     <dl>
                         <dt>联系我们</dt>
                         <dd><a href="javascript:;"></a>全国统一客服热线：400-150-9896</a></dd>
-                        <dd><a href="javascript:;"></a>专家服务电话：1818-619-4461</a></dd>
+                        <dd><a href="javascript:;"></a>专家服务电话：181-8619-4461</a></dd>
                         <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
                         <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
                         <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
