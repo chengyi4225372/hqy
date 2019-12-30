@@ -1,6 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1576807098;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576807098;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1577438726;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1577086735;}*/ ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -15,9 +15,10 @@
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>惠企云</title>
     <link rel="stylesheet" href="/static/home/css/base.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-    <link rel="stylesheet" href="/static/home/css/index.css">
     <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
+    <link rel="stylesheet" href="/static/home/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+    <link rel="stylesheet" href="/static/home/font/syht.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/index.js'></script>
@@ -66,6 +67,7 @@
             <div class='header_fixed'>
                 <input type="hidden" id="data_token" value="<?php echo $userinfo['token']; ?>" />
                 <div class='header_content' id='headerContent'>
+                    <!--<editor-fold desc="Description">-->
                     <div class='w content'>
                         <div class='content_logo' id='logo'></div>
                         <ul class="">
@@ -78,49 +80,39 @@
 
                                     <div>
                                         <dl>
-                                            <dt><a href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
-                                            <dd>
-                                                · 企税降成本 薪税降税负
-
-                                            </dd>
-                                            <dd>· 分红降扣率 创业降个税</dd>
+                                            <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>"
+                                                    target="_blank">惠优税</a>
+                                            </dt>
+                                            <dd>· 企业财税筹划定制</dd>
+                                            <dd>· 一体化解决方案</dd>
                                         </dl>
                                         <dl>
-                                            <dt><a href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
-                                            <dd>
-                                                · 寻求多样化用工模式
-
-                                            </dd>
-                                            <dd>· 提高内部人员效能</dd>
+                                            <dt><a class="secStatus" href="<?php echo config('curl.hlg'); ?>"
+                                                    target="_blank">惠灵工</a>
+                                            </dt>
+                                            <dd>· 企业灵活用工平台</dd>
+                                            <dd>· 财税优化综合服务</dd>
                                         </dl>
                                         <dl>
-                                            <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
-                                            <dd>
-                                                · 优化员工福利选择模块
-
-                                            </dd>
-                                            <dd>· 企业成本可控透明化</dd>
+                                            <dt><a class="secStatus" href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
+                                            <dd>· 优化薪酬结构</dd>
+                                            <dd>· 为企业降本增效</dd>
                                         </dl>
                                         <dl>
-                                            <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
-                                            <dd>
-                                                · 技能价值化
-
-                                            </dd>
-                                            <dd>· 成就更好自我</dd>
+                                            <dt><a class="secStatus" href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
+                                            <dd>· 精选各地好工作</dd>
+                                            <dd>· 高效缔结，轻松入职</dd>
                                         </dl>
                                         <dl>
-                                            <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
-                                            <dd>
-                                                · 一站式解决方案
-
-                                            </dd>
-                                            <dd>· 激活企业最大效益</dd>
+                                            <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
+                                            <dd>· 武汉创业公司</dd>
+                                            <dd>· 一站式商务服务</dd>
                                         </dl>
                                         <dl>
-                                            <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
-                                            <dd>· 赋能企业互联网生态建设</dd>
-                                            <dd>· 助力产业数字化转型升级</dd>
+                                            <dt><a class="secStatus" href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
+                                            <dd>· 企业互联网生态管理</dd>
+                                            <dd>· 全行业全渠道数字化转型</dd>
+
                                         </dl>
                                     </div>
 
@@ -139,27 +131,25 @@
 
 
                         <!-- <div class='register' id="<?php if(empty($userinfo['mobile'])): ?>register<?php else: ?>registers<?php endif; ?>">
-                            <a href="javascript:void(0)" login_url="<?php echo $baseurl; ?>" loca_url="<?php echo config('curl.website'); ?>"
-                                onclick="login_btn(this)">登录</a>
-                            <a href="<?php echo url('/home/login/register'); ?>">注册</a>
+                        <a href="javascript:void(0)" login_url="<?php echo $baseurl; ?>" loca_url="<?php echo config('curl.website'); ?>"
+                            onclick="login_btn(this)">登录</a>
+                        <a href="<?php echo url('/home/login/register'); ?>">注册</a>
+                    </div>
+
+                    <div class="u_info" id="<?php if(empty($userinfo['mobile'])): ?>u_info<?php else: ?>u_info2<?php endif; ?>">
+                        <img src="/static/home/images/user_img.png">
+                        <p id="mobile_phone">
+                            <?php echo $userinfo['mobile']; ?></p>
+                        <div class="u_info_content" id="u_info_content">
+                            <a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>"
+                                onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>"
+                                data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
                         </div>
-
-                        <div class="u_info" id="<?php if(empty($userinfo['mobile'])): ?>u_info<?php else: ?>u_info2<?php endif; ?>">
-                            <img src="/static/home/images/user_img.png">
-                            <p id="mobile_phone">
-                                <?php echo $userinfo['mobile']; ?></p>
-                            <div class="u_info_content" id="u_info_content">
-                                <a class="u_out" href="javascript:void(0)" data-token="<?php echo $userinfo['token']; ?>"
-                                    onclick="user_logout(this)" location_url="<?php echo url('/home/index/index'); ?>"
-                                    data-url="<?php echo url('/home/login/logout'); ?>">退出账号</a>
-                            </div>
-                        </div> -->
-                       
-
-                   
+                    </div> -->
 
 
                     </div>
+                    <!--</editor-fold>-->
 
                 </div>
             </div>
@@ -188,7 +178,8 @@
         <div class="w choose">
             <div class='choose-title'>选择我们</div>
             <div class='choose-intro'>
-                惠企云拥有优质多元产品、权威官方背书、金牌服务团队、一流财税团队、专业客服团队，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案，为企业可持续性发展提供有力保障。</div>
+                惠企云拥有优质多元产品、权威官方背书、金牌服务团队、一流财税团队、专业客服团队，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案，为企业可持续性发展提供有力保障。
+            </div>
             <ul class='img_total'>
                 <li>
                     <img src="/static/home/images/more.png" alt="">
@@ -241,14 +232,13 @@
                     <div class='zhao_title'>
                     </div>
 
-                    <!-- 搜索 -->
-                    <div class='zhaoSearch'>
+                    <!-- 搜索去掉---2019-12-23 运营已同意-->
+<!--                    <div class='zhaoSearch'>
                         <div class='searchLogo'>
                             <i onclick="search(this)" data-url="<?php echo url('/home/index/infoList'); ?>"></i>
                             <input type="text" id="keyword" placeholder="搜索相关信息....">
                         </div>
-                        <!-- <button>查询</button> -->
-                    </div>
+                    </div>-->
                 </div>
 
 
@@ -258,7 +248,6 @@
                     <p>抱歉，没有找到相关的信息</p>
                     <?php else: if(is_array($biao) || $biao instanceof \think\Collection || $biao instanceof \think\Paginator): $i = 0; $__LIST__ = $biao;if( count($__LIST__)==0 ) : echo "没有更多内容" ;else: foreach($__LIST__ as $key=>$biaos): $mod = ($i % 2 );++$i;?>
                     <div class='totalInfo_content'>
-
 
 
                         <a href="<?php echo config('curl.website'); ?>/home/index/detailbiao?mid=<?php echo $biaos['id']; ?>">
@@ -318,9 +307,6 @@
                 </div>
 
 
-                
-
-
             </div>
         </div>
     </div>
@@ -329,13 +315,13 @@
     <input type="hidden" id="add_url" value="<?php echo url('/home/index/ajaximage'); ?>">
     <ul class='success'>
         <div class='w success_content'>
-            <div class='success_title'></div>
 
+            <div class='success_title'></div>
             <!-- 惠家族产品介绍 -->
             <div class="bgProduct">
                 <ul class="produtionIntro">
                     <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $i = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($i % 2 );++$i;?>
-                    <li keys="<?php echo $key; ?>" <?php if($key==1): ?>class="chosenProduct" <?php endif; ?>
+                    <li keys="<?php echo $key; ?>" {if $key==1}class="chosenProduct" { /if}
                         style="background:url('<?php echo $data_list['pic']; ?>')">
                         <span><?php echo $data_list['title2']; ?></span>
                         <p><?php echo $data_list['title3']; ?></p>
@@ -347,8 +333,7 @@
                 <div class='to_detailInfo'>
                     <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $k = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info_list): $mod = ($k % 2 );++$k;?>
                     <div class="<?php echo $info_list['is_show']; ?>" <?php if($key==1): ?>style="display:block;"
-                        <?php else: ?>style="display:none;"<?php endif; ?>>
-                    <div class='huichuangyou_title'><?php echo $info_list['title']; ?></div>
+                        <?php else: ?>style="display:none;"<?php endif; ?>> <div class='huichuangyou_title'><?php echo $info_list['title']; ?></div>
                     <div class="con">
                         <div class="desc"><?php echo $info_list['desc']; ?></div>
                         <div class="desc"><?php echo $info_list['desc2']; ?></div>
@@ -437,7 +422,7 @@
                     <dl>
                         <dt>联系我们</dt>
                         <dd><a href="javascript:;"></a>全国统一客服热线：400-150-9896</a></dd>
-                        <dd><a href="javascript:;"></a>专家服务电话：1818-619-4461</a></dd>
+                        <dd><a href="javascript:;"></a>专家服务电话：181-8619-4461</a></dd>
                         <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
                         <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
                         <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
