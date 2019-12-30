@@ -281,6 +281,9 @@ $('.secStatus').mouseenter(function(){
   // })
 })
 
+function trims(str){
+    return str.replace(/\s/g,'%20');  //替换图片空格
+}
 
 /** 全局变量 **/
 var keyword = []; //关键字 数组
@@ -339,7 +342,7 @@ function hotsearch(obj) {
                    if(index.imgs == '' || index.imgs == undefined){
                    content+= "<img src='/static/home/images/infoItem.jpg'></div>";
                    }else{
-                   content+="<img src="+index.imgs+"></div>";
+                   content+="<img src="+trims(index.imgs)+"></div>";
                    }
                    content+= "<div class='infoRight'><div class='rightTop'>";
                    content+= "<div class='itemTitle'>"+index.title+"</div>";
@@ -432,7 +435,7 @@ function nullhot(obj){
                     if(index.imgs == '' || index.imgs == undefined){
                         content+= "<img src='/static/home/images/infoItem.jpg'></div>";
                     }else{
-                        content+="<img src="+index.imgs+"></div>";
+                        content+="<img src="+trims(index.imgs)+"></div>";
                     }
                     content+= "<div class='infoRight'><div class='rightTop'>";
                     content+= "<div class='itemTitle'>"+index.title+"</div>";
@@ -543,7 +546,7 @@ function pagehrefs(purls,i,titles,pages,count){
                     if(index.imgs == '' || index.imgs == undefined){
                         content+= "<img src='/static/home/images/infoItem.jpg'></div>";
                     }else{
-                        content+="<img src="+index.imgs+"></div>";
+                        content+="<img src="+trims(index.imgs)+"></div>";
                     }
                     content+= "<div class='infoRight'><div class='rightTop'>";
                     content+= "<div class='itemTitle'>"+index.title+"</div>";
