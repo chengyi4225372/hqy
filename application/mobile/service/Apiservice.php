@@ -8,6 +8,7 @@
 namespace app\mobile\service;
 use app\common\model\Protuct;
 use app\common\model\Info;
+use app\common\model\Cases;
 class Apiservice
 {
     protected static $instance = null;
@@ -53,7 +54,22 @@ class Apiservice
         $where['status'] = 1;
         $where['auditing'] = 1;
         $order = 'id desc,release_time desc';
-        $info = collection(Info::instance()->where($where)->order($order)->select())->toArray();
+        $field = 'id,pid,title,describe,release_time';
+        $info = collection(Info::instance()->where($where)->order($order)->field($field)->limit(0,2)->select())->toArray();
+        return count($info) > 0 ? $info : [];
     }
 
+    /**
+     * @DESC：获取惠家族产品列表
+     * @author: jason
+     * @date: 2020-01-03 05:06:39
+     */
+    public function getfamily()
+    {
+        $where = [];
+        $where['status'] = 1;
+        $order = 'sort desc,id desc';
+        $info = collection(Cases::instance()->where($where)->order($order)->select())->toArray();
+        return count($info) > 0 ? $info : '';
+    }
 }

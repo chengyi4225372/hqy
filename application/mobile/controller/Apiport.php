@@ -69,9 +69,29 @@ class Apiport extends Controller
         $tokens1 = md5(md5($this->token1));
         $tokens2 = md5(md5($this->token2));
         if($tokens1 != $tokens2) return json(['code' => 400,'message' => 'TOKEN已失效']);
-
+        $biaoInfo = Apiservice::instance()->gettwobiao(1);
+        $shangInfo = Apiservice::instance()->gettwobiao(2);
+        $biao = !empty($biaoInfo) ? $biaoInfo : '';
+        $shang = !empty($shangInfo) ? $shangInfo : '';
+        return json(['code' => 200,'biao' => $biao,'shang' => $shang,'message' => '获取数据成功']);
     }
 
+    /**
+     * @DESC：获取惠家族产品列表
+     * @author: jason
+     * @date: 2020-01-03 04:33:09
+     */
+    public function getfamily()
+    {
+        //允许跨域
+        header("Access-Control-Allow-Origin:*");
+        //验证token
+        if(empty($this->token2)) return json(['code' => 400,'message' => 'TOKEN不存在']);
 
-
+        $tokens1 = md5(md5($this->token1));
+        $tokens2 = md5(md5($this->token2));
+        if($tokens1 != $tokens2) return json(['code' => 400,'message' => 'TOKEN已失效']);
+        $info = Apiservice::instance()->getfamily();
+        return json(['code' => 200,'data' => $info,'message' => '获取数据成功']);
+    }
 }
