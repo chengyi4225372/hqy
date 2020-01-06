@@ -94,4 +94,60 @@ class Apiport extends Controller
         $info = Apiservice::instance()->getfamily();
         return json(['code' => 200,'data' => $info,'message' => '获取数据成功']);
     }
+
+    /**
+     * @DESC：获取招标信息详情
+     * @author: jason
+     * @date: 2020-01-06 09:22:16
+     */
+    public function getbaioinfo()
+    {
+        //允许跨域
+        header("Access-Control-Allow-Origin:*");
+        //验证token
+        if(empty($this->token2)) return json(['code' => 400,'message' => 'TOKEN不存在']);
+
+        $tokens1 = md5(md5($this->token1));
+        $tokens2 = md5(md5($this->token2));
+        if($tokens1 != $tokens2) return json(['code' => 400,'message' => 'TOKEN已失效']);
+
+        $id = isset($_GET['id']) ? $_GET['id'] : '';
+        if(empty($id)) return json(['code' => 400,'message' => '没有要找的招标信息详情']);
+        $info = Apiservice::instance()->getbaioinfo(['id' => $id]);
+        if(empty($info)) return json(['code' => 400,'message' => '没有搜索到您要查询的数据']);
+        return json(['code' => 200,'message' => '已找到相关数据','data' => $info]);
+    }
+
+    /**
+     * @DESC：获取招商信息
+     * @author: jason
+     * @date: 2020-01-06 10:09:47
+     */
+    public function getshanginfo()
+    {
+        //允许跨域
+        header("Access-Control-Allow-Origin:*");
+        //验证token
+        if(empty($this->token2)) return json(['code' => 400,'message' => 'TOKEN不存在']);
+
+        $tokens1 = md5(md5($this->token1));
+        $tokens2 = md5(md5($this->token2));
+        if($tokens1 != $tokens2) return json(['code' => 400,'message' => 'TOKEN已失效']);
+
+        $id = isset($_GET['id']) ? $_GET['id'] : '';
+        if(empty($id)) return json(['code' => 400,'message' => '没有要找的招标信息详情']);
+        $info = Apiservice::instance()->getbaioinfo(['id' => $id]);
+        if(empty($info)) return json(['code' => 400,'message' => '没有搜索到您要查询的数据']);
+        return json(['code' => 200,'message' => '已找到相关数据','data' => $info]);
+    }
+
+    /**
+     * @DESC：招标查看更多
+     * @author: jason
+     * @date: 2020-01-06 11:05:30
+     */
+    public function getmorebiao()
+    {
+
+    }
 }

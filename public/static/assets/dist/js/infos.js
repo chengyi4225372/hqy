@@ -39,8 +39,10 @@ $('.infos-add').click(function(){
     var title   = $('#title').val();
     var describe= $("#describe").val();
     var keyword = $("#keyword").val();
+    var seo_key = $("#seo_key").val();
 
     if(title == '' || title== undefined){
+        $('#title').focus();
         layer.msg('请填写新闻标题');
         return ;
     }
@@ -51,12 +53,20 @@ $('.infos-add').click(function(){
     }
 
     if(describe == '' || describe == undefined){
-        layer.msg('请填写新闻描述');
+        $('#describe').focus();
+        layer.msg('请填写新闻SEO描述');
         return false;
     }
 
     if(keyword =='' || keyword ==undefined){
+        $('#keyword').focus();
         layer.msg('请填写新闻关键字');
+        return ;
+    }
+
+    if(seo_key =='' || seo_key ==undefined){
+        $('#seo_key').focus();
+        layer.msg('请填写新闻SEO关键字');
         return ;
     }
 
@@ -68,7 +78,7 @@ $('.infos-add').click(function(){
     }
 
 
-    $.post(urls,{'title':title,'pid':pid,'describe':describe,'content':content,'keyword': JSON.stringify(keyword),'imgs':imgs},function(ret){
+    $.post(urls,{'title':title,'pid':pid,'describe':describe,'content':content,'seo_key':seo_key,'keyword': JSON.stringify(keyword),'imgs':imgs},function(ret){
            if(ret.code == 200){
                layer.msg(ret.msg,{icon:6},function(){
                    parent.location.href="index";
@@ -106,8 +116,10 @@ $('.infosedits').click(function(){
     var describe    = $("#describe").val();
     var keyword    = $("#keyword").val();
     var imgs    = $('#Images').val();
+    var seo_key    = $('#seo_key').val();
 
     if(title == '' || title== undefined){
+        $('#title').focus();
         layer.msg('请填写新闻标题');
         return ;
     }
@@ -123,11 +135,19 @@ $('.infosedits').click(function(){
     }
 
     if(describe == '' || describe == undefined){
+        $('#describe').focus();
         layer.msg('请填写新闻描述');
         return false;
     }
 
     if(keyword == '' || keyword == undefined){
+        $('#keyword').focus();
+        layer.msg('新闻关键字不能为空');
+        return false;
+    }
+
+    if(seo_key == '' || seo_key == undefined){
+        $('#seo_key').focus();
         layer.msg('新闻关键字不能为空');
         return false;
     }
@@ -139,7 +159,7 @@ $('.infosedits').click(function(){
          return false;
     }
 
-    $.post(urls,{'title':title,'pid':pid,'content':content,'id':id,'describe':describe,'keyword':JSON.stringify(keyword),'imgs':imgs},function(ret){
+    $.post(urls,{'title':title,'pid':pid,'content':content,'id':id,'describe':describe,'seo_key':seo_key,'keyword':JSON.stringify(keyword),'imgs':imgs},function(ret){
         if(ret.code == 200){
             layer.msg(ret.msg,{icon: 6},function(){
                 parent.location.href="index";

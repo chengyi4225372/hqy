@@ -56,6 +56,7 @@ class Infos extends AuthController
             $array['describe'] = input('post.describe', '', 'trim');
             $array['imgs'] = input('post.imgs', '', 'trim');
             $array['keyword'] = implode(',', json_decode(input('post.keyword', '', 'trim')));
+            $array['seo_key'] = input('post.seo_key','','trim');
             $array['release_time'] = date("Y-m-d");
 
             $ret = Infosservice::instance()->saves($array);
@@ -96,6 +97,7 @@ class Infos extends AuthController
                 'title' => input('post.title', '', 'trim'),
                 'content' => input('post.content'),
                 'describe' => input('post.describe', '', 'trim'),
+                'seo_key' => input('post.seo_key', '', 'trim'),
                 'keyword' => implode(',', json_decode(input('post.keyword', '', 'trim'))),
                 'imgs' => input('post.imgs', '', 'trim'),
             );

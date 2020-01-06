@@ -72,4 +72,20 @@ class Apiservice
         $info = collection(Cases::instance()->where($where)->order($order)->select())->toArray();
         return count($info) > 0 ? $info : '';
     }
+
+    /**
+     * @DESC：招标信息详情
+     * @author: jason
+     * @date: 2020-01-06 09:28:43
+     */
+    public function getbaioinfo($params)
+    {
+        if(empty($params)) return [];
+        $where = [];
+        $where['id'] = $params['id'];
+        $where['status'] = 1;
+        $where['auditing'] = 1;
+        $info = Info::instance()->where($where)->find();
+        return count($info) > 0 ? $info : [];
+    }
 }
