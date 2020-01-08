@@ -1,3 +1,6 @@
 ---------------------------------------------------------------
 [ 2020-01-06T10:11:51+08:00 ] 172.26.2.149 GET /mobile/Apiport/getbaioinfo?id=42216
 [ error ] [0]致命错误: Call to a member function toArray() on null[/opt/web/hqy_/application/mobile/service/Apiservice.php:90]
+---------------------------------------------------------------
+[ 2020-01-06T19:55:44+08:00 ] 172.26.2.149 GET /mobile/Apiport/getmorebiao
+[ error ] [0]致命错误: Class 'app\mobile\service\Ification' not found[/opt/web/hqy_/application/mobile/service/Apiservice.php:192]
