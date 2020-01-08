@@ -94,7 +94,7 @@ class Index extends BaseController
 
            $titles    =$keyword?$keyword:$title;
 
-           $shang = Infosservice::instance()->getshang($titles,20);
+           $shang = Infosservice::instance()->getshang($titles,10);
 
            //关键字排序 最高四条
            $four = Ificationservice::instance()->getBiaofour('招商');
@@ -180,7 +180,7 @@ class Index extends BaseController
 
              $titles    =$keyword?$keyword:$title;
 
-             $biao = Infosservice::instance()->getbiao($titles,30);
+             $biao = Infosservice::instance()->getbiao($titles,10);
 
              //关键字排序 最高四条
              $four = Ificationservice::instance()->getBiaofour('招标');
@@ -296,7 +296,7 @@ class Index extends BaseController
 
             $titles    =$keyword?$keyword:$title;
 
-            $biao = Infosservice::instance()->getIndustry($titles,30);
+            $biao = Infosservice::instance()->getIndustry($titles,10);
 
             //关键字排序 最高四条
             $four = Ificationservice::instance()->getBiaofour('新闻资讯');
