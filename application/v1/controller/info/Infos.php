@@ -72,7 +72,7 @@ class Infos extends AuthController
 
     public function infosEdit()
     {
-
+        $pc_url = Config::get('queue.pc_url');
         if ($this->request->isGet()) {
             $id = input('get.id', '', 'int');
             if (empty($id)) {
@@ -90,7 +90,7 @@ class Infos extends AuthController
                 if (!empty($out)) {
                     foreach ($out as $v) {
                         foreach ($v as $j) {
-                            $url = "http://".$_SERVER['SERVER_NAME'].$j;
+                            $url = $pc_url.$j;
                             $info['content'] = str_replace($j, $url, $content);   //替换相对路径为绝对路径
                         }
                     }
