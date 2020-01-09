@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\industry.html";i:1577694121;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1577086735;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:109:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\industry.html";i:1578491397;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -168,7 +168,7 @@
                                 data-url="<?php echo url('/home/index/industryapi'); ?>" data-id="<?php echo $k; ?>">
                                 <span style='white-space: nowrap;'><?php echo $ff['title']; ?></span>
                                 <span class="close" onclick="nullhot(this)"
-                                      data-url="<?php echo url('/home/index/industryapi'); ?>">✕</span>
+                                    data-title="<?php echo $ff['title']; ?>"  data-url="<?php echo url('/home/index/industryapi'); ?>">✕</span>
                             </li>
                             <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
@@ -315,6 +315,16 @@
 
     </div>
 </div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?866318027a350c7c8dddf0359b3a65d3";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
     <!-- 返回顶部 -->
     <div class='goTop' id="goTop">

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1577694090;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1577086735;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1578490251;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -163,7 +163,7 @@
                       data-url="<?php echo url('/home/index/getshangapi'); ?>" data-id="<?php echo $k; ?>">
                     <span style='white-space: nowrap;'><?php echo $ff['title']; ?></span>
                     <span class="close" onclick="nullhot(this)"
-                          data-url="<?php echo url('/home/index/getshangapi'); ?>">✕</span>
+                          data-title="<?php echo $ff['title']; ?>"   data-url="<?php echo url('/home/index/getshangapi'); ?>">✕</span>
                   </li>
                   <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
@@ -335,6 +335,16 @@
 
     </div>
 </div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?866318027a350c7c8dddf0359b3a65d3";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
 
 

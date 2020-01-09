@@ -286,11 +286,12 @@ function trims(str){
 }
 
 /** 全局变量 **/
-var keyword = []; //关键字 数组
+var keywords = []; //关键字 数组
 var titles  = ''; //关键字分割成字符串
 var hrefs   = '';  //详情页url
 var urls    = ''; //ajax 提交url
 var key     = ''; //分割关键字
+
 /** 列表页热门搜索 **/
 function hotsearch(obj) {
      urls = $(obj).attr('data-url');
@@ -299,24 +300,27 @@ function hotsearch(obj) {
 
      hrefs  = $(obj).attr('data-href');
 
-     var index = $.inArray(searchs,keyword);
+     var index = $.inArray(searchs,keywords);
 
      if(index >= 0){
-         keyword.pop(searchs);
+          keywords.push(searchs);
+          keywords.pop(searchs);
+     }else {
+         keywords.push(searchs);
      }
 
-     keyword.push(searchs);
 
-     if (keyword == '' || keyword == undefined || keyword == 'undefined') {
+
+     if (keywords == '' || keywords == undefined || keywords == 'undefined') {
         return false;
       }
 
-     if(keyword.length == 0 || keyword.length =='' || keyword.length == undefined){
+     if(keywords.length == 0 || keywords.length =='' || keywords.length == undefined){
           layer.msg('请选择关键字进行查询');
           return false;
       }
 
-     titles = keyword.join(',')
+     titles = keywords.join(',');
 
      $.post(urls,{'title':titles},function(ret){
          if(ret.code == 200){
@@ -405,11 +409,16 @@ function hotsearch(obj) {
 
 /** 清除关键字 **/
 function nullhot(obj){
-     var title = $(obj).parents('li').attr('data-title');
-
+     var title = $(obj).attr('data-title');
+     console.log(title);
      urls  = $(obj).attr('data-url');
-     keyword.pop(title);
-     titles = keyword.join(',');
+     var index1 = $.inArray(title,keywords);
+
+     if(index1 >=0){
+         keywords.splice(index1,1);
+     }
+
+     titles = keywords.join(',');
 
     $.post(urls,{'title':titles},function(ret){
         if(ret.code == 200){
