@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1577082303;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1577086421;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1577438510;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1577086421;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -232,14 +232,13 @@
                     <div class='zhao_title'>
                     </div>
 
-                    <!-- 搜索 -->
-                    <div class='zhaoSearch'>
+                    <!-- 搜索去掉---2019-12-23 运营已同意-->
+<!--                    <div class='zhaoSearch'>
                         <div class='searchLogo'>
                             <i onclick="search(this)" data-url="<?php echo url('/home/index/infoList'); ?>"></i>
                             <input type="text" id="keyword" placeholder="搜索相关信息....">
                         </div>
-                        <!-- <button>查询</button> -->
-                    </div>
+                    </div>-->
                 </div>
 
 

@@ -1,6 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"C:\phpEnv\www\hqy_\public/../application/home\view\index\detailshang.html";i:1576913147;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1576131456;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1576806396;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"C:\phpEnv\www\hqy_\public/../application/home\view\index\detailshang.html";i:1577072379;s:58:"C:\phpEnv\www\hqy_\application\home\view\common\login.html";i:1576131456;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1577086421;}*/ ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -213,7 +213,7 @@
                     <dl>
                         <dt>联系我们</dt>
                         <dd><a href="javascript:;"></a>全国统一客服热线：400-150-9896</a></dd>
-                        <dd><a href="javascript:;"></a>专家服务电话：1818-619-4461</a></dd>
+                        <dd><a href="javascript:;"></a>专家服务电话：181-8619-4461</a></dd>
                         <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
                         <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
                         <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
