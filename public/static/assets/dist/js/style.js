@@ -624,6 +624,34 @@ var admin_module = (function (){
         });
     });
 
+
+    //案例手机端图片上传
+    $(function (){
+        layui.use('upload', function(){
+            var upload = layui.upload;
+            var img_url = '';
+
+            //执行实例
+            var uploadInst = upload.render({
+                elem: '#pic4' //绑定元素
+                ,url: $('#pic4').attr('data-url') //上传接口
+                ,done: function(ret){
+                    if(ret.status){
+                        $('#cur_pic4').attr('src',ret['data']['src']);
+                        $('#pic_curr4').val(ret['data']['src']);
+                    }else{
+                        layer.msg(ret.msg, {
+                            icon: 2,
+                            time: 1000 //2秒关闭（如果不配置，默认是3秒）
+                        })
+                    }
+
+                }
+                ,accept: 'images'
+            });
+        });
+    });
+
     //添加主案例的弹窗
     $(document).on('click','#addcase',function (){
         var url = $(this).attr('data-url');
@@ -643,6 +671,7 @@ var admin_module = (function (){
         var title2 = $('#title2').val();
         var title3 = $('#title3').val();
         var pic = $('#pic_curr').val();
+        var pic4 = $('#pic_curr4').val();
         var url = $('#url').val();
         var desc = $('#desc').val();
         var desc2 = $('#desc2').val();
@@ -671,8 +700,13 @@ var admin_module = (function (){
             layer.tips('标题不能为空!','#title3',{tips:[1,'#c00']});return;
         }
         if(pic == '' || pic == undefined || pic == 'undefined'){
-            layer.msg('请选择要上传的图片1');return;
+            layer.msg('请PC端的图片');return;
         }
+
+        if(pic4 == '' || pic4 == undefined || pic4 == 'undefined'){
+            layer.msg('请上传手机端的图片');return;
+        }
+
         if(url == '' || url == undefined || url == 'undefined'){
             $('#url').focus();
             layer.tips('请填写URL!','#url',{tips:[1,'#c00']});return;
@@ -690,6 +724,7 @@ var admin_module = (function (){
         obj.title2 = title2;
         obj.title3 = title3;
         obj.pic = pic;
+        obj.pic4 = pic4;
         obj.url = url;
         obj.desc = desc;
         obj.desc2 = desc2;
@@ -737,6 +772,7 @@ var admin_module = (function (){
         var title2 = $('#title2').val();
         var title3 = $('#title3').val();
         var pic = $('#pic_curr').val();
+        var pic4 = $('#pic_curr4').val();
         var url = $('#url').val();
         var desc = $('#desc').val();
         var desc2 = $('#desc2').val();
@@ -766,9 +802,12 @@ var admin_module = (function (){
             layer.tips('标题不能为空!','#title3',{tips:[1,'#c00']});return;
         }
         if(pic == '' || pic == undefined || pic == 'undefined'){
-            layer.msg('请选择要上传的图片');return;
+            layer.msg('请上传PC端的图片');return;
         }
 
+        if(pic4 == '' || pic4 == undefined || pic4 == 'undefined'){
+            layer.msg('请上传手机端的图片');return;
+        }
 
         if(url == '' || url == undefined || url == 'undefined'){
             $('#url').focus();
@@ -789,6 +828,7 @@ var admin_module = (function (){
         obj.title2 = title2;
         obj.title3 = title3;
         obj.pic = pic;
+        obj.pic4 = pic4;
         obj.url = url;
         obj.desc = desc;
         obj.desc2 = desc2;

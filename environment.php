@@ -14,8 +14,26 @@
 // | 环境设置  开发环境=development    测试环境=test    生产环境=production
 // +----------------------------------------------------------------------
 
-//生产环境
-//define('ENVIRONMENT', 'production');
+
+$clientkeywords = array ('nokia', 'sony','ericsson','mot',
+    'samsung','htc','sgh','lg','sharp',
+    'sie-','philips','panasonic','alcatel',
+    'lenovo','iphone','ipod','blackberry',
+    'meizu','android','netfront','symbian',
+    'ucweb','windowsce','palm','operamini',
+    'operamobi','openwave','nexusone','cldc',
+    'midp','wap','mobile'
+);
+//判断是否是手机端
+//if(preg_match("/(" . implode('|', $clientkeywords) . ")/i", strtolower($_SERVER['HTTP_USER_AGENT']))){
+//    define('ENVIRONMENT', 'mobile');
+//}else{
+//     //生产环境    PC端
+//    //define('ENVIRONMENT', 'production');
+//}
+
+
+
 
 
 //开发环境

@@ -56,6 +56,7 @@ class Infos extends AuthController
             $array['describe'] = input('post.describe', '', 'trim');
             $array['imgs'] = input('post.imgs', '', 'trim');
             $array['keyword'] = implode(',', json_decode(input('post.keyword', '', 'trim')));
+            $array['seo_key'] = input('post.seo_key','','trim');
             $array['release_time'] = date("Y-m-d");
 
             $ret = Infosservice::instance()->saves($array);
@@ -71,7 +72,7 @@ class Infos extends AuthController
 
     public function infosEdit()
     {
-
+        $pc_url = Config::get('queue.pc_url');
         if ($this->request->isGet()) {
             $id = input('get.id', '', 'int');
             if (empty($id)) {
@@ -83,6 +84,19 @@ class Infos extends AuthController
 
             //关键字列表
             $catelist = Ificationservice::instance()->getlist('');
+            if(!empty($info)){
+                $content = htmlspecialchars_decode($info['content']);
+                preg_match_all('/(?<=img.src=").*?(?=")/', $content, $out, PREG_PATTERN_ORDER);
+                if (!empty($out)) {
+                    foreach ($out as $v) {
+                        foreach ($v as $j) {
+                            $url = $pc_url.$j;
+                            $info['content'] = str_replace($j, $url, $content);   //替换相对路径为绝对路径
+                        }
+                    }
+                }
+
+            }
             $this->assign('list', $catelist);
             $this->assign('info', $info);
             $this->assign('keywords', $keywords);
@@ -96,6 +110,7 @@ class Infos extends AuthController
                 'title' => input('post.title', '', 'trim'),
                 'content' => input('post.content'),
                 'describe' => input('post.describe', '', 'trim'),
+                'seo_key' => input('post.seo_key', '', 'trim'),
                 'keyword' => implode(',', json_decode(input('post.keyword', '', 'trim'))),
                 'imgs' => input('post.imgs', '', 'trim'),
             );

@@ -154,15 +154,15 @@
 
           <div class="hotWord">
             <div class="bgHot">
-                <span>热门关键词</span>
+                <span style='white-space: nowrap;'>热门关键词</span>
                 <ul>
                   {volist name='four' id='ff' key='k'}
                   <li onclick="hotsearch(this);" data-title="{$ff.title}"
                       data-href="{:url('/home/index/detailshang')}"
                       data-url="{:url('/home/index/getshangapi')}" data-id="{$k}">
-                    <span>{$ff.title}</span>
+                    <span style='white-space: nowrap;'>{$ff.title}</span>
                     <span class="close" onclick="nullhot(this)"
-                          data-url="{:url('/home/index/getshangapi')}">✕</span>
+                          data-title="{$ff.title}"   data-url="{:url('/home/index/getshangapi')}">✕</span>
                   </li>
                   {/volist}
                 </ul>

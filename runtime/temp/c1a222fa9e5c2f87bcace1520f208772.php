@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"/opt/web/hqy_/public/../application/v1/view/info/infos/infos_edit.html";i:1576659286;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"/opt/web/hqy_/public/../application/v1/view/info/infos/infos_edit.html";i:1578543707;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -100,11 +100,20 @@
                     </div>
                 </div>
 
+
                 <div class="form-group">
                     <label for="username" class="col-sm-3 control-label">
                         <span class="red-color">*</span>新闻重点描述：</label>
                     <div class="col-sm-9">
                         <textarea  id="describe" class="form-control form-control-sm"  rows="5" ><?php echo $info['describe']; ?></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="keyword" class="col-sm-3 control-label">
+                        <span class="red-color">*</span>新闻SEO关键字：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="seo_key" value="<?php echo $info['seo_key']; ?>">
                     </div>
                 </div>
 

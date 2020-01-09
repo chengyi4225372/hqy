@@ -94,7 +94,7 @@ class Index extends BaseController
 
            $titles    =$keyword?$keyword:$title;
 
-           $shang = Infosservice::instance()->getshang($titles,20);
+           $shang = Infosservice::instance()->getshang($titles,10);
 
            //关键字排序 最高四条
            $four = Ificationservice::instance()->getBiaofour('招商');
@@ -180,7 +180,7 @@ class Index extends BaseController
 
              $titles    =$keyword?$keyword:$title;
 
-             $biao = Infosservice::instance()->getbiao($titles,30);
+             $biao = Infosservice::instance()->getbiao($titles,10);
 
              //关键字排序 最高四条
              $four = Ificationservice::instance()->getBiaofour('招标');
@@ -296,7 +296,7 @@ class Index extends BaseController
 
             $titles    =$keyword?$keyword:$title;
 
-            $biao = Infosservice::instance()->getIndustry($titles,30);
+            $biao = Infosservice::instance()->getIndustry($titles,10);
 
             //关键字排序 最高四条
             $four = Ificationservice::instance()->getBiaofour('新闻资讯');
@@ -363,5 +363,25 @@ class Index extends BaseController
             return $this->fetch();
         }
         return false;
+    }
+
+    /**
+     * @DESC：是哪个端进入页面
+     * @author: jason
+     * @date: 2019-12-26 05:05:19
+     */
+    public function ismobile()
+    {
+        $clientkeywords = array ('nokia', 'sony','ericsson','mot',
+            'samsung','htc','sgh','lg','sharp',
+            'sie-','philips','panasonic','alcatel',
+            'lenovo','iphone','ipod','blackberry',
+            'meizu','android','netfront','symbian',
+            'ucweb','windowsce','palm','operamini',
+            'operamobi','openwave','nexusone','cldc',
+            'midp','wap','mobile'
+        );
+        if(preg_match("/(" . implode('|', $clientkeywords) . ")/i", strtolower($_SERVER['HTTP_USER_AGENT'])))
+        echo '<pre>';print_r($_SERVER);exit;
     }
 }

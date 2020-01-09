@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hqy_/public/../application/v1/view/info/infos/index.html";i:1576659937;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576659286;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"/opt/web/hqy_/public/../application/v1/view/info/infos/index.html";i:1578296767;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576659286;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -367,7 +367,8 @@
                 <th class="text-center">展示图</th>
                 <th class="text-center" style="width:21%">新闻标题</th>
                 <th class="text-center" style="width:21%">新闻关键字</th>
-                <th class="text-center">新闻描述</th>
+                <th class="text-center">新闻SEO描述</th>
+                <th class="text-center">新闻SEO关键字</th>
                 <th class="text-center">创建时间</th>
                 <th class="text-center">操作</th>
                 </thead>
@@ -398,6 +399,7 @@
                     <td class="text-center">
                         <textarea rows="6" cols="30"><?php echo $vo['describe']; ?></textarea>
                     </td>
+                    <td class="text-center"><?php echo $vo['seo_key']; ?></td>
                     <td class="text-center"><?php echo $vo['release_time']; ?></td>
 
                     <td class="text-center">

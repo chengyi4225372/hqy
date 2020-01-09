@@ -1,6 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1577083558;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1576807098;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1578490251;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -48,7 +48,7 @@
 
               <div>
                 <dl>
-                  <dt><a href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
+                  <dt><a class="secStatus" href="<?php echo config('curl.hys'); ?>" target="_blank">惠优税</a></dt>
                   <dd>
                     · 企业财税筹划定制
 
@@ -56,14 +56,14 @@
                   <dd>· 一体化解决方案</dd>
                 </dl>
                 <dl>
-                  <dt><a href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
+                  <dt><a class="secStatus" href="<?php echo config('curl.hlg'); ?>" target="_blank">惠灵工</a></dt>
                   <dd>
                     · 企业灵活用工平台
                   </dd>
                   <dd>· 财税优化综合服务</dd>
                 </dl>
                 <dl>
-                  <dt><a href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
+                  <dt><a class="secStatus" href="<?php echo url('/home/many/index'); ?>">惠多薪</a></dt>
                   <dd>
                     · 优化薪酬结构
 
@@ -71,7 +71,7 @@
                   <dd>· 为企业降本增效</dd>
                 </dl>
                 <dl>
-                  <dt><a href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
+                  <dt><a class="secStatus" href="<?php echo url('/home/searches/index'); ?>">惠找事</a></dt>
                   <dd>
                     · 精选各地好工作
 
@@ -79,7 +79,7 @@
                   <dd>· 高效缔结，轻松入职</dd>
                 </dl>
                 <dl>
-                  <dt><a href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
+                  <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                   <dd>
                     · 武汉创业公司
 
@@ -87,7 +87,7 @@
                   <dd>· 一站式商务服务</dd>
                 </dl>
                 <dl>
-                  <dt><a href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
+                  <dt><a class="secStatus" href="<?php echo url('/home/launch/index'); ?>">惠企动</a></dt>
                   <dd>· 企业互联网生态管理</dd>
                   <dd>· 全行业全渠道数字化转型</dd>
                 </dl>
@@ -155,15 +155,15 @@
 
           <div class="hotWord">
             <div class="bgHot">
-                <span>热门关键词</span>
+                <span style='white-space: nowrap;'>热门关键词</span>
                 <ul>
                   <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $k = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($k % 2 );++$k;?>
                   <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
                       data-href="<?php echo url('/home/index/detailshang'); ?>"
                       data-url="<?php echo url('/home/index/getshangapi'); ?>" data-id="<?php echo $k; ?>">
-                    <span><?php echo $ff['title']; ?></span>
+                    <span style='white-space: nowrap;'><?php echo $ff['title']; ?></span>
                     <span class="close" onclick="nullhot(this)"
-                          data-url="<?php echo url('/home/index/getshangapi'); ?>">✕</span>
+                          data-title="<?php echo $ff['title']; ?>"   data-url="<?php echo url('/home/index/getshangapi'); ?>">✕</span>
                   </li>
                   <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
@@ -304,7 +304,7 @@
                     <dl>
                         <dt>联系我们</dt>
                         <dd><a href="javascript:;"></a>全国统一客服热线：400-150-9896</a></dd>
-                        <dd><a href="javascript:;"></a>专家服务电话：1818-619-4461</a></dd>
+                        <dd><a href="javascript:;"></a>专家服务电话：181-8619-4461</a></dd>
                         <dd><a href="javascript:;"></a>武汉市硚口区南国大武汉H座</a></dd>
                         <dd><a href="javascript:;"></a>深圳市福田区第一世界广场A座</a></dd>
                         <dd><a href="javascript:;"></a>北京市西城区贵都国际中心B座</a></dd>
@@ -335,6 +335,16 @@
 
     </div>
 </div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?866318027a350c7c8dddf0359b3a65d3";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
 
 

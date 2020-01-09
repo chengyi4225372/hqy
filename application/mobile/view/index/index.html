@@ -1,0 +1,18 @@
+{extend name="layout/default" /}
+{block name='content'}
+<style>
+    .test img{display:block;max-width:100%;height:auto;}
+</style>
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box" style="min-height:700px;">
+        <div class="box-body">
+            <div>{$info.title}</div>
+            <div>{$info.keyword}</div>
+            <div class="test">{$info.content}</div>
+            <div class="pages"></div>
+        </div>
+    </div>
+
+</section>
+{/block}
