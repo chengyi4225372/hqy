@@ -10,9 +10,9 @@
     <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="keyword" content="{$info['keyword']}">
-    <meta name="description" content="{$info['describe']}">
-    <title>{$title}</title>
+    <title>{$info.title}</title>
+    <meta name="keywords" content="{$info.seo_key|default=''}" />
+    <meta name="description" content="{$info.describe}" />
     <link rel="stylesheet" href="__SPI__/css/base.css">
     <link rel="stylesheet" href="__SPI__/css/detail.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">

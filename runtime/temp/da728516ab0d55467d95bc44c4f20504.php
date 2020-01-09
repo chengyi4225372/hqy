@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hqy_/public/../application/v1/view/systematic/cases/index.html";i:1575527743;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576659286;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hqy_/public/../application/v1/view/systematic/cases/index.html";i:1578393277;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576659286;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -350,7 +350,8 @@
                 <th class="text-center">标题</th>
                 <th class="text-center">标题2</th>
                 <th class="text-center">标题3</th>
-                <th class="text-center">图片</th>
+                <th class="text-center">PC端图片</th>
+                <th class="text-center">手机端图片</th>
                 <th class="text-center">URL</th>
                 <th class="text-center">描述</th>
                 <th class="text-center">描述2</th>
@@ -380,6 +381,14 @@
                     <td class="text-center">
                         <?php if(isset($data_list['pic']) && !empty($data_list['pic'])): ?>
                         <img src="<?php echo $data_list['pic']; ?>" style="width:50px;height:50px;"/>
+                        <?php else: ?>
+                        <img src="/static/default.png" style="width:50px;height:50px;"/>
+                        <?php endif; ?>
+
+                    </td>
+                    <td class="text-center">
+                        <?php if(isset($data_list['mobile_pic']) && !empty($data_list['mobile_pic'])): ?>
+                        <img src="<?php echo $data_list['mobile_pic']; ?>" style="width:50px;height:50px;"/>
                         <?php else: ?>
                         <img src="/static/default.png" style="width:50px;height:50px;"/>
                         <?php endif; ?>

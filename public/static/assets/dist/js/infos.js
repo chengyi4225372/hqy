@@ -39,6 +39,7 @@ $('.infos-add').click(function(){
     var title   = $('#title').val();
     var describe= $("#describe").val();
     var keyword = $("#keyword").val();
+    var seo_key = $("#keyword").val();
 
     if(title == '' || title== undefined){
         layer.msg('请填写新闻标题');

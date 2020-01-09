@@ -96,6 +96,7 @@ class Caseservice
         $add['title2'] = $params['title2'];
         $add['title3'] = $params['title3'];
         $add['pic'] = $params['pic'];
+        $add['mobile_pic'] = $params['pic4'];
         $add['url'] = $params['url'];
         $add['desc'] = $params['desc'];
         $add['desc2'] = $params['desc2'];
@@ -151,6 +152,7 @@ class Caseservice
         $add['title2'] = $params['title2'];
         $add['title3'] = $params['title3'];
         $add['pic'] = $params['pic'];
+        $add['mobile_pic'] = $params['pic4'];
         $add['url'] = $params['url'];
         $add['desc'] = $params['desc'];
         $add['desc2'] = $params['desc2'];

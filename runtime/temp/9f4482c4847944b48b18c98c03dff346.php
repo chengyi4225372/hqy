@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"/opt/web/hqy_/public/../application/v1/view/info/infos/infos_add.html";i:1578295685;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:73:"/opt/web/hqy_/public/../application/v1/view/systematic/cases/addcase.html";i:1578389453;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -51,95 +51,130 @@
     
 <style>
     .dialog-content{margin:20px;}
-    .dialog-footer{right:39%;top:82%;margin-left:30%;}
+    .dialog-footer{position:fixed;right:39%;top:82%}
     .red-color{color:red;}
-    /* 修改原有下拉框*/
-    .bootstrap-select .btn {max-width: 550px;}
-    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {width: 550px;}
 </style>
 <div class="dialog-content">
     <form class="form-horizontal dialog-form" id="form">
         <div class="row">
             <div class="col-md-9">
-
                 <div class="form-group">
-                    <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>新闻展示图：</label>
+                    <label for="title" class="col-sm-3 control-label">标题：</label>
                     <div class="col-sm-9">
-                        <input type="file"  onchange="upload_files()" style="display:none;" class="form-control form-control-sm" id="file">
-                        <img id="imgs" src="/static/default.png" style="width:90px;height:80px;">
-                        <input type="hidden" id="Images" value="">
+                        <input type="text" class="form-control form-control-sm" id="title" name="title">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="status" class="col-sm-3 control-label">分类列表：</label>
+                    <label for="is_show" class="col-sm-3 control-label">样式名称：</label>
                     <div class="col-sm-9">
-                        <select id="pid"  class="form-control form-control-sm">
-                            <option value="1">招标信息</option>
-                            <option value="2">招商信息</option>
-                            <option value="3">行业资讯</option>
+                        <input type="text" class="form-control form-control-sm" id="is_show" name="is_show" value="" placeholder="样式名称将影响前台页面的布局，如有不明白的问PHP程序员">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="title2" class="col-sm-3 control-label">标题2：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title2" name="title2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="title3" class="col-sm-3 control-label">标题3：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="title3" name="title3">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pic" class="col-sm-3 control-label">PC端图片：</label>
+                    <div class="col-sm-9">
+                        <button type="button" class="layui-btn" id="pic"  data-url="<?php echo url('/v1/systematic/system/uploadimg'); ?>" is_nginx="<?php echo $is_nginx; ?>">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                        <img src="/static/default.png" style="width:50px;height:50px;" id="cur_pic"/>
+                        <input type="hidden" name="pic_curr" id="pic_curr" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pic" class="col-sm-3 control-label">手机端图片：</label>
+                    <div class="col-sm-9">
+                        <button type="button" class="layui-btn" id="pic4"  data-url="<?php echo url('/v1/systematic/system/uploadimg'); ?>" is_nginx="<?php echo $is_nginx; ?>">
+                            <i class="layui-icon">&#xe67c;</i>上传图片
+                        </button>
+                        <img src="/static/default.png" style="width:50px;height:50px;" id="cur_pic4"/>
+                        <input type="hidden" name="pic_curr" id="pic_curr4" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="url" class="col-sm-3 control-label">URL：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="url" name="url">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="desc" class="col-sm-3 control-label">描述1：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc2" class="col-sm-3 control-label">描述2：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc2" class="form-control form-control-sm" name="desc2" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc3" class="col-sm-3 control-label">描述3：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc3" class="form-control form-control-sm" name="desc3" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc4" class="col-sm-3 control-label">描述4：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc4" class="form-control form-control-sm" name="desc4" value=""/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="desc5" class="col-sm-3 control-label">描述5：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc5" class="form-control form-control-sm" name="desc5" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc6" class="col-sm-3 control-label">描述6：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc6" class="form-control form-control-sm" name="desc6" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="desc7" class="col-sm-3 control-label">描述7：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="desc7" class="form-control form-control-sm" name="desc7" value=""/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="status" class="col-sm-3 control-label">状态：</label>
+                    <div class="col-sm-9">
+                        <select id="status" name="status" class="form-control form-control-sm">
+                            <?php if(is_array($status) || $status instanceof \think\Collection || $status instanceof \think\Paginator): $i = 0; $__LIST__ = $status;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$status_list): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo $key; ?>"><?php echo $status_list; ?></option>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </select>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="username" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻标题：</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="title">
-                    </div>
-                </div>
 
-               <!--
-                <div class="form-group">
-                    <label for="keyword" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻关键字：</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="keyword">
-                    </div>
-                </div>
-                -->
-
-               <div class="form-group">
-                        <label for="keyword" class="col-sm-3 control-label">新闻关键字列表：</label>
-                        <div class="col-sm-9" >
-                            <select id="keyword" class="selectpicker" multiple  title="请选择..." >
-                                <?php if(is_array($catelist) || $catelist instanceof \think\Collection || $catelist instanceof \think\Paginator): $i = 0; $__LIST__ = $catelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$co): $mod = ($i % 2 );++$i;?>
-                                <option value="<?php echo $co['title']; ?>" data-width="100%"><?php echo $co['title']; ?></option>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
-                            </select>
-                        </div>
-                    </div>
-
-
-                <div class="form-group">
-                    <label for="username" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻SEO重点描述：</label>
-                    <div class="col-sm-9">
-                        <textarea  id="describe" class="form-control form-control-sm"  rows="5"></textarea>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="keyword" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻SEO关键字：</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="seo_key">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="content" class="col-sm-3 control-label">新闻详情：</label>
-                    <div class="col-sm-9">
-                        <script id="content" name="content" type="text/plain"></script>
-                    </div>
-                </div>
             </div>
         </div>
-
-        <div class="td-align dialog-footer">
-            <button class="btn btn-warning cancle"> <i class="fa fa-close"></i> 取消</button>
-            <button class="btn btn-primary infos-add" type="button"  data-url="<?php echo url('/v1/info/infos/infosadd'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+        <div class="td-align dialog-footer" style="top:90%;">
+            <button class="btn btn-warning" onclick="admin_module.cancel_btn()"> <i class="fa fa-close"></i> 取消</button>
+            <input type="hidden" name="is_add" value="1">
+            <button class="btn btn-primary" type="button" onclick="admin_module.add_case(this)" data-url="<?php echo url('/v1/systematic/cases/addcase'); ?>"><i class="fa fa-save"></i> 确定提交</button>
         </div>
     </form>
 </div>
