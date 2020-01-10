@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1578035170;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1578035170;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_biao.html";i:1578550252;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1578035170;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -165,7 +165,7 @@
                                     data-url="<?php echo url('/home/index/getbiaoapi'); ?>" data-id="<?php echo $k; ?>">
                                     <span style='white-space: nowrap;'><?php echo $ff['title']; ?></span>
                                     <span class="close" onclick="nullhot(this)"
-                                        data-url="<?php echo url('/home/index/getbiaoapi'); ?>">✕</span>
+                                          data-title="<?php echo $ff['title']; ?>"   data-url="<?php echo url('/home/index/getbiaoapi'); ?>">✕</span>
                                 </li>
                                 <?php endforeach; endif; else: echo "" ;endif; ?>
                             </ul>

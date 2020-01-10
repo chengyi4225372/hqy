@@ -11,6 +11,7 @@ use app\v1\service\Caseservice;
 use app\v1\service\Ificationservice;
 use think\Cookie;
 use think\Cache;
+use app\common\model\Visit;
 class Index extends BaseController
 {
 
@@ -239,6 +240,22 @@ class Index extends BaseController
                 return false;
             }
             $info = infosservice::instance()->getId($id);
+            //获取当前用户进来查看的IP
+            $ip = getip();
+            //记录当前用户的IP
+            if(!empty($info)){
+                $wh = [];
+                $time = date('Y-m-d');
+                $wh['ip'] = $ip;
+                $wh['visit_time'] = $time;
+                $result = Visit::instance()->where($wh)->find();
+                if(count($result) <= 0){
+                    $add = [];
+                    $add['ip'] = $ip;
+                    $add['visit_time'] = $time;
+                    Visit::instance()->insert($add);
+                }
+            }
             $top  = Infosservice::instance()->getTop($id,1);
             $next = Infosservice::instance()->getNext($id,1);
             $this->assign('info',$info);
@@ -381,7 +398,9 @@ class Index extends BaseController
             'operamobi','openwave','nexusone','cldc',
             'midp','wap','mobile'
         );
-        if(preg_match("/(" . implode('|', $clientkeywords) . ")/i", strtolower($_SERVER['HTTP_USER_AGENT'])))
-        echo '<pre>';print_r($_SERVER);exit;
+        if(preg_match("/(" . implode('|', $clientkeywords) . ")/i", strtolower($_SERVER['HTTP_USER_AGENT']))){
+
+        }
     }
+
 }

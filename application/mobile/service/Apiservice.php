@@ -38,10 +38,14 @@ class Apiservice
      */
     public function getProduct()
     {
+        $url = Config::get('queue.pc_url');
         $productModel = new Protuct();
         $where = [];
         $where['status'] = 1;
         $info = collection($productModel->instance()->where($where)->select())->toArray();
+        foreach($info as $key => $val){
+            $info[$key]['imgs'] = $url.'/'.$val['imgs'];
+        }
         return !empty($info) ? $info : [];
     }
 
@@ -52,6 +56,7 @@ class Apiservice
      */
     public function gettwobiao()
     {
+        $url = Config::get('queue.pc_url');
         $status = Config::get('queue.status');
         $where = [];
         $where['status'] = 1;
@@ -65,6 +70,7 @@ class Apiservice
             foreach ($info as $k => $val) {
                 $info[$k]['category'] = $status[$info[$k]['pid']];
                 $info[$k]['title'] = mb_substr($info[$k]['title'], 0, 50, 'utf-8');
+                $info[$k]['imgs'] = $url.'/'.$val['imgs'];
             }
         }else{
             $info = [];
@@ -79,10 +85,14 @@ class Apiservice
      */
     public function getfamily()
     {
+        $url = Config::get('queue.pc_url');
         $where = [];
         $where['status'] = 1;
         $order = 'sort desc,id desc';
         $info = collection(Cases::instance()->where($where)->order($order)->select())->toArray();
+        foreach($info as $key => $val){
+            $info[$key]['mobile_pic'] = $url.'/'.$val['mobile_pic'];
+        }
         return count($info) > 0 ? $info : '';
     }
 
@@ -131,6 +141,7 @@ class Apiservice
      */
     public function getmorebiao($params)
     {
+        $url = Config::get('queue.pc_url');
         $where = [];
         //每页显示的数量
         $page_size = !empty($params['ps']) ? $params['ps'] : $this->pageSize;
@@ -159,6 +170,7 @@ class Apiservice
             foreach ($info as $k => $val) {
                 $info[$k]['keyword'] = explode(',', $info[$k]['keyword']);
                 $info[$k]['title'] = mb_substr($info[$k]['title'], 0, 50, 'utf-8');
+                $info[$k]['imgs'] = $url.'/'.$val['imgs'];
             }
         }else{
             $info = [];
@@ -173,6 +185,7 @@ class Apiservice
      */
     public function getmoreshang($params)
     {
+        $url = Config::get('queue.pc_url');
         //每页显示的数量
         $page_size = !empty($params['ps']) ? $params['ps'] : $this->pageSize;
         //当前页
@@ -199,6 +212,7 @@ class Apiservice
             foreach ($info as $k => $val) {
                 $info[$k]['keyword'] = explode(',', $info[$k]['keyword']);
                 $info[$k]['title'] = mb_substr($info[$k]['title'], 0, 50, 'utf-8');
+                $info[$k]['imgs'] = $url.'/'.$val['imgs'];
             }
         }else{
             $info = [];
@@ -213,6 +227,7 @@ class Apiservice
      */
     public function getmoresinformation ($params)
     {
+        $url = Config::get('queue.pc_url');
         //每页显示的数量
         $page_size = !empty($params['ps']) ? $params['ps'] : $this->pageSize;
         //当前页
@@ -239,6 +254,7 @@ class Apiservice
             foreach ($info as $k => $val) {
                 $info[$k]['keyword'] = explode(',', $info[$k]['keyword']);
                 $info[$k]['title'] = mb_substr($info[$k]['title'], 0, 50, 'utf-8');
+                $info[$k]['imgs'] = $url.'/'.$val['imgs'];
             }
         }else{
             $info = [];
