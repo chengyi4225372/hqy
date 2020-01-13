@@ -127,8 +127,13 @@ class Infosservice
     {
         $where = [];
         $where['id'] = $id;
-        $info = Info::instance()->where($where)->find();
-        return $info;
+        $infos = Info::instance()->where($where)->find();
+        if(!empty($infos)){
+            $infos['keywords'] = explode(',', $infos['keyword']);
+        }else{
+            $infos['keywords'] = [];
+        }
+        return $infos;
     }
 
     /**

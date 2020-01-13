@@ -23,11 +23,13 @@ class Infos extends AuthController
             $searchField = input('get.searchField', '', 'trim');
             $searchValue = input('get.searchValue', '', 'trim');
             $category = input('get.category', '', 'trim');
+            $page = input('get.page', '', 'trim');
             $list = Infosservice::instance()->getList(['searchField' => $searchField, 'searchValue' => $searchValue, 'category' => $category]);
             $params = [];
             $params['searchField'] = !empty($searchField) ? $searchField : '';
             $params['searchValue'] = !empty($searchValue) ? $searchValue : '';
             $params['category'] = !empty($category) ? $category : '';
+            $params['page'] = !empty($page) ? $page : 1;
             $audit = Config::get('site.audit');
             $this->assign('audit', $audit);
             $this->assign('params', $params);
@@ -72,7 +74,7 @@ class Infos extends AuthController
 
     public function infosEdit()
     {
-
+        $pc_url = Config::get('queue.pc_url');
         if ($this->request->isGet()) {
             $id = input('get.id', '', 'int');
             if (empty($id)) {
@@ -80,7 +82,6 @@ class Infos extends AuthController
             }
             $info = Infosservice::instance()->getId($id);
 
-            $keywords = explode(',', $info['keyword']);
 
             //关键字列表
             $catelist = Ificationservice::instance()->getlist('');
@@ -90,16 +91,29 @@ class Infos extends AuthController
                 if (!empty($out)) {
                     foreach ($out as $v) {
                         foreach ($v as $j) {
-                            $url = "http://".$_SERVER['SERVER_NAME'].$j;
+                            $url = $pc_url.$j;
                             $info['content'] = str_replace($j, $url, $content);   //替换相对路径为绝对路径
                         }
                     }
                 }
 
             }
+
+            $searchField = input('get.searchField', '', 'trim');
+            $searchValue = input('get.searchValue', '', 'trim');
+            $category = input('get.category', '', 'trim');
+            $page = input('get.pages', '', 'trim');
+            $params = [];
+            $params['searchField'] = !empty($searchField) ? $searchField : '';
+            $params['searchValue'] = !empty($searchValue) ? $searchValue : '';
+            $params['category'] = !empty($category) ? $category : '';
+            $params['pages'] = !empty($page) ? $page : 1;
+
+//            echo '<pre>';print_r($info['keywords']);exit;
+            $this->assign('params', $params);
             $this->assign('list', $catelist);
             $this->assign('info', $info);
-            $this->assign('keywords', $keywords);
+            $this->assign('keywords', $info['keyword']);
             return $this->fetch();
         }
 

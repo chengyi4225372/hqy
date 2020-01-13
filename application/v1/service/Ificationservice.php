@@ -56,9 +56,7 @@ class Ificationservice
             $where['title'] = ['LIKE', $caseArr, 'OR'];
         }
 
-        if (!empty($params['status'])) {
-            $where['status'] = $params['status'];
-        }
+        $where['status'] = 1;
 
         if (!empty($params['disable'])) {
             $arr = array_map(function ($par) {
@@ -67,7 +65,12 @@ class Ificationservice
             $where['disable'] = ['like', $arr, 'OR'];
         }
 
-        $list = Ification::instance()->where($where)->order('sort desc')->paginate(15);
+
+        $config = [
+            'query' => request()->param(),
+        ];
+
+        $list = Ification::instance()->where($where)->order('sort desc')->limit(0,14)->paginate(14,false,$config);
         return $list;
     }
 

@@ -7,6 +7,12 @@
  */
 namespace app\mobile\controller;
 
+header('Access-Control-Allow-Origin:*'); // *代表允许任何网址请求
+header('Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE'); // 允许请求的类型
+header('Access-Control-Allow-Headers: Content-Type,Content-Length,Accept-Encoding,X-Requested-with, Origin');
+header('Access-Control-Allow-Headers:content-type,Authorization');
+header("Access-Control-Request-Headers:Origin,X-Requested-With,content-Type,Accept,Authorization");
+
 use app\mobile\service\Apiservice;
 use think\Controller;
 use think\Request;
@@ -23,9 +29,8 @@ class Apiport extends Controller
      */
     public function _initialize()
     {
-//        $this->request->param();
         $token = Config::get('token.tokens');
-        $result = Request::instance()->header('Authorization');
+        $result = Request::instance()->header('authorization');
 
         $token1 = md5(md5($token));
         $token2 = !empty($result) ? md5(md5($result)) : '';
