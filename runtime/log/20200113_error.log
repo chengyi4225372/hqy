@@ -55,3 +55,6 @@
 ---------------------------------------------------------------
 [ 2020-01-13T10:50:08+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42214&pages=4&category=&searchField=&searchValue=
 [ error ] [8]未定义数组索引: page[/opt/web/hqy_/runtime/temp/c1a222fa9e5c2f87bcace1520f208772.php:132]
+---------------------------------------------------------------
+[ 2020-01-13T16:58:28+08:00 ] 127.0.0.1 GET /home/index/industrydetail?mid=42285
+[ error ] [8]未定义数组索引: title[C:\phpEnv\www\hqy_\runtime\temp\c670b89204cf9eacdf978ce19b2b0018.php:13]

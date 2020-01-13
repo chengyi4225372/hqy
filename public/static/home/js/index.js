@@ -1,7 +1,7 @@
 window.onload = function () {
 
-
-  window.onscroll = function () {
+  initialNav()
+  function initialNav(){
     var top = document.body.scrollTop || document.documentElement.scrollTop;
     var box = document.getElementById("headerContent");
     var logo = document.getElementById("logo");
@@ -10,7 +10,7 @@ window.onload = function () {
     var register = document.querySelector('.register')
     var uinfo = document.querySelector('.u_info')
     var goTop = document.querySelector("goTop")
-    if (top >= 1080) {
+    if (top >= 100) {
       box.style.backgroundColor = "#031c36";
       box.style.position = 'fixed'
       box.style.top = "0px"
@@ -32,6 +32,22 @@ window.onload = function () {
       // goTop.style.position='fixed'
       // goTop.style.top=0+'px'
 
+
+    } else if (top < 100) {
+      box.style.backgroundColor = "";
+      logo.style.display = 'block'
+      box.style.position = ''
+      headerTotal.style.position = ''
+
+      box.classList.remove("header_content_two")
+      logo.classList.remove('content_logo_two')
+      ul.classList.remove('two')
+      // register.classList.remove('register_two')
+      // uinfo.classList.remove('u_info_two')
+
+
+    }
+    if (top >= 1080) {
       // 返回顶部
       var goTop = document.getElementById('goTop')
       goTop.style.display = "block"
@@ -55,45 +71,18 @@ window.onload = function () {
           }
         });
       }
-    } else if (top < 1080) {
-      box.style.backgroundColor = "";
-      logo.style.display = 'block'
-      box.style.position = ''
-      headerTotal.style.position = ''
-
-      box.classList.remove("header_content_two")
-      logo.classList.remove('content_logo_two')
-      ul.classList.remove('two')
-      // register.classList.remove('register_two')
-      // uinfo.classList.remove('u_info_two')
-
+    } else {
       // 返回顶部样式
       var goTop = document.getElementById('goTop')
       goTop.style.display = "none"
     }
 
-
-    
-
+  }
+  window.onscroll = function () {
+    initialNav()
   };
 
   // 导航栏样式切换
-
-  // var menuList = document.querySelectorAll('#headerContent ul li')
-  // var menuUl = document.querySelector('#headerContent ul')
-  // menuList.forEach((item, index) => {
-  //   item.onmouseenter = function (event) {
-  //     var li = document.getElementsByClassName('nav-active')[0]
-  //     li.classList.remove('nav-active')
-  //     item.classList.add('nav-active')
-  //   }
-  // })
-  // menuUl.onmouseleave = function () {
-  //   var li = document.getElementsByClassName('nav-active')[0]
-  //   li.classList.remove('nav-active')
-  //   menuList[0].classList.add('nav-active')
-  // }
-
   var menuList = document.querySelectorAll('#headerContent ul li')
   var menuUl = document.querySelector('#headerContent ul')
 
@@ -104,7 +93,6 @@ window.onload = function () {
       this.classList.add('nav-active')
     }
   }
-
   menuUl.onmouseleave = function () {
     var li = document.querySelectorAll('.nav-active')[0]
     li.classList.remove('nav-active')

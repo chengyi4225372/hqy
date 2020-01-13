@@ -110,6 +110,7 @@ class Apiservice
         $where['id'] = $params['id'];
         $where['status'] = 1;
         $where['auditing'] = 1;
+        $where['pid'] = $params['pid'];
         $info = [];
         $infos = Info::instance()->where($where)->find();
 
@@ -129,9 +130,9 @@ class Apiservice
         }else{
             $info = [];
         }
-        $top = $this->getTop($params['id']);
-        $next = $this->getNext($params['id']);
-        return ['data' => $info,'prev' => $top,'next' => $next];
+        $top = $this->getTop($params['id'],$params['pid']);
+        $next = $this->getNext($params['id'],$params['pid']);
+        return ['data' => $info,'prev' => $next,'next' => $top];
     }
 
     /**
@@ -151,20 +152,32 @@ class Apiservice
         //分页起始值
         $select_start = $page_size * ($current_page - 1);
         $keyword = !empty($params['keyword']) ? $params['keyword'] : [];
-
-        if(!empty($keyword) && is_array($keyword)){
+        $title = !empty($params['title']) ? $params['title'] : [];
+        //如果搜标题又搜关键字
+        if(!empty($keyword) && is_array($keyword) && !empty($title)){
+            $keyword = array_map(function($par){
+                return '%'.$par.'%';
+            },$keyword);
+            $where['keyword'] = ['LIKE',$keyword,'OR'];
+            $where['title'] = ['LIKE','%'.$title.'%'];
+        }
+        //如果是只搜标题，不搜关键字
+        if(empty($keyword) && !empty($title)){
+            $where['title'] = ['LIKE','%'.$title.'%'];
+        }
+        //如果只搜关键字，不搜标题
+        if(!empty($keyword) && is_array($keyword) && empty($title)){
             $keyword = array_map(function($par){
                 return '%'.$par.'%';
             },$keyword);
             $where['keyword'] = ['LIKE',$keyword,'OR'];
         }
-
         $where['pid'] = 1;
         $where['status'] = 1;
         $where['auditing'] = 1;
         $count = Info::instance()->where($where)->count();
         $infos = Info::instance()->where($where)->limit($select_start,$page_size)->select();
-
+//        echo Info::instance()->getLastSql();exit;
         if(count($infos) > 0){
             $info = $infos->toArray();
             foreach ($info as $k => $val) {
@@ -192,10 +205,23 @@ class Apiservice
         $current_page = (!empty($params['page']) && intval($params['page']) > 0) ? $params['page'] : $this->current_page;
         //分页起始值
         $select_start = $page_size * ($current_page - 1);
-
-        $keyword = !empty($params['keyword']) ? $params['keyword'] : [];
         $where = [];
-        if(!empty($keyword) && is_array($keyword)){
+        $keyword = !empty($params['keyword']) ? $params['keyword'] : [];
+        $title = !empty($params['title']) ? $params['title'] : [];
+        //如果搜标题又搜关键字
+        if(!empty($keyword) && is_array($keyword) && !empty($title)){
+            $keyword = array_map(function($par){
+                return '%'.$par.'%';
+            },$keyword);
+            $where['keyword'] = ['LIKE',$keyword,'OR'];
+            $where['title'] = ['LIKE','%'.$title.'%'];
+        }
+        //如果是只搜标题，不搜关键字
+        if(empty($keyword) && !empty($title)){
+            $where['title'] = ['LIKE','%'.$title.'%'];
+        }
+        //如果只搜关键字，不搜标题
+        if(!empty($keyword) && is_array($keyword) && empty($title)){
             $keyword = array_map(function($par){
                 return '%'.$par.'%';
             },$keyword);
@@ -238,12 +264,27 @@ class Apiservice
         $where = [];
         $keyword = !empty($params['keyword']) ? $params['keyword'] : [];
 
-        if(!empty($keyword) && is_array($keyword)){
+        $title = !empty($params['title']) ? $params['title'] : [];
+        //如果搜标题又搜关键字
+        if(!empty($keyword) && is_array($keyword) && !empty($title)){
+            $keyword = array_map(function($par){
+                return '%'.$par.'%';
+            },$keyword);
+            $where['keyword'] = ['LIKE',$keyword,'OR'];
+            $where['title'] = ['LIKE','%'.$title.'%'];
+        }
+        //如果是只搜标题，不搜关键字
+        if(empty($keyword) && !empty($title)){
+            $where['title'] = ['LIKE','%'.$title.'%'];
+        }
+        //如果只搜关键字，不搜标题
+        if(!empty($keyword) && is_array($keyword) && empty($title)){
             $keyword = array_map(function($par){
                 return '%'.$par.'%';
             },$keyword);
             $where['keyword'] = ['LIKE',$keyword,'OR'];
         }
+
         $where['pid'] = 3;
         $where['status'] = 1;
         $where['auditing'] = 1;

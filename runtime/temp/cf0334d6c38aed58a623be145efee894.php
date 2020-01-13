@@ -1,6 +1,6 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"C:\phpEnv\www\hqy_\public/../application/home\view\launch\index.html";i:1576840386;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"C:\phpEnv\www\hqy_\public/../application/home\view\launch\index.html";i:1577072395;}*/ ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
