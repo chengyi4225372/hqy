@@ -29,9 +29,7 @@
 
 <body id="getdata" data="{$count}">
 
-    <div class='container'>
-
-
+    <div class='container' data-pageId="0">
         <!-- 头部 -->
         <div class='header'>
             <!-- 头部图标 -->
@@ -44,8 +42,25 @@
                             </div>
                             <div>
                                 <div>
-                                    <span class='wx'></span>
-                                    <sapn class='bo'></sapn>
+                                    <div class='wx'>
+                                        <div class="topQRCode qrwx">
+                                            <p>惠企云官方微信</p>
+                                            <div class="codeBox">
+                                                <img src="__HOME__/images/wxCode.png" alt="">
+                                            </div>
+                                            <img src="__HOME__/images/close2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class='bo'>
+                                        <div class="topQRCode qrwb">
+                                            <p>惠企云官方微博</p>
+                                            <div class="codeBox">
+                                                <img src="__HOME__/images/wbCode.png" alt="">
+                                            </div>
+                                            <img src="__HOME__/images/close2.png" alt="">
+                                        </div>
+
+                                    </div>
                                 </div>
                                 <div>
                                     <span class='email'></span>
@@ -105,7 +120,7 @@
                                         </dl>
                                         <dl>
                                             <dt><a class="secStatus" href="{:url('/home/business/index')}">惠创业</a></dt>
-                                            <dd>· 武汉创业公司</dd>
+                                            <dd>· 创业公司</dd>
                                             <dd>· 一站式商务服务</dd>
                                         </dl>
                                         <dl>
@@ -389,8 +404,6 @@
         </div>
     </div>
 
-    <!-- 底部 -->
-
 
     <div class='goTop' id="goTop">
         <i></i>
@@ -398,7 +411,33 @@
     </div>
 
     </div>
+
+    <!-- 底部 -->
     {include file="common/footer" /}
+
 </body>
+<script>
+$(function(){
+    $('.wx').mouseenter(function(){
+        $('.qrwx').css({'display':'block'})
+        $('.qrwb').css({'display':'none'})
+    })
+    $('.qrwx > img').click(function(){
+        $('.qrwx').css({'display':'none'})
+    })
+
+    $('.bo').mouseenter(function(){
+        $('.qrwb').css({'display':'block'})
+        $('.qrwx').css({'display':'none'})
+    })
+    $('.qrwb > img').click(function(){
+        $('.qrwb').css({'display':'none'})
+    })
+
+
+})
+    
+
+</script>
 
 </html>

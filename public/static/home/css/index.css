@@ -142,6 +142,8 @@ body {
 
 .title_icon > div:nth-child(2) > div:nth-child(1) > .wx,
 .title_icon > div:nth-child(2) > div:nth-child(1) > .bo {
+  cursor: pointer;
+  position: relative;
   display: inline-block;
   width: 1.125rem;
   height: 0.9375rem;
@@ -157,6 +159,46 @@ body {
   background: url("../images/bo_1.png") no-repeat;
   -webkit-background-size: 100% auto;
   background-size: 100% auto; }
+
+  
+  .topQRCode{
+    display: none;
+    position: absolute;
+    top: 1.75rem /* 28/16 */;
+    left: -14.3125rem /* 229/16 */ /* 193/16 */;
+    z-index: 99;
+    width: 18.4375rem /* 295/16 */;
+    height: 18.9375rem /* 303/16 */;
+    /* background-color: pink; */
+    background: url("../images/codeWrap.png") no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  }
+  .topQRCode p{
+    font-size:1.125rem /* 18/16 */;
+    line-height: 1.125rem;
+    font-family:"Noto Sans SC","syht";
+    font-weight:400;
+    color: #323C48;
+    margin-top: 2.3125rem /* 37/16 */;
+    margin-left: 4.6875rem /* 75/16 */;
+  }
+  .topQRCode > img{
+    position: absolute;
+    width: 1.75rem /* 28/16 */;
+    height: 1.75rem /* 28/16 */;
+    top: 2.1875rem /* 35/16 */;
+    right: 1.125rem /* 18/16 */;
+  }
+  .codeBox{
+    width: 13rem /* 208/16 */;
+    height: 13rem /* 208/16 */;
+    margin-left: 2.5625rem /* 41/16 */;
+  }
+  .codeBox img{
+    width: 100%;
+    height: 100%;
+  }
 
 .title_icon > div:nth-child(2) > div:nth-child(2) {
   margin: 0 1.5625rem; }
@@ -188,7 +230,7 @@ body {
 .header_fixed {
   width: 100%;
   position: relative;
-  z-index: 999; }
+  z-index: 9; }
 
 .header_content {
   position: relative;
