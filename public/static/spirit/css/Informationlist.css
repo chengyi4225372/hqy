@@ -1088,8 +1088,7 @@ a {
   /* line-height: 1.125rem; */
   font-weight: 500;
   color: #333;
-
-  width: 22.1875rem;
+  /*width: 22.1875rem;*/
   white-space:nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

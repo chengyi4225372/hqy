@@ -80,7 +80,7 @@
                 <dl>
                   <dt><a class="secStatus" href="{:url('/home/business/index')}">惠创业</a></dt>
                   <dd>
-                    · 武汉创业公司
+                    · 创业公司
 
                   </dd>
                   <dd>· 一站式商务服务</dd>
@@ -230,7 +230,7 @@
 
                     <div class="infoRight">
                       <div class="rightTop">
-                        <div class="itemTitle">{:mb_substr($sh.title,0,35,'utf-8')}</div>
+                        <div class="itemTitle">{$sh.title|default=''}</div>
                         <span class="itemTime">
                           <img src="__SPI__/images/shijian2x.png" alt=""><span>{$sh.release_time}</span>
                         </span>
