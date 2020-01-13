@@ -43,9 +43,9 @@
                 <div class="form-group">
                     <label for="keyword" class="col-sm-3 control-label">新闻关键字列表：</label>
                     <div class="col-sm-9" >
-                        <select id="keyword" class="selectpicker" multiple  title="{$info.keyword}">
+                        <select id="keyword" class="selectpicker" multiple >
                             {volist name='list' id='co'}
-                            <option value="{$co.title}" data-width="100%" {if in_array($co.title,$keywords)} selected="selected" {/if}>{$co.title}</option>
+                            <option value="{$co.title}" data-width="100%" {if in_array($co.title,$info['keywords'])} selected="selected" {/if}>{$co.title}</option>
                             {/volist}
                         </select>
                     </div>
@@ -80,7 +80,7 @@
         </div>
         <div class="td-align dialog-footer">
             <button class="btn btn-warning cancle"> <i class="fa fa-close"></i> 取消</button>
-            <button class="btn btn-primary infosedits" type="button"  data-url="{:url('/v1/info/infos/infosEdit')}"><i class="fa fa-save"></i> 确定提交</button>
+            <button class="btn btn-primary infosedits" type="button" page="{$params['pages']}" category="{$params['category']}" searchField="{$params['searchField']}" searchValue="{$params['searchValue']}"  data-url="{:url('/v1/info/infos/infosEdit')}"><i class="fa fa-save"></i> 确定提交</button>
 
         </div>
     </form>
