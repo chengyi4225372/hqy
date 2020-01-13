@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1577438726;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1578545371;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -10,10 +10,11 @@
     <meta name="renderer" content="webkit" />
     <meta name="force-rendering" content="webkit" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>惠企云</title>
+    <title>节税平台代理_灵活用工加盟_企业服务代理_一体化政企服务招商代理平台-惠企云官网</title>
+    <meta name="keywords" content="税务筹划代理,税收筹划代理,节税筹划代理,灵活用工加盟,企业服务代理,个人避税代理,企业资源变现,企业服务项目,财税代理,工商代理,工商代理公司,税负转嫁平台,惠企云" />
+    <meta name="description" content="惠企云深耕政府服务外包和企业商务服务领域，深度研究财税管理在新经济时代的创新和运用，打造可持续发展的政企互联共同体！将【惠灵工】、【惠优税】、【惠多薪】、【惠创业】、【惠找事】、【惠企动】六大产品融汇，打造一站式互联网服务平台，量身定制一体化财税筹划解决方案，为公司可持续性发展提供有力保障！" />
     <link rel="stylesheet" href="/static/home/css/base.css">
     <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
     <link rel="stylesheet" href="/static/home/css/index.css">

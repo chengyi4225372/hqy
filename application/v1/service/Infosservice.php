@@ -139,7 +139,7 @@ class Infosservice
     {
         $array['status'] = 1;
         $array['auditing'] = 1;
-        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit(0, 2)->select();
+        $arr = Info::instance()->where($array)->order('release_time desc')->limit(0, 2)->select();
         return $arr;
     }
 
@@ -151,7 +151,7 @@ class Infosservice
     {
         $array['status'] = 1;
         $array['auditing'] = 1;
-        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit(0, 2)->select();
+        $arr = Info::instance()->where($array)->order('release_time desc')->limit(0, 2)->select();
         return $arr;
     }
 
@@ -395,7 +395,7 @@ class Infosservice
             $page = 15;
         }
 
-        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
