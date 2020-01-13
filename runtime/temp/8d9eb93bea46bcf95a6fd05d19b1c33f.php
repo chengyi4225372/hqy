@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"/opt/web/hqy_/public/../application/v1/view/info/infos/infos_edit.html";i:1578883874;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"/opt/web/hqy_/public/../application/v1/view/protuct/protucts/edit.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -51,86 +51,58 @@
     
 <style>
     .dialog-content{margin:20px;}
-    .dialog-footer{right:39%;top:82%;margin-left:30%; }
+    .dialog-footer{position:fixed;right:39%;top:82%}
     .red-color{color:red;}
-    /* 修改原有下拉框*/
-    .bootstrap-select .btn {max-width: 550px;}
-    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {width: 550px;}
 </style>
 <div class="dialog-content">
     <form class="form-horizontal dialog-form" id="form">
         <div class="row">
             <div class="col-md-9">
-                <div class="form-group">
-                    <label for="status" class="col-sm-3 control-label">分类列表：</label>
-                    <div class="col-sm-9">
-                        <select id="pid"  class="form-control form-control-sm">
-                            <option value="1" <?php if($info['pid'] == '1'): ?> selected=""<?php endif; ?>>招标信息</option>
-                            <option value="2" <?php if($info['pid'] == '2'): ?> selected=""<?php endif; ?>>招商信息</option>
-                            <option value="3" <?php if($info['pid'] == '3'): ?> selected=""<?php endif; ?>>行业资讯</option>
-                        </select>
-                    </div>
-                </div>
 
                 <div class="form-group">
-                    <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>新闻展示图：</label>
+                    <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>产品图片：</label>
                     <div class="col-sm-9">
-                        <input type="file"  onchange="upload_files()" style="display:none;" class="form-control form-control-sm" id="file">
+                        <input type="file"  onchange="upload_file()" style="display:none;" class="form-control form-control-sm" id="file">
                         <img id="imgs" src="<?php echo (isset($info['imgs']) && ($info['imgs'] !== '')?$info['imgs']:'/static/default.png'); ?>" style="width:90px;height:80px;">
                         <input type="hidden" id="Images" value="<?php echo $info['imgs']; ?>">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="username" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻标题：</label>
+                    <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>产品名称：</label>
                     <div class="col-sm-9">
-                        <input type="text" value="<?php echo $info['title']; ?>"  class="form-control form-control-sm" id="title">
+                        <input type="text" value="<?php echo $info['names']; ?>" class="form-control form-control-sm" id="names" name="names">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="icp" class="col-sm-3 control-label">基本描述：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value="<?php echo $info['desc']; ?>"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="keyword" class="col-sm-3 control-label">新闻关键字列表：</label>
-                    <div class="col-sm-9" >
-                        <select id="keyword" class="selectpicker" multiple >
-                            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$co): $mod = ($i % 2 );++$i;?>
-                            <option value="<?php echo $co['title']; ?>" data-width="100%" <?php if(in_array($co['title'],$info['keywords'])): ?> selected="selected" <?php endif; ?>><?php echo $co['title']; ?></option>
-                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                    <label for="tel" class="col-sm-3 control-label">跳转地址：</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="purl" class="form-control form-control-sm" name="purl" value="<?php echo $info['purl']; ?>"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="status" class="col-sm-3 control-label">状态：</label>
+                    <div class="col-sm-9">
+                        <select id="status"  class="form-control form-control-sm">
+                            <option value="1" <?php if($info['status'] == '1'): ?> selected=""<?php endif; ?> >启用</option>
+                            <option value="0" <?php if($info['status'] == '0'): ?> selected=""<?php endif; ?> >禁止</option>
                         </select>
                     </div>
                 </div>
-
-
-                <div class="form-group">
-                    <label for="username" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻重点描述：</label>
-                    <div class="col-sm-9">
-                        <textarea  id="describe" class="form-control form-control-sm"  rows="5" ><?php echo $info['describe']; ?></textarea>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="keyword" class="col-sm-3 control-label">
-                        <span class="red-color">*</span>新闻SEO关键字：</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="seo_key" value="<?php echo $info['seo_key']; ?>">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="content" class="col-sm-3 control-label">新闻详情：</label>
-                    <div class="col-sm-9">
-                        <script id="content" name="content" type="text/plain"><?php echo $info['content']; ?></script>
-                    </div>
-                </div>
-                <input type="hidden" id="mid" value="<?php echo $info['id']; ?>">
+                <input type="hidden"  id='pid' value="<?php echo $info['id']; ?>" />
             </div>
-
         </div>
         <div class="td-align dialog-footer">
-            <button class="btn btn-warning cancle"> <i class="fa fa-close"></i> 取消</button>
-            <button class="btn btn-primary infosedits" type="button" page="<?php echo $params['pages']; ?>" category="<?php echo $params['category']; ?>" searchField="<?php echo $params['searchField']; ?>" searchValue="<?php echo $params['searchValue']; ?>"  data-url="<?php echo url('/v1/info/infos/infosEdit'); ?>"><i class="fa fa-save"></i> 确定提交</button>
-
+            <button class="btn btn-primary edits" type="button"   data-url="<?php echo url('/v1/protuct/protucts/edit'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+            <button class="btn btn-warning" onclick="go_return()"> <i class="fa fa-close"></i> 取消</button>
         </div>
     </form>
 </div>

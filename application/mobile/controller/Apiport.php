@@ -7,6 +7,12 @@
  */
 namespace app\mobile\controller;
 
+header('Access-Control-Allow-Origin:*'); // *代表允许任何网址请求
+header('Access-Control-Allow-Methods:POST,GET,OPTIONS,DELETE'); // 允许请求的类型
+header('Access-Control-Allow-Headers: Content-Type,Content-Length,Accept-Encoding,X-Requested-with, Origin');
+header('Access-Control-Allow-Headers:content-type,Authorization');
+header("Access-Control-Request-Headers:Origin,X-Requested-With,content-Type,Accept,Authorization");
+
 use app\mobile\service\Apiservice;
 use think\Controller;
 use think\Request;
@@ -23,9 +29,8 @@ class Apiport extends Controller
      */
     public function _initialize()
     {
-//        $this->request->param();
         $token = Config::get('token.tokens');
-        $result = Request::instance()->header('Authorization');
+        $result = Request::instance()->header('authorization');
 
         $token1 = md5(md5($token));
         $token2 = !empty($result) ? md5(md5($result)) : '';
@@ -157,9 +162,10 @@ class Apiport extends Controller
 //        $tokens2 = md5(md5($this->token2));
 //        if($tokens1 != $tokens2) return json(['code' => 400,'message' => 'TOKEN已失效']);
 
-        $id = isset($_GET['id']) ? $_GET['id'] : '';
+        $id = isset($_GET['id']) ? $_GET['id'] : 0;
+        $pid = isset($_GET['pid']) ? $_GET['pid'] : 0;
         if(empty($id)) return json(['code' => 400,'message' => '没有要找的招标信息详情']);
-        $info = Apiservice::instance()->getbaioinfo(['id' => $id]);
+        $info = Apiservice::instance()->getbaioinfo(['id' => $id,'pid' => $pid]);
         if(empty($info)) return json(['code' => 400,'message' => '没有搜索到您要查询的数据']);
         return json(['code' => 200,'message' => '已找到相关数据','list' => ['data' => $info['data'],'prev' => $info['prev'],'next' => $info['next']]]);
     }
@@ -203,7 +209,7 @@ class Apiport extends Controller
         $info = Apiservice::instance()->getmorebiao($params);
 
         if(empty($info)) return json(['code' => 400,'message' => '没有找到相关的数据']);
-        return json(['code' => 200,'message' => '请求成功','datas' => ['data' => $info['data'],'total' => $info['total']]]);
+        return json(['code' => 200,'message' => '请求成功','data' => ['data' => $info['data'],'total' => $info['total']]]);
     }
 
     /**

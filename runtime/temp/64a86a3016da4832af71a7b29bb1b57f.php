@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1578641886;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\header.html";i:1578903611;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1578557291;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1578905794;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\header.html";i:1578903611;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1578557291;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -583,7 +583,7 @@
 
                                     <div class="infoRight">
                                         <div class="rightTop">
-                                            <div class="itemTitle"><?php echo mb_substr($ww['title'],0,35,'utf-8'); ?></div>
+                                            <div class="itemTitle"><?php echo (isset($ww['title']) && ($ww['title'] !== '')?$ww['title']:''); ?></div>
                                             <span class="itemTime">
                                                     <img src="/static/spirit/images/shijian2x.png"
                                                          alt=""><span><?php echo $ww['release_time']; ?></span>

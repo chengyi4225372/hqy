@@ -1,0 +1,60 @@
+---------------------------------------------------------------
+[ 2020-01-13T09:43:40+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [2]explode() expects at least 2 parameters, 1 given[/opt/web/hqy_/application/v1/controller/info/Infos.php:102]
+---------------------------------------------------------------
+[ 2020-01-13T09:45:45+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [8]Array to string conversion[/opt/web/hqy_/runtime/temp/c1a222fa9e5c2f87bcace1520f208772.php:95]
+---------------------------------------------------------------
+[ 2020-01-13T09:49:48+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [2]explode() expects parameter 2 to be string, array given[/opt/web/hqy_/application/v1/controller/info/Infos.php:85]
+---------------------------------------------------------------
+[ 2020-01-13T09:51:03+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [2]explode() expects parameter 2 to be string, array given[/opt/web/hqy_/application/v1/controller/info/Infos.php:85]
+---------------------------------------------------------------
+[ 2020-01-13T09:52:04+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [2]explode() expects parameter 2 to be string, array given[/opt/web/hqy_/application/v1/controller/info/Infos.php:85]
+---------------------------------------------------------------
+[ 2020-01-13T09:54:46+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [2]explode() expects parameter 2 to be string, array given[/opt/web/hqy_/application/v1/controller/info/Infos.php:85]
+---------------------------------------------------------------
+[ 2020-01-13T09:57:12+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [2]explode() expects parameter 2 to be string, array given[/opt/web/hqy_/application/v1/controller/info/Infos.php:85]
+---------------------------------------------------------------
+[ 2020-01-13T09:59:08+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [2]explode() expects parameter 2 to be string, array given[/opt/web/hqy_/application/v1/controller/info/Infos.php:85]
+---------------------------------------------------------------
+[ 2020-01-13T10:02:17+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [2]explode() expects parameter 2 to be string, array given[/opt/web/hqy_/application/v1/controller/info/Infos.php:85]
+---------------------------------------------------------------
+[ 2020-01-13T10:04:19+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [8]未定义数组索引: keyword[/opt/web/hqy_/application/v1/service/Infosservice.php:133]
+---------------------------------------------------------------
+[ 2020-01-13T10:04:51+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [8]未定义数组索引: keyword[/opt/web/hqy_/application/v1/service/Infosservice.php:133]
+---------------------------------------------------------------
+[ 2020-01-13T10:10:36+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [0]类的属性不存在:app\common\model\Info->audit_user [/opt/web/hqy_/thinkphp/library/think/Model.php:624]
+---------------------------------------------------------------
+[ 2020-01-13T10:12:09+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [0]类的属性不存在:app\common\model\Info->audit_user [/opt/web/hqy_/thinkphp/library/think/Model.php:624]
+---------------------------------------------------------------
+[ 2020-01-13T10:12:11+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [0]类的属性不存在:app\common\model\Info->audit_user [/opt/web/hqy_/thinkphp/library/think/Model.php:624]
+---------------------------------------------------------------
+[ 2020-01-13T10:12:12+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [0]类的属性不存在:app\common\model\Info->audit_user [/opt/web/hqy_/thinkphp/library/think/Model.php:624]
+---------------------------------------------------------------
+[ 2020-01-13T10:13:22+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42218&page=3&category=&searchField=&searchValue=
+[ error ] [2]explode() expects parameter 2 to be string, array given[/opt/web/hqy_/application/v1/controller/info/Infos.php:85]
+---------------------------------------------------------------
+[ 2020-01-13T10:35:03+08:00 ] 172.26.2.111 GET /v1/cate/ifications/index.html
+[ error ] [0]致命错误: Call to undefined method think\Collection::render()[/opt/web/hqy_/runtime/temp/a67e6ddc4f2c1cca16230751aac49d49.php:394]
+---------------------------------------------------------------
+[ 2020-01-13T10:48:31+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42214&pages=4&category=&searchField=&searchValue=
+[ error ] [8]未定义数组索引: page[/opt/web/hqy_/runtime/temp/c1a222fa9e5c2f87bcace1520f208772.php:132]
+---------------------------------------------------------------
+[ 2020-01-13T10:50:08+08:00 ] 172.26.2.111 GET /v1/info/infos/infosEdit.html?id=42214&pages=4&category=&searchField=&searchValue=
+[ error ] [8]未定义数组索引: page[/opt/web/hqy_/runtime/temp/c1a222fa9e5c2f87bcace1520f208772.php:132]
+---------------------------------------------------------------
+[ 2020-01-13T16:58:28+08:00 ] 127.0.0.1 GET /home/index/industrydetail?mid=42285
+[ error ] [8]未定义数组索引: title[C:\phpEnv\www\hqy_\runtime\temp\c670b89204cf9eacdf978ce19b2b0018.php:13]

@@ -100,7 +100,7 @@
                     <td class="text-center">{$vo.release_time}</td>
 
                     <td class="text-center">
-                        <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="{:url('/v1/info/infos/infosEdit',['id'=>$vo.id])}">编辑</a>
+                        <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="{:url('/v1/info/infos/infosEdit',['id'=>$vo.id,'pages' => $params['page'],'category' => $params['category'],'searchField' => $params['searchField'],'searchValue' => $params['searchValue']])}">编辑</a>
 
                         <a  class="btn btn-danger infos_del" data-url="{:url('/v1/info/infos/infoDels',['id'=>$vo.id])}">删除</a>
 

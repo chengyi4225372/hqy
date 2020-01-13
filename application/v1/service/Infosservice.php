@@ -127,8 +127,13 @@ class Infosservice
     {
         $where = [];
         $where['id'] = $id;
-        $info = Info::instance()->where($where)->find();
-        return $info;
+        $infos = Info::instance()->where($where)->find();
+        if(!empty($infos)){
+            $infos['keywords'] = explode(',', $infos['keyword']);
+        }else{
+            $infos['keywords'] = [];
+        }
+        return $infos;
     }
 
     /**
@@ -139,7 +144,7 @@ class Infosservice
     {
         $array['status'] = 1;
         $array['auditing'] = 1;
-        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit(0, 2)->select();
+        $arr = Info::instance()->where($array)->order('release_time desc')->limit(0, 2)->select();
         return $arr;
     }
 
@@ -151,7 +156,7 @@ class Infosservice
     {
         $array['status'] = 1;
         $array['auditing'] = 1;
-        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->limit(0, 2)->select();
+        $arr = Info::instance()->where($array)->order('release_time desc')->limit(0, 2)->select();
         return $arr;
     }
 
@@ -181,7 +186,7 @@ class Infosservice
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
-            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 50, 'utf-8');
+            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 30, 'utf-8');
         }
 
         return $arr;
@@ -290,7 +295,7 @@ class Infosservice
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
-            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 50, 'utf-8');
+            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 30, 'utf-8');
         }
 
         return $arr ? $arr : '';
@@ -395,11 +400,11 @@ class Infosservice
             $page = 15;
         }
 
-        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
-            $arr[$k]['title'] = mb_substr($arr[$k]['title'], '0', '50', 'utf-8');
+            $arr[$k]['title'] = mb_substr($arr[$k]['title'], '0', '30', 'utf-8');
         }
 
         return $arr ? $arr : '';

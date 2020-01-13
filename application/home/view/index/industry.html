@@ -116,7 +116,7 @@
 
                                     <div class="infoRight">
                                         <div class="rightTop">
-                                            <div class="itemTitle">{:mb_substr($ww.title,0,35,'utf-8')}</div>
+                                            <div class="itemTitle">{$ww.title|default=''}</div>
                                             <span class="itemTime">
                                                     <img src="__SPI__/images/shijian2x.png"
                                                          alt=""><span>{$ww.release_time}</span>

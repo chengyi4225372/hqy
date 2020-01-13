@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_biao.html";i:1577694012;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_biao.html";i:1578898989;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -165,7 +165,7 @@
                                     data-url="<?php echo url('/home/index/getbiaoapi'); ?>" data-id="<?php echo $k; ?>">
                                     <span style='white-space: nowrap;'><?php echo $ff['title']; ?></span>
                                     <span class="close" onclick="nullhot(this)"
-                                        data-url="<?php echo url('/home/index/getbiaoapi'); ?>">✕</span>
+                                          data-title="<?php echo $ff['title']; ?>"   data-url="<?php echo url('/home/index/getbiaoapi'); ?>">✕</span>
                                 </li>
                                 <?php endforeach; endif; else: echo "" ;endif; ?>
                             </ul>
@@ -205,7 +205,7 @@
 
                                         <div class="infoRight">
                                             <div class="rightTop">
-                                                <div class="itemTitle"><?php echo mb_substr($ww['title'],0,35,'utf-8'); ?></div>
+                                                <div class="itemTitle"><?php echo (isset($ww['title']) && ($ww['title'] !== '')?$ww['title']:''); ?></div>
                                                 <span class="itemTime">
                                                     <img src="/static/spirit/images/shijian2x.png" alt="">
                                                     <span><?php echo $ww['release_time']; ?></span>

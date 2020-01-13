@@ -140,7 +140,7 @@
 
                     <div class="infoRight">
                       <div class="rightTop">
-                        <div class="itemTitle">{:mb_substr($sh.title,0,35,'utf-8')}</div>
+                        <div class="itemTitle">{$sh.title|default=''}</div>
                         <span class="itemTime">
                           <img src="__SPI__/images/shijian2x.png" alt=""><span>{$sh.release_time}</span>
                         </span>

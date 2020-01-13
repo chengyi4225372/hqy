@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:70:"/opt/web/hqy_/public/../application/v1/view/cate/ifications/index.html";i:1577239822;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576659286;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:70:"/opt/web/hqy_/public/../application/v1/view/cate/ifications/index.html";i:1577239906;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576659286;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -384,12 +384,7 @@
                         <?php endif; ?>
                     </td>
                     <td class="text-center">
-                        <?php if($vo['status'] == 1): ?>
                         <a  class="btn btn-info" data-url="<?php echo url('/v1/cate/ifications/edit',['mid'=>$vo['id']]); ?>"  onclick="edits(this)">编辑</a>
-                        <?php else: ?>
-                        <a  class="btn btn-info" disabled="true">编辑</a>
-                        <?php endif; ?>
-
                     </td>
                 </tr>
 

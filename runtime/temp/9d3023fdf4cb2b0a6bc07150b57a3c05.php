@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1578490251;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1578899112;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -81,7 +81,7 @@
                 <dl>
                   <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                   <dd>
-                    · 武汉创业公司
+                    · 创业公司
 
                   </dd>
                   <dd>· 一站式商务服务</dd>
@@ -230,7 +230,7 @@
 
                     <div class="infoRight">
                       <div class="rightTop">
-                        <div class="itemTitle"><?php echo mb_substr($sh['title'],0,35,'utf-8'); ?></div>
+                        <div class="itemTitle"><?php echo (isset($sh['title']) && ($sh['title'] !== '')?$sh['title']:''); ?></div>
                         <span class="itemTime">
                           <img src="/static/spirit/images/shijian2x.png" alt=""><span><?php echo $sh['release_time']; ?></span>
                         </span>
