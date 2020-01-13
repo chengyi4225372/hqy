@@ -291,7 +291,6 @@ var titles  = ''; //关键字分割成字符串
 var hrefs   = '';  //详情页url
 var urls    = ''; //ajax 提交url
 var key     = ''; //分割关键字
-
 /** 列表页热门搜索 **/
 function hotsearch(obj) {
      urls = $(obj).attr('data-url');
@@ -326,6 +325,7 @@ function hotsearch(obj) {
          if(ret.code == 200){
            if(ret.data.length<=0){
                $('#shang li').remove(); //清空原有标签
+
                var arr = '';
                arr+= "<li><div class='tabs-items-content'>";
                arr+= "<div class='tabs-items-content-text figcaption'>";
@@ -349,44 +349,41 @@ function hotsearch(obj) {
                    content+="<img src="+trims(index.imgs)+"></div>";
                    }
                    content+= "<div class='infoRight'><div class='rightTop'>";
-                   content+= "<div class='itemTitle'>"+index.title+"</div>";
+                   content+= "<div class='itemTitle'>"+index.title+'...'+"</div>";
                    content+= "<span class='itemTime'><img src='/static/spirit/images/shijian2x.png'>";
                    content+= "<span>"+index.release_time+"</span>";
                    content+= "</span></div>";
                    content+= "<p>"+index.describe+"</p>";
                    content+= "</div></div></a>";
-                   content+= "<ul class='tags'>";
-                   for(var i in key){
-                       content+= "<li data-title="+key[i]+">";
-                       content+=  key[i];
-                       content+= "</li>";
-                   }
-                   content+= "</ul>";
+                   content += "<ul class='tags'>";
+                       for (var i in key) {
+                           content += "<li data-title=" + key[i] + ">";
+                           content += key[i];
+                           content += "</li>";
+                       }
+                       content += "</ul>";
+
+
                    $("#shang").append(content).show();
                });
 
+               $('.page').remove();
                 // 分页
-                if(ret.count <= 0){
+                if(ret.count <= 0 || ret.data.length <= ret.size){
                     return ;
                 } else {
                     $('.page').remove();
                     var page  = '';
+                    var i =1;
                     page += "<ul class='page'>";
                     //上一页
-                    page += "<li class='prev' onclick='pagehrefs(urls,-1,titles,"+ret.page+","+ret.count+");'>上一页</li>";
-                    for(var i=1;i<=ret.count;i++){
-                        //当前页
-                        if(ret.page == i){
-                            page += "<li class='activePage' onclick='pagehrefs(urls,0,"+ret.page+","+ret.count+");'>"+i+"</li>";
-                        }
-                        //不是当前页
-                        if(ret.page != i){
+                    page += "<li class='prev' onclick='pagehrefs(urls,--i,titles,"+ret.page+","+ret.count+");'>上一页</li>";
+                    for(i;i<=ret.count;i++){
+                           console.log(i);
                             page += "<li onclick='pagehrefs(urls,"+i+",titles,"+ret.page+","+ret.count+");'>"+i+"</li>";
-                        }
-
                     }
                     //下一页
-                    page += "<li class='next' onclick='pagehrefs(urls,1,titles,"+ret.page+","+ret.count+");'>下一页</li>";
+                    page += "<li class='next' onclick='pagehrefs(urls,++i,titles,"+ret.page+","+ret.count+");'>下一页</li>";
                     page +="</ul>";
                     $('.pageNation').append(page).show();
                 }
@@ -447,7 +444,7 @@ function nullhot(obj){
                         content+="<img src="+trims(index.imgs)+"></div>";
                     }
                     content+= "<div class='infoRight'><div class='rightTop'>";
-                    content+= "<div class='itemTitle'>"+index.title+"</div>";
+                    content+= "<div class='itemTitle'>"+index.title+'...'+"</div>";
                     content+= "<span class='itemTime'><img src='/static/spirit/images/shijian2x.png'>";
                     content+= "<span>"+index.release_time+"</span>";
                     content+= "</span></div>";
@@ -464,25 +461,18 @@ function nullhot(obj){
                 });
 
                 // 分页
-                if(ret.count <= 0){
+                if(ret.count <= 0 || ret.data.length < ret.size){
                     return ;
                 } else {
                     $('.page').remove();
                     var page  = '';
+                    var i= 1;
                     page += "<ul class='page'>";
-                    page += "<li class='prev' onclick='pagehrefs(urls,-1,titles,"+ret.page+","+ret.count+");'>上一页</li>";
-                    for(var i=1;i<=ret.count;i++){
-                        //当前页
-                        if(ret.page == i){
-                            page += "<li class='activePage' onclick='pagehrefs(urls,0,"+ret.page+","+ret.count+");'>"+i+"</li>";
-                        }
-                        //不是当前页
-                        if(ret.page != i){
-                            page += "<li onclick='pagehrefs(urls,"+i+",titles,"+ret.page+","+ret.count+");'>"+i+"</li>";
-                        }
-
+                    page += "<li class='prev' onclick='pagehrefs(urls,--i,titles,"+ret.page+","+ret.count+");'>上一页</li>";
+                    for(i;i<=ret.count;i++){
+                        page += "<li onclick='pagehrefs(urls,"+i+",titles,"+ret.page+","+ret.count+");'>"+i+"</li>";
                     }
-                    page += "<li class='next' onclick='pagehrefs(urls,1,titles,"+ret.page+","+ret.count+");'>下一页</li>";
+                    page += "<li class='next' onclick='pagehrefs(urls,i++,titles,"+ret.page+","+ret.count+");'>下一页</li>";
                     page +="</ul>";
                     $('.pageNation').append(page).show();
                 }
@@ -517,21 +507,23 @@ function pagehrefs(purls,i,titles,pages,count){
          return false;
      }
 
-     //上一页
-     if(i == -1){
-         i= pages + i;
-         if(i <=0 ){
-             layer.msg('已经是第一页了');
-             return false;
+     console.log(i);
+     return false;
+    //上一页
+         if(i <=0){
+             if(i <=count ){
+                 layer.msg('已经是第一页了');
+                 return false;
+             }
+         }else {
+             //下一页
+             //i= pages +i;
+             if(i > count){
+                 layer.msg('已经是最后一页了');
+                 return false;
+             }
          }
-     }else {
-         //下一页
-         i= pages +i;
-         if(i > count){
-             layer.msg('已经是最后一页了');
-             return false;
-         }
-     }
+
 
     $.post(purls,{'title':titles,'page':i},function(ret){
         if(ret.code == 200){
@@ -574,25 +566,18 @@ function pagehrefs(purls,i,titles,pages,count){
                     $("#shang").append(content).show();
                 });
                 // 分页
-                if(ret.count <= 0){
+                if(ret.count <= 0 || ret.data.length < ret.data){
                     return ;
                 } else {
                     $('.page').remove();
                     var page  = '';
+                    var i =1;
                     page += "<ul class='page'>";
-                    page += "<li class='prev' onclick='pagehrefs(urls,-1,titles,"+ret.page+","+ret.count+");'>上一页</li>";
-                    for(var i=1;i<=ret.count;i++){
-                        //当前页
-                        if(ret.page == i){
-                            page += "<li class='activePage' onclick='pagehrefs(urls,0,"+ret.page+","+ret.count+");'>"+i+"</li>";
-                        }
-                        //不是当前页
-                        if(ret.page != i){
-                            page += "<li onclick='pagehrefs(urls,"+i+",titles,"+ret.page+","+ret.count+");'>"+i+"</li>";
-                        }
-
+                    page += "<li class='prev' onclick='pagehrefs(urls,--i,titles,"+ret.page+","+ret.count+");'>上一页</li>";
+                    for(i;i<=ret.count;i++){
+                        page += "<li onclick='pagehrefs(urls,"+i+",titles,"+ret.page+","+ret.count+");'>"+i+"</li>";
                     }
-                    page += "<li class='next' onclick='pagehrefs(urls,1,titles,"+ret.page+","+ret.count+");'>下一页</li>";
+                    page += "<li class='next' onclick='pagehrefs(urls,++i,titles,"+ret.page+","+ret.count+");'>下一页</li>";
                     page +="</ul>";
                     $('.pageNation').append(page).show();
                 }
