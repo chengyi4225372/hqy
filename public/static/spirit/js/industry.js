@@ -1,21 +1,6 @@
 window.onload = function () {
 
-    var menuList = document.querySelectorAll('#headerContent ul li')
-    var menuUl = document.querySelector('#headerContent ul')
-
-    for (var i = 0; i < menuList.length; i++) {
-        menuList[i].onmouseenter = function () {
-            var li = document.querySelectorAll('.nav-active')[0]
-            li.classList.remove('nav-active')
-            this.classList.add('nav-active')
-        }
-    }
-
-    menuUl.onmouseleave = function () {
-        var li = document.querySelectorAll('.nav-active')[0]
-        li.classList.remove('nav-active')
-        menuList[5].classList.add('nav-active')
-    }
+  
 
     var liArr = document.querySelectorAll(".tabs ul li");
     var spanArr = document.querySelectorAll(".tabs-items");

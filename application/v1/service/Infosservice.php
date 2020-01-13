@@ -201,7 +201,7 @@ class Infosservice
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
-            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 30, 'utf-8');
+            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 30, 'utf-8').'...';
         }
 
         return $arr;
@@ -256,7 +256,7 @@ class Infosservice
      */
      public function getbiaocount($title){
          $array = [];
-         if (empty($title)) {
+         if (empty($title) ||!isset($title)) {
              $array['status'] = 1;
              $array['auditing'] = 1;
              $array['pid'] = 1;
@@ -266,7 +266,6 @@ class Infosservice
              $arr_title = array_filter($new_title,function ($params){
                  return !empty($params);
              });
-
              $arr_w = array_map(function ($pa){
                  return '%'.$pa.'%';
              },$arr_title);
@@ -277,7 +276,7 @@ class Infosservice
              $array['keyword'] = ['like',$arr_w,'OR'];
          }
          $arr = Info::instance()->where($array)->order('id desc,release_time desc')->count();
-
+         
          return $arr?$arr:'';
      }
 
@@ -310,7 +309,7 @@ class Infosservice
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
-            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 30, 'utf-8');
+            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 30, 'utf-8').'...';
         }
 
         return $arr ? $arr : '';
@@ -366,7 +365,7 @@ class Infosservice
      public function getindustrycount($title){
          $where = [];
 
-         if(empty($title)){
+         if(empty($title) || !isset($title)){
              $where['status'] = 1;
              $where['auditing'] = 1;
              $where['pid']    = 3;
@@ -419,7 +418,7 @@ class Infosservice
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
-            $arr[$k]['title'] = mb_substr($arr[$k]['title'], '0', '30', 'utf-8');
+            $arr[$k]['title'] = mb_substr($arr[$k]['title'], '0', '30', 'utf-8').'...';
         }
 
         return $arr ? $arr : '';
