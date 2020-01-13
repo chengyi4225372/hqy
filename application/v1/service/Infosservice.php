@@ -128,12 +128,27 @@ class Infosservice
         $where = [];
         $where['id'] = $id;
         $infos = Info::instance()->where($where)->find();
+        $info = [];
         if(!empty($infos)){
-            $infos['keywords'] = explode(',', $infos['keyword']);
+            $info = $infos->toArray();
+            $info['id'] = $info['id'];
+            $info['pid'] = $info['pid'];
+            $info['title'] = $info['title'];
+            $info['imgs'] = $info['imgs'];
+            $info['pid'] = $info['pid'];
+            $info['keyword'] = $info['keyword'];
+            $info['keywords'] = explode(',', $info['keyword']);
+            $info['content'] = $info['content'];
+            $info['describe'] = $info['describe'];
+            $info['status'] = $info['status'];
+            $info['release_time'] = $info['release_time'];
+            $info['auditing'] = $info['auditing'];
+            $info['audit_user'] = $info['audit_user'];
+            $info['seo_key'] = $info['seo_key'];
         }else{
-            $infos['keywords'] = [];
+            $info['keywords'] = [];
         }
-        return $infos;
+        return $info;
     }
 
     /**

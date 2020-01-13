@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_list.html";i:1578035170;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1578035170;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:66:"/opt/web/hqy_/public/../application/home/view/index/info_list.html";i:1578901880;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1578035170;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -81,7 +81,7 @@
                 <dl>
                   <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                   <dd>
-                    · 武汉创业公司
+                    · 创业公司
 
                   </dd>
                   <dd>· 一站式商务服务</dd>
@@ -163,7 +163,7 @@
                       data-url="<?php echo url('/home/index/getshangapi'); ?>" data-id="<?php echo $k; ?>">
                     <span style='white-space: nowrap;'><?php echo $ff['title']; ?></span>
                     <span class="close" onclick="nullhot(this)"
-                          data-url="<?php echo url('/home/index/getshangapi'); ?>">✕</span>
+                          data-title="<?php echo $ff['title']; ?>"   data-url="<?php echo url('/home/index/getshangapi'); ?>">✕</span>
                   </li>
                   <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
@@ -230,7 +230,7 @@
 
                     <div class="infoRight">
                       <div class="rightTop">
-                        <div class="itemTitle"><?php echo mb_substr($sh['title'],0,35,'utf-8'); ?></div>
+                        <div class="itemTitle"><?php echo (isset($sh['title']) && ($sh['title'] !== '')?$sh['title']:''); ?></div>
                         <span class="itemTime">
                           <img src="/static/spirit/images/shijian2x.png" alt=""><span><?php echo $sh['release_time']; ?></span>
                         </span>

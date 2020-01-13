@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"/opt/web/hqy_/public/../application/v1/view/info/infos/infos_add.html";i:1578295685;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"/opt/web/hqy_/public/../application/v1/view/info/infos/infos_add.html";i:1578907189;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -139,7 +139,7 @@
 
         <div class="td-align dialog-footer">
             <button class="btn btn-warning cancle"> <i class="fa fa-close"></i> 取消</button>
-            <button class="btn btn-primary infos-add" type="button"  data-url="<?php echo url('/v1/info/infos/infosadd'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+            <button class="btn btn-primary infos-add" type="button"   data-url="<?php echo url('/v1/info/infos/infosadd'); ?>" page="<?php echo $params['pages']; ?>" category="<?php echo $params['category']; ?>" searchField="<?php echo $params['searchField']; ?>" searchValue="<?php echo $params['searchValue']; ?>"><i class="fa fa-save"></i> 确定提交</button>
         </div>
     </form>
 </div>

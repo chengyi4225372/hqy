@@ -45,7 +45,18 @@ class Infos extends AuthController
     public function infosAdd()
     {
         if ($this->request->isGet()) {
+            $searchField = input('get.searchField', '', 'trim');
+            $searchValue = input('get.searchValue', '', 'trim');
+            $category = input('get.category', '', 'trim');
+            $page = input('get.pages', '', 'trim');
+            $params = [];
+            $params['searchField'] = !empty($searchField) ? $searchField : '';
+            $params['searchValue'] = !empty($searchValue) ? $searchValue : '';
+            $params['category'] = !empty($category) ? $category : '';
+            $params['pages'] = !empty($page) ? $page : 1;
             $catelist = Ificationservice::instance()->getlist('');
+
+            $this->assign('params', $params);
             $this->assign('catelist', $catelist);
             return $this->fetch();
         }
@@ -109,7 +120,7 @@ class Infos extends AuthController
             $params['category'] = !empty($category) ? $category : '';
             $params['pages'] = !empty($page) ? $page : 1;
 
-//            echo '<pre>';print_r($info['keywords']);exit;
+
             $this->assign('params', $params);
             $this->assign('list', $catelist);
             $this->assign('info', $info);

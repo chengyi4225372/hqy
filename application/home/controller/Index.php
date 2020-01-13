@@ -12,6 +12,7 @@ use app\v1\service\Ificationservice;
 use think\Cookie;
 use think\Cache;
 use app\common\model\Visit;
+
 class Index extends BaseController
 {
 
@@ -39,21 +40,21 @@ class Index extends BaseController
 
         $caseInfo = Caseservice::instance()->getallparent();
 //            echo '<pre>';print_r($caseInfo);exit;
-        $pic = array_column($caseInfo,'pic');
-        $pic2 = array_column($caseInfo,'pic2');
-        $this->assign('pic1',json_encode($pic));
-        $this->assign('pic2',json_encode($pic2));
-        $this->assign('count',count($caseInfo));
+        $pic = array_column($caseInfo, 'pic');
+        $pic2 = array_column($caseInfo, 'pic2');
+        $this->assign('pic1', json_encode($pic));
+        $this->assign('pic2', json_encode($pic2));
+        $this->assign('count', count($caseInfo));
         $this->assign('case_list', $caseInfo);
 
 
-        $this->assign('site_info',$siteInfo);
+        $this->assign('site_info', $siteInfo);
 
         $this->assign('slideshow', $slideshow);
         $this->assign('biao', $biao);
         $this->assign('shang', $shang);
         //用户信息
-        $this->assign('userinfo',$this->userinfo);
+        $this->assign('userinfo', $this->userinfo);
         return $this->fetch();
 
     }
@@ -63,19 +64,20 @@ class Index extends BaseController
      * @author: jason
      * @date: 2019-10-28 10:27:42
      */
-    public function ajaximage(){
-        if($this->request->isAjax() && $this->request->isPost() && $_POST['data'] == 'getdata'){
+    public function ajaximage()
+    {
+        if ($this->request->isAjax() && $this->request->isPost() && $_POST['data'] == 'getdata') {
             $caseInfo = Caseservice::instance()->getallparent();
             $pic_arr = [];
             $pic2_arr = [];
-            foreach($caseInfo as $key => $value){
+            foreach ($caseInfo as $key => $value) {
                 $pic_arr[$key]['pic1'] = $value['pic'];
                 $pic_arr[$key]['is_show'] = $value['is_show'];
                 $pic2_arr[$key]['pic2'] = $value['pic2'];
                 $pic2_arr[$key]['is_show'] = $value['is_show'];
                 $pic2_arr[$key]['is_pic1'] = $value['pic'];
             }
-            return json(['pic1' => $pic_arr,'pic2' => $pic2_arr]);
+            return json(['pic1' => $pic_arr, 'pic2' => $pic2_arr]);
         }
     }
 
@@ -83,29 +85,30 @@ class Index extends BaseController
     /**
      * 招商列表页面
      */
-    public function infoList(){
-       if($this->request->isGet()){
+    public function infoList()
+    {
+        if ($this->request->isGet()) {
 
 //           if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
 //               return $this->redirect('/home/index/index');
 //           }
-           // 招商信息
-           $keyword   = input('get.keyword','','trim');
-           $title     = input('get.title','','trim');
+            // 招商信息
+            $keyword = input('get.keyword', '', 'trim');
+            $title = input('get.title', '', 'trim');
 
-           $titles    =$keyword?$keyword:$title;
+            $titles = $keyword ? $keyword : $title;
 
-           $shang = Infosservice::instance()->getshang($titles,10);
+            $shang = Infosservice::instance()->getshang($titles, 10);
 
-           //关键字排序 最高四条
-           $four = Ificationservice::instance()->getBiaofour('招商');
+            //关键字排序 最高四条
+            $four = Ificationservice::instance()->getBiaofour('招商');
 
-           $this->assign('shang',$shang);
-           $this->assign('title','政府招商政策');
-           $this->assign('four',$four);
-           return $this->fetch();
-       }
-       return false;
+            $this->assign('shang', $shang);
+            $this->assign('title', '政府招商政策');
+            $this->assign('four', $four);
+            return $this->fetch();
+        }
+        return false;
     }
 
     /**
@@ -116,22 +119,43 @@ class Index extends BaseController
      */
     public function detailshang()
     {
-        if($this->request->isGet()){
+        if ($this->request->isGet()) {
 //            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
 //                return $this->redirect('/home/index/index');
 //            }
 
-            $id = input('get.mid','','int');
-            if(empty($id) || !isset($id)|| $id <=0){
+            $id = input('get.mid', '', 'int');
+            if (empty($id) || !isset($id) || $id <= 0) {
                 return false;
             }
             $info = infosservice::instance()->getId($id);
-            $top  = Infosservice::instance()->getTop($id,2);
-            $next = Infosservice::instance()->getNext($id,2);
-            $this->assign('info',$info);
-            $this->assign('top',$top);
-            $this->assign('next',$next);
-            $this->assign('title','政府招商政策');
+
+            //获取当前用户进来查看的IP
+            $ip = getip();
+            //记录当前用户的IP
+            if(!empty($info)){
+                $wh = [];
+                $time = date('Y-m-d');
+                $wh['ip'] = $ip;
+                $wh['visit_time'] = $time;
+                $result = Visit::instance()->where($wh)->find();
+                if(count($result) <= 0){
+                    $add = [];
+                    $add['ip'] = $ip;
+                    $add['article'] = $info['id'];
+                    $add['title'] = $info['title'];
+                    $add['visit_time'] = $time;
+                    $add['add_time'] = date('Y-m-d H:i:s');
+                    Visit::instance()->insert($add);
+                }
+            }
+
+            $top = Infosservice::instance()->getTop($id, 2);
+            $next = Infosservice::instance()->getNext($id, 2);
+            $this->assign('info', $info);
+            $this->assign('top', $top);
+            $this->assign('next', $next);
+            $this->assign('title', '政府招商政策');
             return $this->fetch();
         }
         return false;
@@ -143,78 +167,81 @@ class Index extends BaseController
      * keyword string
      * page string |id
      */
-    public function getshangapi(){
-       if($this->request->isPost() || $this->request->isAjax()){
-           $title = input('post.title', '', 'trim'); //热门搜索
-           $page  = input('post.page','','int');
-           $titles = $title? $title: '';
-           $page  = $page ?$page :'1';//当前页数
-           $size  = 35; //每页显示条数
+    public function getshangapi()
+    {
+        if ($this->request->isPost() || $this->request->isAjax()) {
+            $title = input('post.title', '', 'trim'); //热门搜索
+            $page = input('post.page', '', 'int');
+            $titles = $title ? $title : '';
+            $page = $page ? $page : '1';//当前页数
+            $size = 35; //每页显示条数
 
-           $data   = Infosservice::instance()->getshangjson($titles, $page,$size);
-           $count  =  Infosservice::instance()->getshangcount($titles);
-           $countpage = ceil($count / $size);
+            $data = Infosservice::instance()->getshangjson($titles, $page, $size);
+            $count = Infosservice::instance()->getshangcount($titles);
+            $countpage = ceil($count / $size);
 
-           if(!empty($data)){
-               return json(['data'=>$data,'page'=>$page,'size'=>$size,'count'=>$countpage,'code'=>200,'msg'=>'success']);
-           }
+            if (!empty($data)) {
+                return json(['data' => $data, 'page' => $page, 'size' => $size, 'count' => $countpage, 'code' => 200, 'msg' => 'success']);
+            }
 
-           if(empty($data)){
-               return json(['data'=>'','code'=>400,'msg'=>'error']);
-           }
-       }
-       return false;
+            if (empty($data)) {
+                return json(['data' => '', 'code' => 400, 'msg' => 'error']);
+            }
+        }
+        return false;
     }
 
     /**
      * 招标列表页
      */
-     public function infoBiao(){
-         if($this->request->isGet()){
+    public function infoBiao()
+    {
+        if ($this->request->isGet()) {
 
 //           if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
 //               return $this->redirect('/home/index/index');
 //           }
-             // 招商信息
-             $keyword   = input('get.keyword','','trim');//正常搜索
-             $title     = input('get.title','','trim'); //热门搜索
+            // 招商信息
+            $keyword = input('get.keyword', '', 'trim');//正常搜索
+            $title = input('get.title', '', 'trim'); //热门搜索
 
-             $titles    =$keyword?$keyword:$title;
+            $titles = $keyword ? $keyword : $title;
 
-             $biao = Infosservice::instance()->getbiao($titles,10);
+            $biao = Infosservice::instance()->getbiao($titles, 10);
 
-             //关键字排序 最高四条
-             $four = Ificationservice::instance()->getBiaofour('招标');
+            //关键字排序 最高四条
+            $four = Ificationservice::instance()->getBiaofour('招标');
 
-             $this->assign('biao',$biao);
-             $this->assign('four',$four);
-             $this->assign('title','招标信息列表');
-             return $this->fetch();
-         }
-         return false;
-     }
+            $this->assign('biao', $biao);
+            $this->assign('four', $four);
+            $this->assign('title', '招标信息列表');
+            return $this->fetch();
+        }
+        return false;
+    }
 
     /**
      * 招标信息 接口
      */
-    public function getbiaoapi(){
-        if($this->request->isPost() || $this->request->isAjax()){
+    public function getbiaoapi()
+    {
+        if ($this->request->isPost() || $this->request->isAjax()) {
             $title = input('post.title', '', 'trim'); //热门搜索
-            $page  = input('post.page','','int');
-            $titles = $title? $title: '';
-            $page  = $page ?$page :'1';//当前页数
-            $size  = 35; //每页显示条数
+            $page = input('post.page', '', 'int');
+            $titles = $title ? $title : '';
+            $page = $page ? $page : '1';//当前页数
+            $size = 35; //每页显示条数
 
-            $data   = Infosservice::instance()->getbiaojson($titles, $page,$size);
-            $count  =  Infosservice::instance()->getbiaocount($titles);
+            $data = Infosservice::instance()->getbiaojson($titles, $page, $size);
+            $count = Infosservice::instance()->getbiaocount($titles);
             $countpage = ceil($count / $size);
 
-            if(!empty($data)){
-                return json(['data'=>$data,'page'=>$page,'size'=>$size,'count'=>$countpage,'code'=>200,'msg'=>'success']);
+            if (!empty($data)) {
+                return json(['data' => $data, 'page' => $page, 'size' => $size, 'count' => $countpage, 'code' => 200, 'msg' => 'success']);
             }
 
-            if(empty($data)){
-                return json(['data'=>'','code'=>400,'msg'=>'error']);
+            if (empty($data)) {
+                return json(['data' => '', 'code' => 400, 'msg' => 'error']);
             }
 
         }
@@ -230,16 +257,64 @@ class Index extends BaseController
      */
     public function detailbiao()
     {
-        if($this->request->isGet()){
+        if ($this->request->isGet()) {
 //            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
 //                return $this->redirect('/home/index/index');
 //            }
 
-            $id = input('get.mid','','int');
-            if(empty($id) || !isset($id)|| $id <=0){
+            $id = input('get.mid', '', 'int');
+            if (empty($id) || !isset($id) || $id <= 0) {
                 return false;
             }
             $info = infosservice::instance()->getId($id);
+            //获取当前用户进来查看的IP
+            $ip = getip();
+            //记录当前用户的IP
+            if (!empty($info)) {
+                $wh = [];
+                $time = date('Y-m-d');
+                $wh['ip'] = $ip;
+                $wh['visit_time'] = $time;
+                $result = Visit::instance()->where($wh)->find();
+                if (count($result) <= 0) {
+                    $add = [];
+                    $add['ip'] = $ip;
+                    $add['article'] = $info['id'];
+                    $add['title'] = $info['title'];
+                    $add['visit_time'] = $time;
+                    $add['add_time'] = date('Y-m-d H:i:s');
+                    Visit::instance()->insert($add);
+                }
+            }
+            $top = Infosservice::instance()->getTop($id, 1);
+            $next = Infosservice::instance()->getNext($id, 1);
+            $this->assign('info', $info);
+            $this->assign('top', $top);
+            $this->assign('next', $next);
+            $this->assign('title', '招标信息详情');
+            return $this->fetch();
+        }
+        return false;
+    }
+
+
+    /**
+     * 新闻详情页
+     * min  string | int
+     */
+    public function getInfo()
+    {
+        if ($this->request->isGet()) {
+//            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
+//                return $this->redirect('/home/index/index');
+//            }
+
+            $id = input('get.mid', '', 'int');
+            if (empty($id) || !isset($id) || $id <= 0) {
+                return false;
+            }
+            $info = infosservice::instance()->getId($id);
+
             //获取当前用户进来查看的IP
             $ip = getip();
             //记录当前用户的IP
@@ -252,44 +327,21 @@ class Index extends BaseController
                 if(count($result) <= 0){
                     $add = [];
                     $add['ip'] = $ip;
+                    $add['article'] = $info['id'];
+                    $add['title'] = $info['title'];
                     $add['visit_time'] = $time;
+                    $add['add_time'] = date('Y-m-d H:i:s');
                     Visit::instance()->insert($add);
                 }
             }
-            $top  = Infosservice::instance()->getTop($id,1);
-            $next = Infosservice::instance()->getNext($id,1);
-            $this->assign('info',$info);
-            $this->assign('top',$top);
-            $this->assign('next',$next);
-            $this->assign('title','招标信息详情');
+
+            $top = Infosservice::instance()->getTop($id);
+            $next = Infosservice::instance()->getNext($id);
+            $this->assign('info', $info);
+            $this->assign('top', $top);
+            $this->assign('next', $next);
+            $this->assign('title', '新闻详情');
             return $this->fetch();
-        }
-        return false;
-    }
-
-
-    /**
-     * 新闻详情页
-     * min  string | int
-     */
-    public function getInfo(){
-        if($this->request->isGet()){
-//            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
-//                return $this->redirect('/home/index/index');
-//            }
-
-           $id = input('get.mid','','int');
-           if(empty($id) || !isset($id)|| $id <=0){
-               return false;
-           }
-           $info = infosservice::instance()->getId($id);
-           $top  = Infosservice::instance()->getTop($id);
-           $next = Infosservice::instance()->getNext($id);
-           $this->assign('info',$info);
-           $this->assign('top',$top);
-           $this->assign('next',$next);
-           $this->assign('title','新闻详情');
-           return $this->fetch();
         }
         return false;
     }
@@ -302,24 +354,24 @@ class Index extends BaseController
      */
     public function industry()
     {
-        if($this->request->isGet()){
+        if ($this->request->isGet()) {
 
 //           if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
 //               return $this->redirect('/home/index/index');
 //           }
             // 招商信息
-            $keyword   = input('get.keyword','','trim');//正常搜索
-            $title     = input('get.title','','trim'); //热门搜索
+            $keyword = input('get.keyword', '', 'trim');//正常搜索
+            $title = input('get.title', '', 'trim'); //热门搜索
 
-            $titles    =$keyword?$keyword:$title;
+            $titles = $keyword ? $keyword : $title;
 
-            $biao = Infosservice::instance()->getIndustry($titles,10);
+            $biao = Infosservice::instance()->getIndustry($titles, 10);
 
             //关键字排序 最高四条
             $four = Ificationservice::instance()->getBiaofour('新闻资讯');
-            $this->assign('biao',$biao);
-            $this->assign('four',$four);
-            $this->assign('title','新闻资讯');
+            $this->assign('biao', $biao);
+            $this->assign('four', $four);
+            $this->assign('title', '新闻资讯');
             return $this->fetch();
         }
         return false;
@@ -328,23 +380,24 @@ class Index extends BaseController
     /**
      * 行业资讯关键字接口
      */
-    public function industryapi(){
-        if($this->request->isPost() || $this->request->isAjax()) {
+    public function industryapi()
+    {
+        if ($this->request->isPost() || $this->request->isAjax()) {
             //行业资讯
             $title = input('post.title', '', 'trim'); //热门搜索
-            $page  = input('post.page','','int');
-            $titles = $title? $title: '';
-            $page  = $page ?$page :'1';//当前页数
-            $size  = 40; //每页显示条数
-            $data   = Infosservice::instance()->getindustryjson($titles, $page,$size);
-            $count  =  Infosservice::instance()->getindustrycount($titles);
+            $page = input('post.page', '', 'int');
+            $titles = $title ? $title : '';
+            $page = $page ? $page : '1';//当前页数
+            $size = 40; //每页显示条数
+            $data = Infosservice::instance()->getindustryjson($titles, $page, $size);
+            $count = Infosservice::instance()->getindustrycount($titles);
             $countpage = ceil($count / $size);
-            if(!empty($data)){
-                return json(['data'=>$data,'page'=>$page,'size'=>$size,'count'=>$countpage,'code'=>200,'msg'=>'success']);
+            if (!empty($data)) {
+                return json(['data' => $data, 'page' => $page, 'size' => $size, 'count' => $countpage, 'code' => 200, 'msg' => 'success']);
             }
 
-            if(empty($data)){
-                return json(['data'=>'','code'=>400,'msg'=>'error']);
+            if (empty($data)) {
+                return json(['data' => '', 'code' => 400, 'msg' => 'error']);
             }
 
         }
@@ -359,24 +412,44 @@ class Index extends BaseController
      */
     public function industrydetail()
     {
-        if($this->request->isGet()){
+        if ($this->request->isGet()) {
 //            if(Cookie('mobile') == '' || Cookie('mobile') == NULL || Cookie('mobile') == 0 ){
 //                return $this->redirect('/home/index/index');
 //            }
 
-            $id = input('get.mid','','int');
-            if(empty($id) || !isset($id)|| $id <=0){
+            $id = input('get.mid', '', 'int');
+            if (empty($id) || !isset($id) || $id <= 0) {
                 return false;
             }
 
-            $info = infosservice::instance()->getId($id,3);
+            $info = infosservice::instance()->getId($id, 3);
 
-            $top  = Infosservice::instance()->getTop($id,3);
-            $next = Infosservice::instance()->getNext($id,3);
-            $this->assign('info',$info);
-            $this->assign('top',$top);
-            $this->assign('next',$next);
-            $this->assign('title','新闻资讯');
+            //获取当前用户进来查看的IP
+            $ip = getip();
+            //记录当前用户的IP
+            if(!empty($info)){
+                $wh = [];
+                $time = date('Y-m-d');
+                $wh['ip'] = $ip;
+                $wh['visit_time'] = $time;
+                $result = Visit::instance()->where($wh)->find();
+                if(count($result) <= 0){
+                    $add = [];
+                    $add['ip'] = $ip;
+                    $add['article'] = $info['id'];
+                    $add['title'] = $info['title'];
+                    $add['visit_time'] = $time;
+                    $add['add_time'] = date('Y-m-d H:i:s');
+                    Visit::instance()->insert($add);
+                }
+            }
+
+            $top = Infosservice::instance()->getTop($id, 3);
+            $next = Infosservice::instance()->getNext($id, 3);
+            $this->assign('info', $info);
+            $this->assign('top', $top);
+            $this->assign('next', $next);
+            $this->assign('title', '新闻资讯');
             return $this->fetch();
         }
         return false;
@@ -389,16 +462,16 @@ class Index extends BaseController
      */
     public function ismobile()
     {
-        $clientkeywords = array ('nokia', 'sony','ericsson','mot',
-            'samsung','htc','sgh','lg','sharp',
-            'sie-','philips','panasonic','alcatel',
-            'lenovo','iphone','ipod','blackberry',
-            'meizu','android','netfront','symbian',
-            'ucweb','windowsce','palm','operamini',
-            'operamobi','openwave','nexusone','cldc',
-            'midp','wap','mobile'
+        $clientkeywords = array('nokia', 'sony', 'ericsson', 'mot',
+            'samsung', 'htc', 'sgh', 'lg', 'sharp',
+            'sie-', 'philips', 'panasonic', 'alcatel',
+            'lenovo', 'iphone', 'ipod', 'blackberry',
+            'meizu', 'android', 'netfront', 'symbian',
+            'ucweb', 'windowsce', 'palm', 'operamini',
+            'operamobi', 'openwave', 'nexusone', 'cldc',
+            'midp', 'wap', 'mobile'
         );
-        if(preg_match("/(" . implode('|', $clientkeywords) . ")/i", strtolower($_SERVER['HTTP_USER_AGENT']))){
+        if (preg_match("/(" . implode('|', $clientkeywords) . ")/i", strtolower($_SERVER['HTTP_USER_AGENT']))) {
 
         }
     }
