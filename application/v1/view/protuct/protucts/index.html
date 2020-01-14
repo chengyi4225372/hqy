@@ -41,6 +41,7 @@
                 <th class="text-center">产品图</th>
                 <th class="text-center">产品描述</th>
                 <th class="text-center">链接地址</th>
+                <th class="text-center">手机端链接地址</th>
                 <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
@@ -58,6 +59,7 @@
                     </td>
                     <td class="text-center">{$vo.desc|default=''}</td>
                     <td class="text-center">{$vo.purl|default=''}</td>
+                    <td class="text-center">{$vo.mobile_url|default=''}</td>
                     <td class="text-center">
                         {if condition="$vo.status eq 1"}
                         <span class="btn btn-success">正常</span>

@@ -29,6 +29,7 @@ class Protucts extends AuthController
         $param = $this->request->param();
         $array = [
             'purl'=>$param['purl'],
+            'mobile_url'=>$param['mobile_url'],
             'imgs'=>$param['imgs'],
             'names'=>$param['names'],
             'status'=>$param['status'],
@@ -63,6 +64,7 @@ class Protucts extends AuthController
           $param = $this->request->param();
           $array = array(
               'purl'=>$param['purl'],
+              'mobile_url'=>$param['mobile_url'],
               'imgs'=>$param['imgs'],
               'names'=>$param['names'],
               'status'=>$param['status'],

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hqy_/public/../application/v1/view/protuct/protucts/index.html";i:1575011765;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576659286;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hqy_/public/../application/v1/view/protuct/protucts/index.html";i:1578970235;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576659286;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -344,6 +344,7 @@
                 <th class="text-center">产品图</th>
                 <th class="text-center">产品描述</th>
                 <th class="text-center">链接地址</th>
+                <th class="text-center">手机端链接地址</th>
                 <th class="text-center">状态</th>
                 <th class="text-center">操作</th>
                 </thead>
@@ -361,6 +362,7 @@
                     </td>
                     <td class="text-center"><?php echo (isset($vo['desc']) && ($vo['desc'] !== '')?$vo['desc']:''); ?></td>
                     <td class="text-center"><?php echo (isset($vo['purl']) && ($vo['purl'] !== '')?$vo['purl']:''); ?></td>
+                    <td class="text-center"><?php echo (isset($vo['mobile_url']) && ($vo['mobile_url'] !== '')?$vo['mobile_url']:''); ?></td>
                     <td class="text-center">
                         <?php if($vo['status'] == 1): ?>
                         <span class="btn btn-success">正常</span>
