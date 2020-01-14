@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hqy_/public/../application/v1/view/systematic/cases/index.html";i:1578393277;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576659286;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:71:"/opt/web/hqy_/public/../application/v1/view/systematic/cases/index.html";i:1578966060;s:53:"/opt/web/hqy_/application/v1/view/layout/default.html";i:1575880812;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/header.html";i:1575426269;s:50:"/opt/web/hqy_/application/v1/view/common/left.html";i:1576659286;s:52:"/opt/web/hqy_/application/v1/view/common/footer.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -352,7 +352,8 @@
                 <th class="text-center">标题3</th>
                 <th class="text-center">PC端图片</th>
                 <th class="text-center">手机端图片</th>
-                <th class="text-center">URL</th>
+                <th class="text-center">PC端跳转的URL</th>
+                <th class="text-center">手机端的跳转URL</th>
                 <th class="text-center">描述</th>
                 <th class="text-center">描述2</th>
                 <th class="text-center">描述3</th>
@@ -395,6 +396,7 @@
 
                     </td>
                     <td><?php echo isset($data_list['url']) ? $data_list['url'] : ''; ?></td>
+                    <td><?php echo isset($data_list['mobile_url']) ? $data_list['mobile_url'] : ''; ?></td>
                     <td class="text-center"><?php echo isset($data_list['desc']) ? $data_list['desc'] : ''; ?></td>
                     <td class="text-center"><?php echo isset($data_list['desc2']) ? $data_list['desc2'] : ''; ?></td>
                     <td class="text-center"><?php echo isset($data_list['desc3']) ? $data_list['desc3'] : ''; ?></td>
