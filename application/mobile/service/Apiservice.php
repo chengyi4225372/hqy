@@ -10,6 +10,7 @@ use app\common\model\Protuct;
 use app\common\model\Info;
 use app\common\model\Cases;
 use app\common\model\Ification;
+use app\common\model\Statistics;
 use think\Config;
 class Apiservice
 {
@@ -377,5 +378,34 @@ class Apiservice
         } else {
             return $info;
         }
+    }
+
+    /**
+     * @DESC：统计慧企云报名人数
+     * @author: jason
+     * @date: 2020-01-14 11:40:44
+     */
+    public function hqystatistics()
+    {
+        $totals = Config::get('site.hqy_total');
+        $where = [];
+        $where['status'] = 1;
+        $res = Statistics::instance()->where($where)->setInc('totals',$totals);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @DESC：查询有多少报名人数
+     * @author: jason
+     * @date: 2020-01-14 01:54:48
+     */
+    public function getCount()
+    {
+        $where['status'] = 1;
+        $reeturn_data = Statistics::instance()->where($where)->find();
+        return $reeturn_data;
     }
 }
