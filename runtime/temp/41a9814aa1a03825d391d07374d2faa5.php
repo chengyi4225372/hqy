@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"/opt/web/hqy_/public/../application/v1/view/protuct/protucts/edit.html";i:1578969293;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"/opt/web/hqy_/public/../application/v1/view/protuct/protucts/add.html";i:1578969034;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -63,52 +63,51 @@
                     <label for="images" class="col-sm-3 control-label"><span class="red-color">*</span>产品图片：</label>
                     <div class="col-sm-9">
                         <input type="file"  onchange="upload_file()" style="display:none;" class="form-control form-control-sm" id="file">
-                        <img id="imgs" src="<?php echo (isset($info['imgs']) && ($info['imgs'] !== '')?$info['imgs']:'/static/default.png'); ?>" style="width:90px;height:80px;">
-                        <input type="hidden" id="Images" value="<?php echo $info['imgs']; ?>">
+                        <img id="imgs" src="/static/default.png" style="width:90px;height:80px;">
+                        <input type="hidden" id="Images" value="">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="title" class="col-sm-3 control-label"><span class="red-color">*</span>产品名称：</label>
+                    <label for="names" class="col-sm-3 control-label"><span class="red-color">*</span>产品名称：</label>
                     <div class="col-sm-9">
-                        <input type="text" value="<?php echo $info['names']; ?>" class="form-control form-control-sm" id="names" name="names">
+                        <input type="text" class="form-control form-control-sm" id="names" name="names">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="icp" class="col-sm-3 control-label">基本描述：</label>
+                    <label for="desc" class="col-sm-3 control-label">基本描述：</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value="<?php echo $info['desc']; ?>"/>
+                        <input type="text" class="form-control form-control-sm" id="desc" name="desc" value=""/>
                     </div>
                 </div>
-
                 <div class="form-group">
-                    <label for="tel" class="col-sm-3 control-label">跳转地址：</label>
+                    <label for="purl" class="col-sm-3 control-label">PC端跳转地址：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="purl" class="form-control form-control-sm" name="purl" value="<?php echo $info['purl']; ?>"/>
+                        <input type="text" id="purl" class="form-control form-control-sm" name="purl" value=""/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="mobile_url" class="col-sm-3 control-label">手机端端跳转地址：</label>
                     <div class="col-sm-9">
-                        <input type="text" id="mobile_url" class="form-control form-control-sm" name="mobile_url" value="<?php echo $info['mobile_url']; ?>"/>
+                        <input type="text" id="mobile_url" class="form-control form-control-sm" name="mobile_url" value=""/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="status" class="col-sm-3 control-label">状态：</label>
                     <div class="col-sm-9">
-                        <select id="status"  class="form-control form-control-sm">
-                            <option value="1" <?php if($info['status'] == '1'): ?> selected=""<?php endif; ?> >启用</option>
-                            <option value="0" <?php if($info['status'] == '0'): ?> selected=""<?php endif; ?> >禁止</option>
+                        <select id="status" name="status" class="form-control form-control-sm">
+                            <option value="1">启用</option>
+                            <option value="2">禁止</option>
                         </select>
                     </div>
                 </div>
-                <input type="hidden"  id='pid' value="<?php echo $info['id']; ?>" />
+
             </div>
         </div>
         <div class="td-align dialog-footer">
-            <button class="btn btn-primary edits" type="button"   data-url="<?php echo url('/v1/protuct/protucts/edit'); ?>"><i class="fa fa-save"></i> 确定提交</button>
+            <button class="btn btn-primary adds" type="button"   data-url="<?php echo url('/v1/protuct/protucts/add'); ?>"><i class="fa fa-save"></i> 确定提交</button>
             <button class="btn btn-warning" onclick="go_return()"> <i class="fa fa-close"></i> 取消</button>
         </div>
     </form>

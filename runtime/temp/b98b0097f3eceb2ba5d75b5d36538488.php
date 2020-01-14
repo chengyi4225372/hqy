@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1578451399;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1578035170;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1578901880;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1578035170;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -106,7 +106,7 @@
                                         </dl>
                                         <dl>
                                             <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
-                                            <dd>· 武汉创业公司</dd>
+                                            <dd>· 创业公司</dd>
                                             <dd>· 一站式商务服务</dd>
                                         </dl>
                                         <dl>

@@ -10,6 +10,7 @@ use app\common\model\Protuct;
 use app\common\model\Info;
 use app\common\model\Cases;
 use app\common\model\Ification;
+use app\common\model\Statistics;
 use think\Config;
 class Apiservice
 {
@@ -104,7 +105,7 @@ class Apiservice
     public function getbaioinfo($params)
     {
         $status = Config::get('queue.status');
-        $baseUrl = Config::get('queue.url');
+        $baseUrl = Config::get('queue.pc_url');
         if(empty($params)) return [];
         $where = [];
         $where['id'] = $params['id'];
@@ -117,16 +118,17 @@ class Apiservice
         if(!empty($infos)){
             $info = $infos->toArray();
             $info['categroy'] = $status[$infos['pid']];
-            $content = htmlspecialchars_decode($info['content']);
-            preg_match_all('/(?<=img.src=").*?(?=")/', $content, $out, PREG_PATTERN_ORDER);
-            if (!empty($out)) {
-                foreach ($out as $v) {
-                    foreach ($v as $j) {
-                        $url = $baseUrl.$j;
-                        $info['content'] = str_replace($j, $url, $content);   //替换相对路径为绝对路径
-                    }
-                }
-            }
+            $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
+            $info['content'] = preg_replace($pregRule, '<img src="' . $baseUrl . '${1}">', $info['content']);
+//            preg_match_all('/(?<=img.src=").*?(?=")/', $content, $out, PREG_PATTERN_ORDER);
+//            if (!empty($out)) {
+//                foreach ($out as $v) {
+//                    foreach ($v as $j) {
+//                        $url = $baseUrl.$j;
+//                        $info['content'] = str_replace($j, $url, $content);   //替换相对路径为绝对路径
+//                    }
+//                }
+//            }
         }else{
             $info = [];
         }
@@ -377,5 +379,34 @@ class Apiservice
         } else {
             return $info;
         }
+    }
+
+    /**
+     * @DESC：统计慧企云报名人数
+     * @author: jason
+     * @date: 2020-01-14 11:40:44
+     */
+    public function hqystatistics()
+    {
+        $totals = Config::get('site.hqy_total');
+        $where = [];
+        $where['status'] = 1;
+        $res = Statistics::instance()->where($where)->setInc('totals',$totals);
+        if($res === false){
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @DESC：查询有多少报名人数
+     * @author: jason
+     * @date: 2020-01-14 01:54:48
+     */
+    public function getCount()
+    {
+        $where['status'] = 1;
+        $reeturn_data = Statistics::instance()->where($where)->find();
+        return $reeturn_data;
     }
 }

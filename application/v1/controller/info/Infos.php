@@ -45,7 +45,18 @@ class Infos extends AuthController
     public function infosAdd()
     {
         if ($this->request->isGet()) {
+            $searchField = input('get.searchField', '', 'trim');
+            $searchValue = input('get.searchValue', '', 'trim');
+            $category = input('get.category', '', 'trim');
+            $page = input('get.pages', '', 'trim');
+            $params = [];
+            $params['searchField'] = !empty($searchField) ? $searchField : '';
+            $params['searchValue'] = !empty($searchValue) ? $searchValue : '';
+            $params['category'] = !empty($category) ? $category : '';
+            $params['pages'] = !empty($page) ? $page : 1;
             $catelist = Ificationservice::instance()->getlist('');
+
+            $this->assign('params', $params);
             $this->assign('catelist', $catelist);
             return $this->fetch();
         }
@@ -85,19 +96,6 @@ class Infos extends AuthController
 
             //关键字列表
             $catelist = Ificationservice::instance()->getlist('');
-            if(!empty($info)){
-                $content = htmlspecialchars_decode($info['content']);
-                preg_match_all('/(?<=img.src=").*?(?=")/', $content, $out, PREG_PATTERN_ORDER);
-                if (!empty($out)) {
-                    foreach ($out as $v) {
-                        foreach ($v as $j) {
-                            $url = $pc_url.$j;
-                            $info['content'] = str_replace($j, $url, $content);   //替换相对路径为绝对路径
-                        }
-                    }
-                }
-
-            }
 
             $searchField = input('get.searchField', '', 'trim');
             $searchValue = input('get.searchValue', '', 'trim');
@@ -109,7 +107,7 @@ class Infos extends AuthController
             $params['category'] = !empty($category) ? $category : '';
             $params['pages'] = !empty($page) ? $page : 1;
 
-//            echo '<pre>';print_r($info['keywords']);exit;
+
             $this->assign('params', $params);
             $this->assign('list', $catelist);
             $this->assign('info', $info);

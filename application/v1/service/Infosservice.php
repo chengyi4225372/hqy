@@ -128,12 +128,27 @@ class Infosservice
         $where = [];
         $where['id'] = $id;
         $infos = Info::instance()->where($where)->find();
+        $info = [];
         if(!empty($infos)){
-            $infos['keywords'] = explode(',', $infos['keyword']);
+            $info = $infos->toArray();
+            $info['id'] = $info['id'];
+            $info['pid'] = $info['pid'];
+            $info['title'] = $info['title'];
+            $info['imgs'] = $info['imgs'];
+            $info['pid'] = $info['pid'];
+            $info['keyword'] = $info['keyword'];
+            $info['keywords'] = explode(',', $info['keyword']);
+            $info['content'] = $info['content'];
+            $info['describe'] = $info['describe'];
+            $info['status'] = $info['status'];
+            $info['release_time'] = $info['release_time'];
+            $info['auditing'] = $info['auditing'];
+            $info['audit_user'] = $info['audit_user'];
+            $info['seo_key'] = $info['seo_key'];
         }else{
-            $infos['keywords'] = [];
+            $info['keywords'] = [];
         }
-        return $infos;
+        return $info;
     }
 
     /**
@@ -182,11 +197,11 @@ class Infosservice
             $page = 10;
         }
 
-        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
-            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 30, 'utf-8');
+            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 30, 'utf-8').'...';
         }
 
         return $arr;
@@ -241,7 +256,7 @@ class Infosservice
      */
      public function getbiaocount($title){
          $array = [];
-         if (empty($title)) {
+         if (empty($title) ||!isset($title)) {
              $array['status'] = 1;
              $array['auditing'] = 1;
              $array['pid'] = 1;
@@ -251,7 +266,6 @@ class Infosservice
              $arr_title = array_filter($new_title,function ($params){
                  return !empty($params);
              });
-
              $arr_w = array_map(function ($pa){
                  return '%'.$pa.'%';
              },$arr_title);
@@ -261,7 +275,7 @@ class Infosservice
              $array['pid'] = 1;
              $array['keyword'] = ['like',$arr_w,'OR'];
          }
-         $arr = Info::instance()->where($array)->order('id desc,release_time desc')->count();
+         $arr = Info::instance()->where($array)->order('release_time desc')->count();
 
          return $arr?$arr:'';
      }
@@ -295,7 +309,7 @@ class Infosservice
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
-            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 30, 'utf-8');
+            $arr[$k]['title'] = mb_substr($arr[$k]['title'], 0, 30, 'utf-8').'...';
         }
 
         return $arr ? $arr : '';
@@ -351,7 +365,7 @@ class Infosservice
      public function getindustrycount($title){
          $where = [];
 
-         if(empty($title)){
+         if(empty($title) || !isset($title)){
              $where['status'] = 1;
              $where['auditing'] = 1;
              $where['pid']    = 3;
@@ -404,7 +418,7 @@ class Infosservice
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
-            $arr[$k]['title'] = mb_substr($arr[$k]['title'], '0', '30', 'utf-8');
+            $arr[$k]['title'] = mb_substr($arr[$k]['title'], '0', '30', 'utf-8').'...';
         }
 
         return $arr ? $arr : '';

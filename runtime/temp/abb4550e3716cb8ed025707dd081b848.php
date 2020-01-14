@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:68:"/opt/web/hqy_/public/../application/home/view/index/detailshang.html";i:1577091075;s:53:"/opt/web/hqy_/application/home/view/common/login.html";i:1575456051;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1577091075;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:68:"/opt/web/hqy_/public/../application/home/view/index/detailshang.html";i:1578901880;s:53:"/opt/web/hqy_/application/home/view/common/login.html";i:1575456051;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1578035170;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -11,9 +11,11 @@
     <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="keyword" content="<?php echo $info['keyword']; ?>">
-    <meta name="description" content="<?php echo $info['describe']; ?>">
-    <title><?php echo $title; ?></title>
+
+    <title><?php echo $info['title']; ?></title>
+    <meta name="keywords" content="<?php echo (isset($info['seo_key']) && ($info['seo_key'] !== '')?$info['seo_key']:''); ?>" />
+    <meta name="description" content="<?php echo $info['describe']; ?>" />
+
     <link rel="stylesheet" href="/static/spirit/css/base.css">
     <link rel="stylesheet" href="/static/spirit/css/detail.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
@@ -90,7 +92,7 @@
                                 <dl>
                                     <dt><a class="secStatus" href="<?php echo url('/home/business/index'); ?>">惠创业</a></dt>
                                     <dd>
-                                        · 武汉创业公司
+                                        · 创业公司
 
                                     </dd>
                                     <dd>· 一站式商务服务</dd>
@@ -244,6 +246,16 @@
 
     </div>
 </div>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?866318027a350c7c8dddf0359b3a65d3";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
         <!-- 返回顶部 -->
         <div class='goTop' id="goTop">

@@ -17,6 +17,7 @@ use app\mobile\service\Apiservice;
 use think\Controller;
 use think\Request;
 use think\config;
+use app\common\model\Visit;
 class Apiport extends Controller
 {
     protected $token1 = '';
@@ -166,6 +167,26 @@ class Apiport extends Controller
         $pid = isset($_GET['pid']) ? $_GET['pid'] : 0;
         if(empty($id)) return json(['code' => 400,'message' => '没有要找的招标信息详情']);
         $info = Apiservice::instance()->getbaioinfo(['id' => $id,'pid' => $pid]);
+
+        //获取当前用户进来查看的IP
+        $ip = $this->getip();
+        //记录当前用户的IP
+        $wh = [];
+        $time = date('Y-m-d');
+        $wh['ip'] = $ip;
+        $wh['visit_time'] = $time;
+        $result = Visit::instance()->where($wh)->find();
+        if(empty($result)){
+            $add = [];
+            $add['ip'] = $ip;
+            $add['article'] = $info['data']['id'];
+            $add['title'] = $info['data']['title'];
+            $add['visit_time'] = $time;
+            $add['add_time'] = date('Y-m-d H:i:s');
+            Visit::instance()->insert($add);
+        }
+
+
         if(empty($info)) return json(['code' => 400,'message' => '没有搜索到您要查询的数据']);
         return json(['code' => 200,'message' => '已找到相关数据','list' => ['data' => $info['data'],'prev' => $info['prev'],'next' => $info['next']]]);
     }
@@ -380,5 +401,76 @@ class Apiport extends Controller
         $keyword = Apiservice::instance()->getbiaokey('新闻');
         if(empty($keyword)) return json(['code' => 400,'message' => '没有找到相关的数据']);
         return json(['code' => 200,'message' => '请求成功','keywords' => $keyword]);
+    }
+
+
+    function getip() {
+        $ip = $_SERVER['REMOTE_ADDR'];
+        if (isset($_SERVER['HTTP_CLIENT_IP']) && preg_match('/^([0-9]{1,3}\.){3}[0-9]{1,3}$/', $_SERVER['HTTP_CLIENT_IP'])) {
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif(isset($_SERVER['HTTP_X_FORWARDED_FOR']) AND preg_match_all('#\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}#s', $_SERVER['HTTP_X_FORWARDED_FOR'], $matches)) {
+            foreach ($matches[0] AS $xip) {
+                if (!preg_match('#^(10|172\.16|192\.168)\.#', $xip)) {
+                    $ip = $xip;
+                    break;
+                }
+            }
+        }
+        return $ip;
+    }
+
+
+    /**
+     * @DESC：统计报名人数
+     * @author: jason
+     * @date: 2020-01-14 11:39:51
+     */
+    public function hqystatistics()
+    {
+        //允许跨域
+        if($_SERVER['REQUEST_METHOD'] == 'OPTIONS'){
+            header("Access-Control-Allow-Origin: *");
+            header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
+            header('Access-Control-Allow-Methods: GET, POST, PUT,DELETE,OPTIONS,PATCH');
+            exit;
+        }
+
+        header('Access-Control-Allow-Origin:*');
+        // 响应类型
+        header('Access-Control-Allow-Methods:*');
+        // 响应头设置
+        header('Access-Control-Allow-Headers:content-type,token,id');
+        header("Access-Control-Request-Headers: Origin, X-Requested-With, content-Type, Accept, Authorization");
+
+        $return_data = Apiservice::instance()->hqystatistics();
+        if($return_data == false) return json(['code' => 400,'message' => '更新失败']);
+        return json(['code' => 200,'message' => '更新成功']);
+    }
+
+    /**
+     * @DESC：查询有多少报名人数
+     * @author: jason
+     * @date: 2020-01-14 01:57:28
+     */
+    public function getcount()
+    {
+        //允许跨域
+        if($_SERVER['REQUEST_METHOD'] == 'OPTIONS'){
+            header("Access-Control-Allow-Origin: *");
+            header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
+            header('Access-Control-Allow-Methods: GET, POST, PUT,DELETE,OPTIONS,PATCH');
+            exit;
+        }
+
+        header('Access-Control-Allow-Origin:*');
+        // 响应类型
+        header('Access-Control-Allow-Methods:*');
+        // 响应头设置
+        header('Access-Control-Allow-Headers:content-type,token,id');
+        header("Access-Control-Request-Headers: Origin, X-Requested-With, content-Type, Accept, Authorization");
+
+        $return_data = Apiservice::instance()->getCount();
+        if($return_data == false) return json(['code' => 400,'message' => '更新失败']);
+        return json(['code' => 200,'message' => 'success','totals' => $return_data['totals']]);
     }
 }

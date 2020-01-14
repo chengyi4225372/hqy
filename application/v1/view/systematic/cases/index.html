@@ -49,7 +49,8 @@
                 <th class="text-center">标题3</th>
                 <th class="text-center">PC端图片</th>
                 <th class="text-center">手机端图片</th>
-                <th class="text-center">URL</th>
+                <th class="text-center">PC端跳转的URL</th>
+                <th class="text-center">手机端的跳转URL</th>
                 <th class="text-center">描述</th>
                 <th class="text-center">描述2</th>
                 <th class="text-center">描述3</th>
@@ -92,6 +93,7 @@
 
                     </td>
                     <td>{:isset($data_list['url']) ? $data_list['url'] : ''}</td>
+                    <td>{:isset($data_list['mobile_url']) ? $data_list['mobile_url'] : ''}</td>
                     <td class="text-center">{:isset($data_list['desc']) ? $data_list['desc'] : ''}</td>
                     <td class="text-center">{:isset($data_list['desc2']) ? $data_list['desc2'] : ''}</td>
                     <td class="text-center">{:isset($data_list['desc3']) ? $data_list['desc3'] : ''}</td>
