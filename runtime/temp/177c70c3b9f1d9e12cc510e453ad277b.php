@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1578897928;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:106:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\index.html";i:1578906066;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -30,9 +30,7 @@
 
 <body id="getdata" data="<?php echo $count; ?>">
 
-    <div class='container'>
-
-
+    <div class='container' data-pageId="0">
         <!-- 头部 -->
         <div class='header'>
             <!-- 头部图标 -->
@@ -45,8 +43,25 @@
                             </div>
                             <div>
                                 <div>
-                                    <span class='wx'></span>
-                                    <sapn class='bo'></sapn>
+                                    <div class='wx'>
+                                        <div class="topQRCode qrwx">
+                                            <p>惠企云官方微信</p>
+                                            <div class="codeBox">
+                                                <img src="/static/home/images/wxCode.png" alt="">
+                                            </div>
+                                            <img src="/static/home/images/close2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class='bo'>
+                                        <div class="topQRCode qrwb">
+                                            <p>惠企云官方微博</p>
+                                            <div class="codeBox">
+                                                <img src="/static/home/images/wbCode.png" alt="">
+                                            </div>
+                                            <img src="/static/home/images/close2.png" alt="">
+                                        </div>
+
+                                    </div>
                                 </div>
                                 <div>
                                     <span class='email'></span>
@@ -380,8 +395,6 @@
         </div>
     </div>
 
-    <!-- 底部 -->
-
 
     <div class='goTop' id="goTop">
         <i></i>
@@ -389,6 +402,8 @@
     </div>
 
     </div>
+
+    <!-- 底部 -->
     <div class="bgBottom">
     <div class="bottomBox">
         <div class="w bottom">
@@ -464,6 +479,30 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+
 </body>
+<script>
+$(function(){
+    $('.wx').mouseenter(function(){
+        $('.qrwx').css({'display':'block'})
+        $('.qrwb').css({'display':'none'})
+    })
+    $('.qrwx > img').click(function(){
+        $('.qrwx').css({'display':'none'})
+    })
+
+    $('.bo').mouseenter(function(){
+        $('.qrwb').css({'display':'block'})
+        $('.qrwx').css({'display':'none'})
+    })
+    $('.qrwb > img').click(function(){
+        $('.qrwb').css({'display':'none'})
+    })
+
+
+})
+    
+
+</script>
 
 </html>

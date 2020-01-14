@@ -182,7 +182,7 @@ class Infosservice
             $page = 10;
         }
 
-        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->paginate($page);
+        $arr = Info::instance()->where($array)->order('release_time desc')->paginate($page);
 
         foreach ($arr as $k => $val) {
             $arr[$k]['keyword'] = explode(',', $arr[$k]['keyword']);
@@ -260,8 +260,8 @@ class Infosservice
              $array['pid'] = 1;
              $array['keyword'] = ['like',$arr_w,'OR'];
          }
-         $arr = Info::instance()->where($array)->order('id desc,release_time desc')->count();
-         
+         $arr = Info::instance()->where($array)->order('release_time desc')->count();
+
          return $arr?$arr:'';
      }
 
