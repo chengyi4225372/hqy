@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1578903429;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1578557291;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1578994239;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1578557291;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -486,17 +486,23 @@ $(function(){
     $('.wx').mouseenter(function(){
         $('.qrwx').css({'display':'block'})
         $('.qrwb').css({'display':'none'})
+        $('.wx').css('background-image','url(/static/home/images/wx_1.png)');
+        $('.bo').css('background-image','url(/static/home/images/bo_0.png)');
     })
     $('.qrwx > img').click(function(){
         $('.qrwx').css({'display':'none'})
+        $('.wx').css('background-image','url(/static/home/images/wx_0.png)');
     })
 
     $('.bo').mouseenter(function(){
         $('.qrwb').css({'display':'block'})
         $('.qrwx').css({'display':'none'})
+        $('.bo').css('background-image','url(/static/home/images/bo_1.png)');
+        $('.wx').css('background-image','url(/static/home/images/wx_0.png)');
     })
     $('.qrwb > img').click(function(){
         $('.qrwb').css({'display':'none'})
+        $('.bo').css('background-image','url(/static/home/images/bo_0.png)');
     })
 
 

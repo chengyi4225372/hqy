@@ -418,4 +418,59 @@ class Apiport extends Controller
         }
         return $ip;
     }
+
+
+    /**
+     * @DESC：统计报名人数
+     * @author: jason
+     * @date: 2020-01-14 11:39:51
+     */
+    public function hqystatistics()
+    {
+        //允许跨域
+        if($_SERVER['REQUEST_METHOD'] == 'OPTIONS'){
+            header("Access-Control-Allow-Origin: *");
+            header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
+            header('Access-Control-Allow-Methods: GET, POST, PUT,DELETE,OPTIONS,PATCH');
+            exit;
+        }
+
+        header('Access-Control-Allow-Origin:*');
+        // 响应类型
+        header('Access-Control-Allow-Methods:*');
+        // 响应头设置
+        header('Access-Control-Allow-Headers:content-type,token,id');
+        header("Access-Control-Request-Headers: Origin, X-Requested-With, content-Type, Accept, Authorization");
+
+        $return_data = Apiservice::instance()->hqystatistics();
+        if($return_data == false) return json(['code' => 400,'message' => '更新失败']);
+        return json(['code' => 200,'message' => '更新成功']);
+    }
+
+    /**
+     * @DESC：查询有多少报名人数
+     * @author: jason
+     * @date: 2020-01-14 01:57:28
+     */
+    public function getcount()
+    {
+        //允许跨域
+        if($_SERVER['REQUEST_METHOD'] == 'OPTIONS'){
+            header("Access-Control-Allow-Origin: *");
+            header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
+            header('Access-Control-Allow-Methods: GET, POST, PUT,DELETE,OPTIONS,PATCH');
+            exit;
+        }
+
+        header('Access-Control-Allow-Origin:*');
+        // 响应类型
+        header('Access-Control-Allow-Methods:*');
+        // 响应头设置
+        header('Access-Control-Allow-Headers:content-type,token,id');
+        header("Access-Control-Request-Headers: Origin, X-Requested-With, content-Type, Accept, Authorization");
+
+        $return_data = Apiservice::instance()->getCount();
+        if($return_data == false) return json(['code' => 400,'message' => '更新失败']);
+        return json(['code' => 200,'message' => 'success','totals' => $return_data['totals']]);
+    }
 }

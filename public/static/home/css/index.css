@@ -150,13 +150,13 @@ body {
   vertical-align: middle; }
 
 .title_icon > div:nth-child(2) > div:nth-child(1) > .wx {
-  background: url("../images/wx_1.png") no-repeat;
+  background: url("../images/wx_0.png") no-repeat;
   -webkit-background-size: 100% auto;
   background-size: 100% auto;
   margin-right: 0.75rem; }
 
 .title_icon > div:nth-child(2) > div:nth-child(1) > .bo {
-  background: url("../images/bo_1.png") no-repeat;
+  background: url("../images/bo_0.png") no-repeat;
   -webkit-background-size: 100% auto;
   background-size: 100% auto; }
 

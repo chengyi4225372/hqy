@@ -96,19 +96,6 @@ class Infos extends AuthController
 
             //关键字列表
             $catelist = Ificationservice::instance()->getlist('');
-            if(!empty($info)){
-                $content = htmlspecialchars_decode($info['content']);
-                preg_match_all('/(?<=img.src=").*?(?=")/', $content, $out, PREG_PATTERN_ORDER);
-                if (!empty($out)) {
-                    foreach ($out as $v) {
-                        foreach ($v as $j) {
-                            $url = $pc_url.$j;
-                            $info['content'] = str_replace($j, $url, $content);   //替换相对路径为绝对路径
-                        }
-                    }
-                }
-
-            }
 
             $searchField = input('get.searchField', '', 'trim');
             $searchValue = input('get.searchValue', '', 'trim');
