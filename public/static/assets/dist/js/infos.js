@@ -67,7 +67,10 @@ $('.infos-add').click(function () {
         return false;
     }
 
-
+    var page = $(this).attr('page');
+    var category = $(this).attr('category');
+    var searchField = $(this).attr('searchField');
+    var searchValue = $(this).attr('searchValue');
     $.post(urls, {
         'title': title,
         'pid': pid,
@@ -78,14 +81,12 @@ $('.infos-add').click(function () {
     }, function (ret) {
         if (ret.code == 200) {
             layer.msg(ret.msg, {icon: 6}, function () {
-                parent.location.href = "index";
+                parent.location.href = "index?page=" + page + '&category=' + category + '&searchField=' + searchField + '&searchValue=' + searchValue;
             })
         }
 
         if (ret.code == 400) {
-            layer.msg(ret.msg, {icon: 5}, function () {
-                parent.location.href = "index";
-            })
+            layer.msg(ret.msg, {icon: 5})
         }
     }, 'json')
 });

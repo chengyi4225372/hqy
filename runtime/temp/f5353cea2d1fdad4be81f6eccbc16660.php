@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"/opt/web/hqy_/public/../application/v1/view/systematic/cases/editcase.html";i:1578393398;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"/opt/web/hqy_/public/../application/v1/view/systematic/cases/editcase.html";i:1578963375;s:52:"/opt/web/hqy_/application/v1/view/layout/dialog.html";i:1575880777;s:50:"/opt/web/hqy_/application/v1/view/common/meta.html";i:1575011765;s:52:"/opt/web/hqy_/application/v1/view/common/script.html";i:1575011765;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
 <head>
@@ -108,9 +108,16 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="url" class="col-sm-3 control-label">URL：</label>
+                    <label for="url" class="col-sm-3 control-label">PC端跳转URL：</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control form-control-sm" id="url" name="url" value="<?php echo $data['url']; ?>">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="url" class="col-sm-3 control-label">手机端跳转URL：</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control form-control-sm" id="mobile_url" name="mobile_url" value="<?php echo $data['mobile_url']; ?>">
                     </div>
                 </div>
 
