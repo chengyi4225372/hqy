@@ -9,7 +9,7 @@ function checkPhone(phone) {
 }
 
 var gurl = "https://test.zxrhgb.com";
-
+//var gurl = "http://47.105.48.137:8089";
 /** 提交公海 **/
 function getErp() {
     var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";

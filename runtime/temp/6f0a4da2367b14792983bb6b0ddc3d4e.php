@@ -1,38 +1,51 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1578986967;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\header.html";i:1578906066;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:112:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\detailshang.html";i:1578906066;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\header.html";i:1578906066;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="renderer" content="webkit" />
-  <meta name="force-rendering" content="webkit" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-  <!-- <script>/*@cc_on window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script> -->
-  <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title><?php echo $title; ?></title>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <!-- <script src='/static/spirit/js/xlPaging.js'></script> -->
-  <link rel="stylesheet" href="/static/spirit/css/base.css">
-  <!-- <link rel="stylesheet" href="/static/spirit/css/layui.css"  media="all"> -->
-  <link rel="stylesheet" href="/static/spirit/css/Informationlist.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-  <link rel="stylesheet" href="/static/home/font/syht.css">
-  <script src="/static/spirit/js/clamp.js"></script>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <!-- <script>/*@cc_on window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); @*/</script> -->
+    <script>/*@cc_on document.write('\x3Cscript id="_iealwn_js" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); @*/</script>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <script src='/static/spirit/js/Informationlist.js'></script>
-  <script src="/static/assets/plugins/layui/layui.all.js"></script>
-  <script src='/static/home/js/common.js'></script>
-  <script src='/static/common/js/public.js'></script>
+    <title><?php echo $info['title']; ?></title>
+    <meta name="keywords" content="<?php echo (isset($info['seo_key']) && ($info['seo_key'] !== '')?$info['seo_key']:''); ?>" />
+    <meta name="description" content="<?php echo $info['describe']; ?>" />
+
+    <link rel="stylesheet" href="/static/spirit/css/base.css">
+    <link rel="stylesheet" href="/static/spirit/css/detail.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+    <link rel="stylesheet" href="/static/home/font/syht.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src='/static/home/js/common.js'></script>
+    <script src='/static/common/js/public.js'></script>
+    <script src="/static/spirit/js/detail.js"></script>
+    <script src="/static/assets/plugins/layui/layui.all.js"></script>
+    <style>
+        /* 归属信息 */
+        .affiliation {
+            text-align: right;
+            font-size: 10px;
+            color: #ccc;
+            padding-right: 20px;
+            margin-top: 200px;
+        }
+
+        .page {
+            margin-top: 60px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class='container' data-pageId="4">
 
-  <div class='container' data-pageId="4">
-
-    <!-- 导航部分 -->
-    <style>
+        <!-- 导航部分 -->
+        <style>
     .container{
         padding-top: 3.75rem;
 
@@ -500,128 +513,49 @@
       })
     })
   </script>
-    <div class="bg_banner">
-      <div class="w banner">
-
-        <img src="/static/spirit/images/zaoshang.png" alt="">
-      </div>
+    <div class="bgBread">
+        <div class='w bread_title'>
+            <a class="actives" href="<?php echo url('/home/index/index'); ?>">首页 ></a>
+            <a class="actives" onclick="go_news(this)" data-url="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a> >
+            <a class="activees" href="javasrcipt:void(0)">详情</a>
+        </div>
     </div>
 
-    <!-- 面包屑导航 -->
-    <div class="bg_breadCrumbs">
-      <div class="w bread-crumbs">
-        <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
-        <span><a class="current" style="color:#3E92FF;" href="javasrcipt:void(0)">政府招商政策</a></span> <span></span>
-      </div>
-    </div>
+        <div class='main_content'>
+            <div class='content_middle'>
+                <div class='pic_total'>
+                    <div class='pic_title'><?php echo $info['title']; ?></div>
+                    <div class='time'><?php echo $info['release_time']; ?></div>
+                    <div class='line'></div>
+                    <div class='tuwen'>
+                        <div class='wenzi'><?php echo $info['content']; ?></div>
 
-    <!-- 信息列表 -->
-    <div class="content-box">
-      <div class="m content">
+                        <!-- <div class="affiliation">
+                            <p>本信息来源：中国招标网</p>
+                        </div> -->
 
-        <div class="information-list">
-          <div class="tabs clearfix">
-            <!-- <ul class="clearfix fl">
-                      <li class="li-active">招商政策</li>
-                      <li>招标信息</li>
-                    </ul> -->
-            <div class="govPolicy fl">政府招商政策</div>
-          </div>
-
-
-
-          <div class="hotWord">
-            <div class="bgHot">
-                <span style='white-space: nowrap;'>热门关键词</span>
-                <ul>
-                  <?php if(is_array($four) || $four instanceof \think\Collection || $four instanceof \think\Paginator): $k = 0; $__LIST__ = $four;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ff): $mod = ($k % 2 );++$k;?>
-                  <li onclick="hotsearch(this);" data-title="<?php echo $ff['title']; ?>"
-                      data-href="<?php echo url('/home/index/detailshang'); ?>"
-                      data-url="<?php echo url('/home/index/getshangapi'); ?>" data-id="<?php echo $k; ?>">
-                    <span style='white-space: nowrap;'><?php echo $ff['title']; ?></span>
-                    <span class="close" onclick="nullhot(this)"
-                          data-title="<?php echo $ff['title']; ?>"   data-url="<?php echo url('/home/index/getshangapi'); ?>">✕</span>
-                  </li>
-                  <?php endforeach; endif; else: echo "" ;endif; ?>
-                </ul>
-            </div>
-            <div class="search-box">
-                <input type="text" id="keyword" value="<?php echo \think\Request::instance()->get('keyword'); ?>" placeholder="请输入关键字">
-                <div id="searched" style="cursor:pointer;" data-url="<?php echo url('/home/index/infoList'); ?>">搜索
+                        
+                    </div>
+                    <div class='page'>
+                            <?php if(empty($top) || (($top instanceof \think\Collection || $top instanceof \think\Paginator ) && $top->isEmpty())): ?>
+                            <div><span>上一篇:</span><a href="javascript:;">已经是第一篇了</a></div>
+                            <?php else: ?>
+                            <div><span>上一篇:</span><a
+                                    href="<?php echo url('/home/index/detailshang',array('mid'=>$top['id'])); ?>"><?php echo $top['title']; ?></a>
+                            </div>
+                            <?php endif; if(empty($next) || (($next instanceof \think\Collection || $next instanceof \think\Paginator ) && $next->isEmpty())): ?>
+                            <div><span>下一篇:</span><a href="javascript:;">已经是最后一篇了</a></div>
+                            <?php else: ?>
+                            <div><span>下一篇:</span><a
+                                    href="<?php echo url('/home/index/detailshang',array('mid'=>$next['id'])); ?>"><?php echo $next['title']; ?></a>
+                            </div>
+                            <?php endif; ?>
+                        </div>
                 </div>
             </div>
-
         </div>
-
-          <div class="bg_divide">
-
-            <div class="divide"></div>
-          </div>
-
-
-          <div class="tabs-items show">
-            <ul id="shang">
-              <?php if(empty($shang) || (($shang instanceof \think\Collection || $shang instanceof \think\Paginator ) && $shang->isEmpty())): ?>
-              <li>
-                <div class="tabs-items-content">
-                  <div class="tabs-items-content-text figcaption">
-                    <p>抱歉，没有找到与<b style="color: #ff2222"><?php echo \think\Request::instance()->get('keyword'); ?></b>的相关结果。</p>
-                  </div>
-                </div>
-              </li>
-              <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sh): $mod = ($i % 2 );++$i;?>
-              <li>
-                <!--<a href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo $sh['id']; ?>">-->
-                <!--todo 测试-->
-                <a href="<?php echo url('/home/index/detailshang',['mid'=>$sh['id']]); ?>">
-                  <div class="infoItem">
-                    <div class="infoLeft">
-                      <img src="<?php echo !empty($sh['imgs'])?$sh['imgs']:'/static/home/images/infoItem.jpg';; ?>" alt="">
-                    </div>
-
-                    <div class="infoRight">
-                      <div class="rightTop">
-                        <div class="itemTitle"><?php echo (isset($sh['title']) && ($sh['title'] !== '')?$sh['title']:''); ?></div>
-                        <span class="itemTime">
-                          <img src="/static/spirit/images/shijian2x.png" alt=""><span><?php echo $sh['release_time']; ?></span>
-                        </span>
-                      </div>
-                      <p class="limitP">
-                        <?php echo $sh['describe']; ?>
-                      </p>
-
-                    </div>
-
-                  </div>
-                </a>
-
-                <ul class="tags">
-                  <?php if(empty($sh['keyword']) || (($sh['keyword'] instanceof \think\Collection || $sh['keyword'] instanceof \think\Paginator ) && $sh['keyword']->isEmpty())): else: if(is_array($sh['keyword']) || $sh['keyword'] instanceof \think\Collection || $sh['keyword'] instanceof \think\Paginator): if( count($sh['keyword'])==0 ) : echo "" ;else: foreach($sh['keyword'] as $k=>$key): ?>
-                  <li onclick="hotsearch(this);" data-title="<?php echo $key; ?>" data-url="<?php echo url('/home/index/infoList'); ?>"><?php echo $key; ?>
-                  </li>
-                  <?php endforeach; endif; else: echo "" ;endif; endif; ?>
-                </ul>
-              </li>
-              <?php endforeach; endif; else: echo "" ;endif; endif; ?>
-            </ul>
-            <input type="hidden" id="sid" value="<?php echo \think\Request::instance()->get('keyword'); ?>">
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!-- 分页 -->
-    <div class="pageNation">
-      <!-- <ul class="page">
-        <li class="prev">上一页</li>
-        <li class="currentPage">1</li>
-        <li>2</li>
-        <li class="next">下一页</li>
-      </ul> -->
-      <?php echo $shang->render(); ?>
-    </div>
-<!-- 底部 -->
-      <div class="bgBottom">
+        <!-- 底部 -->
+        <div class="bgBottom">
     <div class="bottomBox">
         <div class="w bottom">
             <div class="aboutUs">
@@ -697,32 +631,14 @@
     })();
 </script>
 
+        <!-- 返回顶部 -->
+        <div class='goTop' id="goTop">
+            <i></i>
+            <div>返回顶部</div>
+        </div>
 
-
-
-
-
-
-    <!-- 返回顶部 -->
-    <div class='goTop' id="goTop">
-      <i></i>
-      <div>返回顶部</div>
     </div>
-
-
-
-  </div>
-
-  <script>
-  
-
-            /* 信息列表显示2行加省略号 */
-            $('.limitP').each(function () { $clamp($(this)[0], { clamp: 2 }) })
-  </script>
-
  
-
-
 </body>
 
 </html>

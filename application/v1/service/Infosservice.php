@@ -492,7 +492,7 @@ class Infosservice
             $array['pid'] = 2;
             $array['keyword'] = ['like',$arr_w,'OR'];
         }
-        $arr = Info::instance()->where($array)->order('id desc,release_time desc')->count();
+        $arr = Info::instance()->where($array)->order('release_time desc')->count();
 
         return $arr?$arr:'';
     }
@@ -522,12 +522,21 @@ class Infosservice
             return false;
         }
         $where = [
-            'id' => ['GT', $id],
+            'id' =>$id,
             'status' => 1,
             'auditing' => 1,
         ];
         if(!empty($pid)) $where['pid'] = $pid;
-        $info = Info::instance()->where($where)->order('id asc,release_time asc')->find();
+        $infos = Info::instance()->where($where)->find(); //查询当前新闻添加时间
+
+        $w = [
+            'status'=>1,
+            'auditing' => 1,
+            'pid'=>$pid,
+            'release_time'=>['GT',$infos['release_time']],
+        ];
+
+        $info  = Info::instance()->where($w)->order('release_time desc')->find();
         if (empty($info)) {
             return $info = '';
         } else {
@@ -548,13 +557,23 @@ class Infosservice
         }
 
         $where = [
-            'id' => ['LT', $id],
+            'id' =>$id,
             'status' => 1,
             'auditing' => 1,
         ];
         if(!empty($pid)) $where['pid'] = $pid;
-        $info = Info::instance()->where($where)->order('id desc,release_time desc')->find();
 
+        $infos = Info::instance()->where($where)->find();
+
+        $w = [
+            'status'=>1,
+            'auditing' => 1,
+            'pid'=>$pid,
+            'release_time'=>['LT',$infos['release_time']],
+        ];
+
+
+        $info  = Info::instance()->where($w)->order('release_time desc')->find();
         if (empty($info)) {
             return $info = '';
         } else {
