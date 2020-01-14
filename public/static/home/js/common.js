@@ -583,7 +583,7 @@ function pagehrefs(purls,i,titles,pages,count){
                      });
                      $('.page').remove();
                      // 分页
-                     if (ret.count <= 0 || ret.data.length < ret.data) {
+                     if (ret.count <= 0) {
                          return;
                      } else {
                          var page = '';
