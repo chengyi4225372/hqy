@@ -105,7 +105,7 @@ class Apiservice
     public function getbaioinfo($params)
     {
         $status = Config::get('queue.status');
-        $baseUrl = Config::get('queue.url');
+        $baseUrl = Config::get('queue.pc_url');
         if(empty($params)) return [];
         $where = [];
         $where['id'] = $params['id'];
@@ -118,16 +118,17 @@ class Apiservice
         if(!empty($infos)){
             $info = $infos->toArray();
             $info['categroy'] = $status[$infos['pid']];
-            $content = htmlspecialchars_decode($info['content']);
-            preg_match_all('/(?<=img.src=").*?(?=")/', $content, $out, PREG_PATTERN_ORDER);
-            if (!empty($out)) {
-                foreach ($out as $v) {
-                    foreach ($v as $j) {
-                        $url = $baseUrl.$j;
-                        $info['content'] = str_replace($j, $url, $content);   //替换相对路径为绝对路径
-                    }
-                }
-            }
+            $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
+            $info['content'] = preg_replace($pregRule, '<img src="' . $baseUrl . '${1}">', $info['content']);
+//            preg_match_all('/(?<=img.src=").*?(?=")/', $content, $out, PREG_PATTERN_ORDER);
+//            if (!empty($out)) {
+//                foreach ($out as $v) {
+//                    foreach ($v as $j) {
+//                        $url = $baseUrl.$j;
+//                        $info['content'] = str_replace($j, $url, $content);   //替换相对路径为绝对路径
+//                    }
+//                }
+//            }
         }else{
             $info = [];
         }
