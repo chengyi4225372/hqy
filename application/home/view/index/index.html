@@ -421,17 +421,23 @@ $(function(){
     $('.wx').mouseenter(function(){
         $('.qrwx').css({'display':'block'})
         $('.qrwb').css({'display':'none'})
+        $('.wx').css('background-image','url(__HOME__/images/wx_1.png)');
+        $('.bo').css('background-image','url(__HOME__/images/bo_0.png)');
     })
     $('.qrwx > img').click(function(){
         $('.qrwx').css({'display':'none'})
+        $('.wx').css('background-image','url(__HOME__/images/wx_0.png)');
     })
 
     $('.bo').mouseenter(function(){
         $('.qrwb').css({'display':'block'})
         $('.qrwx').css({'display':'none'})
+        $('.bo').css('background-image','url(__HOME__/images/bo_1.png)');
+        $('.wx').css('background-image','url(__HOME__/images/wx_0.png)');
     })
     $('.qrwb > img').click(function(){
         $('.qrwb').css({'display':'none'})
+        $('.bo').css('background-image','url(__HOME__/images/bo_0.png)');
     })
 
 
