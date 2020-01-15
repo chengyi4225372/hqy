@@ -536,7 +536,7 @@ class Infosservice
             'release_time'=>['GT',$infos['release_time']],
         ];
 
-        $info  = Info::instance()->where($w)->order('release_time desc')->find();
+        $info  = Info::instance()->where($w)->order('release_time asc')->find();
         if (empty($info)) {
             return $info = '';
         } else {
