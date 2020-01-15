@@ -70,7 +70,7 @@ class Infos extends AuthController
             $array['imgs'] = input('post.imgs', '', 'trim');
             $array['keyword'] = implode(',', json_decode(input('post.keyword', '', 'trim')));
             $array['seo_key'] = input('post.seo_key','','trim');
-            $array['release_time'] = date("Y-m-d");
+            $array['release_time'] = date("Y-m-d,h:i:s");
 
             $ret = Infosservice::instance()->saves($array);
             if ($ret) {

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_biao.html";i:1578906066;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\header.html";i:1578906066;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_biao.html";i:1579053338;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\header.html";i:1578906066;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -585,7 +585,7 @@
                                                 <div class="itemTitle"><?php echo (isset($ww['title']) && ($ww['title'] !== '')?$ww['title']:''); ?></div>
                                                 <span class="itemTime">
                                                     <img src="/static/spirit/images/shijian2x.png" alt="">
-                                                    <span><?php echo $ww['release_time']; ?></span>
+                                                    <span><?php echo date('Y-m-d',strtotime($ww['release_time'])); ?></span>
                                                 </span>
                                             </div>
                                             <p class="limitP">

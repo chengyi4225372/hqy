@@ -116,7 +116,8 @@
                       <div class="rightTop">
                         <div class="itemTitle">{$sh.title|default=''}</div>
                         <span class="itemTime">
-                          <img src="__SPI__/images/shijian2x.png" alt=""><span>{$sh.release_time}</span>
+                          <img src="__SPI__/images/shijian2x.png" alt="">
+                          <span>{:date("Y-m-d",strtotime($sh.release_time))}</span>
                         </span>
                       </div>
                       <p class="limitP">

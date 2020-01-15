@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1578986967;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\header.html";i:1578906066;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:110:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\public/../application/home\view\index\info_list.html";i:1579052693;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\header.html";i:1578906066;s:98:"C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\home\view\common\footer.html";i:1578032464;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -571,9 +571,9 @@
               </li>
               <?php else: if(is_array($shang) || $shang instanceof \think\Collection || $shang instanceof \think\Paginator): $i = 0; $__LIST__ = $shang;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sh): $mod = ($i % 2 );++$i;?>
               <li>
-                <!--<a href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo $sh['id']; ?>">-->
-                <!--todo 测试-->
-                <a href="<?php echo url('/home/index/detailshang',['mid'=>$sh['id']]); ?>">
+
+
+                <a href="<?php echo config('curl.website'); ?>/home/index/detailshang?mid=<?php echo $sh['id']; ?>">
                   <div class="infoItem">
                     <div class="infoLeft">
                       <img src="<?php echo !empty($sh['imgs'])?$sh['imgs']:'/static/home/images/infoItem.jpg';; ?>" alt="">
@@ -583,7 +583,7 @@
                       <div class="rightTop">
                         <div class="itemTitle"><?php echo (isset($sh['title']) && ($sh['title'] !== '')?$sh['title']:''); ?></div>
                         <span class="itemTime">
-                          <img src="/static/spirit/images/shijian2x.png" alt=""><span><?php echo $sh['release_time']; ?></span>
+                          <img src="/static/spirit/images/shijian2x.png" alt=""><span><?php echo date("Y-m-d",strtotime($sh['release_time'])); ?></span>
                         </span>
                       </div>
                       <p class="limitP">
