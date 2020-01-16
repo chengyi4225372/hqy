@@ -149,7 +149,6 @@ class Apiservice
         }else{
             $info = [];
         }
-
         $keyword = !empty($params['keyword']) ? $params['keyword'] : [];
         $title = !empty($params['title']) ? $params['title'] : [];
 

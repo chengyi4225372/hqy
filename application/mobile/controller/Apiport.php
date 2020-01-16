@@ -165,8 +165,11 @@ class Apiport extends Controller
 
         $id = isset($_GET['id']) ? $_GET['id'] : 0;
         $pid = isset($_GET['pid']) ? $_GET['pid'] : 0;
+        $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : '';
+        $title = isset($_GET['title']) ? $_GET['title'] : '';
+
         if(empty($id)) return json(['code' => 400,'message' => '没有要找的招标信息详情']);
-        $info = Apiservice::instance()->getbaioinfo(['id' => $id,'pid' => $pid]);
+        $info = Apiservice::instance()->getbaioinfo(['id' => $id,'pid' => $pid,'keyword' => $keyword ,'title' => $title]);
 
         //获取当前用户进来查看的IP
         $ip = $this->getip();
