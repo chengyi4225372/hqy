@@ -43,7 +43,7 @@ class Apiservice
         $productModel = new Protuct();
         $where = [];
         $where['status'] = 1;
-        $info = collection($productModel->instance()->where($where)->select())->toArray();
+        $info = collection($productModel->instance()->where($where)->order('id desc')->select())->toArray();
         foreach($info as $key => $val){
             $info[$key]['imgs'] = $url.'/'.$val['imgs'];
         }
@@ -62,9 +62,13 @@ class Apiservice
         $where = [];
         $where['status'] = 1;
         $where['auditing'] = 1;
-        $where['pid'] = ['IN',[1,2]];
-        $order = 'id desc,release_time desc';
+        $where['pid'] = 1;
+        $order = 'release_time desc';
+        //招标
         $infos = Info::instance()->where($where)->order($order)->limit(0,4)->select();
+        //招商
+        $where['pid'] = 2;
+        $infos2 = Info::instance()->where($where)->order($order)->limit(0,4)->select();
 
         if(count($infos) > 0){
             $info = $infos->toArray();
@@ -76,7 +80,20 @@ class Apiservice
         }else{
             $info = [];
         }
-        return $info;
+
+
+        if(count($infos2) > 0){
+            $info2 = $infos2->toArray();
+            foreach ($info2 as $k => $val) {
+                $info2[$k]['category'] = $status[$info2[$k]['pid']];
+                $info2[$k]['title'] = mb_substr($info2[$k]['title'], 0, 50, 'utf-8');
+                $info2[$k]['imgs'] = $url.'/'.$val['imgs'];
+            }
+        }else{
+            $info2 = [];
+        }
+
+        return ['biao' => $info,'shang' => $info2];
     }
 
     /**
@@ -132,9 +149,13 @@ class Apiservice
         }else{
             $info = [];
         }
-        $top = $this->getTop($params['id'],$params['pid']);
-        $next = $this->getNext($params['id'],$params['pid']);
-        return ['data' => $info,'prev' => $next,'next' => $top];
+
+        $keyword = !empty($params['keyword']) ? $params['keyword'] : [];
+        $title = !empty($params['title']) ? $params['title'] : [];
+
+        $top = $this->getTop($params['id'],$params['pid'],$keyword,$title);
+        $next = $this->getNext($params['id'],$params['pid'],$keyword,$title);
+        return ['data' => $info,'prev' => $top,'next' => $next];
     }
 
     /**
@@ -178,7 +199,7 @@ class Apiservice
         $where['status'] = 1;
         $where['auditing'] = 1;
         $count = Info::instance()->where($where)->count();
-        $infos = Info::instance()->where($where)->limit($select_start,$page_size)->select();
+        $infos = Info::instance()->where($where)->order('release_time desc')->limit($select_start,$page_size)->select();
 //        echo Info::instance()->getLastSql();exit;
         if(count($infos) > 0){
             $info = $infos->toArray();
@@ -234,7 +255,7 @@ class Apiservice
         $where['status'] = 1;
         $where['auditing'] = 1;
         $count = Info::instance()->where($where)->count();
-        $infos = Info::instance()->where($where)->limit($select_start,$page_size)->select();
+        $infos = Info::instance()->where($where)->order('release_time desc')->limit($select_start,$page_size)->select();
         if(count($infos) > 0){
             $info = $infos->toArray();
             foreach ($info as $k => $val) {
@@ -291,7 +312,7 @@ class Apiservice
         $where['status'] = 1;
         $where['auditing'] = 1;
         $count = Info::instance()->where($where)->count();
-        $infos = Info::instance()->where($where)->limit($select_start,$page_size)->select();
+        $infos = Info::instance()->where($where)->order('release_time desc')->limit($select_start,$page_size)->select();
         if(count($infos) > 0){
             $info = $infos->toArray();
             foreach ($info as $k => $val) {
@@ -331,19 +352,48 @@ class Apiservice
      * @author: jason
      * @date: 2020-01-07 08:53:48
      */
-    public function getTop($id,$pid = '')
+    public function getTop($id,$pid = '',$keyword = [],$title = '')
     {
+
         $where = [];
+        $wh = [];
         if (empty($id) || !isset($id)) {
             return false;
         }
         $where = [
-            'id' => ['GT', $id],
+            'id' =>$id,
             'status' => 1,
             'auditing' => 1,
         ];
         if(!empty($pid)) $where['pid'] = $pid;
-        $info = Info::instance()->where($where)->order('id asc,release_time asc')->find();
+        $infos = Info::instance()->where($where)->find(); //查询当前新闻添加时间
+
+        $w['status'] = 1;
+        $w['auditing'] = 1;
+        $w['pid'] = $pid;
+        $w['release_time'] = ['GT',$infos['release_time']];
+
+        //如果搜标题又搜关键字
+        if(!empty($keyword) && is_array($keyword) && !empty($title)){
+            $keyword = array_map(function($par){
+                return '%'.$par.'%';
+            },$keyword);
+            $w['keyword'] = ['LIKE',$keyword,'OR'];
+            $w['title'] = ['LIKE','%'.$title.'%'];
+        }
+        //如果是只搜标题，不搜关键字
+        if(empty($keyword) && !empty($title)){
+            $w['title'] = ['LIKE','%'.$title.'%'];
+        }
+        //如果只搜关键字，不搜标题
+        if(!empty($keyword) && is_array($keyword) && empty($title)){
+            $keyword = array_map(function($par){
+                return '%'.$par.'%';
+            },$keyword);
+            $w['keyword'] = ['LIKE',$keyword,'OR'];
+        }
+        $info  = Info::instance()->where($w)->order('release_time asc')->find();
+
         if (empty($info)) {
             return $info = '';
         } else {
@@ -360,20 +410,49 @@ class Apiservice
      * @author: jason
      * @date: 2020-01-07 08:54:21
      */
-    public function getNext($id,$pid = '')
+    public function getNext($id,$pid = '',$keyword,$title)
     {
         if (empty($id) || !isset($id)) {
             return false;
         }
 
         $where = [
-            'id' => ['LT', $id],
+            'id' =>$id,
             'status' => 1,
             'auditing' => 1,
         ];
         if(!empty($pid)) $where['pid'] = $pid;
-        $info = Info::instance()->where($where)->order('id desc,release_time desc')->find();
 
+        $infos = Info::instance()->where($where)->find();
+
+        $w = [
+            'status'=>1,
+            'auditing' => 1,
+            'pid'=>$pid,
+            'release_time'=>['LT',$infos['release_time']],
+        ];
+
+        //如果搜标题又搜关键字
+        if(!empty($keyword) && is_array($keyword) && !empty($title)){
+            $keyword = array_map(function($par){
+                return '%'.$par.'%';
+            },$keyword);
+            $wh['keyword'] = ['LIKE',$keyword,'OR'];
+            $wh['title'] = ['LIKE','%'.$title.'%'];
+        }
+        //如果是只搜标题，不搜关键字
+        if(empty($keyword) && !empty($title)){
+            $wh['title'] = ['LIKE','%'.$title.'%'];
+        }
+        //如果只搜关键字，不搜标题
+        if(!empty($keyword) && is_array($keyword) && empty($title)){
+            $keyword = array_map(function($par){
+                return '%'.$par.'%';
+            },$keyword);
+            $wh['keyword'] = ['LIKE',$keyword,'OR'];
+        }
+
+        $info  = Info::instance()->where($w)->order('release_time desc')->find();
         if (empty($info)) {
             return $info = '';
         } else {

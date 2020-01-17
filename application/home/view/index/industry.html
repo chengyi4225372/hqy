@@ -119,7 +119,7 @@
                                             <div class="itemTitle">{$ww.title|default=''}</div>
                                             <span class="itemTime">
                                                     <img src="__SPI__/images/shijian2x.png"
-                                                         alt=""><span>{$ww.release_time}</span>
+                                                         alt=""><span>{:date('Y-m-d',strtotime($ww.release_time))}</span>
                                                 </span>
                                         </div>
                                         <p class="limitP">

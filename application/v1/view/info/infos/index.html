@@ -97,7 +97,7 @@
                         <textarea rows="6" cols="30">{$vo.describe}</textarea>
                     </td>
                     <td class="text-center">{$vo.seo_key}</td>
-                    <td class="text-center">{$vo.release_time}</td>
+                    <td class="text-center">{:date('Y-m-d',strtotime($vo.release_time))}</td>
 
                     <td class="text-center">
                         <a href="javascript:void(0)" class="btn btn-info infos_edit" data-url="{:url('/v1/info/infos/infosEdit',['id'=>$vo.id,'pages' => $params['page'],'category' => $params['category'],'searchField' => $params['searchField'],'searchValue' => $params['searchValue']])}">编辑</a>

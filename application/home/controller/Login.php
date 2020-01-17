@@ -115,7 +115,7 @@ class Login extends BaseController
         $array['userType'] = $userType;
 
         //todo 这个暂时先这样，后面还要改
-        //$this->redirect($hlg_url.'/home/index/index?line='.$mobile.'&userType='.$userType.'&ttttt='.$token.'&location=yes');return;
+        $this->redirect($hlg_url.'/home/index/index?line='.$mobile.'&userType='.$userType.'&ttttt='.$token.'&location=yes');return;
         //请求惠灵工的页面的接口把用户信息带过去
         //todo 这个暂时先这样，后面还要改
 

@@ -1,0 +1,36 @@
+---------------------------------------------------------------
+[ 2020-01-15T09:39:43+08:00 ] 127.0.0.1 GET /home/index/infoList.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\service\Infosservice.php:422]
+---------------------------------------------------------------
+[ 2020-01-15T09:40:12+08:00 ] 127.0.0.1 GET /home/index/infoList.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\service\Infosservice.php:422]
+---------------------------------------------------------------
+[ 2020-01-15T09:40:14+08:00 ] 127.0.0.1 GET /home/index/infoList.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\service\Infosservice.php:422]
+---------------------------------------------------------------
+[ 2020-01-15T09:41:29+08:00 ] 127.0.0.1 GET /home/index/infoList.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\service\Infosservice.php:422]
+---------------------------------------------------------------
+[ 2020-01-15T09:41:30+08:00 ] 127.0.0.1 GET /home/index/infoList.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\application\v1\service\Infosservice.php:422]
+---------------------------------------------------------------
+[ 2020-01-15T09:42:17+08:00 ] 127.0.0.1 GET /home/index/infoList.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\runtime\temp\9d3023fdf4cb2b0a6bc07150b57a3c05.php:586]
+---------------------------------------------------------------
+[ 2020-01-15T09:42:19+08:00 ] 127.0.0.1 GET /home/index/infoList.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\runtime\temp\9d3023fdf4cb2b0a6bc07150b57a3c05.php:586]
+---------------------------------------------------------------
+[ 2020-01-15T09:42:20+08:00 ] 127.0.0.1 GET /home/index/infoList.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\runtime\temp\9d3023fdf4cb2b0a6bc07150b57a3c05.php:586]
+---------------------------------------------------------------
+[ 2020-01-15T09:42:43+08:00 ] 127.0.0.1 GET /home/index/infoList.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\runtime\temp\9d3023fdf4cb2b0a6bc07150b57a3c05.php:586]
+---------------------------------------------------------------
+[ 2020-01-15T09:42:45+08:00 ] 127.0.0.1 GET /home/index/infoList.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\runtime\temp\9d3023fdf4cb2b0a6bc07150b57a3c05.php:586]
+---------------------------------------------------------------
+[ 2020-01-15T09:43:09+08:00 ] 127.0.0.1 GET /home/index/infoList.html
+[ error ] [8]A non well formed numeric value encountered[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\runtime\temp\9d3023fdf4cb2b0a6bc07150b57a3c05.php:586]
+---------------------------------------------------------------
+[ 2020-01-15T09:54:33+08:00 ] 127.0.0.1 GET /home/index/industry.html
+[ error ] [8]Use of undefined constant ww - assumed 'ww'[C:\Users\Administrator\Desktop\phpEnv5.6.0-Green\www\hqy_\runtime\temp\e120bcf7436046a6d3ecb6f9a1357132.php:589]
