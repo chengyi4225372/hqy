@@ -1,4 +1,4 @@
-var baseUrl = 'http://47.105.48.137:8040';
+var baseUrl = 'https://hlg_job.hui7y.com';
 function user_logout(objthis){
 
 

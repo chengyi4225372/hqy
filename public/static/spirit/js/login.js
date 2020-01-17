@@ -1,4 +1,4 @@
-var baseUrl = 'http://172.26.2.215:8089';
+var baseUrl = 'https://hlg_job.hui7y.com';
 
 window.onload = function () {
     var spans = document.getElementById("change").getElementsByTagName("span")

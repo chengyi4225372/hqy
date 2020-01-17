@@ -149,12 +149,13 @@ class Apiservice
         }else{
             $info = [];
         }
+
         $keyword = !empty($params['keyword']) ? $params['keyword'] : [];
         $title = !empty($params['title']) ? $params['title'] : [];
 
         $top = $this->getTop($params['id'],$params['pid'],$keyword,$title);
         $next = $this->getNext($params['id'],$params['pid'],$keyword,$title);
-        return ['data' => $info,'prev' => $next,'next' => $top];
+        return ['data' => $info,'prev' => $top,'next' => $next];
     }
 
     /**
@@ -344,49 +345,55 @@ class Apiservice
 
 
     /**
-     * @DESC：详情的下一篇
+     * @DESC：详情的上一篇
      * @param $id
      * @param string $pid
      * @return bool|string
      * @author: jason
      * @date: 2020-01-07 08:53:48
      */
-    public function getTop($id,$pid = '',$keyword,$title)
+    public function getTop($id,$pid = '',$keyword = [],$title = '')
     {
+
         $where = [];
+        $wh = [];
         if (empty($id) || !isset($id)) {
             return false;
         }
         $where = [
+            'id' =>$id,
             'status' => 1,
             'auditing' => 1,
         ];
+        if(!empty($pid)) $where['pid'] = $pid;
+        $infos = Info::instance()->where($where)->find(); //查询当前新闻添加时间
+
+        $w['status'] = 1;
+        $w['auditing'] = 1;
+        $w['pid'] = $pid;
+        $w['release_time'] = ['GT',$infos['release_time']];
 
         //如果搜标题又搜关键字
         if(!empty($keyword) && is_array($keyword) && !empty($title)){
             $keyword = array_map(function($par){
                 return '%'.$par.'%';
             },$keyword);
-            $where['keyword'] = ['LIKE',$keyword,'OR'];
-            $where['title'] = ['LIKE','%'.$title.'%'];
+            $w['keyword'] = ['LIKE',$keyword,'OR'];
+            $w['title'] = ['LIKE','%'.$title.'%'];
         }
         //如果是只搜标题，不搜关键字
         if(empty($keyword) && !empty($title)){
-            $where['title'] = ['LIKE','%'.$title.'%'];
+            $w['title'] = ['LIKE','%'.$title.'%'];
         }
         //如果只搜关键字，不搜标题
         if(!empty($keyword) && is_array($keyword) && empty($title)){
             $keyword = array_map(function($par){
                 return '%'.$par.'%';
             },$keyword);
-            $where['keyword'] = ['LIKE',$keyword,'OR'];
+            $w['keyword'] = ['LIKE',$keyword,'OR'];
         }
+        $info  = Info::instance()->where($w)->order('release_time asc')->find();
 
-        $getInfo = Info::instance()->where(['id' => $id])->find();
-        if(!empty($getInfo)) $where['release_time'] = ['ELT',$getInfo['release_time']];
-        $where['id'] = ['NEQ',$id];
-        if(!empty($pid)) $where['pid'] = $pid;
-        $info = Info::instance()->where($where)->order('release_time desc')->find();
         if (empty($info)) {
             return $info = '';
         } else {
@@ -396,7 +403,7 @@ class Apiservice
     }
 
     /**
-     * @DESC：详情的上一篇
+     * @DESC：详情的下一篇
      * @param $id
      * @param string $pid
      * @return bool|string
@@ -410,8 +417,19 @@ class Apiservice
         }
 
         $where = [
+            'id' =>$id,
             'status' => 1,
             'auditing' => 1,
+        ];
+        if(!empty($pid)) $where['pid'] = $pid;
+
+        $infos = Info::instance()->where($where)->find();
+
+        $w = [
+            'status'=>1,
+            'auditing' => 1,
+            'pid'=>$pid,
+            'release_time'=>['LT',$infos['release_time']],
         ];
 
         //如果搜标题又搜关键字
@@ -419,26 +437,22 @@ class Apiservice
             $keyword = array_map(function($par){
                 return '%'.$par.'%';
             },$keyword);
-            $where['keyword'] = ['LIKE',$keyword,'OR'];
-            $where['title'] = ['LIKE','%'.$title.'%'];
+            $wh['keyword'] = ['LIKE',$keyword,'OR'];
+            $wh['title'] = ['LIKE','%'.$title.'%'];
         }
         //如果是只搜标题，不搜关键字
         if(empty($keyword) && !empty($title)){
-            $where['title'] = ['LIKE','%'.$title.'%'];
+            $wh['title'] = ['LIKE','%'.$title.'%'];
         }
         //如果只搜关键字，不搜标题
         if(!empty($keyword) && is_array($keyword) && empty($title)){
             $keyword = array_map(function($par){
                 return '%'.$par.'%';
             },$keyword);
-            $where['keyword'] = ['LIKE',$keyword,'OR'];
+            $wh['keyword'] = ['LIKE',$keyword,'OR'];
         }
 
-        $getInfo = Info::instance()->where(['id' => $id])->find();
-        if(!empty($getInfo)) $where['release_time'] = ['EGT',$getInfo['release_time']];
-        $where['id'] = ['NEQ',$id];
-        if(!empty($pid)) $where['pid'] = $pid;
-        $info = Info::instance()->where($where)->order('release_time desc')->find();
+        $info  = Info::instance()->where($w)->order('release_time desc')->find();
         if (empty($info)) {
             return $info = '';
         } else {
