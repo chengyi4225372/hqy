@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1578905794;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\header.html";i:1578903611;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1578557291;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"C:\phpEnv\www\hqy_\public/../application/home\view\index\industry.html";i:1579241095;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\header.html";i:1578903611;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1579241200;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -514,7 +514,7 @@
         <div class="w bread-crumbs">
             <span><a href="<?php echo url('/home/index/index'); ?>">首页</a></span> >
             <span><a class="current" style="color:#3E92FF;" onclick="go_news(this)"
-                     data-url="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></span> <span></span>
+                     data-url="<?php echo url('/home/index/industry'); ?>">行业资讯</a></span> <span></span>
         </div>
     </div>
 
@@ -528,7 +528,7 @@
                   <li class="li-active">招商政策</li>
                   <li>招标信息</li>
                 </ul> -->
-                    <div class="govPolicy fl">新闻资讯</div>
+                    <div class="govPolicy fl">行业资讯</div>
 
                 </div>
 
@@ -646,7 +646,7 @@
                     </dl>
                     <dl>
                         <dt>资讯信息</dt>
-                        <dd><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></dd>
+                        <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>

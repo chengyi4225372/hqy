@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1578994239;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1578557291;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:67:"C:\phpEnv\www\hqy_\public/../application/home\view\index\index.html";i:1579240536;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1578557291;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -141,7 +141,7 @@
                                 <a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a>
                             </li>
                             <li>
-                                <a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a>
+                                <a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a>
                             </li>
                         </ul>
 
