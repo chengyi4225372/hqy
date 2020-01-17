@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1578905695;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\header.html";i:1578903611;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1578557291;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"C:\phpEnv\www\hqy_\public/../application/home\view\index\info_biao.html";i:1579241248;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\header.html";i:1578903611;s:59:"C:\phpEnv\www\hqy_\application\home\view\common\footer.html";i:1579241200;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -585,7 +585,7 @@
                                                 <div class="itemTitle"><?php echo (isset($ww['title']) && ($ww['title'] !== '')?$ww['title']:''); ?></div>
                                                 <span class="itemTime">
                                                     <img src="/static/spirit/images/shijian2x.png" alt="">
-                                                    <span><?php echo $ww['release_time']; ?></span>
+                                                    <span><?php echo date('Y-m-d',strtotime($ww['release_time'])); ?></span>
                                                 </span>
                                             </div>
                                             <p class="limitP">
@@ -642,7 +642,7 @@
                     </dl>
                     <dl>
                         <dt>资讯信息</dt>
-                        <dd><a href="<?php echo url('/home/index/industry'); ?>">新闻资讯</a></dd>
+                        <dd><a href="<?php echo url('/home/index/industry'); ?>">行业资讯</a></dd>
                         <dd><a href="<?php echo url('/home/index/infoList'); ?>">政府招商政策</a></dd>
                         <dd><a href="<?php echo url('/home/index/infoBiao'); ?>">招标信息</a></dd>
                     </dl>

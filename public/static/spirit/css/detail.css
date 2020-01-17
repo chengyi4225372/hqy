@@ -361,12 +361,14 @@ a {
     font-size: 1.125rem;
     line-height: 1.125rem;
     font-family: "Noto Sans SC","syht";
+    white-space: nowrap;
     margin-bottom: 3.25rem;
   }
   
   .bottomBox .bottom .navBottom .navList dl dd {
     margin-bottom: 1.875rem;
     font-size: 1.125rem;
+    white-space: nowrap;
   }
   
   .bottomBox .bottom .navBottom .navList dl dd a {
@@ -374,6 +376,7 @@ a {
     color: #dcdcdc;
     font-size: 1.125rem;
     line-height: 1.125rem;
+    white-space: nowrap;
   }
   
   .bottomBox .bottom .navBottom .navList dl:first-child dd:nth-of-type(3) a,
