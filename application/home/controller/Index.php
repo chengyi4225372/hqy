@@ -319,7 +319,7 @@ class Index extends BaseController
             $four = Ificationservice::instance()->getBiaofour('新闻资讯');
             $this->assign('biao',$biao);
             $this->assign('four',$four);
-            $this->assign('title','新闻资讯');
+            $this->assign('title','行业资讯');
             return $this->fetch();
         }
         return false;
