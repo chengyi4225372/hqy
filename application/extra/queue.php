@@ -15,6 +15,6 @@ return [
         2 => '政府招商政策',
         3 => '行业资讯',
     ],
-    'url' => 'http://hqy_h5.hui7y.com',//手机端的生产环境
+    'url' => 'https://hqy_h5.hui7y.com',//手机端的生产环境
     'pc_url' => 'https://www.hui7y.com',
 ];
