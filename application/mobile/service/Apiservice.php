@@ -135,8 +135,11 @@ class Apiservice
         if(!empty($infos)){
             $info = $infos->toArray();
             $info['categroy'] = $status[$infos['pid']];
-            $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
-            $info['content'] = preg_replace($pregRule, '<img src="' . $baseUrl . '${1}">', $info['content']);
+            if(stripos($info['content'],$baseUrl) === false){
+                $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
+                $info['content'] = preg_replace($pregRule, '<img src="' . $baseUrl . '${1}">', $info['content']);
+            }
+
 //            preg_match_all('/(?<=img.src=").*?(?=")/', $content, $out, PREG_PATTERN_ORDER);
 //            if (!empty($out)) {
 //                foreach ($out as $v) {
