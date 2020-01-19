@@ -437,19 +437,19 @@ class Apiservice
             $keyword = array_map(function($par){
                 return '%'.$par.'%';
             },$keyword);
-            $wh['keyword'] = ['LIKE',$keyword,'OR'];
-            $wh['title'] = ['LIKE','%'.$title.'%'];
+            $w['keyword'] = ['LIKE',$keyword,'OR'];
+            $w['title'] = ['LIKE','%'.$title.'%'];
         }
         //如果是只搜标题，不搜关键字
         if(empty($keyword) && !empty($title)){
-            $wh['title'] = ['LIKE','%'.$title.'%'];
+            $w['title'] = ['LIKE','%'.$title.'%'];
         }
         //如果只搜关键字，不搜标题
         if(!empty($keyword) && is_array($keyword) && empty($title)){
             $keyword = array_map(function($par){
                 return '%'.$par.'%';
             },$keyword);
-            $wh['keyword'] = ['LIKE',$keyword,'OR'];
+            $w['keyword'] = ['LIKE',$keyword,'OR'];
         }
 
         $info  = Info::instance()->where($w)->order('release_time desc')->find();
