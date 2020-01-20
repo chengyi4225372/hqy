@@ -135,20 +135,22 @@ class Apiservice
         if(!empty($infos)){
             $info = $infos->toArray();
             $info['categroy'] = $status[$infos['pid']];
-            if(stripos($info['content'],$baseUrl) === false){
+/*            if(stripos($info['content'],$baseUrl) === false){
                 $pregRule = "/<[img|IMG].*?src=[\'|\"](.*?(?:[\.jpg|\.jpeg|\.png|\.gif|\.bmp]))[\'|\"].*?[\/]?>/";
                 $info['content'] = preg_replace($pregRule, '<img src="' . $baseUrl . '${1}">', $info['content']);
-            }
+            }*/
 
-//            preg_match_all('/(?<=img.src=").*?(?=")/', $content, $out, PREG_PATTERN_ORDER);
-//            if (!empty($out)) {
-//                foreach ($out as $v) {
-//                    foreach ($v as $j) {
-//                        $url = $baseUrl.$j;
-//                        $info['content'] = str_replace($j, $url, $content);   //替换相对路径为绝对路径
-//                    }
-//                }
-//            }
+            preg_match_all('/(?<=img.src=").*?(?=")/', $info['content'], $out, PREG_PATTERN_ORDER);
+            if (!empty($out)) {
+                foreach ($out as $v) {
+                    foreach ($v as $j) {
+                        if(stripos($j,$baseUrl) === false){
+                            $url = $baseUrl.$j;
+                            $info['content'] = str_replace($j, $url, $info['content']);   //替换相对路径为绝对路径
+                        }
+                    }
+                }
+            }
         }else{
             $info = [];
         }
