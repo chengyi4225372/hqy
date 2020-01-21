@@ -1,2 +1,10 @@
 User-agent: *
-Disallow:
+Disallow: /application/v1
+Disallow: /application/extra
+Disallow: /application/tags.php
+Disallow: /application/route.php
+Disallow: /public
+Disallow: /extend
+Disallow: /vendor
+Disallow: /thinkphp
+Disallow: /runtime
