@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1579395817;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1579395817;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1580637029;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1580637029;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
