@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1580637029;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1580637029;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1580955007;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1580955014;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -20,12 +20,12 @@
     <link rel="stylesheet" href="/static/assets/plugins/layui/css/layui.css">
     <link rel="stylesheet" href="/static/home/css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-    <link rel="stylesheet" href="/static/home/font/syht.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="/static/assets/plugins/layui/layui.all.js"></script>
     <script src='/static/home/js/index.js'></script>
     <script src='/static/common/js/public.js'></script>
     <script src='/static/home/js/common.js'></script>
+    <script src='/static/spirit/js/lazysizes.min.js' async='async'></script>
 
 </head>
 
@@ -48,18 +48,18 @@
                                         <div class="topQRCode qrwx">
                                             <p>惠企云官方微信</p>
                                             <div class="codeBox">
-                                                <img src="/static/home/images/wxCode.png" alt="">
+                                                <img class="lazyload" data-src="/static/home/images/wxCode.png" alt="">
                                             </div>
-                                            <img src="/static/home/images/close2.png" alt="">
+                                            <img class="lazyload" data-src="/static/home/images/close2.png" alt="">
                                         </div>
                                     </div>
                                     <div class='bo'>
                                         <div class="topQRCode qrwb">
                                             <p>惠企云官方微博</p>
                                             <div class="codeBox">
-                                                <img src="/static/home/images/wbCode.png" alt="">
+                                                <img class="lazyload" data-src="/static/home/images/wbCode.png" alt="">
                                             </div>
-                                            <img src="/static/home/images/close2.png" alt="">
+                                            <img class="lazyload" data-src="/static/home/images/close2.png" alt="">
                                         </div>
 
                                     </div>
@@ -182,7 +182,7 @@
         <div carousel-item>
             <?php if(is_array($slideshow) || $slideshow instanceof \think\Collection || $slideshow instanceof \think\Paginator): $i = 0; $__LIST__ = $slideshow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$list_item): $mod = ($i % 2 );++$i;?>
             <div>
-                <img src="<?php echo $slideshow[$key]['pic']; ?>" alt="">
+                <img class="lazyload" data-src="<?php echo $slideshow[$key]['pic']; ?>" alt="">
                 <button class="customize" onclick="showSearch()">立&nbsp;即&nbsp;咨&nbsp;询</button>
             </div>
             <?php endforeach; endif; else: echo "" ;endif; ?>
@@ -199,15 +199,15 @@
             </div>
             <ul class='img_total'>
                 <li>
-                    <img src="/static/home/images/more.png" alt="">
+                    <img class="lazyload" data-src="/static/home/images/more.png" alt="">
                     <a href="javascript:void(0)">创新模式</a>
                 </li>
                 <li>
-                    <img src="/static/home/images/rainning.png" alt="">
+                    <img class="lazyload" data-src="/static/home/images/rainning.png" alt="">
                     <a href="javascript:void(0)">深度提效</a>
                 </li>
                 <li>
-                    <img src="/static/home/images/pig.png" alt="">
+                    <img class="lazyload" data-src="/static/home/images/pig.png" alt="">
                     <a href="javascript:void(0)">多元增收</a>
                 </li>
             </ul>
@@ -221,7 +221,7 @@
             <ul class='all_product'>
                 <?php if(is_array($protuct) || $protuct instanceof \think\Collection || $protuct instanceof \think\Paginator): $i = 0; $__LIST__ = $protuct;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v1): $mod = ($i % 2 );++$i;?>
                 <li>
-                    <img class="all_product-img-box" src="<?php echo (isset($v1['imgs']) && ($v1['imgs'] !== '')?$v1['imgs']:''); ?>" alt="">
+                    <img class="all_product-img-box lazyload"  data-src="<?php echo (isset($v1['imgs']) && ($v1['imgs'] !== '')?$v1['imgs']:''); ?>" alt="">
                     <a href="javascript:void(0)"><?php echo (isset($v1['names']) && ($v1['names'] !== '')?$v1['names']:''); ?></a>
                     <a href="javascript:void(0)"><?php echo (isset($v1['desc']) && ($v1['desc'] !== '')?$v1['desc']:''); ?></a>
                     <ul class='one_pic'>

@@ -19,13 +19,13 @@
     <!-- <link rel="stylesheet" href="__SPI__/css/layui.css"  media="all"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
     <link rel="stylesheet" href="__SPI__/css/Informationlist.css">
-    <link rel="stylesheet" href="__HOME__/font/syht.css">
     <script src="__SPI__/js/clamp.js"></script>
 
     <script src='__SPI__/js/Informationlist.js'></script>
     <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
     <script src='__HOME__/js/common.js'></script>
     <script src='__PUBLIC__/common/js/public.js'></script>
+    <script src='__SPI__/js/lazysizes.min.js' async='async'></script>
 </head>
 
 <body>
@@ -39,7 +39,7 @@
         <div class="bg_banner">
             <div class="w banner">
 
-                <img src="__SPI__/images/banner.png" alt="">
+                <img class="lazyload" data-src="__SPI__/images/banner.png" alt="">
             </div>
         </div>
 
@@ -112,14 +112,14 @@
                                 <a href="{:config('curl.website')}/home/index/detailbiao?mid={$ww['id']}">
                                     <div class="infoItem">
                                         <div class="infoLeft">
-                                            <img src="{$ww.imgs?$ww.imgs:'__HOME__/images/infoItem.jpg';}" alt="">
+                                            <img class="lazyload" data-src="{$ww.imgs?$ww.imgs:'__HOME__/images/infoItem.jpg';}" alt="">
                                         </div>
 
                                         <div class="infoRight">
                                             <div class="rightTop">
                                                 <div class="itemTitle">{$ww.title|default=''}</div>
                                                 <span class="itemTime">
-                                                    <img src="__SPI__/images/shijian2x.png" alt="">
+                                                    <img class="lazyload" data-src="__SPI__/images/shijian2x.png" alt="">
                                                     <span>{:date('Y-m-d',strtotime($ww.release_time))}</span>
                                                 </span>
                                             </div>

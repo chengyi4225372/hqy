@@ -19,12 +19,12 @@
     <link rel="stylesheet" href="__PUBLIC__/assets/plugins/layui/css/layui.css">
     <link rel="stylesheet" href="__HOME__/css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
-    <link rel="stylesheet" href="__HOME__/font/syht.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="__PUBLIC__/assets/plugins/layui/layui.all.js"></script>
     <script src='__HOME__/js/index.js'></script>
     <script src='__PUBLIC__/common/js/public.js'></script>
     <script src='__HOME__/js/common.js'></script>
+    <script src='__SPI__/js/lazysizes.min.js' async='async'></script>
 
 </head>
 
@@ -47,18 +47,18 @@
                                         <div class="topQRCode qrwx">
                                             <p>惠企云官方微信</p>
                                             <div class="codeBox">
-                                                <img src="__HOME__/images/wxCode.png" alt="">
+                                                <img class="lazyload" data-src="__HOME__/images/wxCode.png" alt="">
                                             </div>
-                                            <img src="__HOME__/images/close2.png" alt="">
+                                            <img class="lazyload" data-src="__HOME__/images/close2.png" alt="">
                                         </div>
                                     </div>
                                     <div class='bo'>
                                         <div class="topQRCode qrwb">
                                             <p>惠企云官方微博</p>
                                             <div class="codeBox">
-                                                <img src="__HOME__/images/wbCode.png" alt="">
+                                                <img class="lazyload" data-src="__HOME__/images/wbCode.png" alt="">
                                             </div>
-                                            <img src="__HOME__/images/close2.png" alt="">
+                                            <img class="lazyload" data-src="__HOME__/images/close2.png" alt="">
                                         </div>
 
                                     </div>
@@ -181,7 +181,7 @@
         <div carousel-item>
             {volist name="slideshow" id="list_item" empty=""}
             <div>
-                <img src="{$slideshow[$key]['pic']}" alt="">
+                <img class="lazyload" data-src="{$slideshow[$key]['pic']}" alt="">
                 <button class="customize" onclick="showSearch()">立&nbsp;即&nbsp;咨&nbsp;询</button>
             </div>
             {/volist}
@@ -198,15 +198,15 @@
             </div>
             <ul class='img_total'>
                 <li>
-                    <img src="__HOME__/images/more.png" alt="">
+                    <img class="lazyload" data-src="__HOME__/images/more.png" alt="">
                     <a href="javascript:void(0)">创新模式</a>
                 </li>
                 <li>
-                    <img src="__HOME__/images/rainning.png" alt="">
+                    <img class="lazyload" data-src="__HOME__/images/rainning.png" alt="">
                     <a href="javascript:void(0)">深度提效</a>
                 </li>
                 <li>
-                    <img src="__HOME__/images/pig.png" alt="">
+                    <img class="lazyload" data-src="__HOME__/images/pig.png" alt="">
                     <a href="javascript:void(0)">多元增收</a>
                 </li>
             </ul>
@@ -220,7 +220,7 @@
             <ul class='all_product'>
                 {volist name='protuct' id='v1'}
                 <li>
-                    <img class="all_product-img-box" src="{$v1.imgs|default=''}" alt="">
+                    <img class="all_product-img-box lazyload"  data-src="{$v1.imgs|default=''}" alt="">
                     <a href="javascript:void(0)">{$v1.names|default=''}</a>
                     <a href="javascript:void(0)">{$v1.desc|default=''}</a>
                     <ul class='one_pic'>
