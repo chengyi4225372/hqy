@@ -224,7 +224,18 @@
                     <a href="javascript:void(0)">{$v1.names|default=''}</a>
                     <a href="javascript:void(0)">{$v1.desc|default=''}</a>
                     <ul class='one_pic'>
-                        <li><a onclick="showSearch()">获取方案</a></li>
+                        <li>
+                            {switch name="$v1['names']"}
+                            {case value="惠优税"}<a onclick="showSearch('惠优税获取方案')">获取方案</a>{/case}
+                            {case value="惠灵工"}<a onclick="showSearch('惠灵工获取方案')">获取方案</a>{/case}
+                            {case value="惠多薪"}<a onclick="showSearch('惠多薪获取方案')">获取方案</a>{/case}
+                            {case value="惠创业"}<a onclick="showSearch('惠创业获取方案')">获取方案</a>{/case}
+                            {case value="惠找事"}<a onclick="showSearch('惠找事获取方案')">获取方案</a>{/case}
+                            {case value="惠企动"}<a onclick="showSearch('惠企动获取方案')">获取方案</a>{/case}
+                            {default /}<a onclick="showSearch('获取方案')">获取方案</a>
+                            {/switch}
+
+                        </li>
                         <li><a href="{$v1.purl|default='#'}">前往网站</a></li>
                     </ul>
                     <div class="downBorder"></div>
@@ -346,8 +357,8 @@
             <!-- 惠家族产品介绍 -->
             <div class="bgProduct">
                 <ul class="produtionIntro">
-                    {volist name="case_list" id="data_list"}
-                    <li keys="{$key}" {if $key==1}class="chosenProduct" { /if}
+                    {volist name="case_list" id="data_list" key="k2"}
+                    <li keys="{$key}" {if $k2==2}class="chosenProduct" {/if}
                         style="background:url('{$data_list.pic}')">
                         <span>{$data_list['title2']}</span>
                         <p>{$data_list['title3']}</p>
@@ -358,7 +369,7 @@
                 </ul>
                 <div class='to_detailInfo'>
                     {volist name="case_list" id="info_list" key='k'}
-                    <div class="{$info_list['is_show']}" {if $key==1}style="display:block;"
+                    <div class="{$info_list['is_show']}" {if $k==2}style="display:block;"
                         {else /}style="display:none;"{/if}> <div class='huichuangyou_title'>{$info_list['title']}</div>
                     <div class="con">
                         <div class="desc">{$info_list['desc']}</div>
@@ -379,9 +390,16 @@
                                 <input type="text" id='hcontactMobile{$k}' placeholder="请输入您的手机号.." />
                             </div>
                             <div>
-                                <input type='hidden' id='hsource' value='门户首页' />
-                                <input type='hidden' id='hidentification' value='企业一站式服务' />
-                                <input type="button" class="form-btn" onclick="hgetErp('{$k}')" value='定制您的方案' />
+                                <input type='hidden' id='hsource' value='惠家族产品介绍' />
+                                {switch name="$info_list['title2']"}
+                                {case value="惠优税"}<input type="button" class="form-btn" hidentification="惠优税定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
+                                {case value="惠灵工"}<input type="button" class="form-btn" hidentification="惠灵工定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
+                                {case value="惠灵工"}<input type="button" class="form-btn" hidentification="惠多薪定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
+                                {case value="惠灵工"}<input type="button" class="form-btn" hidentification="惠创业定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
+                                {case value="惠灵工"}<input type="button" class="form-btn" hidentification="惠找事定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
+                                {case value="惠灵工"}<input type="button" class="form-btn" hidentification="惠企动定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
+                                {default /}<input type="button" class="form-btn" hidentification="惠企动定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />
+                                {/switch}
                             </div>
                             <!-- 提交成果后弹窗 -->
                             <div class="mask-box2">

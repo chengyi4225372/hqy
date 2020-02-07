@@ -11,7 +11,7 @@ function checkPhone(phone) {
 var gurl = "https://test.zxrhgb.com";
 //var gurl = "http://47.105.48.137:8089";
 /** 提交公海 **/
-function getErp() {
+function getErp(obj) {
     var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
     var data = {};
 
@@ -19,7 +19,7 @@ function getErp() {
     data.companyName = $.trim($("#companyName").val()); //公司
     data.contactMobile = $.trim($("#contactMobile").val());//手机
     data.source = $("#source").val(); //渠道
-    data.identification = $("#identification").val();//标识
+    data.identification = $(obj).attr('hidentification');//标识
 
     if (data.contactMobile == '' || data.contactMobile == undefined) {
         layer.msg('请填写联系电话');
@@ -85,7 +85,7 @@ function getErp() {
 /** 慧企云 慧家族产品 进入公海
  * @k  循环的下标
  **/
-function hgetErp(vals) {
+function hgetErp(vals,obj) {
     var urkl = gurl + "/api/wechatForeign/public/addGatewayPotentialCustomer";
     var arr = {};
 
@@ -94,7 +94,7 @@ function hgetErp(vals) {
     arr.companyName = $.trim($("#hcompanyName"+vals).val()); //公司
     arr.contactMobile =$.trim($("#hcontactMobile"+vals).val());//手机
     arr.source = $("#hsource").val(); //渠道
-    arr.identification = $("#hidentification").val();//标识
+    arr.identification = $(obj).attr('hidentification');//标识
 
     if (arr.contactMobile == '' || arr.contactMobile == undefined) {
         layer.msg('请填写联系电话');
@@ -158,7 +158,7 @@ function hgetErp(vals) {
 }
 
 //点击弹窗
-function showSearch() {
+function showSearch(source) {
     var content = '';
     content += "<div class='propbox' >";
     content += "<div class='title' onclick='closedTab()'>方案咨询<i class='close'></i></div>";
@@ -169,9 +169,8 @@ function showSearch() {
     content += "<input type='text' id='companyName' placeholder='请输入您的公司名称'></div><div>";
     content += "<span>联系方式</span>";
     content += "<input type='text' id='contactMobile'  placeholder='请输入您的联系方式'></div>";
-    content += "<input type='hidden' id='source' value='门户首页'>";
-    content += "<input type='hidden' id='identification' value='企业一站式服务'>";
-    content += "<button  class='button' onclick='getErp()'>获取方案</button>";
+    content += "<input type='hidden' id='source' value='惠家族产品'>";
+    content += "<button  class='button' hidentification='"+source+"' onclick='getErp(this)'>获取方案</button>";
     content += "</div><div class='mask-box1'>";
     content += "<span></span>";
     content += "<p class='mask-box-title'>提交成功</p>";
