@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1581069875;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1580955014;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:62:"/opt/web/hqy_/public/../application/home/view/index/index.html";i:1581391658;s:54:"/opt/web/hqy_/application/home/view/common/footer.html";i:1580955014;}*/ ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -342,7 +342,7 @@
             <div class="bgProduct">
                 <ul class="produtionIntro">
                     <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $k2 = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data_list): $mod = ($k2 % 2 );++$k2;?>
-                    <li keys="<?php echo $key; ?>" <?php if($k2==2): ?>class="chosenProduct" <?php endif; ?>
+                    <li keys="<?php echo $key; ?>" <?php if($k2==1): ?>class="chosenProduct" <?php endif; ?>
                         style="background:url('<?php echo $data_list['pic']; ?>')">
                         <span><?php echo $data_list['title2']; ?></span>
                         <p><?php echo $data_list['title3']; ?></p>
@@ -353,7 +353,7 @@
                 </ul>
                 <div class='to_detailInfo'>
                     <?php if(is_array($case_list) || $case_list instanceof \think\Collection || $case_list instanceof \think\Paginator): $k = 0; $__LIST__ = $case_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info_list): $mod = ($k % 2 );++$k;?>
-                    <div class="<?php echo $info_list['is_show']; ?>" <?php if($k==2): ?>style="display:block;"
+                    <div class="<?php echo $info_list['is_show']; ?>" <?php if($k==1): ?>style="display:block;"
                         <?php else: ?>style="display:none;"<?php endif; ?>> <div class='huichuangyou_title'><?php echo $info_list['title']; ?></div>
                     <div class="con">
                         <div class="desc"><?php echo $info_list['desc']; ?></div>
@@ -375,7 +375,7 @@
                             </div>
                             <div>
                                 <input type='hidden' id='hsource' value='惠家族产品介绍' />
-                                <?php switch($info_list['title2']): case "惠优税": ?><input type="button" class="form-btn" hidentification="惠优税定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; case "惠灵工": ?><input type="button" class="form-btn" hidentification="惠灵工定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; case "惠灵工": ?><input type="button" class="form-btn" hidentification="惠多薪定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; case "惠灵工": ?><input type="button" class="form-btn" hidentification="惠创业定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; case "惠灵工": ?><input type="button" class="form-btn" hidentification="惠找事定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; case "惠灵工": ?><input type="button" class="form-btn" hidentification="惠企动定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; default: ?><input type="button" class="form-btn" hidentification="惠企动定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' />
+                                <?php switch($info_list['title2']): case "惠优税": ?><input type="button" class="form-btn" hidentification="惠优税定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; case "惠灵工": ?><input type="button" class="form-btn" hidentification="惠灵工定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; case "惠多薪": ?><input type="button" class="form-btn" hidentification="惠多薪定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; case "惠创业": ?><input type="button" class="form-btn" hidentification="惠创业定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; case "惠找事": ?><input type="button" class="form-btn" hidentification="惠找事定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; case "惠企动": ?><input type="button" class="form-btn" hidentification="惠企动定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' /><?php break; default: ?><input type="button" class="form-btn" hidentification="惠企动定制方案" onclick="hgetErp('<?php echo $k; ?>',this)" value='定制您的方案' />
                                 <?php endswitch; ?>
                             </div>
                             <!-- 提交成果后弹窗 -->

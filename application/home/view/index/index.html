@@ -358,7 +358,7 @@
             <div class="bgProduct">
                 <ul class="produtionIntro">
                     {volist name="case_list" id="data_list" key="k2"}
-                    <li keys="{$key}" {if $k2==2}class="chosenProduct" {/if}
+                    <li keys="{$key}" {if $k2==1}class="chosenProduct" {/if}
                         style="background:url('{$data_list.pic}')">
                         <span>{$data_list['title2']}</span>
                         <p>{$data_list['title3']}</p>
@@ -369,7 +369,7 @@
                 </ul>
                 <div class='to_detailInfo'>
                     {volist name="case_list" id="info_list" key='k'}
-                    <div class="{$info_list['is_show']}" {if $k==2}style="display:block;"
+                    <div class="{$info_list['is_show']}" {if $k==1}style="display:block;"
                         {else /}style="display:none;"{/if}> <div class='huichuangyou_title'>{$info_list['title']}</div>
                     <div class="con">
                         <div class="desc">{$info_list['desc']}</div>
@@ -394,10 +394,10 @@
                                 {switch name="$info_list['title2']"}
                                 {case value="惠优税"}<input type="button" class="form-btn" hidentification="惠优税定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
                                 {case value="惠灵工"}<input type="button" class="form-btn" hidentification="惠灵工定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
-                                {case value="惠灵工"}<input type="button" class="form-btn" hidentification="惠多薪定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
-                                {case value="惠灵工"}<input type="button" class="form-btn" hidentification="惠创业定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
-                                {case value="惠灵工"}<input type="button" class="form-btn" hidentification="惠找事定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
-                                {case value="惠灵工"}<input type="button" class="form-btn" hidentification="惠企动定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
+                                {case value="惠多薪"}<input type="button" class="form-btn" hidentification="惠多薪定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
+                                {case value="惠创业"}<input type="button" class="form-btn" hidentification="惠创业定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
+                                {case value="惠找事"}<input type="button" class="form-btn" hidentification="惠找事定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
+                                {case value="惠企动"}<input type="button" class="form-btn" hidentification="惠企动定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />{/case}
                                 {default /}<input type="button" class="form-btn" hidentification="惠企动定制方案" onclick="hgetErp('{$k}',this)" value='定制您的方案' />
                                 {/switch}
                             </div>
